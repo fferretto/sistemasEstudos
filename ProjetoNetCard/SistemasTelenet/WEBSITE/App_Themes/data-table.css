@@ -1,0 +1,62 @@
+﻿/* main table */
+.table-main-td {
+    width: 100%;
+}
+/* header table */
+.table-header-div {
+    width: 98%;
+}
+
+.table-header-table {
+    width: 100%;
+    border-collapse: collapse;
+    empty-cells: show;
+    TABLE-LAYOUT: fixed;
+    overflow: hidden;
+}
+
+.table-header-column {
+    text-align: center;
+    border-left-width: 0px;
+}
+/* data table */
+.table-data-div {
+    width: 100%;
+    overflow: auto scroll;
+}
+
+.table-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    empty-cells: show;
+    table-layout: fixed;
+    overflow: hidden;
+}
+/* footer table */
+.table-footer-div {
+    width: 98%;
+}
+
+.table-footer-table {
+    width: 100%;
+    border-collapse: collapse;
+    empty-cells: show;
+    TABLE-LAYOUT: fixed;
+    overflow: hidden;
+}
+
+.table-footer-td {
+    border-bottom-width: 0px;
+}
+
+.table-column-align-right {
+    text-align: right;
+}
+
+.table-column-align-left {
+    text-align: left;
+}
+
+.table-column-align-center {
+    text-align: center;
+}

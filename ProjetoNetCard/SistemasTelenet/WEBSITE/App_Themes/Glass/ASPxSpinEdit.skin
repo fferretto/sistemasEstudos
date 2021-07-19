@@ -1,0 +1,4 @@
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v8.3" %>
+<dxe:ASPxSpinEdit runat="server" Height="21px" ImageFolder="~/App_Themes/Glass/{0}/" CssFilePath="~/App_Themes/Glass/{0}/styles.css" CssPostfix="Glass">
+<SpinButtons HorizontalSpacing="1"></SpinButtons>
+</dxe:ASPxSpinEdit>

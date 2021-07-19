@@ -1,0 +1,73 @@
+﻿@model IList<PagNet.Application.Models.TaxasCobradasPGTOVm>
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="gridListaTaxasTitulo" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Descrição)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Valor)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().DataInclusao)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().nmUsuario)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(item => item[i].Descrição)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].Valor)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].DataInclusao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].nmUsuario)
+                            </td>
+                        </tr>
+                    }
+                    <tr>
+                        <td>
+                            <b>Total</b>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(item => item[0].ValorTotal)
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#gridListaTaxasTitulo').dataTable({
+            dom: 'rtip',
+            //buttons: [
+            //    'excel'
+            //],
+        });
+
+    });
+
+</script>

@@ -1,0 +1,263 @@
+﻿@model IList<PagNet.Application.Models.SolicitacaoBoletoVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaTitulosVM">
+    <div class="panel-heading">
+        Lista de Títulos
+    </div>
+    <div class="panel-body">
+        @Html.DDLbtnDinamic("AcoesFaturamento", "Ações", "/ContasReceber/ConsultarBoletos/CarregaListaAcoes/", 1)
+        <div class="col-md-11">
+        </div>
+
+        <div class="table-responsive" style="margin-top:4%">
+            <table id="gridConsultaFaturamento" class="table" cellspacing="0" width="130%">
+                <thead>
+                    <tr>
+                        <th width="2%" style="text-align:center;"></th>
+                        <th width="3%" style="text-align:center;"></th>
+                        <th width="4%" style="text-align:center;">Codigo</th>
+                        <th width="21%">Cliente</th>
+                        <th width="8%" style="text-align:center;">Origem</th>
+                        <th width="10%" style="text-align:center;">Vencimento</th>
+                        <th width="8%" style="text-align:center;">Valor</th>
+                        <th width="12%" style="text-align:center;">Status</th>
+                        <th width="5%" style="text-align:center;">Parcela</th>
+                        <th width="8%" style="text-align:center;">Total de Parcelas</th>
+                        <th width="9%" style="text-align:center;">Código de Rastreio</th>
+                        <th width="10%" style="text-align:center;">CPF/CNPJ</th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                    </tr>
+                </thead>
+                <tbody style="font-size:11px">
+                    @if (Model != null)
+                    {
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var CorFundo = "background-color:#ffffff";
+                            var PonteiroMouse = "cursor:Pointer";
+
+                            if (Model[i].BoletoRecusado == "S" && Model[i].Status == "EM ABERTO")
+                            {
+                                CorFundo = "background-color:#d2d0d0;font-weight: bold; cursor:Default";
+                            }
+                    <tr>
+
+                        <td class="inpBola" width="2%" title="@Model[i].msgRecusa" style="text-align:center;@PonteiroMouse;">
+                            @if (Model[i].Status == "LIQUIDADO" || Model[i].Status == "LIQUIDADO MANUALMENTE")
+                            {
+                                <i class="bolaVerde"></i>
+                            }
+                            else if (Model[i].Status == "PENDENTE DE REGISTRO" | Model[i].Status == "REGISTRADO")
+                            {
+                                <i class="bolaAmarela"></i>
+                            }
+                            else if (Model[i].Status == "RECUSADO" || Model[i].Status == "PARCIALMENTE RECUSADO" || Model[i].Status == "VENCIDO")
+                            {
+                                <i class="bolaVermelha"></i>
+                            }
+                            else if (Model[i].Status == "EM BORDERO" || Model[i].Status == "EM ABERTO")
+                            {
+                                <i class="bolaCinza"></i>
+                            }
+                            else if (Model[i].Status == "A FATURAR")
+                            {
+                                <i class="bolaLaranja"></i>
+                            }
+
+
+                        </td>
+                        <td width="3%" align='center' title="@Model[i].msgRecusa">
+                            <div class="btn btn-success" onclick="VisualizarLog(@Model[i].codEmissaoBoleto);">
+                                <i class="fa fa-search "></i>
+                            </div>
+                        </td>
+                        <td class="nomeCliente" align='center' width="4%" title="@Model[i].msgRecusa" style="@PonteiroMouse">
+                            @Html.DisplayFor(item => item[i].codEmissaoBoleto)
+                        </td>
+                        <td class="nomeCliente" width="21%" title="@Model[i].msgRecusa" style="@PonteiroMouse">
+                            @Html.DisplayFor(item => item[i].nomeCliente)
+                        </td>
+                        <td class="inpOrigemBoleto" width="8%" title="@Model[i].msgRecusa" style="text-align:center;@PonteiroMouse">
+                            @Html.DisplayFor(item => item[i].OrigemBoleto)
+                        </td>
+                        <td class="inpdtVencimento" width="10%" title="@Model[i].msgRecusa" style="text-align:center;@PonteiroMouse;">
+                            @Html.DisplayFor(item => item[i].dtVencimento)
+                        </td>
+                        <td class="inpValor" width="8%" title="@Model[i].msgRecusa" style="text-align:center;@PonteiroMouse">
+                            @Html.DisplayFor(item => item[i].ValParcela)
+                        </td>
+                        <td class="inpStatus" width="12%" title="@Model[i].msgRecusa" style="text-align:center;@PonteiroMouse">
+                            @Html.DisplayFor(item => item[i].Status)
+                        </td>
+                        <td class="inpnParcela" width="5%" title="@Model[i].msgRecusa" style="text-align:center;@PonteiroMouse">
+                            @Html.DisplayFor(item => item[i].nParcela)
+                        </td>
+                        <td class="inpntotalParcelas" width="8%" title="@Model[i].msgRecusa" style="text-align:center;@PonteiroMouse">
+                            @Html.DisplayFor(item => item[i].ntotalParcelas)
+                        </td>
+                        <td class="inpnroDocumento" width="9%" title="@Model[i].msgRecusa" style="text-align:center;@PonteiroMouse">
+                            @Html.DisplayFor(item => item[i].nroDocumento)
+                        </td>
+                        <td class="cnpj" width="10%" title="@Model[i].msgRecusa" style="text-align:center;@PonteiroMouse">
+                            @Html.DisplayFor(item => item[i].cnpj)
+                        </td>
+
+                        <td class="codEmissaoBoleto" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].codEmissaoBoleto", nmPropriedade, i)" value="@Model[i].codEmissaoBoleto" />
+                        </td>
+                        <td class="Status" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].Status", nmPropriedade, i)" value="@Model[i].Status" />
+                        </td>
+                        <td class="OrigemBoleto" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].OrigemBoleto", nmPropriedade, i)" value="@Model[i].OrigemBoleto" />
+                        </td>
+                        <td class="Email" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].Email", nmPropriedade, i)" value="@Model[i].Email" />
+                        </td>
+                        <td class="ntotalParcelas" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].ntotalParcelas", nmPropriedade, i)" value="@Model[i].ntotalParcelas" />
+                        </td>
+                        <td class="nParcela" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].nParcela", nmPropriedade, i)" value="@Model[i].nParcela" />
+                        </td>
+                    </tr>
+                        }
+
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.unblockUI();
+
+        var table = $('#gridConsultaFaturamento').DataTable({
+            dom: 'Blfrtip',
+            buttons: [
+                'excel'
+            ],
+            scrollX: true,
+            order: [[6, 'asc']],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0, 1]
+                }
+            ]
+        });
+
+        $('#gridConsultaFaturamento tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+
+    });
+
+    function RealizarAcao(tipoAcao) {
+        var table = $('#gridConsultaFaturamento').DataTable();
+        var trs = $(table.cells().nodes()).parent()
+        var codigoFaturamento = 0;
+        var statusFaturamento = 0;
+        var EmailCliente = "";
+        var OrigemBoleto = '';
+        var nParcelas = 1;
+        var totalParcelas = 1;
+        $(trs).each(function (index, value) {
+            if ($(value).hasClass("selected")) {
+                codigoFaturamento = $(value).find('.codEmissaoBoleto').find('input').val();
+                statusFaturamento = $(value).find('.Status').find('input').val();
+                OrigemBoleto = $(value).find('.TipoFaturamento').find('input').val();
+                EmailCliente = $(value).find('.Email').find('input').val();
+                nParcelas = $(value).find('.nParcela').find('input').val();
+                totalParcelas = $(value).find('.ntotalParcelas').find('input').val();
+            }
+        });
+        if (codigoFaturamento == 0) {
+            msgAviso("Obrigatório selecionar um faturamento para realizar esta ação.");
+            return false;
+        }
+
+        if (tipoAcao == "EDITARFATURAMENTO") {
+            if (statusFaturamento != "A FATURAR" && statusFaturamento != "EM ABERTO") {
+                msgAviso("Status não permitido para realizar esta ação.");
+                return false;
+            }
+            EditarFaturamento(codigoFaturamento, statusFaturamento)
+        }
+        else if (tipoAcao == "LIQUIDAMANUALMENTE") {
+            if (statusFaturamento == "A FATURAR" || statusFaturamento == "LIQUIDADO MANUALMENTE" || statusFaturamento == "LIQUIDADO") {
+                msgAviso("Status não permitido para realizar esta ação.");
+                return false;
+            }
+            AbrirJanelaLiquidacaoManual(codigoFaturamento)
+        }
+        else if (tipoAcao == "EXCLUIRFATURAMENTO") {
+            $.confirm({
+                title: 'CUIDADO!',
+                icon: "glyphicon glyphicon-alert",
+                content: ' Tenha certeza que a fatura seleciona é a mesma que realmente deseja cancelar. ' +
+                    'Confirma o cancelamento ? ',
+                type: 'blue',
+                buttons: {
+                    confirm: {
+                        text: 'Sim',
+                        btnClass: 'btn-blue',
+                        action: function () {
+                            JustificarCancelamentoPedidoFaturamento(codigoFaturamento);
+                        }
+                    },
+                    cancel: {
+                        text: 'Não',
+                        keys: ['enter']
+                    }
+                }
+            });
+
+        }
+        else if (tipoAcao == "DETALHAMENTOCOBRANCA") {
+            EnviaDescritivoValoresCobrados(codigoFaturamento, EmailCliente)
+        }
+        else if (tipoAcao == "PARCELARFATURA") {
+            if (statusFaturamento != "A FATURAR" && statusFaturamento != "EM ABERTO") {
+                msgAviso("Status não permitido para realizar esta ação.");
+                return false;
+            }
+            else if (totalParcelas > 1) {
+                msgAviso("Já existe um parcelamento para este pedido de faturamento.");
+                return false;
+            }
+            else {
+                ParcelarFatura(codigoFaturamento);
+            }
+        }
+
+    }
+
+
+</script>

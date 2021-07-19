@@ -1,0 +1,60 @@
+﻿@model PagNet.Application.Models.EmissaoBoletoVM
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            Informe o motivo do cancelamento deste pedido de faturamento
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="row">
+                    @Html.DDLBootstrapFor(model => model.codJustificativa, Model.descJustificativa, "/ContasReceber/ConsultarBoletos/BuscaJustificativas/", 5)
+                    @Html.EditBootstrapFor(model => model.DescJustOutros, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <div id="btnCancelPedido" class="btn btn-warning" data-confirm="Confirma o cancelamento deste pedido de faturamento?" onclick="Cancelamento(); ">Cancelar Pedido de Faturamento</div>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    inicia();
+    $(".DescJustOutros").hide();
+
+
+    $(".codJustificativa").change(function () {
+        $("#codJustificativa").val($('.codJustificativa option:selected').val());
+        if ($("#codJustificativa").val() == "OUTROS") {
+            $(".DescJustOutros").show();
+        }
+        else {
+            $(".DescJustOutros").hide();
+            $("#DescJustOutros").val("");
+        }
+    });
+
+    function Cancelamento() {
+
+        var codJustificativa = $('.codJustificativa option:selected').val()
+        var descJustificativa = $('.codJustificativa').find("option:selected").text();
+        var DescJustOutros = $('#DescJustOutros').val();
+
+        if (codJustificativa == "-1" || codJustificativa == "" || codJustificativa == "NAOINFORMADO") {
+            msgAviso("Obrigatório justificar o motivo da liquidação manual.");
+            return false;
+        }
+
+        CancelarPedidoFaturamento(codJustificativa, descJustificativa, DescJustOutros)
+    }
+
+</script>

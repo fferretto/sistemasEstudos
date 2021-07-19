@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<telenet>
+  <services.domains>
+    <domain name="DescontoEmFolha">
+      <messages>
+        <add key="1" text="PagNet Desconto Folha" />
+
+        <add key="1000" text="Identificador de sistema inválido." />
+        <add key="1001" text="Matricula Não Informada." />
+        <add key="1002" text="Nenhum usuário informado." />
+        <add key="1003" text="Código do cliente não informado." />
+        <add key="1004" text="Código do lote não informado" />
+        <add key="1005" text="Arquivo de retorno não coincide com o arquivo de conciliação enviado ao cliente."/>
+        <add key="1006" text="Arquivo já validado anteriormente." />
+        <add key="1007" text="Ocorreu uma falha ao tentar identificar o usuário no NetCard. Favor contactar o suporte."/>
+        <add key="1008" text="Necessário configurar o arquivo do desconto em folha antes de começar a usar."/>
+        <add key="1009" text="A extensão do arquivo de retorno utilizada é diferente da que foi configurada."/>
+        <add key="1010" text="A extensão do conciliação do cliente é diferente da que foi configurada."/>
+      </messages>
+    </domain>
+  </services.domains>
+</telenet>
+
+

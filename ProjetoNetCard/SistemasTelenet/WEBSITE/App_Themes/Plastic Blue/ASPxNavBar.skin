@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dxnb" Namespace="DevExpress.Web.ASPxNavBar" Assembly="DevExpress.Web.v8.3" %>
+<dxnb:ASPxNavBar runat="server" GroupSpacing="1px" ImageFolder="~/App_Themes/Plastic Blue/{0}/" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" CssPostfix="PlasticBlue">
+<LoadingPanelImage Url="~/App_Themes/Plastic Blue/Web/nbLoading.gif" />
+<ItemStyle ImageSpacing="8px"></ItemStyle>
+<ItemImage Url="~/App_Themes/Plastic Blue/Web/nbItemBullet.gif"></ItemImage>
+<CollapseImage Url="~/App_Themes/Plastic Blue/Web/nbCollapse.gif"></CollapseImage>
+<ExpandImage Url="~/App_Themes/Plastic Blue/Web/nbExpand.gif"></ExpandImage>
+</dxnb:ASPxNavBar>

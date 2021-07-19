@@ -1,0 +1,125 @@
+﻿@model PagNet.Application.Models.AjustarValorTitulo
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        @Html.HiddenFor(x => x.codigoTituloAjusteValor)
+        @Html.HiddenFor(x => x.Desconto)
+        @Html.HiddenFor(x => x.codigoEmpresaAjusteValor)
+        @Html.HiddenFor(x => x.codigoUsuarioAjusteValor)       
+
+
+        <div class="panel-heading">
+            Dados para Edição
+        </div>
+        <div class="panel-body">
+            <div class="form-group" id="GrupoTipoProgramacao">
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.codigoFavorecido, tudoTamanho: 1, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.nomeFavorecido, tudoTamanho: 8, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.cpfCnpj, tudoTamanho: 2, inputTamanho: 12)
+                </div>
+
+                <div class="panel panel-default col-md-3" style="margin-top:1%" id="FazPagamento">
+                    <div class="panel-heading-decision">
+                        Tipo de Ajuste de Valor
+                    </div>
+                    <div class="panel-body">
+                        <ul class="nav nav-pills">
+                            <li class="active" id="liDesconto">
+                                <a href="#Desconto" data-toggle="tab" id="btnDesconto">Desconto</a>
+                            </li>
+                            <li class="" id="liAcrescimo">
+                                <a href="#Acrescimo" data-toggle="tab" id="btnAcrescimo">Acréscimo</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" style="margin-top:2%;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.Descricao, tudoTamanho: 11, inputTamanho: 10)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.ValorAtual, tudoTamanho: 3, inputTamanho: 6)
+                    @Html.EditBootstrapFor(model => model.valorConcedido, tudoTamanho: 3, inputTamanho: 6)
+                    @Html.EditBootstrapFor(model => model.NovoValor, tudoTamanho: 3, inputTamanho: 6)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" id="btnGeraArquivo" class="btn btn-success" onclick="SalvarAjusteValor();">Salvar</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+    $("#codigoFavorecido").prop('disabled', true);
+    $("#nomeFavorecido").prop('disabled', true);
+    $("#cpfCnpj").prop('disabled', true);
+    $("#ValorAtual").prop('disabled', true);
+    $("#NovoValor").prop('disabled', true);
+
+
+    $("#btnDesconto").click(function () {
+        $("#Desconto").val('True');
+        CalculaValorFinal();
+    })
+    $("#btnAcrescimo").click(function () {
+        $("#Desconto").val('False');
+        CalculaValorFinal();
+    })
+
+    $('#valorConcedido').mask("#.##0,00", { reverse: true })
+
+    $("#valorConcedido").click(function () {
+        if ($("#valorConcedido").val() == "0,00") {
+            $("#valorConcedido").val("")
+        }
+    });
+    $("#valorConcedido").focusout(function () {
+        CalculaValorFinal();
+    });
+
+    function CalculaValorFinal() {
+        var ValorAtual = getMoney($("#ValorAtual").val())
+        var valor = getMoney($("#valorConcedido").val())
+        if ($('#Desconto').val() == "True") {
+            var valorTotal = (ValorAtual - valor)
+            if (valorTotal > 0) {
+                $("#NovoValor").val(formatReal(valorTotal))
+            }
+            else {
+                msgAviso("O valor de desconto não pode ser superior ao vaor atual.")
+            }
+        }
+        else {
+            var valorTotal = (ValorAtual + valor)
+            $("#NovoValor").val(formatReal(valorTotal))
+        }
+    }
+
+    function getMoney(str) {
+        return parseInt(str.replace(/[\D]+/g, ''));
+    }
+    function formatReal(int) {
+        var tmp = int + '';
+        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+        if (tmp.length > 6)
+            tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+        return tmp;
+    }
+
+
+</script>

@@ -1,0 +1,14 @@
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.csproj.CopyComplete
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Web.Setup.pdb

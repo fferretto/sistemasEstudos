@@ -1,0 +1,30 @@
+<<<<<<< HEAD
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.pdb
+=======
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.csprojAssemblyReference.cache
+>>>>>>> remotes/origin/master
+C:\ProjetosPagNet\PagNet_V5\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\ProjetosPagNet\PagNet_V5\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.pdb
+C:\ProjetosPagNet\PagNet_V5\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.deps.json
+C:\ProjetosPagNet\PagNet_V5\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\ProjetosPagNet\PagNet_V5\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.pdb
+C:\ProjetosPagNet\PagNet_V5\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.csprojAssemblyReference.cache
+C:\ProjetosPagNet\PagNet_V5\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.csproj.CoreCompileInputs.cache
+C:\ProjetosPagNet\PagNet_V5\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.AssemblyInfoInputs.cache
+C:\ProjetosPagNet\PagNet_V5\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.AssemblyInfo.cs

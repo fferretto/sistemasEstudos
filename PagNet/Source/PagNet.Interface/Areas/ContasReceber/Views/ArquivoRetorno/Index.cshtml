@@ -1,0 +1,58 @@
+﻿@model PagNet.Application.Models.FiltroArquivoRetornoVM
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Baixa de Faturas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.codUsuario)
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.CodigoCliente)
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Baixa de Faturas via Arquivo</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-xs-8 form-group">
+                        <label for="ArquivoUpload">Selecione o Arquivo de Retorno do Banco</label>
+                        <abbr class='tooltip2' title='Arquivo de retorno disponibilizado pelo banco após processar o arquivo remessa'>
+                            <i class='fa fa-question-circle'></i>
+                        </abbr>
+
+                        <div class="input-group">
+                            <input type="file" name="files" id="uploadFile" class="form-control" />
+                            <span class="form-group input-group-btn">
+                                <input class="btn btn-default" style="height:29px" type="button" onclick="ProcessarArquivo();" value="Processar">
+                            </span>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+<div id="ListaPagamentos">
+    <div id="modal">
+
+    </div>
+</div>
+
+@*<script src="~/js/Scripts/ContasReceber/ArquivoRetorno.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "ContasReceber" , classe = "ArquivoRetorno.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()

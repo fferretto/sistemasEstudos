@@ -1,0 +1,87 @@
+﻿@model IList<PagNet.Application.Models.ConstulaEmissao_BoletoVM>
+@using PagNet.Interface.Helpers
+
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="GritListaBoletos" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th width="9%">@Html.DisplayNameFor(model => model.FirstOrDefault().codEmissaoBoleto)</th>
+                    <th width="28%">@Html.DisplayNameFor(model => model.FirstOrDefault().nmCliente)</th>
+                    <th width="13%">@Html.DisplayNameFor(model => model.FirstOrDefault().cnpj)</th>
+                    <th width="10%">@Html.DisplayNameFor(model => model.FirstOrDefault().Valor)</th>
+                    <th width="13%">@Html.DisplayNameFor(model => model.FirstOrDefault().Status)</th>
+                    <th width="12%">@Html.DisplayNameFor(model => model.FirstOrDefault().dtVencimento)</th>
+                    <th width="15%">@Html.DisplayNameFor(model => model.FirstOrDefault().Origem)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                <tr>
+                    <td width="9%">
+                        @Html.DisplayFor(item => item[i].codEmissaoBoleto)
+                    </td>
+                    <td width="28%">
+                        @Html.DisplayFor(item => item[i].nmCliente)
+                    </td>
+                    <td width="13%">
+                        @Html.DisplayFor(item => item[i].cnpj)
+                    </td>
+                    <td width="10%">
+                        @Html.DisplayFor(item => item[i].Valor)
+                    </td>
+                    <td width="13%">
+                        @Html.DisplayFor(item => item[i].Status)
+                    </td>
+                    <td width="12%">
+                        @Html.DisplayFor(item => item[i].dtVencimento)
+                    </td>
+                    <td width="15%">
+                        @Html.DisplayFor(item => item[i].Origem)
+                    </td>
+                    <td align='center'>
+                        <a href="@Url.Action("Index", "IncluirNovoBoleto", new { area = "ContasReceber", id = Model[i].codEmissaoBoleto, sid = ViewBag.Sid })">
+                            <div class="btn btn-primary btn-xs">
+                                <i class="fa fa-edit "></i>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    function carregaPagina() {
+    }
+    $(window).load(carregaPagina());
+
+    $(document).ready(function () {
+
+        $('#GritListaBoletos').dataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'excel'
+            ],
+        });
+
+    });
+
+
+</script>

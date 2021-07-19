@@ -1,0 +1,226 @@
+﻿@model PagNet.Interface.Areas.Relatorios.Models.RelatoriosModel
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Relatório";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm(new { target = "_blank" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.codRel)
+    @Html.HiddenFor(x => x.nmProc)
+    @Html.HiddenFor(x => x.nmTela)
+    @Html.HiddenFor(x => x.urlRelatorio)
+    @Html.HiddenFor(x => x.pathArquivo)
+    @Html.HiddenFor(x => x.statusGeracao)
+    @Html.HiddenFor(x => x.ExecutaViaJob)
+    @Html.HiddenFor(x => x.TipoRelatorio)
+    @Html.HiddenFor(x => x.PossuiOutroRelatorioSendoGerado)
+    @Html.HiddenFor(x => x.codigoRelatorioSendoGerado)
+
+
+
+    <div class="col-md-3"></div>
+    <div class="panel panel-default col-md-6">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>@Model.nmTela</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12 TesteCampos">
+                    @if (Model.listaCampos != null && Model.listaCampos.Count >= 0)
+                    {
+                        for (int i = 0; i < Model.listaCampos.Count; i++)
+                        {
+                            @Html.DinamicParamRel(Model.listaCampos[i], i, "listaCampos")
+                        }
+                    }
+
+                    <div class="col-md-11">
+                        <div class="form-group col-lg-6  pull-right" id="dvNovoRelatorio" style="display:none">
+                            <div class="pull-right" style="margin-top: 26px">
+                                <div id="btnVisualizarPDF" class="btn btn-success" data-confirm="Confirma a visualização deste relatório?" onclick="VisualizaRel();">Gerar PDF</div>
+                                <div id="btnExportarPDF" class="btn btn-warning" data-confirm="Confirma o download deste relatório?" onclick="ExportaRel(); ">Gerar CSV</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12" id="dvOutroSendoGerado" style="display:none">
+                            <div class="col-md-12" style="text-align:center; background-color:gainsboro; font-size:13px; border-color:red; color:red;font-weight: bold;">
+                                Existe outro relatório em andamento.
+                                <a href="@Url.Action("Index", "Relatorios", new { area = "Relatorios", id = Model.codigoRelatorioSendoGerado, sid = ViewBag.Sid })">
+                                    Clique aqui
+                                </a>
+                                para visualizar.
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12" id="dvEmGeracao" style="display:none">
+                            <div class="col-md-12" style="text-align:center; background-color:gainsboro; font-size:13px; border-color:red; color:red;font-weight: bold;">
+                               <img src="~/images/processando.gif" style="width:30px" /> Seu relatório está sendo gerado. Aguarde a conclusão.
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12" id="dvDownloadRel" style="display:none">
+                            <div class="col-md-12" style="text-align:center; background-color:gainsboro; font-size:13px; border-color:green; color:green;font-weight: bold;">
+
+                                @if (Model.TipoRelatorio == 1)
+                                {
+                                    <b>Relatório concluído.</b> <a onclick="RetornoRelatornoViaJob()"  style="cursor:pointer">Clique aqui</a> <b> para realizar o download</b>
+                                }
+                                else
+                                {
+                                    <b>Relatório concluído.</b> <a onclick="RetornoRelatornoViaJob()" style="cursor:pointer">Clique aqui</a> <b> para visualizar</b>
+                                }
+
+
+                                @*<a onclick="RetornoRelatornoViaJob()" class="btn btn-success">
+                                    Download
+                                </a>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="TelaDinamica" tabindex="-1" role="dialog" aria-labelledby="TelaDinamica" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalTelaDinamica">
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@*<script src="~/js/Scripts/Relatorios/Relatorios.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Relatorios" , classe = "Relatorios.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+@section Scripts
+    {
+    <script>
+
+        $('#NOMEFAVORECIDO').prop('disabled', true);
+
+        $(".DATA_INI").change(function () {
+            var dtInicio = $(".DATA_INI").val().split("/");
+            var dtFim = $(".DATA_FIM").val().split("/");
+            var dataIni = new Date(dtInicio[2], dtInicio[1] - 1, dtInicio[0]);
+            var dataFim = new Date(dtFim[2], dtFim[1] - 1, dtFim[0]);
+
+            if (dataFim < dataIni) {
+                $(".DATA_FIM").val($(".DATA_INI").val())
+            }
+        });
+
+        $(".DATA_FIM").change(function () {
+            var dtInicio = $(".DATA_INI").val().split("/");
+            var dtFim = $(".DATA_FIM").val().split("/");
+            var dataIni = new Date(dtInicio[2], dtInicio[1] - 1, dtInicio[0]);
+            var dataFim = new Date(dtFim[2], dtFim[1] - 1, dtFim[0]);
+
+            if (dataFim < dataIni) {
+                $(".DATA_INI").val($(".DATA_FIM").val());
+                //addErros("dtFim", "Data Inválida!");
+            }
+        });
+
+        function LocalizaFavorecido() {
+
+            for (var i = 0; i < document.getElementsByClassName('PagNet-ddl').length; i++) {
+                var idCampo = document.getElementsByClassName("PagNet-ddl")[i].id;
+
+                $(idCampo).val($('.' + idCampo + ' option:selected').val());
+            }
+
+            var url = montaUrl("/Relatorios/Relatorios/ConsultaFavorecidos")
+            url += "&codigoEmpresa=" + $('.CODEMPRESA option:selected').val();
+
+            $("#modalTelaDinamica").load(url);
+            $("#TelaDinamica").modal();
+        }
+
+        $('.CODFAVORECIDO').focusout(function () {
+            var filtro = $('.CODFAVORECIDO').val();
+            if (filtro != "") {
+
+                var url = montaUrl('/Relatorios/Relatorios/BuscaFavorecido/?filtro=' + filtro);
+                url += "&codigoEmpresa=" + $("#CODEMPRESA").val();
+
+                $.ajax({
+                    type: 'get',
+                    url: url,
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.length > 0) {
+
+                            var arr = data.split("/");
+                            $(".CODFAVORECIDO").val(arr[0]);
+                            $("#NOMEFAVORECIDO").val(arr[1]);
+
+                        } else {
+                            addErros("CODFAVORECIDO", "Favorecido não encontrado");
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        addErros("CODFAVORECIDO", "Erro interno. Tente novamente mais tarde.");
+                    }
+                });
+            }
+            else {
+                $(".CODFAVORECIDO").val('');
+                $("#NOMEFAVORECIDO").val('');
+            }
+        });
+
+
+        function SelecionaFavorecido(CODFAVORECIDO) {
+
+            if (CODFAVORECIDO != "") {
+
+                var url = montaUrl('/ContasPagar/EmitirTitulo/BuscaFavorecido/?filtro=' + CODFAVORECIDO);
+
+                $.ajax({
+                    type: 'get',
+                    url: url,
+                    dataType: 'json',
+                    success: function (data) {
+                        $("#TelaDinamica .close").click();
+                        if (data.length > 0) {
+
+                            var arr = data.split("/");
+                            $(".CODFAVORECIDO").val(arr[0]);
+                            $("#NOMEFAVORECIDO").val(arr[1]);
+
+
+                        } else {
+                            addErros("CODFAVORECIDO", "Favorecido não encontrado");
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        addErros("CODFAVORECIDO", "Erro interno. Tente novamente mais tarde.");
+                    }
+                });
+            }
+            else {
+                $(".CODFAVORECIDO").val('');
+                $("#NOMEFAVORECIDO").val('');
+            }
+
+        }
+
+
+    </script>
+}

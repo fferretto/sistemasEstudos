@@ -1,0 +1,36 @@
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.deps.json
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.csprojAssemblyReference.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.AssemblyInfoInputs.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.AssemblyInfo.cs
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.deps.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.deps.json
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Domain\obj\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Domain.pdb

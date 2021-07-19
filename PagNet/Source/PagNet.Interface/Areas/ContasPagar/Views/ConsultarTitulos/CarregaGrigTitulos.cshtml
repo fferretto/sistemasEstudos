@@ -1,0 +1,355 @@
+﻿@model IList<PagNet.Application.Models.ListaTitulosPagVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaTitulosVM">
+    <div class="panel-heading">
+        Lista de Títulos
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">
+                @Html.DDLbtnDinamic("AcoesFaturamento", "Ações", "/ContasPagar/ConsultarTitulos/CarregaListaAcoes/", 1)
+            </div>
+            <div class="col-md-8">
+                @Html.EditBootstrapFor(model => model.FirstOrDefault().ValorTotalBruto, tudoTamanho: 3, inputTamanho: 12)
+                @Html.EditBootstrapFor(model => model.FirstOrDefault().ValorTotalTaxas, tudoTamanho: 3, inputTamanho: 12)
+                @Html.EditBootstrapFor(model => model.FirstOrDefault().ValorTotalPagar, tudoTamanho: 3, inputTamanho: 12)
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table id="gridConsultaTitulos" class="table" cellspacing="0" width="160%">
+                <thead>
+                    <tr>
+                        @*<th width="2%" style="text-align:center;"></th>*@
+                        <th width="2%" style="text-align:center;"></th>
+                        <th width="3%" style="text-align:center;"></th>
+                        <th width="6%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().CODTITULO)</th>
+                        <th width="13%">@Html.DisplayNameFor(model => model.FirstOrDefault().NMFAVORECIDO)</th>
+                        <th width="7%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().VALTOTAL)</th>
+                        <th width="6%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().VALORTAXA)</th>
+                        <th width="6%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().VALORBRUTO)</th>
+                        <th width="12%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().STATUS)</th>
+                        <th width="8%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().DATREALPGTO)</th>
+                        <th width="7%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().DATEMISSAO)</th>
+                        <th width="6%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().DATPGTO)</th>
+                        <th width="6%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().TIPCARTAO)</th>
+                        <th width="5%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().BANCO)</th>
+                        <th width="5%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().AGENCIA)</th>
+                        <th width="7%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().CONTA)</th>
+                        <th width="9%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().CNPJ)</th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var CorFundo = "background-color:#ffffff";
+                            var desabilita = true;
+                            var PonteiroMouse = "cursor:Pointer";
+
+                            if (Model[i].TITVENCIDO == "S")
+                            {
+                                CorFundo = "background-color:#d2d0d0;font-weight: bold; cursor:Default";
+                            }
+                            if (Model[i].STATUS == "RECUSADO")
+                            {
+                                CorFundo = "background-color:#fa6161;font-weight: bold; cursor:Default";
+                            }
+                            <tr>
+
+                                <td class="inpBola" width="3%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @if (Model[i].STATUS == "BAIXADO" || Model[i].STATUS == "BAIXADO MANUALMENTE")
+                                    {
+                                        <i class="bolaVerde"></i>
+                                    }
+                                    else if (Model[i].STATUS == "AGUARDANDO ARQUIVO RETORNO")
+                                    {
+                                        <i class="bolaAmarela"></i>
+                                    }
+                                    else if (Model[i].STATUS == "EM BORDERO")
+                                    {
+                                        <i class="bolaVermelha"></i>
+                                    }
+                                    else if (Model[i].STATUS == "EM ABERTO" || Model[i].STATUS == "CANCELADO" || Model[i].STATUS == "RECUSADO")
+                                    {
+                                        <i class="bolaCinza"></i>
+                                        desabilita = false;
+                                    }
+
+
+                                </td>
+                                <td width="2%" align='center' title="@Model[i].MSGRETBANCO">
+                                    <div class="btn btn-success" onclick="VisualizarLog(@Model[i].CODTITULO);" style="font-size:9px">
+                                        <i class="fa fa-search "></i>
+                                    </div>
+                                </td>
+                                @*<td class="inpEditarTitulo" width="2%" title="@Model[i].MSGRETBANCO" style="text-align:center;@CorFundo">
+                                        <div class="btn btn-success btnEditarTitulo" disabled="@desabilita" onclick="EditarTitulo(@Model[i].CODTITULO);" style="font-size:11px">
+                                            <i class="fa fa-edit"></i>
+                                        </div>
+                                    </td>*@
+                                <td class="TIPCARTAO" width="6%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].CODTITULO)
+                                </td>
+                                <td class="NMFAVORECIDO" width="13%" title="@Model[i].MSGRETBANCO" style="@PonteiroMouse;font-size: 11px">
+                                    @Html.DisplayFor(item => item[i].NMFAVORECIDO)
+                                </td>
+                                <td class="VALTOTAL" width="7%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].VALTOTAL)
+                                </td>
+                                <td class="VALORTAXA" width="6%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    <a onclick="DetalharTaxas(@Model[i].CODTITULO)">
+                                        @Html.DisplayFor(item => item[i].VALORTAXA)
+                                    </a>
+                                </td>
+                                <td class="VALORBRUTO" width="6%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].VALORBRUTO)
+                                </td>
+                                <td class="inpSTATUS" width="12%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].STATUS)
+                                </td>
+                                <td class="DATREALPGTO" width="8%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].DATREALPGTO)
+                                </td>
+                                <td class="DATEMISSAO" width="7%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].DATEMISSAO)
+                                </td>
+                                <td class="DATPGTO" width="6%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].DATPGTO)
+                                </td>
+                                <td class="TIPCARTAO" width="6%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].TIPCARTAO)
+                                </td>
+                                <td class="BANCO" width="5%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].BANCO)
+                                </td>
+                                <td class="AGENCIA" width="5%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].AGENCIA)
+                                </td>
+                                <td class="CONTA" width="7" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].CONTA)
+                                </td>
+                                <td class="CNPJ" width="9%" title="@Model[i].MSGRETBANCO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].CNPJ)
+                                </td>
+                                <td class="TITVENCIDO" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].TITVENCIDO", nmPropriedade, i)" value="@Model[i].TITVENCIDO" />
+                                </td>
+                                <td class="CODTITULO" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].CODTITULO", nmPropriedade, i)" value="@Model[i].CODTITULO" />
+                                </td>
+                                <td class="STATUS" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].STATUS", nmPropriedade, i)" value="@Model[i].STATUS" />
+                                </td>
+
+                            </tr>
+                        }
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="VisualizarTaxas" tabindex="-1" role="dialog" aria-labelledby="VisualizarTaxas" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="width:50%;float: left;margin-left: 29%;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalVisualizarTaxas">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="EditarTitulo" tabindex="-1" role="dialog" aria-labelledby="EditarTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalEditarTitulo">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="VisualizarTransacoes" tabindex="-1" role="dialog" aria-labelledby="Localizar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalTransacoes">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="VisualizarLog" tabindex="-1" role="dialog" aria-labelledby="VisualizarLog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalLog">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="JanelaMdl" tabindex="-1" role="dialog" aria-labelledby="Localizar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalJanelaMdl">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.unblockUI();
+        var table = $('#gridConsultaTitulos').DataTable({
+            dom: 'Blfrtip',
+            buttons: [
+                'excel'
+            ],
+            scrollX: true,
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0, 1]
+                }
+            ]
+        });
+
+        $('#gridConsultaTitulos tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                //table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+
+        $("#ValorTotalPagar").prop('disabled', true);
+        $("#ValorTotalTaxas").prop('disabled', true);
+        $("#ValorTotalBruto").prop('disabled', true);
+        ValidaTituloVencidoLoad();
+    });
+
+    function RealizarAcao(tipoAcao) {
+        var table = $('#gridConsultaTitulos').DataTable();
+        var trs = $(table.cells().nodes()).parent()
+        var codigoTitulo = 0;
+        var statusTitulo = "";
+        var quantidadeSelecionado = 0;
+        $(trs).each(function (index, value) {
+            //console.log(value)
+            if ($(value).hasClass("selected")) {
+                quantidadeSelecionado += 1;
+                codigoTitulo = $(value).find('.CODTITULO').find('input').val();
+                statusTitulo = $(value).find('.STATUS').find('input').val();
+            }
+        });
+
+        if (codigoTitulo == 0) {
+            msgAviso("Obrigatório selecionar um título para realizar esta ação.");
+            return false;
+        }
+        if (tipoAcao == "EDITARTITULO") {
+            if (quantidadeSelecionado > 1) {
+                msgAviso("Permitido selecionar apenas um título por vez para ser editado.");
+                return false;
+            }
+            if (statusTitulo != "EM ABERTO" && statusTitulo != "RECUSADO" && statusTitulo != "EM_ABERTO") {
+                msgAviso("Permitido realizar a edição apenas para títulos em aberto.");
+                return false;
+            }
+            EditarTitulo(codigoTitulo)
+        }
+        if (tipoAcao == "ANTECIPARPGTO") {
+            if (quantidadeSelecionado > 1) {
+                msgAviso("É permitido selecionar apenas um título para realizar esta ação.");
+                return false;
+            }
+            if (statusTitulo != "EM ABERTO" && statusTitulo != "RECUSADO" && statusTitulo != "EM_ABERTO") {
+                msgAviso("Permitido realizar a antecipação de pagamento apenas para títulos em aberto.");
+                return false;
+            }
+            AnteciparPGTO(codigoTitulo)
+        }
+        else if (tipoAcao == "DESVINCULARTITULO") {
+            if (statusTitulo != "AGUARDANDO ARQUIVO RETORNO") {
+                msgAviso("Permitido apenas para títulos que estão aguardando o arquivo de Retorno.");
+                return false;
+            }
+            JustificativaDesvincularTitulo(codigoTitulo)
+        }
+        else if (tipoAcao == "BAIXAMANUAL") {
+            if (statusTitulo != "EM ABERTO" && statusTitulo != "RECUSADO" && statusTitulo != "AGUARDANDO ARQUIVO RETORNO") {
+                msgAviso("Permitido realizar a baixa manual apenas para títulos em aberto.");
+                return false;
+            }
+            JustificativaBaixaManual(codigoTitulo)
+        }
+        else if (tipoAcao == "CONSULTARLOG") {
+            if (quantidadeSelecionado > 1) {
+                msgAviso("É permitido selecionar apenas um título para realizar esta ação.");
+                return false;
+            }
+            VisualizarLog(codigoTitulo)
+        }
+        else if (tipoAcao == "CANCELARTITULO") {
+            if (statusTitulo != "EM ABERTO" && statusTitulo != "RECUSADO" && statusTitulo != "EM_ABERTO") {
+                msgAviso("Permitido realizar o cancelamento apenas para títulos em aberto.");
+                return false;
+            }
+            JustificativaCancelamentoTitulo(codigoTitulo)
+        }
+        else if (tipoAcao == "AJUSTARVALORTITULO") {
+            if (quantidadeSelecionado > 1) {
+                msgAviso("É permitido selecionar apenas um título para realizar esta ação.");
+                return false;
+            }
+            if (statusTitulo != "EM ABERTO" && statusTitulo != "RECUSADO" && statusTitulo != "EM_ABERTO") {
+                msgAviso("Permitido realizar o ajuste de valor apenas para títulos em aberto.");
+                return false;
+            }
+            AjustarValorTitulo(codigoTitulo)
+        }
+
+    }
+
+
+
+
+</script>

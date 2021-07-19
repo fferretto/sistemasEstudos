@@ -1,0 +1,24 @@
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.deps.json
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.pdb
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Abstraction.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Abstraction.pdb
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.csproj.CopyComplete
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\bin\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.csproj.CopyComplete
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Job\obj\Release\netcoreapp2.1\PagNet.BLD.Relatorio.Job.pdb

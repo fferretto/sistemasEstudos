@@ -1,0 +1,57 @@
+﻿@model PagNet.Application.Models.ModRelPDFVm
+@using PagNet.Interface.Helpers
+
+@{
+
+    ViewBag.Title = Model.nmRelatorio;
+    Layout = "~/Views/Shared/_Rel.cshtml";
+}
+
+
+@{
+    if (Model.Conteudo.Any())
+    {
+        for (int i = 0; i < Model.Conteudo.Count; i++)
+        {
+            if (Model.Cabecalho != null && Model.Cabecalho.Count > 0)
+            {
+                if (i == 0 || i % (86 - Model.Cabecalho.Count - 1) == 0)
+                {
+                    @*if (i > 0)
+                        { <br class="quebrapagina" /> }*@
+                    @Html.Raw("<div style=\"white-space:pre;padding-bottom: 10px;page-break-before: always;\">" + (DateTime.Now + " PAG." + Convert.ToInt16((i / (88 - Model.Cabecalho.Count - 1)) + 1)).PadLeft(118, ' ') + "</div>")
+                    @*@Html.Raw("<div style=\"white-space:pre; background-repeat: no-repeat;  background-image: url('" + imgSrc + "'); position: absolute; z-index: 0; width: 196px; height: 40px; margin-top: -20PX;\"></div>")*@
+                    foreach (var cabecalho in Model.Cabecalho)
+                    {
+                        @Html.Raw("<div style=\"white-space:pre;\">" + cabecalho.LINHAIMP.Replace("&nbsp", "&nbsp;") + "</div>")
+                    }
+                }
+            }
+            @Html.Raw("<div>" + Model.Conteudo[i].LINHAIMP.Replace("&nbsp", "&nbsp;") + "</div>")
+        }
+    }
+    else
+    {
+        if (Model.Cabecalho != null && Model.Cabecalho.Count > 0)
+        {
+            @*@Html.Raw("<div style=\"white-space:pre;padding-bottom: 10px;page-break-before: always;\">" + (DateTime.Now + " PAG." + Convert.ToInt16((i / (88 - Model.Cabecalho.Count - 1)) + 1)).PadLeft(118, ' ') + "</div>")*@
+            foreach (var cabecalho in Model.Cabecalho)
+            {
+                @Html.Raw("<div style=\"white-space:pre;\">" + cabecalho.LINHAIMP.Replace("&nbsp", "&nbsp;") + "</div>")
+            }
+        }
+        @*@Html.ValidationSummary(true)*@
+    }
+}
+
+<style>
+    .quebrapagina {
+        page-break-before: always;
+    }
+
+    body {
+        font-size: 10pt;
+        font-family: "Courier New";
+    }
+</style>
+

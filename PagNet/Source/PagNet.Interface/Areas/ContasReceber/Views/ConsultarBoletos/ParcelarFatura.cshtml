@@ -1,0 +1,97 @@
+﻿@model PagNet.Application.Models.ParcelamentoFaturaVm
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x => x.Parcela_codFaturamento)
+        @Html.HiddenFor(x => x.Parcela_codUsuario)
+        @Html.HiddenFor(x => x.Parcela_codEmpresa)
+        @Html.HiddenFor(x => x.codJustificativaParcela)
+        @Html.HiddenFor(x => x.DescJustOutrosParcela)
+        @Html.HiddenFor(x => x.descJustificativaParcela)
+        @Html.HiddenFor(x => x.ListaParcelas)
+        
+
+        <div class="panel-heading">
+            Parcelar Fatura
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+
+                    @Html.EditBootstrapFor(model => model.Parcela_Cliente, tudoTamanho: 6, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.Parcela_ValorOriginal, tudoTamanho: 3, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.Parcela_dtVencimento, tudoTamanho: 3, inputTamanho: 12)
+
+                    @Html.EditBootstrapFor(model => model.Parcela_qtParcelas, tudoTamanho: 2, inputTamanho: 4)
+                    @Html.EditBootstrapFor(model => model.Parcela_TaxaMensal, tudoTamanho: 2, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.Parcela_dataPrimeiraParcela, tudoTamanho: 3, inputTamanho: 12)
+
+                    <div class="form-group col-md-4">
+                        <label></label>
+                        <div class="input-group col-xs-12">
+                            <div class="btn btn-warning" onclick="CalcularParcelamentoFatura();">Calcular</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ListaParcelas">
+                <div id="modalListaParcelas">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="col-md-12">
+        <div class="btn btn-success " onclick="SalvarParcelamentoFatura();">Salvar</div>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="~/css/bootstrap-datepicker.css" />
+<link rel="stylesheet" href="~/css/bootstrap-datepicker.standalone.css" />
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "ContasReceber", subpasta = "ConsultaFaturamento", classe = "EditarPedidoFaturamento.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $('#Parcela_Cliente').prop("disabled", true);
+    $('#Parcela_ValorOriginal').prop("disabled", true);
+    $('#Parcela_dtVencimento').prop("disabled", true);
+    $('#Parcela_ValorRestante').prop("disabled", true);
+
+    $('#Parcela_TaxaMensal').mask("00,00", { reverse: true })
+
+ 
+    $("#Parcela_TaxaMensal").on('click', function () {
+        if ($(this).val() == "0,00") {
+            $(this).val("")
+        }
+    });
+    $("#Parcela_qtParcelas").on('click', function () {
+        if ($(this).val() == "0") {
+            $(this).val("")
+        }
+    });
+
+    $('#Parcela_TaxaMensal').focusout(function () {
+        if ($(this).val() == "") {
+            $(this).val("0,00")
+        }
+    });
+
+
+    
+</script>

@@ -1,0 +1,81 @@
+﻿@model PagNet.Application.Models.FiltroTransacaoVM
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Consolidar Transação";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.codigoUsuario)
+    @Html.HiddenFor(x => x.acessoAdmin)
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Transações</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-8">
+                    @Html.DDLBootstrapFor(model => model.codigoEmpresa, Model.nomeEmpresa, "/Generico/CadastrosDiversos/GetEmpresa/",  6)
+                    <div>
+                        @Html.DDLBootstrapFor(model => model.codContaCorrente, Model.nmContaCorrente, "/Generico/CadastrosDiversos/GetContaCorrente/",  6)
+
+                        <span id="ValidaContaCorrente" style="display:none; margin-left:2%" class="text-danger field-validation-valid" data-valmsg-replace="true">
+                            Obrigatório Informar uma Conta Corrente!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-10 pull-right">
+                            <div class="panel panel-default" style="float:right">
+                                <div class="panel-body">
+                                    <div class="form-group" id="GrupoTipoProgramacao">
+                                        <div class="row">
+                                            @Html.EditBootstrapFor(model => model.MesRef, tudoTamanho: 12, inputTamanho: 11)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group col-md-6  pull-right" style="margin-top:0.3%; margin-left:-2%">
+                            <label></label>
+                            <div class="input-group col-xs-12">
+                                <div class="btn btn-success" onclick="ConsultarTransacoes();">Consultar Transações</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="ListTransacao">
+        <div id="modal">
+
+        </div>
+    </div>
+
+
+
+}
+
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Tesouraria" , classe = "Transacao.js", sid = ViewBag.Sid })"></script>
+
+@Html.ShowError()
+
+
+<script>
+    ConsultarTransacoes();
+</script>

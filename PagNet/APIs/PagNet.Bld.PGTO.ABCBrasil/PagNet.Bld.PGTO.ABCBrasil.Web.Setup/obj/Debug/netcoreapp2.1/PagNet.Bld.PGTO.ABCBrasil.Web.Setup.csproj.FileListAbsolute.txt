@@ -1,0 +1,8 @@
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.ABCBrasil.Web.Setup.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.ABCBrasil.Web.Setup.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.ABCBrasil.Web.Setup.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.ABCBrasil.Web.Setup.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.ABCBrasil.Web.Setup.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.ABCBrasil.Web.Setup.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.ABCBrasil.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.ABCBrasil.dll

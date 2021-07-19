@@ -1,0 +1,139 @@
+﻿@model PagNet.Application.Models.EmissaoBoletoVM
+@using PagNet.Interface.Helpers
+
+
+<div class="modal-body">
+    @Html.HiddenFor(x => x.codigoUsuario)
+    @Html.HiddenFor(x => x.codigoEmpresa)
+    @Html.HiddenFor(x => x.codigoEmissaoBoleto)
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.codBordero)
+    @Html.HiddenFor(x => x.Status)
+    @Html.HiddenFor(x => x.codigoContaCorrente)
+    @Html.HiddenFor(x => x.codigoFormaFaturamento)
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Informações sobre o Faturamento</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+
+                    @Html.EditBootstrapFor(model => model.nomeEmpresa, tudoTamanho: 3, inputTamanho: 11)
+                    @Html.EditBootstrapFor(model => model.nomeClienteConsulta, tudoTamanho: 6, inputTamanho: 11)
+                    @Html.EditBootstrapFor(model => model.nomeFormaFaturamento, tudoTamanho: 6, inputTamanho: 11)
+                    @Html.EditBootstrapFor(model => model.Origem, tudoTamanho: 6, inputTamanho: 11)
+
+                    <div class="col-md-11" style="background-color:darkgrey;margin-left:1%;margin-top:1%;border:1px solid #264c54;" id="DadosCliente">
+                        <div>
+                            <b>Taxa para Emissão do Boleto: </b>
+                            <input id="TaxaEmissaoBoleto" name="TaxaEmissaoBoleto" type="text" disabled="" value="@Model.TaxaEmissaoBoleto" style="background-color:darkgrey;border: darkgrey;width: 11%;">
+
+                            <b>CPF/CNPJ: </b>
+                            <input id="CPFCNPJCliente" name="CPFCNPJCliente" type="text" disabled="" value="@Model.CPFCNPJCliente" style="background-color:darkgrey;border: darkgrey;width: 17%;">
+
+                            <b>Email: </b>
+                            <input id="EmailCliente" name="EmailCliente" type="text" disabled="" value="@Model.EmailCliente" style="background-color:darkgrey;border: darkgrey;width: 35%;">
+                        </div>
+                        <div>
+                            <b>Cobra Juros: </b>
+                            <input id="CobraJuros" name="CobraJuros" type="text" disabled="" value="@Model.CobraJuros" style="background-color:darkgrey;border: darkgrey;width: 21.5%;">
+
+                            <b>Valor Juros: </b>
+                            <input id="ValorJuros" name="ValorJuros" type="text" disabled="" value="@Model.ValorJuros" style="background-color:darkgrey;border: darkgrey;width: 16%;">
+
+                            <b>Porcentagem Juros: </b>
+                            <input id="PercentualJuros" name="PercentualJuros" type="text" disabled="" value="@Model.PercentualJuros" style="background-color:darkgrey;border: darkgrey;width: 17%;">
+                        </div>
+                        <div>
+                            <b>Cobra Multa: </b>
+                            <input id="CobraMulta" name="CobraMulta" type="text" disabled="" value="@Model.CobraMulta" style="background-color:darkgrey;border: darkgrey;width: 21.5%;">
+
+                            <b>Valor Multa: </b>
+                            <input id="ValorMulta" name="ValorMulta" type="text" disabled="" value="@Model.ValorMulta" style="background-color:darkgrey;border: darkgrey;width: 16.5%;">
+
+                            <b>Porcentagem Multa: </b>
+                            <input id="PercentualMulta" name="PercentualMulta" type="text" disabled="" value="@Model.PercentualMulta" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 1%;margin-left:-1%">
+                        @Html.EditBootstrapFor(model => model.dataVencimento, tudoTamanho: 3, inputTamanho: 11)
+                        @Html.EditBootstrapFor(model => model.Valor, tudoTamanho: 3, inputTamanho: 11)
+                        @Html.EditBootstrapFor(model => model.nroDocumento, tudoTamanho: 3, inputTamanho: 11)
+                    </div>
+
+                    <div id="TipoBoleto" style="display:none">
+                        <div class="row">
+                            @* verificação da forma de cobrança da multa *@
+                            <div class="panel panel-default col-md-6" style="margin-left:3%" id="ConcederDesconto">
+                                <div class="panel-heading-decision">
+                                    Conceder Desconto
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="nav nav-pills">
+                                        <li class="" id="liDescontoSim">
+                                            <a href="#DescontoSim" data-toggle="tab" id="btnDescontoSim">Sim</a>
+                                        </li>
+                                        <li class="active" id="liDescontoNao">
+                                            <a href="#DescontoNao" data-toggle="tab" id="btnDescontoNao">Não</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" style="margin-top:2%;">
+                                        <div class="tab-pane fade" id="DescontoSim">
+                                            <div class="row">
+                                                @Html.EditBootstrapFor(model => model.valorDesconto, tudoTamanho: 12, inputTamanho: 5)
+                                                @Html.EditBootstrapFor(model => model.dataSegundoDesconto, tudoTamanho: 5, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.valorSegundoDesconto, tudoTamanho: 5, inputTamanho: 12)
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="DescontoNao">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Mensagem de instrução para o Banco:</label><br />
+                                @Html.TextAreaFor(model => model.MensagemArquivoRemessa, 2, 130, new { maxlength = "40", @class = "form-control" })
+                                <span class="caracteresRemessa">40</span> Restantes <br>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Mensagem de instrução para o Caixa:</label><br />
+                                @Html.TextAreaFor(model => model.MensagemInstrucoesCaixa, 2, 130, new { maxlength = "40", @class = "form-control" })
+                                <span class="caracteresCaixa">40</span> Restantes <br>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $('#nomeEmpresa').prop('disabled', true);
+    $('#nomeClienteConsulta').prop('disabled', true);
+    $('#dataVencimento').prop('disabled', true);
+    $('#Valor').prop('disabled', true);
+    $('#nroDocumento').prop('disabled', true);
+    $('#nomeFormaFaturamento').prop('disabled', true);
+    $('#Origem').prop('disabled', true);   
+
+
+</script>
+
+
+
+

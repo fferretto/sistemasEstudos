@@ -1,0 +1,12 @@
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\bin\Debug\netstandard2.0\PagNet.BLD.Relatorio.deps.json
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\bin\Debug\netstandard2.0\PagNet.BLD.Relatorio.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\bin\Debug\netstandard2.0\PagNet.BLD.Relatorio.pdb
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\bin\Debug\netstandard2.0\PagNet.BLD.Relatorio.Abstraction.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\bin\Debug\netstandard2.0\PagNet.BLD.Relatorio.Abstraction.pdb
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\obj\Debug\netstandard2.0\PagNet.BLD.Relatorio.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\obj\Debug\netstandard2.0\PagNet.BLD.Relatorio.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\obj\Debug\netstandard2.0\PagNet.BLD.Relatorio.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\obj\Debug\netstandard2.0\PagNet.BLD.Relatorio.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\obj\Debug\netstandard2.0\PagNet.BLD.Relatorio.csproj.CopyComplete
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\obj\Debug\netstandard2.0\PagNet.BLD.Relatorio.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio\obj\Debug\netstandard2.0\PagNet.BLD.Relatorio.pdb

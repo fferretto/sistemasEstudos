@@ -1,0 +1,5 @@
+---------------------------  ARQUIVO DE LOG - DATA:23/03/2016  --------------------------
+
+ O arquivo foi processado e apresentou os seguintes resultados:
+
+LINHA 00001 CLIENTE 99997 CPF 04407907606 - PROCESSO REALIZADO COM SUCESSO. VALOR MAIOR QUE A CARGA PADRÃO DO CLIENTE.                                              

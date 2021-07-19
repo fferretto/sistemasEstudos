@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dxnc" Namespace="DevExpress.Web.ASPxNewsControl" Assembly="DevExpress.Web.v8.3" %>
+<dxnc:ASPxNewsControl runat="server" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" ImageFolder="~/App_Themes/Plastic Blue/{0}/" CssPostfix="PlasticBlue">
+<LoadingPanelImage Url="~/App_Themes/Plastic Blue/Web/ncLoading.gif"></LoadingPanelImage>
+<ItemDateStyle Spacing="0px"></ItemDateStyle>
+<ItemHeaderStyle Spacing="7px"></ItemHeaderStyle>
+<ItemSettings DateVerticalPosition="Header" TailPosition="KeepWithLastWord"></ItemSettings>
+<LoadingPanelStyle ImageSpacing="6px"></LoadingPanelStyle>
+</dxnc:ASPxNewsControl>

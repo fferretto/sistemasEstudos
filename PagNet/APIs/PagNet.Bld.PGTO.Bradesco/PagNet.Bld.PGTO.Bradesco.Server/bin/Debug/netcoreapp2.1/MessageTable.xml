@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<telenet>
+  <services.domains>
+    <domain name="TransmissaoBradesco">
+      <messages>
+        
+        <add key="1" text="PagNet Processo de Pagamento da Bradesco" />
+        <add key="1000" text="Arquivo informado não contém informações relacionadas a títulos gerados pelo sistema PagNet." />
+        <add key="1001" text="Nenhum arquivo informado." />
+        <add key="1002" text="Obrigatório informar uma conta corrente que possua um código de convêncio de pagamento cadastrado." />
+      </messages>
+    </domain>
+  </services.domains>
+</telenet>

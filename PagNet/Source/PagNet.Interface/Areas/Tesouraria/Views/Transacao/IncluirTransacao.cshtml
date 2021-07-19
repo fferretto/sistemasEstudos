@@ -1,0 +1,191 @@
+﻿@model PagNet.Application.Models.IncluiTransacaoVM
+@using PagNet.Interface.Helpers
+
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        @Html.HiddenFor(x => x.codigoUsuarioIncTransacao)
+        @Html.HiddenFor(x => x.acessoAdminIncTransacao)
+        @Html.HiddenFor(x => x.TipoIncTransacao)
+        @Html.HiddenFor(x => x.RepetirIncTransacao)
+        @Html.HiddenFor(x => x.codigoEmpresaIncTransacao)
+        @Html.HiddenFor(x => x.codContaCorrenteIncTransacao)
+
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Inclusão de Transações que Nâo Serão Incluidas em Arquivos de Remessas</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+
+
+                    @*TIPO DE TRANSAÇÃO QUE SERÁ REALIZADA*@
+                    <div class="panel panel-default col-md-5" style="margin-left:1%" id="TipoTransacao">
+                        <div class="panel-heading-decision">
+                            Informe o Tipo da Transação que Será Realizada
+                        </div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills">
+                                <li class="" id="liTipoReceita">
+                                    <a href="#TipoReceita" data-toggle="tab" id="btnTipoReceita" title="Transação do Tipo Crédito">
+                                        Entrada
+                                    </a>
+                                </li>
+                                <li class="" id="liTipoDespesa">
+                                    <a href="#TipoDespesa" data-toggle="tab" id="btnTipoDespesa" title="Transação do Típo Débito">
+                                        Saída
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="margin-top:2%;">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    @Html.EditBootstrapFor(model => model.DescricaoIncTransacao, tudoTamanho: 6, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.dtIncTransacao, tudoTamanho: 2, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.ValorIncTransacao, tudoTamanho: 2, inputTamanho: 12)
+
+                    <div class="col-md-12"></div>
+                    <div class="panel panel-default col-md-6" style="margin-left:1%">
+                        <div class="panel-heading-decision">
+                            Repetir Transação Mensalmente?
+                        </div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills">
+                                <li class="" id="liRepeteSim">
+                                    <a href="#RepeteSim" data-toggle="tab" id="btnRepeteSim">Sim</a>
+                                </li>
+                                <li class="active" id="liRepeteNao">
+                                    <a href="#RepeteNao" data-toggle="tab" id="btnRepeteNao">Não</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="margin-top:2%;">
+                                <div class="tab-pane fade" id="RepeteSim">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            @Html.EditBootstrapFor(model => model.ParcelaInicioIncTransacao, tudoTamanho: 3, inputTamanho: 12)
+                                            @Html.EditBootstrapFor(model => model.ParcelaTerminoIncTransacao, tudoTamanho: 3, inputTamanho: 12)
+                                            @Html.EditBootstrapFor(model => model.ValorTotalIncTransacao, tudoTamanho: 6, inputTamanho: 12)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="RepeteNao">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" id="btnIncluirTransacao" class="btn btn-success" onclick="IncluiTransacao();">Salvar</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+
+<script>
+
+
+    $("#ValorTotalIncTransacao").prop("disabled", "disabled");
+
+    $('.umadata input').datepicker({
+        format: "dd/mm/yyyy",
+        language: "pt-BR",
+        orientation: "auto",
+        autoclose: true
+    });
+
+    $("#btnTipoReceita").click(function () {
+        $("#TipoIncTransacao").val('ENTRADA');
+    });
+    $("#btnTipoDespesa").click(function () {
+        $("#TipoIncTransacao").val('SAIDA');
+    });
+    $("#btnRepeteSim").click(function () {
+        $("#RepetirIncTransacao").val('true');
+
+        var valor = $('#ValorIncTransacao').val();
+        if (valor == '') valor = '0';
+        $('#ParcelaTerminoIncTransacao').val("1");
+        $('#ParcelaInicioIncTransacao').val("1");
+        var valoraux = ConvertDecimal(valor);
+        $('#ValorTotalIncTransacao').val(FormataMoedaReal(valoraux));
+    });
+    $("#btnRepeteNao").click(function () {
+        $("#RepetirIncTransacao").val('false');
+
+        var valor = $('#ValorIncTransacao').val();
+        $('#ParcelaTerminoIncTransacao').val("1");
+        $('#ParcelaInicioIncTransacao').val("1");
+        var valoraux = ConvertDecimal(valor);
+        $('#ValorTotalIncTransacao').val(FormataMoedaReal(valoraux));
+    });
+    $("#ValorIncTransacao").focusout(function () {
+        var valParcelaInicio = parseInt($('#ParcelaInicioIncTransacao').val());
+        var valParcelaTermino = parseInt($('#ParcelaTerminoIncTransacao').val());
+        var valor = $('#ValorIncTransacao').val();
+        if (valParcelaInicio == '') valParcelaInicio = '1';
+        if (valParcelaTermino == '') valParcelaTermino = '1';
+
+        if (valor != "") {
+            var qtParcelas = (valParcelaTermino - valParcelaInicio) + 1;
+            var valoraux = ConvertDecimal(valor);
+            var valortotal = valoraux * qtParcelas;
+            $('#ValorTotalIncTransacao').val(FormataMoedaReal(valortotal));
+        }
+    });
+    $("#ParcelaTerminoIncTransacao").change(function () {
+        var valParcelaInicio = parseInt($('#ParcelaInicioIncTransacao').val());
+        var valParcelaTermino = parseInt($('#ParcelaTerminoIncTransacao').val());
+        var valor = $('#ValorIncTransacao').val();
+
+        if (valParcelaTermino < valParcelaInicio) {
+            $('#ParcelaInicioIncTransacao').val(valParcelaTermino)
+            var valoraux = ConvertDecimal(valor);
+            $('#ValorTotalIncTransacao').val(FormataMoedaReal(valoraux));
+        }
+        else if (valor != "") {
+            var qtParcelas = (valParcelaTermino - valParcelaInicio) + 1;
+            var valoraux = ConvertDecimal(valor);
+            var valortotal = valoraux * qtParcelas;
+            $('#ValorTotalIncTransacao').val(FormataMoedaReal(valortotal));
+        }
+
+    });
+    $("#ParcelaInicioIncTransacao").change(function () {
+        var valParcelaInicio = parseInt($('#ParcelaInicioIncTransacao').val());
+        var valParcelaTermino = parseInt($('#ParcelaTerminoIncTransacao').val());
+        var valor = $('#ValorIncTransacao').val();
+
+        if (valParcelaTermino < valParcelaInicio) {
+            $('#ParcelaTerminoIncTransacao').val(valParcelaInicio)
+            var valoraux = ConvertDecimal(valor);
+            $('#ValorTotalIncTransacao').val(FormataMoedaReal(valoraux));
+        }
+        else if (valor != "") {
+            var qtParcelas = (valParcelaTermino - valParcelaInicio) + 1;
+            var valoraux = ConvertDecimal(valor);
+            var valortotal = valoraux * qtParcelas;
+            $('#ValorTotalIncTransacao').val(FormataMoedaReal(valortotal));
+        }
+
+    });
+
+</script>

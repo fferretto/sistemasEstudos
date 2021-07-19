@@ -1,0 +1,68 @@
+﻿@model PagNet.Application.Models.EditarTransacaoVM
+@using PagNet.Interface.Helpers
+
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        @Html.HiddenFor(x => x.codigoUsuario)
+        @Html.HiddenFor(x => x.acessoAdmin)
+        @Html.HiddenFor(x => x.TipoTransacao)
+        @Html.HiddenFor(x => x.codigoTransacao)
+
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Atualização de Transações que Nâo Serão Incluidas em Arquivos de Remessas</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+
+                    @*TIPO DE TRANSAÇÃO QUE SERÁ REALIZADA*@
+                    <div class="panel panel-default col-md-5" style="margin-left:1%" id="TipoTransacao">
+                        <div class="panel-heading-decision">
+                            Alteração de transação de @Model.TipoTransacao
+                        </div>
+                    </div>
+                    <div class="col-md-12"></div>
+                    @Html.EditBootstrapFor(model => model.DescricaoTransacao, tudoTamanho: 6, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.dtTransacao, tudoTamanho: 2, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.ValorTransacao, tudoTamanho: 2, inputTamanho: 12)
+
+                    <div>
+                        @Html.DDLBootstrapFor(model => model.codContaCorrenteTransacao, Model.nmContaCorrenteTransacao, "/Generico/CadastrosDiversos/GetContaCorrentePagamento/", 6)
+                        <span id="ValidaContaCorrente" style="display:none; margin-left:2%" class="text-danger field-validation-valid" data-valmsg-replace="true">
+                            Obrigatório Informar uma Conta Corrente!
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" id="btnGeraArquivo" class="btn btn-success" onclick="AlterarTituloPGTO();">Alterar</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+
+<script>
+
+    $('.umadata input').datepicker({
+        format: "dd/mm/yyyy",
+        language: "pt-BR",
+        orientation: "auto",
+        autoclose: true
+    });
+
+</script>

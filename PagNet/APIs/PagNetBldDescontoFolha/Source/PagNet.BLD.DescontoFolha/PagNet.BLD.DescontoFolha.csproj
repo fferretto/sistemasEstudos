@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PagNet.Bld.Domain" Version="1.0.24" />
+    <PackageReference Include="SpreadsheetLight.Core" Version="3.4.0" />
+    <PackageReference Include="System.Data.OleDb" Version="4.7.1" />
+    <PackageReference Include="Telenet.BusinessLogicModel" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagNet.BLD.DescontoFolha.Abstraction\PagNet.BLD.DescontoFolha.Abstraction.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PagNet.Bld.Domain">
+      <HintPath>..\..\..\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

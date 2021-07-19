@@ -1,0 +1,40 @@
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.deps.json
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Abstraction.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.csproj.CopyComplete
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.deps.json
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Abstraction.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.csproj.CopyComplete
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\bin\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.csproj.CopyComplete
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldDescontoFolha\Source\PagNet.BLD.DescontoFolha\obj\Debug\netstandard2.0\PagNet.BLD.DescontoFolha.pdb

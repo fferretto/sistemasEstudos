@@ -1,0 +1,73 @@
+﻿@model IList<PagNet.Application.Models.ConstulaEmissao_BoletoVM>
+@using PagNet.Interface.Helpers
+
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="GridTransacao" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th width="31%">@Html.DisplayNameFor(model => model.FirstOrDefault().nmCliente)</th>
+                    <th width="13%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().cnpj)</th>
+                    <th width="13%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().Valor)</th>
+                    <th width="18%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().Status)</th>
+                    <th width="13%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().dtVencimento)</th>
+                    <th width="11%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().seuNumero)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td width="31%">
+                            @Html.DisplayFor(item => item[i].nmCliente)
+                        </td>
+                        <td width="13%" style="text-align:center;">
+                            @Html.DisplayFor(item => item[i].cnpj)
+                        </td>
+                        <td width="13%" style="text-align:center;">
+                            @Html.DisplayFor(item => item[i].Valor)
+                        </td>
+                        <td width="18%" style="text-align:center;">
+                            @Html.DisplayFor(item => item[i].Status)
+                        </td>
+                        <td width="13%" style="text-align:center;">
+                            @Html.DisplayFor(item => item[i].dtVencimento)
+                        </td>
+                        <td width="11%" style="text-align:center;">
+                            @Html.DisplayFor(item => item[i].seuNumero)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    function carregaPagina() {
+    }
+    $(window).load(carregaPagina());
+
+    $(document).ready(function () {
+
+        $('#GridTransacao').dataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'excel'
+            ],
+        });
+
+    });
+
+
+</script>

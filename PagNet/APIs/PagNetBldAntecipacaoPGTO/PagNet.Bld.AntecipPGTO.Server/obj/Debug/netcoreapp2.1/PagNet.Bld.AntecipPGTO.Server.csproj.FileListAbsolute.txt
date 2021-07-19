@@ -1,0 +1,131 @@
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.deps.json
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.json
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.dev.json
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.Views.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csprojAssemblyReference.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cs
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfoInputs.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfo.cs
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorTargetAssemblyInfo.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CopyComplete
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\MessageTable.xml
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\MessageTable.xml
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.deps.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.dev.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.Views.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorTargetAssemblyInfo.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CopyComplete
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\MessageTable.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.deps.json
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.json
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.dev.json
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.Views.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorTargetAssemblyInfo.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CopyComplete
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\MessageTable.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.dev.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.Views.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorTargetAssemblyInfo.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CopyComplete
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\MessageTable.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.runtimeconfig.dev.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.Views.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Web.Setup.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorAssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.RazorTargetAssemblyInfo.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.csproj.CopyComplete
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Server\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Server.pdb

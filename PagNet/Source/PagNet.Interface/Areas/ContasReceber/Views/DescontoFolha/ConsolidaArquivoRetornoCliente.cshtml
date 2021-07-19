@@ -1,0 +1,147 @@
+﻿@model PagNet.Interface.Areas.ContasReceber.Models.RetornoValidaDescontoFolhaVM
+@using PagNet.Interface.Helpers
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div class="col-md-11">
+                    @if (!Model.ArquivoValido)
+                    {
+                        <div class="col=md-12" style="text-align:center; background-color:gainsboro; font-size:13px; border-color:red; color:red;font-weight: bold;">
+                            @Model.msgRetornoValidacao
+                        </div>
+                    }
+                </div>
+
+                @if (Model.ArquivoValido)
+                {
+                    <div class="form-group col-lg-10">
+                        <div>                            
+                            @Html.EditBootstrapFor(model => model.quantidadeTotalEsperado, tudoTamanho: 3, inputTamanho: 11)
+                            @Html.EditBootstrapFor(model => model.quantidadeTotal, tudoTamanho: 3, inputTamanho: 11)
+                            @Html.EditBootstrapFor(model => model.quantidadeOK, tudoTamanho: 3, inputTamanho: 11)
+                            @Html.EditBootstrapFor(model => model.quantidadeNaoOK, tudoTamanho: 3, inputTamanho: 11)
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-2  pull-right">
+                        <div class="pull-right" style="margin-top: 19px">
+                            <div id="btnGeraArquivo" class="btn btn-success" data-confirm="Confirma o processamento dos itens conforme opção escolhida?" onclick="GerarFaturamentosByArquivoCliente();">Processar</div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-12">
+                <div class="table-responsive" style="margin-top: 2%">
+                    <table id="gridValidaViaArquivo" class="table" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="26%">Usuário</th>
+                                <th width="10%" style="text-align:center;">CPF</th>
+                                <th width="10%" style="text-align:center;">Valor Devido</th>
+                                <th width="10%" style="text-align:center;">Valor Cobrado</th>
+                                <th width="28%" style="text-align:center;">Mensagem</th>
+                                <th width="16%" style="text-align:center;">Ação</th>
+                                <th width="0%"></th>
+                                <th width="0%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.ListaUsuarios != null)
+                            {
+                                @for (int i = 0; i < Model.ListaUsuarios.Count; i++)
+                                {
+                                    <tr>
+                                        <td width="26%">
+                                            @Html.DisplayFor(item => item.ListaUsuarios[i].NomeClienteUsuario)
+                                        </td>
+                                        <td width="10%" style="text-align:center;">
+                                            @Html.DisplayFor(item => item.ListaUsuarios[i].CPF)
+                                        </td>
+                                        <td width="10%" style="text-align:center;">
+                                            @Html.DisplayFor(item => item.ListaUsuarios[i].ValorRem)
+                                        </td>
+                                        <td width="10%" style="text-align:center;">
+                                            @Html.DisplayFor(item => item.ListaUsuarios[i].ValorRet)
+                                        </td>
+                                        <td width="28%" style="text-align:center;">
+                                            @Html.DisplayFor(item => item.ListaUsuarios[i].msgRetorno)
+                                        </td>
+                                        <td width="16%" align="center">
+
+                                            @if (Model.ArquivoValido)
+                                            {
+                                                <div class="panel-body" style="padding: 2px !important;">
+                                                    <ul class="nav nav-pills">
+                                                        @*<li class="active" id="liProximaFatura" onclick="ProximaFatura(@i)" title="Será descontado este valor da fatura atual e será realizada uma nova tentativa de desconto na próxima fatura">
+                                                            <a href="#ProximaFatura" data-toggle="tab" id="btnProximaFatura">
+                                                                <i class="far fa-handshake"></i>
+                                                            </a>
+                                                        </li>*@
+                                                        <li class="" id="liDescontoDireto" onclick="DescontoDireto(@i)" title="Será criada uma fatura para este usuário">
+                                                            <a href="#DescontoDireto" data-toggle="tab" id="btnDescontoDireto">
+                                                                <i class="fas fa-file-import"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="" id="liPerdoarDivida" onclick="PerdoarDivida(@i)" title="Declarar como perda deste Valor">
+                                                            <a href="#PerdoarDivida" data-toggle="tab" id="btPerdoarDivida">
+                                                                <i class="fas fa-eraser"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" style="margin-top:2%;">
+
+                                                    </div>
+                                                </div>
+                                            }
+                                        </td>
+                                        <td class="CPF" width="0%" style="display:none;">
+                                            <input class="" type="hidden" value="@Model.ListaUsuarios[i].CPF" />
+                                        </td>
+                                        <td class="Acao" width="0%" style="display:none;">
+                                            <input class="" type="hidden" value="@Model.ListaUsuarios[i].Acao" />
+                                        </td>
+
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script>
+    $("#quantidadeTotalEsperado").prop('disabled', true);
+    $("#quantidadeTotal").prop('disabled', true);
+    $("#quantidadeOK").prop('disabled', true);
+    $("#quantidadeNaoOK").prop('disabled', true);
+
+    $(document).ready(function () {
+
+        $.unblockUI();
+
+        var table = $('#gridValidaViaArquivo').dataTable({
+            dom: 'brtip',
+            scrollX: true,
+            order: [1, 'asc'],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0]
+                }
+            ]
+
+        });
+
+    });
+
+</script>

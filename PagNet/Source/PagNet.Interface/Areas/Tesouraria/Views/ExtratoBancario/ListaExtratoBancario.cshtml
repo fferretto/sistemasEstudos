@@ -1,0 +1,135 @@
+﻿@model IList<PagNet.Application.Models.TesourariaExtratoBancarioVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaTitulosVM" style="height: 557px">
+    <div class="panel-heading">
+        Extrato Bancário no Período
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table id="gridExtratoBancario" class="table" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th width="15%" style="text-align:center;">Data</th>
+                        <th width="40%">Descrição</th>
+                        <th width="15%" style="text-align:right;">Saída (R$)</th>
+                        <th width="15%" style="text-align:right;">Entrada (R$)</th>
+                        <th width="15%" style="text-align:right;">Saldo (R$)</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        var corTexto = "#000000";
+                        var PonteiroMouse = "cursor:Pointer";
+                        if (Model.FirstOrDefault().SaldoInicial.IndexOf("-") != -1)
+                        {
+                            corTexto = "color:#fb0505";
+                        }
+                        else
+                        {
+                            corTexto = "#000000";
+                        }
+                        <tr>
+                            <td class="inpDataExtratoBancario" width="15%" style="text-align:center;@PonteiroMouse"></td>
+                            <td class="inpDescExtratoBancario" width="40%" style="@PonteiroMouse">
+                                <b>SALDO ANTERIOR</b>
+                            </td>
+                            <td width="15%" style="text-align:right;@PonteiroMouse;"></td>
+                            <td width="15%" style="text-align:right;@PonteiroMouse"></td>
+                            <td class="inpSaldoInicial" width="15%" style="text-align:right;@PonteiroMouse;@corTexto">
+                                <b>@Html.DisplayFor(item => item.FirstOrDefault().SaldoInicial)</b>
+                            </td>
+                        </tr>
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            if (Model[i].Saldo.IndexOf("-") != -1)
+                            {
+                                corTexto = "color:#fb0505";
+                            }
+                            else
+                            {
+                                corTexto = "#000000";
+                            }
+                            <tr>
+                                <td class="inpDataExtratoBancario" width="15%" title="@Model[i].DataExtratoBancario" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].DataExtratoBancario)
+                                </td>
+                                <td class="inpDescExtratoBancario" width="40%" title="@Model[i].DescExtratoBancario" style="@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].DescExtratoBancario)
+                                </td>
+                                <td class="inpValorExtratoBancarioDespesa" width="15%" title="@Model[i].ValorExtratoBancarioDespesa" style="text-align:right;@PonteiroMouse;color:#fb0505">
+                                    @Html.DisplayFor(item => item[i].ValorExtratoBancarioDespesa)
+                                </td>
+                                <td class="inpValorExtratoBancarioReceita" width="15%" title="@Model[i].ValorExtratoBancarioReceita" style="text-align:right;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].ValorExtratoBancarioReceita)
+                                </td>
+                                <td class="inpSaldo" width="15%" title="@Model[i].Saldo" style="text-align:right;@PonteiroMouse;@corTexto">
+                                    <b>@Html.DisplayFor(item => item[i].Saldo)</b>
+                                </td>
+                            </tr>
+                        }
+                        if (Model.FirstOrDefault().SaldoFinalPeriodo.IndexOf("-") != -1)
+                        {
+                            corTexto = "color:#fb0505";
+                        }
+                        else
+                        {
+                            corTexto = "#000000";
+                        }
+                        <tr>
+                            <td class="inpDataExtratoBancario" width="15%" style="text-align:center;@PonteiroMouse"></td>
+                            <td class="inpDescExtratoBancario" width="40%" style="@PonteiroMouse">
+                                <b>TOTAL</b>
+                            </td>
+                            <td class="inpValorTotalSaida" width="15%" style="text-align:right;@PonteiroMouse;color:#fb0505">
+                                <b>@Html.DisplayFor(item => item.FirstOrDefault().ValorTotalSaida)</b>
+                            </td>
+                            <td class="inpValorTotalEntrada" width="15%" style="text-align:right;@PonteiroMouse">
+                                <b> @Html.DisplayFor(item => item.FirstOrDefault().ValorTotalEntrada)</b>
+                            </td>
+                            <td class="inpSaldoInicial" width="15%" style="text-align:right;@PonteiroMouse;@corTexto">
+                                <b>@*@Html.DisplayFor(item => item.FirstOrDefault().SaldoFinalPeriodo)*@</b>
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@Html.ShowError()
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.unblockUI();
+        var table = $('#gridExtratoBancario').DataTable({
+            dom: 'Brti',
+            buttons: [
+                'excel', 'pdf'
+            ],
+            scrollY: "400px",
+            scrollCollapse: true,
+            paging: false,
+            ordering: false
+        });
+
+        $('#gridExtratoBancario tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+    });
+
+</script>

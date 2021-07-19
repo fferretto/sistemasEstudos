@@ -1,0 +1,121 @@
+﻿@model PagNet.Application.Models.IndicaroresVM
+@using PagNet.Interface.Helpers
+
+@*<script src="https://code.highcharts.com/highcharts.js"></script>*@
+@*<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>*@
+@{
+    ViewBag.Title = "Indicadores de Credenciados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.codEmpresa)
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.codCredenciado)
+    @Html.HiddenFor(x => x.codBanco)
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Indicadores de Pagamentos Realizadas</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="col-md-12">
+                        @Html.EditBootstrapFor(model => model.filtroCredenciado, tudoTamanho: 4, inputTamanho: 10)
+                        @Html.EditBootstrapFor(model => model.nmCredenciado, tudoTamanho: 8, inputTamanho: 12)
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditBootstrapFor(model => model.filtroCodBanco, tudoTamanho: 4, inputTamanho: 10)
+                        @Html.EditBootstrapFor(model => model.FiltroNmBanco, tudoTamanho: 8, inputTamanho: 12)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.DDLBootstrapFor(model => model.codEmpresa, Model.nmEmpresa, "/Generico/CadastrosDiversos/GetEmpresa/", 0)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-10 pull-right">
+                            <div class="panel panel-default" style="float:right">
+                                <div class="panel-heading">
+                                    Intervalo de Data de Pagamento
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group" id="GrupoTipoProgramacao">
+                                        <div class="row">
+                                            @Html.EditBootstrapFor(model => model.dtInicio, tudoTamanho: 12, inputTamanho: 11)
+                                        </div>
+                                        <div class="row">
+                                            @Html.EditBootstrapFor(model => model.dtFim, tudoTamanho: 12, inputTamanho: 11)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group col-md-2  pull-right">
+                        <label></label>
+                        <div class="input-group col-xs-12 pull-right">
+                            <div class="btn btn-success  pull-right" onclick="ConsultarTransacaoo();">Visualizar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-12" id="ListDespesasPeriodo" style="margin-left: -1%;">
+        <div id="modalListDespesasPeriodo">
+
+        </div>
+    </div>
+    <div class="col-md-12" id="ListTransacaoPag" style="margin-left: -1%;">
+        <div id="modalListTransacaoPag">
+
+        </div>
+    </div>
+
+}
+
+
+<script src="~/js/Scripts/Indicadores/PagamentosRealizados.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+
+@section Scripts
+    {
+    <script>
+
+
+        $("#dtInicio").change(function () {
+            var dtInicio = $("#dtInicio").val().split("/");
+            var dtFim = $("#dtFim").val().split("/");
+            var dataIni = new Date(dtInicio[2], dtInicio[1] - 1, dtInicio[0]);
+            var dataFim = new Date(dtFim[2], dtFim[1] - 1, dtFim[0]);
+
+            if (dataFim < dataIni) {
+                $("#dtFim").val($("#dtInicio").val())
+            }
+        });
+
+        $("#dtFim").change(function () {
+            var dtInicio = $("#dtInicio").val().split("/");
+            var dtFim = $("#dtFim").val().split("/");
+            var dataIni = new Date(dtInicio[2], dtInicio[1] - 1, dtInicio[0]);
+            var dataFim = new Date(dtFim[2], dtFim[1] - 1, dtFim[0]);
+
+            if (dataFim < dataIni) {
+                $("#dtInicio").val($("#dtFim").val());
+            }
+        });
+
+    </script>
+}

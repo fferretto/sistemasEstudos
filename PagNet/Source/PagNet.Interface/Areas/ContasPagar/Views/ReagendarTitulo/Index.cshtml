@@ -1,0 +1,122 @@
+﻿@model PagNet.Application.Models.FiltroTitulosPagamentoVM
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Geração de Borderô";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.codFavorecido)
+    @Html.HiddenFor(x => x.codBanco)
+    @Html.HiddenFor(x => x.CaminhoArquivoDownload)
+    @Html.HiddenFor(x => x.codEmpresa)
+    @Html.HiddenFor(x => x.CodFormaPagamento)
+    @Html.HiddenFor(x => x.acessoAdmin)
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Títulos Vencidos</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-8">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+
+                    <div class="col-md-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Intervalo de Data Real de Pagamento
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group" id="GrupoTipoProgramacao">
+                                    <div class="row">
+                                        @Html.EditBootstrapFor(model => model.dtInicio, tudoTamanho: 6, inputTamanho: 11)
+                                        @Html.EditBootstrapFor(model => model.dtFim, tudoTamanho: 6, inputTamanho: 11)
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8" id="FiltroEmpresa" style="display:none">
+                        @Html.DDLBootstrapFor(model => model.codEmpresa, Model.nmEmpresa, "/Generico/CadastrosDiversos/GetEmpresa/", 11)
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group col-md-2  pull-right">
+                        <label></label>
+                        <div class="input-group col-xs-12">
+                            <div class="btn btn-success" onclick="CarregaGridTitulosVencidos();">Atualizar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ListTitulosVencidos">
+        <div id="modal">
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="EditarTitulo" tabindex="-1" role="dialog" aria-labelledby="EditarTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalEditarTitulo">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@*<script src="~/js/Scripts/ContasPagar/ReagendarTitulo.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "ContasPagar" , classe = "ReagendarTitulo.js", sid = ViewBag.Sid })"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+@section Scripts
+    {
+    <script>
+        $("#dtInicio").change(function () {
+            var dtInicio = $("#dtInicio").val().split("/");
+            var dtFim = $("#dtFim").val().split("/");
+            var dataIni = new Date(`${dtInicio[2]},${dtInicio[1]},${dtInicio[0]}`);
+            var dataFim = new Date(`${dtFim[2]},${dtFim[1]},${dtFim[0]}`);
+
+            if (dataFim < dataIni) {
+                $("#dtFim").val($("#dtInicio").val())
+            }
+        });
+        $("#dtFim").change(function () {
+            var dtInicio = $("#dtInicio").val().split("/");
+            var dtFim = $("#dtFim").val().split("/");
+            var dataIni = new Date(`${dtInicio[2]},${dtInicio[1]},${dtInicio[0]}`);
+            var dataFim = new Date(`${dtFim[2]},${dtFim[1]},${dtFim[0]}`);
+
+
+            if (dataFim < dataIni) {
+                $("#dtInicio").val($("#dtFim").val());
+            }
+        });
+
+        //window.data = null;
+        //bindingData(".umadata");
+    </script>
+}
+

@@ -1,0 +1,182 @@
+﻿@model PagNet.Application.Models.DetalhamentoFaturaReembolsoVm
+@using PagNet.Interface.Helpers
+
+@{
+
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Rel.cshtml";
+}
+
+<div class="Borda" style="margin-top:2%;width:100%">
+    <div style="margin-top:2%;width:100%">
+        <div style="width:35%;float:left;text-align:center;margin-top: 5px;">
+            <b style="font-size:23px; color:#905b5b;">FATURA DE REEMBOLSO</b>
+            <br />
+            <b style="color:coral;font-size:20px">@Model.nroDocumento</b>
+        </div>
+        <div style="width:15%;float:left;text-align:center;margin-top: 5px;">
+            <b style="font-size:23px; color:#905b5b;">EMISSAO</b>
+            <br />
+            <b style="color:coral;font-size:20px">@Model.datEmissao</b>
+        </div>
+        <div style="width:25%;float:left;text-align:center;margin-top: 5px;">
+            <b style="font-size:23px; color:#905b5b;">VENCIMENTO</b>
+            <br />
+            <b style="color:coral;font-size:20px">@Model.datVencimento</b>
+        </div>
+        <div style="width:25%;float:left;text-align:center;margin-top: 5px;">
+            <b style="font-size:23px; color:#905b5b;">VALOR TOTAL</b>
+            <br />
+            <b style="color:coral;font-size:20px"> @Model.vlTotal</b>
+        </div>
+    </div>
+    <div style="margin-top:2%;width:100%">
+        <div style="margin-left:10%;width:43%;float:left;margin-top:4%">
+            <b>Credor</b><br />
+            <a>@Model.Credor</a><br />
+            <a>CPF/CNPJ: @Model.CNPJCredor</a><br />
+            <a>CEP: @Model.CEPCredor</a> <br />
+            <a>@Model.EnderecoCredor, Nº @Model.nroCredor - @Model.ComplementoCredor</a> <br />
+            <a>@Model.BairroCredor</a><br />
+            <a>@Model.CidadeCredor / @Model.EstadoCredor</a><br />
+            @*<a>Telefone: @Model.TelefoneCredor</a>*@
+        </div>
+        <div class="linha-vertical" style="width:43%;float:left;margin-top:4%">
+            <b>Devedor</b><br />
+            <a>@Model.Devedor</a><br />
+            <a>CPF/CNPJ: @Model.CNPJDevedor</a><br />
+            <a>CEP: @Model.CEPDevedor</a> <br />
+            <a>@Model.EnderecoDevedor, Nº @Model.nroDevedor - @Model.ComplementoDevedor</a><br />
+            <a>@Model.BairroDevedor</a><br />
+            <a>@Model.CidadeDevedor / @Model.EstadoDevedor</a><br />
+            @*<a>Telefone: @Model.TelefoneDevedor</a>*@
+        </div>
+
+    </div>
+    <div class="Texto1">
+        <b>DESCRITIVO DOS VALORES COBRADOS NA FATURA</b>
+    </div>
+
+    <div class="table-responsive" style="width:100%;margin-top:1%">
+        <table id="gridFaturamentoNaoLiquidados" class="table" cellspacing="0" width="100%" border="1" rules="none">
+            <thead>
+                <tr>
+                    <th width="40%" class="cabecalhoTable">Descrição</th>
+                    <th width="20%" class="cabecalhoTable">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model.Detalhamento != null)
+                {
+                    @for (int i = 0; i < Model.Detalhamento.Count; i++)
+                    {
+                        <tr>
+                            <td width="40%" style="text-align:left;font-size: 18px;border: none">
+                                @Html.DisplayFor(item => item.Detalhamento[i].Descricao)
+                            </td>
+                            <td width="20%" style="text-align:center;font-size: 18px;border: none">
+                                @Html.DisplayFor(item => item.Detalhamento[i].Valor)
+                            </td>
+                        </tr>
+                    }
+                    <tr>
+                        <td width="40%" style="text-align:left;font-size: 22px;">
+                            <b>@Html.Label("Total -------------------------")</b>
+                        </td>
+                        <td width="20%" style="text-align:center;font-size: 22px;">
+                            <b>@Html.DisplayFor(item => item.vlTotal)</b>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div style="width:100%;margin-top:3%">
+        <div class="table-responsive" style="width:100%;margin-top:1%">
+            <table id="gridFaturamentoNaoLiquidados" class="table" cellspacing="0" width="100%" border="1" rules="none">
+                @*<thead>
+                        <tr>
+                            <th width="50%">
+                                <b>Credor</b><br />
+                                <a>@Model.Credor</a><br />
+                            </th>
+                            <th width="50%">
+                                <b>Data de Emissão</b><br />
+                                                      <a>@Model.datEmissao</a><br />
+                            </th>
+                        </tr>
+                    </thead>*@
+                <tbody>
+                    <tr style="border:none">
+                        <td width="80%" style="text-align:left;font-size: 18px;">
+                            <b>Credor</b><br />
+                            <a>@Model.Credor</a><br />
+                        </td>
+                        <td width="20%" style="text-align:center;font-size: 18px;">
+                            <b>Data de Emissão</b><br />
+                            <a>@Model.datEmissao</a><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80%" style="text-align:left;font-size: 18px;">
+                            <b>Devedor</b><br />
+                            <a>@Model.Devedor</a><br />
+                        </td>
+                        <td width="20%" style="text-align:center;font-size: 18px;">
+                            <b>Data de Vencimento</b><br />
+                            <a>@Model.datVencimento</a><br />
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<style>
+    body {
+        font-family: "Calibri";
+        font-size: 17px;
+    }
+
+    .linha-vertical {
+        height: 170px; /*Altura da linha*/
+        border-left: 2px solid; /* Adiciona borda esquerda na div como ser fosse uma linha.*/
+        padding-left: 15px;
+    }
+
+    .Borda {
+        padding: 3px;
+        border: 2px solid gray;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0px;
+    }
+
+    table, th, td {
+        padding: 2px;
+        border: 1px solid gray;
+    }
+
+    .cabecalhoTable {
+        text-align: center;
+        background-color: #d0cac8;
+        font-size: 20px;
+    }
+
+    .Texto1 {
+        width: 100%;
+        float: left;
+        margin-top: 4%;
+        text-align: center;
+        color: #888888;
+        font-size: 25px;
+    }
+</style>
+

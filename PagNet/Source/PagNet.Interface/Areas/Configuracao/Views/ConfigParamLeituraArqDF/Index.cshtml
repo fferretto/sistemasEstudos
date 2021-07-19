@@ -1,0 +1,129 @@
+﻿@model PagNet.Interface.Areas.Configuracao.Models.ConfigParamLeituraArquivoVM
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Desconto em Folha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.codigoCliente)
+    @Html.HiddenFor(x => x.IsCPF)
+    @Html.HiddenFor(x => x.codigoArquivoDescontoFolha)
+    @Html.HiddenFor(x => x.codigoFormaVerificacao)
+    @Html.HiddenFor(x => x.codigoParamUsuario)
+    @Html.HiddenFor(x => x.codigoParamValor)
+    @Html.HiddenFor(x => x.extensaoArquivoRET)
+                    
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div style="font-weight: bold;font-size:15px;">
+            <b>Configuração da Leitura de Arquivos de Desconto em Folha</b>
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-11">
+                @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+
+                <div class="col-md-8" id="FiltroEmpresa" style="display:none">
+                    @Html.DDLBootstrapFor(model => model.codigoEmpresa, Model.nmEmpresa, "/Generico/CadastrosDiversos/GetEmpresa/", 0)
+                </div>
+                <div class="col-md-12">
+                    @Html.EditBootstrapFor(model => model.filtroCliente, tudoTamanho: 3, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.nomeCliente, tudoTamanho: 7, inputTamanho: 12)
+                    <div class="form-group col-md-2" id="btnLocalizarCliente">
+                        <label></label>
+                        <div class="input-group col-xs-12">
+                            <div class="btn btn-success" onclick="LocalizaCliente();">Localizar</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    @Html.DDLBootstrapFor(model => model.codigoFormaVerificacaoArq, Model.nmFormaVerificacaoArq, "/Configuracao/ConfigParamLeituraArqDF/CarregaFormaLerArquivo/", 11)
+                </div>
+                <div class="col-md-12">
+                    @Html.DDLBootstrapFor(model => model.extensaoArquivo, Model.NomeextensaoArquivo, "/Configuracao/ConfigParamLeituraArqDF/CarregaTipoExtensao/", 5)
+                </div>
+                <div class="col-md-12">
+                    @Html.EditBootstrapFor(model => model.linhaInicial, tudoTamanho: 12, inputTamanho: 3)
+                </div>
+                <div class="panel panel-default col-md-11" style="margin-left:1%" id="FormaCobrancaAntecipa">
+                    <div class="panel-heading-decision">
+                        Forma de Identificar o Usuário
+                    </div>
+                    <div class="panel-body">
+                        <ul class="nav nav-pills">
+                            <li class="" id="liCPF">
+                                <a href="#CPF" data-toggle="tab" id="btnCPF">
+                                    CPF
+                                </a>
+                            </li>
+                            <li class="" id="liMatricula">
+                                <a href="#Matricula" data-toggle="tab" id="btnMatricula">
+                                    Matrícula
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" style="margin-top:2%;">
+                            <div class="tab-pane fade" id="CPF">
+                                <div class="row">
+                                    @Html.EditBootstrapFor(model => model.posicaoInicialCPF, tudoTamanho: 4, inputTamanho: 10)
+                                    @Html.EditBootstrapFor(model => model.posicaoFinalCPF, tudoTamanho: 4, inputTamanho: 10)
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Matricula">
+                                <div class="row">
+                                    @Html.EditBootstrapFor(model => model.posicaoInicialMatricula, tudoTamanho: 4, inputTamanho: 10)
+                                    @Html.EditBootstrapFor(model => model.posicaoFinalMatricula, tudoTamanho: 4, inputTamanho: 10)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    @Html.EditBootstrapFor(model => model.posicaoInicialValor, tudoTamanho: 12, inputTamanho: 3)
+                    @Html.EditBootstrapFor(model => model.posicaoFinalValor, tudoTamanho: 12, inputTamanho: 3)
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <div class="form-group col-md-3  pull-right">
+                    <label></label>
+                    <div class="input-group col-xs-12">
+                        <div id="Salvar" class="btn btn-success" data-confirm="Confirma a gravação desta configuração?" onclick="SalvarConfiguracao();">Salvar</div>
+                        @*<div id="Desativar" style="margin-left:1%" class="btn btn-danger" onclick="Desativar();">Desativar</div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="LocalizaCliente" tabindex="-1" role="dialog" aria-labelledby="LocalizaCliente" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalCliente">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+}
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Configuracao" , classe = "ConfigParamLeituraArqDF.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+

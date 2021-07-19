@@ -1,0 +1,11 @@
+<%@ Register TagPrefix="dxsm" Namespace="DevExpress.Web.ASPxSiteMapControl" Assembly="DevExpress.Web.v8.3" %>
+<dxsm:ASPxSiteMapControl runat="server" CssFilePath="~/App_Themes/Glass/{0}/styles.css" CssPostfix="Glass"><LevelProperties>
+<dxsm:LevelProperties BulletStyle="None">
+<ChildNodesPaddings PaddingTop="7px" PaddingBottom="5px" PaddingLeft="22px"></ChildNodesPaddings>
+</dxsm:LevelProperties>
+<dxsm:LevelProperties BulletStyle="None" NodeSpacing="7px">
+<ChildNodesPaddings PaddingLeft="19px"></ChildNodesPaddings>
+</dxsm:LevelProperties>
+<dxsm:LevelProperties NodeSpacing="4px"></dxsm:LevelProperties>
+</LevelProperties>
+</dxsm:ASPxSiteMapControl>

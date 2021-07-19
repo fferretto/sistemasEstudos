@@ -1,0 +1,84 @@
+﻿@model IList<PagNet.Interface.Areas.Cadastros.Models.APIFavorecidoVM>
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="ListaFavorecido" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().nomeFavorecido)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().CPFCNPJ)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Banco)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Agencia)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().DvAgencia)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().contaCorrente)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().DvContaCorrente)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(item => item[i].nomeFavorecido)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].CPFCNPJ)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].Banco)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].Agencia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].DvAgencia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].contaCorrente)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].DvContaCorrente)
+                            </td>
+                            <td align='center'>
+                                <a href="@Url.Action("Index", "Centralizadora", new { area = "Cadastros", id = Model[i].codigoFavorecido, sid = ViewBag.Sid, codigoEmpresa = Model[i].codigoEmpresa })">
+                                    <div class="btn btn-primary btn-xs">
+                                        <i class="fa fa-edit "></i>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    function carregaPagina() {
+    }
+    $(window).load(carregaPagina());
+
+    $(document).ready(function () {
+
+        $('#ListaFavorecido').dataTable({
+            dom: 'frtip',
+            //buttons: [
+            //    'excel'
+            //],
+        });
+
+    });
+
+</script>

@@ -1,0 +1,214 @@
+﻿@model PagNet.Application.Models.PlanoContasVm
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <div class="panel panel-default">
+
+            @Html.HiddenFor(x => x.codigoEmpresaPlanoContas)
+            @Html.HiddenFor(x => x.TipoDespesa)
+            @Html.HiddenFor(x => x.PagamentoCentralizadora)
+            @Html.HiddenFor(x => x.RecebimentoClienteNetCard)
+
+            <div class="panel-heading">
+                Inclusão de um novo Plano de Contas
+            </div>
+            <div class="panel-body">
+                <div class="form-group" id="GrupoTipoProgramacao">
+                    <div class="row">
+                        @Html.DDLBootstrapFor(model => model.codigoRaiz, Model.nomeRaiz, "/Generico/ConsultasGenericas/CarregaListaRaizPlanoContas/", "codigoEmpresaPlanoContas", null, 5)
+                        @Html.EditBootstrapFor(model => model.Classificacao, tudoTamanho: 5, inputTamanho: 12)
+                        @Html.EditBootstrapFor(model => model.Descricao, tudoTamanho: 8, inputTamanho: 12)
+                    </div>
+                    <div class="row">
+                        @Html.DDLBootstrapFor(model => model.CodigoTipoConta, Model.TipoConta, "/Configuracao/PlanoContas/CarregaListaTipoConta/", 5)
+                        @Html.DDLBootstrapFor(model => model.CodigoNatureza, Model.Natureza, "/Configuracao/PlanoContas/CarregaListaNatureza/", 5)
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-default col-md-5" style="margin-left:1%">
+                            <div class="panel-heading-decision">
+                                É Despesa?
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills">
+                                    <li class="" id="liDespesaSim">
+                                        <a href="#DespesaSim" data-toggle="tab" id="btnDespesaSim">Sim</a>
+                                    </li>
+                                    <li class="active" id="liDespesaNao">
+                                        <a href="#DespesaNao" data-toggle="tab" id="btnDespesaNao">Não</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" style="margin-top:2%;">
+                                    <div class="tab-pane fade" id="DespesaSim">
+                                        <div class="row">
+                                            <div class="row">
+                                                <div class="panel panel-default col-md-11" style="margin-left:2%">
+                                                    <div class="panel-heading-decision">
+                                                        Utilizado para Pagamentos a Centralizadoras?
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <ul class="nav nav-pills">
+                                                            <li class="" id="liPagCenSim">
+                                                                <a href="#PagCenSim" data-toggle="tab" id="btnPagCenSim">Sim</a>
+                                                            </li>
+                                                            <li class="active" id="liPagCenNao">
+                                                                <a href="#PagCenNao" data-toggle="tab" id="btnPagCenNao">Não</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="tab-content" style="margin-top:2%;">
+                                                            <div class="tab-pane fade" id="PagCenSim">
+                                                            </div>
+                                                            <div class="tab-pane fade" id="PagCenNao">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="DespesaNao">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default col-md-5" style="margin-left:1%">
+                            <div class="panel-heading-decision">
+                                Utilizado para Solicitação de Faturamento vindas do NetCard?
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills">
+                                    <li class="" id="liReceitaSim">
+                                        <a href="#ReceitaSim" data-toggle="tab" id="btnReceitaSim">Sim</a>
+                                    </li>
+                                    <li class="active" id="liReceitaNao">
+                                        <a href="#ReceitaNao" data-toggle="tab" id="btnReceitaNao">Não</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" style="margin-top:2%;">
+                                    <div class="tab-pane fade" id="ReceitaSim">
+                                    </div>
+                                    <div class="tab-pane fade" id="ReceitaNao">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" id="btnGeraArquivo" class="btn btn-success" onclick="SalvarNovoPlanoContas();">Salvar</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script>    
+    $("#Classificacao").prop("disabled", "disabled");
+
+    $(".CodigoTipoConta").change(function () {
+        $("#CodigoTipoConta").val($('.CodigoTipoConta option:selected').val());
+    });
+    $(".CodigoNatureza").change(function () {
+        $("#CodigoNatureza").val($('.CodigoNatureza option:selected').val());
+    });
+    $(".codigoRaiz").change(function () {
+        $("#codigoRaiz").val($('.codigoRaiz option:selected').val());
+
+        var url = montaUrl('/Configuracao/PlanoContas/BuscaNovaClassificacao/');
+        url += '&codigoRaiz=' + $("#codigoRaiz").val();
+        url += '&codigoEmpresa=' + $("#codigoEmpresaPlanoContas").val();
+
+        $.ajax({
+            type: 'get',
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+                if (data.success) {
+                    $('#Classificacao').val(data.responseText);
+                } else {
+                    msgErro(data.responseText);
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                msgErro("Erro interno. Tente novamente mais tarde.");
+            }
+        });
+    });
+
+    $("#btnDespesaSim").click(function () {
+        $("#TipoDespesa").val('True');
+    })
+    $("#btnPagNao").click(function () {
+        $("#TipoDespesa").val('False');
+        $("#liPagCenSim").removeClass('active');
+        $("#liPagCenNao").addClass('active');
+        $("#PagamentoCentralizadora").val('False');
+    })
+    $("#btnPagCenSim").click(function () {
+        $.confirm({
+            title: 'Atenção!',
+            icon: "glyphicon glyphicon-alert",
+            content: 'Ao selecionar esta opção, todos os títulos que forem criados a partir de integração com outros sistemas utilizarão este plano de contas. Confirma esta alteração?',
+            type: 'blue',
+            buttons: {
+                confirm: {
+                    text: 'Sim',
+                    btnClass: 'btn-green',
+                    keys: ['enter'],
+                    action: function () {
+                        $("#PagamentoCentralizadora").val('True');
+                    }
+                },
+                cancel: {
+                    text: 'Não',
+                    action: function () {
+                        $("#btnPagCenNao").click();
+                        $("#liPagCenSim").removeClass('active');
+                        $("#liPagCenNao").addClass('active');
+                        $("#PagamentoCentralizadora").val('False');
+                    }
+                }
+            }
+        });
+    })
+    $("#btnPagCenNao").click(function () {
+        $("#PagamentoCentralizadora").val('False');
+    })
+
+    $("#btnReceitaSim").click(function () {
+        $.confirm({
+            title: 'Atenção!',
+            icon: "glyphicon glyphicon-alert",
+            content: 'Ao selecionar esta opção, todos os pedidos de faturamentos que forem criados a partir de integração com outros sistemas passarão a utilizar este plano de contas. Confirma esta alteração?',
+            type: 'blue',
+            buttons: {
+                confirm: {
+                    text: 'Sim',
+                    btnClass: 'btn-green',
+                    keys: ['enter'],
+                    action: function () {
+                        $("#RecebimentoClienteNetCard").val('True');
+                    }
+                },
+                cancel: {
+                    text: 'Não',
+                    action: function () {
+                        $("#btnPagCenNao").click();
+                        $("#liReceitaSim").removeClass('active');
+                        $("#liReceitaNao").addClass('active');
+                        $("#RecebimentoClienteNetCard").val('False');
+                    }
+                }
+            }
+        });
+    })
+    $("#btnReceitaNao").click(function () {
+        $("#RecebimentoClienteNetCard").val('False');
+    })
+</script>

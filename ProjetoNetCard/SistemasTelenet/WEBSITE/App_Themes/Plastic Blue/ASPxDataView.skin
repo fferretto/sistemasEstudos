@@ -1,0 +1,29 @@
+<%@ Register TagPrefix="dxdv" Namespace="DevExpress.Web.ASPxDataView" Assembly="DevExpress.Web.v8.3" %>
+<dxdv:ASPxDataView runat="server" ItemSpacing="3px" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" PagerAlign="Justify" PagerPanelSpacing="3px" CssPostfix="PlasticBlue" ImageFolder="~/App_Themes/Plastic Blue/{0}/">
+            <PagerSettings>
+                <AllButton>
+                    <Image Height="15px" Width="15px" Url="~/App_Themes/Plastic Blue/Web/dvAll.png" UrlDisabled="~/App_Themes/Plastic Blue/Web/dvAllDis.png">
+                    </Image>
+                </AllButton>
+                <FirstPageButton>
+                    <Image Height="15px" Width="15px" Url="~/App_Themes/Plastic Blue/Web/dvFirst.png" UrlDisabled="~/App_Themes/Plastic Blue/Web/dvFirstDis.png">
+                    </Image>
+                </FirstPageButton>
+                <LastPageButton>
+                    <Image Height="15px" Width="15px" Url="~/App_Themes/Plastic Blue/Web/dvLast.png" UrlDisabled="~/App_Themes/Plastic Blue/Web/dvLastDis.png">
+                    </Image>
+                </LastPageButton>
+                <NextPageButton>
+                    <Image Height="15px" Width="15px" Url="~/App_Themes/Plastic Blue/Web/dvNext.png" UrlDisabled="~/App_Themes/Plastic Blue/Web/dvNextDis.png">
+                    </Image>
+                </NextPageButton>
+                <PrevPageButton>
+                    <Image Height="15px" Width="15px" Url="~/App_Themes/Plastic Blue/Web/dvPrev.png" UrlDisabled="~/App_Themes/Plastic Blue/Web/dvPrevDis.png">
+                    </Image>
+                </PrevPageButton>
+            </PagerSettings>
+<LoadingPanelImage Url="~/App_Themes/Plastic Blue/Web/dvLoading.gif"></LoadingPanelImage>
+<LoadingPanelStyle ImageSpacing="6px"></LoadingPanelStyle>
+<PagerStyle ForeColor="White"></PagerStyle>
+<DisabledStyle ForeColor="#B8B8B8"></DisabledStyle>
+</dxdv:ASPxDataView>

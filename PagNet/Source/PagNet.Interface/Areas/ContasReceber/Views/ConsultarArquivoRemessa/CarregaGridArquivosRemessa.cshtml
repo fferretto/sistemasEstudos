@@ -1,0 +1,119 @@
+﻿@model IList<PagNet.Application.Models.ConsultaArquivosRemessaVM>
+@using PagNet.Interface.Helpers
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Lista de Arquivos de Remessa para Download</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div class="col-md-12">
+
+                </div>
+                <div class="table-responsive">
+                    <table id="example" class="table" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="5%" style="text-align:center;"></th>
+                                <th width="15%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().dtArquivo)</th>
+                                <th width="15%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().qtRegistros)</th>
+                                <th width="13%" style="text-align:right;">@Html.DisplayNameFor(model => model.FirstOrDefault().vlTotal)</th>
+                                <th width="30%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().Status)</th>
+                                <th width="5%"></th>
+                                <th width="5%"></th>
+                                <th width="0%" style="display:none;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                <tr>
+                                    <td width="5%" align='center'>
+                                        <div class="btn btn-success" onclick="VisualizarBoletos(@Model[i].CodArquivo);" style="font-size:11px">
+                                            <i class="fa fa-search "></i>
+                                        </div>
+                                    </td>
+                                    <td width="15%" style="text-align:center;">
+                                        @Html.DisplayFor(item => item[i].dtArquivo)
+                                    </td>
+                                    <td width="15%" style="text-align:center;">
+                                        @Html.DisplayFor(item => item[i].qtRegistros)
+                                    </td>
+                                    <td width="13%" style="text-align:right;">
+                                        @Html.DisplayFor(item => item[i].vlTotal)
+                                    </td>
+                                    <td width="30%" style="text-align:center;">
+                                        @Html.DisplayFor(item => item[i].Status)
+                                    </td>
+                                    <td width="5%" align='center'>
+
+                                        <a href="@Url.Action("DownloadArquivoRemessa", "ConsultarArquivoRemessa", new { area = "ContasReceber", id = Model[i].nmArquivo, codempresa = Model[i].codigoEmpresaArquivo, sid = ViewBag.Sid })" class="btnDownload">
+                                            <div class="btn btn-success">
+                                                <i class="fa fa-download"></i>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td width="5%" align='center'>
+                                        @if (Model[i].Status == "PENDENTE REGISTRO")
+                                        {
+                                            <a onclick="CancelaArquivoRemessa(@Model[i].CodArquivo)" data-confirm="Confirma o cancelamento do arquivo?">
+                                                <div class="btn btn-danger">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                                </div>
+                                            </a>
+                                        }
+                                    </td>
+                                    <td class="codArquivo" width="0%" style="display:none;">
+                                        <input class="" type="hidden" name="@Model[i].CodArquivo" value="@Model[i].CodArquivo" />
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="VisualizarTransacoes" tabindex="-1" role="dialog" aria-labelledby="Localizar" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalTransacoes">
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+    $(document).ready(function () {
+
+        $.unblockUI();
+
+        $('#example').dataTable({
+            order: [0, 'asc'],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [4, 5]
+                }
+            ]
+
+        });
+    });
+
+
+</script>

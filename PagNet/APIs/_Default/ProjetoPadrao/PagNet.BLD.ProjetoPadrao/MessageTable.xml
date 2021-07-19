@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<telenet>
+  <services.domains>
+    <domain name="AntecipacaoPGTO">
+      <messages>
+        <add key="1" text="PagNet Antecipação de Pagamento" />
+
+        <add key="1000" text="Identificador de sistema inválido." />
+        <add key="1001" text="Código do título não informado" />
+        <add key="1002" text="Nova data para pagamento não informada" />
+        <add key="1003" text="Nova data para pagamento menor que a data atual" />
+        <add key="1004" text="Nova data para pagamento superior a data real de pagamento" />
+        <add key="1005" text="Código da Empresa não Informado" />
+        <add key="1006" text="Código do Favorecido não informado" />
+      </messages>
+    </domain>
+  </services.domains>
+</telenet>
+

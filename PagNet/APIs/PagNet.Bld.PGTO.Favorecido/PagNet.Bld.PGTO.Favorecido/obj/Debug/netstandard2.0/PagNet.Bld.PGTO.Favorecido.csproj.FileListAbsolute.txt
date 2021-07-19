@@ -1,0 +1,12 @@
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.csproj.CopyComplete
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.Favorecido.pdb

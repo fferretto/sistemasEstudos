@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SIL</name>
+    </assembly>
+    <members>
+        <member name="T:SIL.AuditingService">
+            <summary>
+            Serviço de log de erros.
+            </summary>
+        </member>
+        <member name="M:SIL.DAL.daCargaNovo.ExecuteSqlQuery(System.Boolean)">
+            <summary>
+            Executa a query passada retornando um datatable
+            </summary>
+            <param name="bancoAutorizador"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SIL.DAL.daCriptografia.Criptografar(System.String)">
+            <summary>
+            Criptografa usando a função FUNCTIONCRIP do banco de dados.
+            </summary>
+            <param name="paramTextoACriptografar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SIL.DAL.daSolicitaCarga.VerificaCargaArquivoLayout7(System.Collections.Generic.List{System.String},TELENET.SIL.PO.LOG@)">
+            <summary>
+            Verifica se os cartões podem ser inseridos. Retorna true para sim e false para não.
+            </summary>
+            <param name="linhas"></param>
+            <param name="log"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SIL.DbConnectionExtensions">
+            <summary>
+            Summary description for DbConnectionExtensions
+            </summary>
+        </member>
+        <member name="M:TELENET.SIL.DA.daCredenciadoVANovo.BuscaParamFechCred4dPos">
+            
+        </member>
+        <member name="M:TELENET.SIL.DA.daCredenciadoVA.BuscaParamFechCred4d">
+            
+        </member>
+        <member name="T:Sil.Criptografia.CryptProvider">
+            <summary>
+            Enumerator com os tipos de classes para criptografia.
+            </summary>
+        </member>
+        <member name="F:Sil.Criptografia.CryptProvider.Rijndael">
+            <summary>
+            Representa a classe base para implementações criptografia dos algoritmos simétricos Rijndael.
+            </summary>
+        </member>
+        <member name="F:Sil.Criptografia.CryptProvider.RC2">
+            <summary>
+            Representa a classe base para implementações do algoritmo RC2.
+            </summary>
+        </member>
+        <member name="F:Sil.Criptografia.CryptProvider.DES">
+            <summary>
+            Representa a classe base para criptografia de dados padrões (DES - Data Encryption Standard).
+            </summary>
+        </member>
+        <member name="F:Sil.Criptografia.CryptProvider.TripleDES">
+            <summary>
+            Representa a classe base (TripleDES - Triple Data Encryption Standard).
+            </summary>
+        </member>
+        <member name="M:Sil.Criptografia.Criptografia.SetIV">
+            <summary>
+            Inicialização do vetor do algoritmo simétrico
+            </summary>
+        </member>
+        <member name="P:Sil.Criptografia.Criptografia.Key">
+            <summary>
+            Chave secreta para o algoritmo simétrico de criptografia.
+            </summary>
+        </member>
+        <member name="M:Sil.Criptografia.Criptografia.#ctor">
+            <summary>
+            Contrutor padrão da classe, é setado um tipo de criptografia padrão (Rijndael).
+            </summary>
+        </member>
+        <member name="M:Sil.Criptografia.Criptografia.#ctor(Sil.Criptografia.CryptProvider)">
+            <summary>
+            Construtor com o tipo de criptografia a ser usada Você pode escolher o tipo pelo Enum chamado CryptProvider.
+            </summary>
+            <param name="cryptProvider">Tipo de criptografia.</param>
+        </member>
+        <member name="M:Sil.Criptografia.Criptografia.GetKey">
+            <summary>
+            Gera a chave de criptografia válida dentro do array.
+            </summary>
+            <returns>Chave com array de bytes.</returns>
+        </member>
+        <member name="M:Sil.Criptografia.Criptografia.Encrypt(System.String)">
+            <summary>
+            Encripta o dado solicitado.
+            </summary>
+            <param name="texto">Texto a ser criptografado.</param>
+            <returns>Texto criptografado.</returns>
+        </member>
+        <member name="M:Sil.Criptografia.Criptografia.Decrypt(System.String)">
+            <summary>
+            Desencripta o dado solicitado.
+            </summary>
+            <param name="textoCriptografado">Texto a ser descriptografado.</param>
+            <returns>Texto descriptografado.</returns>
+        </member>
+    </members>
+</doc>

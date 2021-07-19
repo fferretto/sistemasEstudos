@@ -1,0 +1,52 @@
+﻿@model PagNet.Application.Models.TreinamentoVm
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Treinamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.NomedoVideo)
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold; font-size: 15px;">
+                <b>Treinamentos do sistema pagnet</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12" style="text-align:center">
+                        <b style="font-size: 30px;">@Model.Titulo</b>
+                    </div>
+                    <div class="col-md-12" style="text-align:center">
+                        <b style="font-size: 17px;color: #cd4445;">@Model.TextoCabecalho</b>
+                    </div>
+                    <div class="col-md-12">
+                        <div>
+                            <video class="videoTreinamento" controls  width="640" height="292" poster="~/images/Tela Inicial.png">
+                                <source id="ogg" src="@Url.Action("RetornaVideoTreinamento", "Treinamento", new { area = "Ajuda", sid = ViewBag.Sid, nomeVideo = Model.NomedoVideo, extensao = "ogv"})" type='video/ogg; codecs="theora, vorbis"' />
+                                <source id="webm" src="@Url.Action("RetornaVideoTreinamento", "Treinamento", new { area = "Ajuda", sid = ViewBag.Sid, nomeVideo = Model.NomedoVideo, extensao = "webm"})" type='video/webm'>
+                                <source id="mp4" src="@Url.Action("RetornaVideoTreinamento", "Treinamento", new { area = "Ajuda", sid = ViewBag.Sid, nomeVideo = Model.NomedoVideo, extensao = "mp4"})" type='video/mp4'>
+                                <p>Se você não estiver conseguindo visualizar o vídeo, provavelmente o seu browser não possui os codecs necessários.</p>
+                            </video>
+                        </div>
+                        <div class="col-md-2 form-group" style="top: 50%;left: 45%; margin-right: -50%;">
+                            <a id="btnNovo" class="btn btn-success" href="@Url.Action("Index", "Treinamento", new { area = "Ajuda", sid = ViewBag.Sid })">
+                                Voltar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+

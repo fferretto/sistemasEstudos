@@ -1,0 +1,138 @@
+﻿@model IList<PagNet.Application.Models.ListaBoletosVM>
+@using PagNet.Interface.Helpers
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Lista de Boletos Registrados</b>
+            </div>
+        </div>
+        <div class="panel-body">
+
+            <div class="col-md-12">
+                <div>
+                    <div id="btnGeraArquivo" class="btn btn-success" onclick="EnviarEmailEmMassa();">Enviar Email em Massa</div>
+                </div>
+                <div class="col-md-12" style="margin-top: 14px">
+                </div>
+                <div class="table-responsive">
+                    <table id="gridBoletosGerados" class="table" width="110%">
+                        <thead>
+                            <tr>
+                                <th width="5%" style="text-align:center;" class="CheckBox-Grid"><input name="select_all" id="select_all" checked="checked" type="checkbox"></th>
+                                <th width="5%" style="text-align:center;"></th>
+                                <th width="5%" style="text-align:center;"></th>
+                                <th width="9%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().BoletoEnviado)</th>
+                                <th width="30%">@Html.DisplayNameFor(model => model.FirstOrDefault().Cliente)</th>
+                                <th width="10%" style="text-align:right;">@Html.DisplayNameFor(model => model.FirstOrDefault().Valor)</th>
+                                <th width="10%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().dtVencimento)</th>
+                                <th width="26%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().EmailCliente)</th>
+                                <th width="0%" style="display:none;"></th>
+                                <th width="0%" style="display:none;"></th>
+                                <th width="0%" style="display:none;"></th>
+                                <th width="0%" style="display:none;"></th>
+                                <th width="0%" style="display:none;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                <tr style="font-size:11px">
+                                    <td class="CheckBox-Grid" width="5%" align="center">
+                                        <input class="inpchkFechCredPai" type="checkbox" name="@String.Format("{0}[{1}].chkBoleto", "ListaBoletos", i)" checked="@Model[i].chkBoleto" />
+                                    </td>
+                                    <td width="5%" align='center'>
+                                        <a href="@Url.Action("DownloadBoleto", "EmitirBoletosGerados", new { area = "ContasReceber", id = Model[i].nomeBoleto, codigo = Model[i].codEmissaoBoleto, codigoempresa = Model[i].codigoEmpresaBoleto, sid = ViewBag.Sid })" class="btnDownload">
+                                            <div class="btn btn-success">
+                                                <i class="fa fa-download"></i>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td width="5%" align='center'>
+                                        <a onclick="EnviarEmail(@Model[i].codEmissaoBoleto)">
+                                            <div class="btn btn-danger">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td width="9%" style="text-align:center;" title="@Model[i].BoletoEnviado">
+                                        @Html.DisplayFor(item => item[i].BoletoEnviado)
+                                    </td>
+                                    <td width="30%">
+                                        @Html.DisplayFor(item => item[i].Cliente)
+                                    </td>
+                                    <td class="Valor" width="10%" style="text-align:right;">
+                                        <input class="" type="hidden" name="@Model[i].Valor" value="@Model[i].Valor" />
+                                        @Html.DisplayFor(item => item[i].Valor)
+                                    </td>
+                                    <td width="10%" style="text-align:center;">
+                                        @Html.DisplayFor(item => item[i].dtVencimento)
+                                    </td>
+                                    <td width="26%" title="@Model[i].EmailCliente">
+                                        @Html.DisplayFor(item => item[i].EmailCliente)
+                                    </td>
+                                    <td class="codEmissaoBoleto" width="0%" style="display:none;">
+                                        <input class="" type="hidden" name="@Model[i].codEmissaoBoleto" value="@Model[i].codEmissaoBoleto" />
+                                    </td>
+                                    <td class="Cliente" width="0%" style="display:none;">
+                                        <input class="" type="hidden" name="@Model[i].Cliente" value="@Model[i].Cliente" />
+                                    </td>
+                                    <td class="CNPJ" width="0%" style="display:none;">
+                                        <input class="" type="hidden" name="@Model[i].CNPJ" value="@Model[i].CNPJ" />
+                                    </td>
+                                    <td class="EmailCliente" width="0%" style="display:none;">
+                                        <input class="" type="hidden" name="@Model[i].EmailCliente" value="@Model[i].EmailCliente" />
+                                    </td>
+                                    <td class="Status" width="0%" style="display:none;">
+                                        <input class="" type="hidden" name="@Model[i].Status" value="@Model[i].Status" />
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="LogProcessoEnvioEmail" tabindex="-1" role="dialog" aria-labelledby="Localizar" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalLogProcessoEnvioEmail">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+
+    $(document).ready(function () {
+        $.unblockUI();
+        var table = $('#gridBoletosGerados').DataTable({
+            scrollX: true,
+            order: [4, 'asc']
+        });
+
+
+        $("#select_all").click(function () {
+            $('input', table.cells().nodes()).prop('checked', this.checked);
+        });
+
+    });
+
+</script>

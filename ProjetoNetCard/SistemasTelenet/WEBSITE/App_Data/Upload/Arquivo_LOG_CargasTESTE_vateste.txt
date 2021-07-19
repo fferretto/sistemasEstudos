@@ -1,0 +1,6 @@
+---------------------------  ARQUIVO DE LOG - DATA:26/01/2016  --------------------------
+
+ O arquivo foi processado e apresentou os seguintes resultados:
+
+ Carga gerada com sucesso - A carga para o cliente 1205 foi gerada com sucesso                                                                      
+ OK - PROCESSO INICIADO COM SUCESSO. VERIFIQUE O STATUS DO PROCESSO NA LISTAGEM DE CARGAS. LOG DISPONIVEL PARA CONFIRMACAO. PARA ATUALIZAR O STATUS DO PROCESSO, CLIQUE NO BOTAO ATUALIZAR TELA

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Telenet.Bld.ControleAcesso.Web.Setup" Version="1.0.5" />
+    <PackageReference Include="Telenet.BusinessLogicModel" Version="1.0.0" />
+    <PackageReference Include="Telenet.Data.SqlClient" Version="1.0.2" />
+    <PackageReference Include="Telenet.Extensions.Data" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetCard.Bld.Relatorio.Abstraction\NetCard.Bld.Relatorio.Abstraction.csproj" />
+  </ItemGroup>
+
+</Project>

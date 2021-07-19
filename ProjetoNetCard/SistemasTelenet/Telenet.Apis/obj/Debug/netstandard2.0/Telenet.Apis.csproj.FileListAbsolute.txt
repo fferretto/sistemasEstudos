@@ -1,0 +1,9 @@
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Apis\bin\Debug\netstandard2.0\Telenet.Apis.deps.json
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Apis\bin\Debug\netstandard2.0\Telenet.Apis.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Apis\obj\Debug\netstandard2.0\Telenet.Apis.csprojAssemblyReference.cache
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Apis\obj\Debug\netstandard2.0\Telenet.Apis.csproj.CoreCompileInputs.cache
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Apis\obj\Debug\netstandard2.0\Telenet.Apis.AssemblyInfoInputs.cache
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Apis\obj\Debug\netstandard2.0\Telenet.Apis.AssemblyInfo.cs
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Apis\bin\Debug\netstandard2.0\Telenet.Apis.pdb
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Apis\obj\Debug\netstandard2.0\Telenet.Apis.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Apis\obj\Debug\netstandard2.0\Telenet.Apis.pdb

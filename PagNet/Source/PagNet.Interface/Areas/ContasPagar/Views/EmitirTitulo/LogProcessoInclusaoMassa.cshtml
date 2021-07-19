@@ -1,0 +1,79 @@
+﻿@model IList<PagNet.Application.Models.ListaTitulosInclusaoMassa>
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="gridDadosUsuarioNC" class="table" width="100%">
+            <thead>
+                <tr>
+                    <th width="25%">Usuários</th>
+                    <th width="10%" style="text-align:center;">CPF</th>
+                    <th width="10%" style="text-align:center;">Data Pagamento</th>
+                    <th width="8%" style="text-align:right;">Valor</th>
+                    <th width="12%" style="text-align:center;">Status</th>
+                    <th width="35%">Resultado</th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <th class="inpNomeUsuarioNC" width="25%">
+                                @Html.DisplayFor(item => item[i].NomeUsuarioNC)
+                            </th>
+                            <td class="inpCPFUsuarioNC" width="10%" style="text-align:center;">
+                                @Html.DisplayFor(item => item[i].CPFUsuarioNC)
+                            </td>
+                            <td class="inpDataPGTO" width="10%" style="text-align:center;">
+                                @Html.DisplayFor(item => item[i].DataPGTO)
+                            </td>
+                            <td class="inpvlLiquido" width="8%" style="text-align:right;">
+                                @Html.DisplayFor(item => item[i].vlLiquido)
+                            </td>
+                            <td class="inpStatusProcessamento" width="12%" style="text-align:center;">
+                                @Html.DisplayFor(item => item[i].StatusProcessamento)
+                            </td>
+                            <td class="inpLogProcessamento" width="35%">
+                                @Html.DisplayFor(item => item[i].LogProcessamento)
+                            </td>
+                            <td class="codFavorecidoNC" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("[{0}].codFavorecidoNC", i)" value="@Model[i].codFavorecidoNC" />
+                            </td>
+                            <td class="DataPGTO" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("[{0}].DataPGTO", i)" value="@Model[i].DataPGTO" />
+                            </td>
+                            <td class="vlLiquido" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("[{0}].vlLiquido", i)" value="@Model[i].vlLiquido" />
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" id="btnGerarTituloEmMassa" class="btn btn-success" onclick="GerarTituloEmMassa();">Incluir Titulos</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@Html.ShowError()
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#gridDadosUsuarioNC').dataTable({
+            dom: 'frtip'
+        });
+
+
+    });
+
+
+</script>

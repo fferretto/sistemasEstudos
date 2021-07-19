@@ -1,0 +1,48 @@
+﻿@model PagNet.Application.Models.EmissaoBoletoVM
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            Informe o motivo do cancelamento deste pedido de faturamento
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="row">
+                    @Html.DDLBootstrapFor(model => model.codJustificativa, Model.descJustificativa, "/ContasReceber/ConsultarBoletos/BuscaJustificativas/", 5)
+                    @Html.EditBootstrapFor(model => model.DescJustOutros, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <div id="btnCancelPedido" class="btn btn-warning" data-confirm="Confirma o cancelamento deste pedido de faturamento?" onclick="CancelarPedidoFaturamento(); ">Cancelar Pedido de Faturamento</div>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(".DescJustOutros").hide();
+
+
+    $(".codJustificativa").change(function () {
+        $("#codJustificativa").val($('.codJustificativa option:selected').val());
+        if ($("#codJustificativa").val() == "OUTROS") {
+            $(".DescJustOutros").show();
+        }
+        else {
+            $(".DescJustOutros").hide();
+            $("#DescJustOutros").val("");
+        }
+    });
+
+
+
+</script>

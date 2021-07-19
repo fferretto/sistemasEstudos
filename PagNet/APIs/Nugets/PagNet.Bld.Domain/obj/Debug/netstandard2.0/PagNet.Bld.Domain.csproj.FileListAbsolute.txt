@@ -1,0 +1,35 @@
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.deps.json
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.pdb
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.AssemblyInfo.cs
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.pdb
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.deps.json
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.pdb
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.pdb
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\Nugets\PagNet.Bld.Domain\obj\Debug\netstandard2.0\PagNet.Bld.Domain.pdb

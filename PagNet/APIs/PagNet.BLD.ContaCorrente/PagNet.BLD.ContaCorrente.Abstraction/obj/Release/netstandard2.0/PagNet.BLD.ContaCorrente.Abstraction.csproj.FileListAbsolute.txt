@@ -1,0 +1,9 @@
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Release\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Release\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\bin\Release\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Release\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Release\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Release\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Release\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Release\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Abstraction\obj\Release\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.pdb

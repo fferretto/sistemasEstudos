@@ -1,0 +1,245 @@
+﻿@model PagNet.Application.Models.EmissaoTituloAvulsto
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Geração de Borderô";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.PossuiNetCard)
+    @Html.HiddenFor(x => x.codUsuario)
+    @Html.HiddenFor(x => x.CODTITULO)
+    @Html.HiddenFor(x => x.CODTITULOPAI)
+    @Html.HiddenFor(x => x.acessoAdmin)
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Emissão de Títulos</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+                    <ul class="nav nav-pills">
+                        <li class="active" id="liTituloAvulso">
+                            <a href="#TituloAvulso" data-toggle="tab" id="btnTituloAvulso">Título Avulso</a>
+                        </li>
+                        <li class="" id="liTituloMassa">
+                            <a href="#TituloMassa" data-toggle="tab" id="btnTituloMassa">Titulos em Massa</a>
+                        </li>
+                        @if (Model.PossuiNetCard)
+                        {
+                            <li class="" id="liTituloMassaNC">
+                                <a href="#TituloMassaNC" data-toggle="tab" id="btnTituloMassaNC">Titulos em Massa Usuarios NetCard</a>
+                            </li>
+                        }
+                    </ul>
+                    <div class="tab-content" style="margin-top:2%;">
+                        <div class="tab-pane fade active in show" id="TituloAvulso">
+                            @*----------------------------------Inclusão de título avulso-------------------------------------------*@
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Inclusão de Título Avulso
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+
+                                        <div class="col-md-8" id="FiltroEmpresa" style="display:none">
+                                            @Html.DDLBootstrapFor(model => model.CODEMPRESA, Model.NMEMPRESA, "/Generico/CadastrosDiversos/GetEmpresa/", 0)
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.DDLBootstrapFor(model => model.TIPOTITULO, Model.NMTIPOTITULO, "/ContasPagar/EmitirTitulo/GetTipoTitulo/", 11)
+                                        </div>
+                                        <div class="col-md-12" id="TEDDOC" style="display:none">
+                                            @Html.EditBootstrapFor(model => model.CODFORNECEDOR, tudoTamanho: 3, inputTamanho: 11)
+                                            @Html.EditBootstrapFor(model => model.NMFORNECEDOR, tudoTamanho: 7, inputTamanho: 11)
+                                            <div class="form-group col-md-2" style="margin-left:-2%">
+                                                <label></label>
+                                                <div class="input-group col-xs-12" id="btnLocalizar">
+                                                    <div class="btn btn-success" onclick="LocalizaFavorecido();">Localizar</div>
+                                                </div>
+                                            </div>
+                                            @Html.EditBootstrapFor(model => model.DATREALPGTO, tudoTamanho: 3, inputTamanho: 11)
+                                            @Html.EditBootstrapFor(model => model.VALOR, tudoTamanho: 3, inputTamanho: 11)
+                                        </div>
+                                        <div class="col-md-12" id="BOLETO" style="display:none">
+                                            <div class="col-md-12">
+                                                @Html.Label("Linha Digitável")
+                                            </div>
+                                            @Html.EditBootstrapFor(model => model.LINHADIGITAVEL, tudoTamanho: 12, inputTamanho: 8)
+                                            <div id="BOLETOCOBRANCA" style="display:none; ">
+                                                @Html.EditBootstrapFor(model => model.LINHADIGITAVELCOBRANCA1, tudoTamanho: 1, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.LINHADIGITAVELCOBRANCA2, tudoTamanho: 1, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.LINHADIGITAVELCOBRANCA3, tudoTamanho: 1, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.LINHADIGITAVELCOBRANCA4, tudoTamanho: 1, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.LINHADIGITAVELCOBRANCA5, tudoTamanho: 1, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.LINHADIGITAVELCOBRANCA6, tudoTamanho: 1, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.LINHADIGITAVELCOBRANCA7, tudoTamanho: 1, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.LINHADIGITAVELCOBRANCA8, tudoTamanho: 5, inputTamanho: 8)
+                                            </div>
+                                            @Html.EditBootstrapFor(model => model.DATREALPGTOBOLETO, tudoTamanho: 3, inputTamanho: 11)
+                                            @Html.EditBootstrapFor(model => model.DATVENCIMENTOBOLETO, tudoTamanho: 3, inputTamanho: 11)
+                                            @Html.EditBootstrapFor(model => model.VALORBOLETO, tudoTamanho: 3, inputTamanho: 11)
+                                        </div>
+                                        <div class="col-md-12">
+                                            @Html.DDLBootstrapFor(model => model.CodigoPlanoContas, Model.NomePlanoContas, "/Generico/ConsultasGenericas/DDLPlanoContasPagamento/", "CODEMPRESA", null, 5)
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group col-md-2  pull-right">
+                                                <label></label>
+                                                <div class="input-group col-xs-12">
+                                                    <div class="btn btn-success" onclick="SalvarTitulo();">Salvar</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="TituloMassa">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Inclusão de Títulos em Massa
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-md-4">
+                                        <a href="@Url.Action("DownloadLayoutTitulosUsuaro", "EmitirTitulo", new { area = "ContasPagar", tipoArquivo="TM",  sid = ViewBag.Sid})" class="btnDownload">
+                                            <div class="btn btn-default">
+                                                <i class="fa fa-download">   Download do Layout do Arquivo</i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-7" style="color:brown">
+                                        <b>Os campos referente a endereço e dados bancários são obrigatórios apenas se o favoreçido não esteja cadastrado no sistema.</b>
+                                    </div>
+                                    <div class="col-xs-8 form-group" style="margin-top:1%">
+                                        <label for="ArquivoUpload">Selecione o Arquivo</label>
+                                        <abbr class='tooltip2' title='Arquivo utilizado para realizar a inclusão dos títulos em massa'>
+                                            <i class='fa fa-question-circle'></i>
+                                        </abbr>
+
+                                        <div class="input-group">
+                                            <input type="file" name="files" id="ArquivoTituloMassa" class="form-control" />
+                                            <span class="form-group input-group-btn">
+                                                <input class="btn btn-default" style="height:29px" type="button" onclick="ProcessarArquivo('TM');" value="Processar">
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="TituloMassaNC">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Inclusão de Títulos em Massa (Utilizado apenas para pagamento a algum usuário do sistema NetCard)
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-md-12">
+                                        <a href="@Url.Action("DownloadLayoutTitulosUsuaro", "EmitirTitulo", new { area = "ContasPagar", tipoArquivo="NC", sid = ViewBag.Sid})" class="btnDownload">
+                                            <div class="btn btn-default">
+                                                <i class="fa fa-download">   Download do Layout do Arquivo</i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-8 form-group" style="margin-top:1%">
+                                        <label for="ArquivoUpload">Selecione o Arquivo</label>
+                                        <abbr class='tooltip2' title='Arquivo utilizado para realizar a inclusão dos títulos em massa'>
+                                            <i class='fa fa-question-circle'></i>
+                                        </abbr>
+
+                                        <div class="input-group">
+                                            <input type="file" name="files" id="ArquivoTituloNC" class="form-control" />
+                                            <span class="form-group input-group-btn">
+                                                <input class="btn btn-default" style="height:29px" type="button" onclick="ProcessarArquivo('NC');" value="Processar">
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="modal fade" id="LocalizarFavorecido" tabindex="-1" role="dialog" aria-labelledby="LocalizarFavorecido" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalFavorecido">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="LogProcesso" tabindex="-1" role="dialog" aria-labelledby="LogProcesso" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalLogProcesso">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<script src="~/js/Scripts/ContasPagar/EmitirTitulo.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "ContasPagar" , classe = "EmitirTitulo.js", sid = ViewBag.Sid })"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+
+@section Scripts
+    {
+    <script>
+
+        $("#LINHADIGITAVEL").css("margin-top", "-15px");
+        $("#LINHADIGITAVELCOBRANCA1").css("margin-top", "-15px");
+        $("#LINHADIGITAVELCOBRANCA2").css("margin-top", "-15px");
+        $("#LINHADIGITAVELCOBRANCA3").css("margin-top", "-15px");
+        $("#LINHADIGITAVELCOBRANCA4").css("margin-top", "-15px");
+        $("#LINHADIGITAVELCOBRANCA5").css("margin-top", "-15px");
+        $("#LINHADIGITAVELCOBRANCA6").css("margin-top", "-15px");
+        $("#LINHADIGITAVELCOBRANCA7").css("margin-top", "-15px");
+        $("#LINHADIGITAVELCOBRANCA8").css("margin-top", "-15px");
+
+
+
+        $("#DATREALPGTO").change(function () {
+
+            var data = new Date();
+            var dtInicio = $("#DATREALPGTO").val().split("/");
+            var dataIni = new Date(`${dtInicio[2]},${dtInicio[1]},${dtInicio[0]}`);
+            var dataAtual = new Date(`${data.getFullYear()},${data.getMonth() + 1},${data.getDate()}`)
+
+            if (dataIni < dataAtual) {
+                valido = false;
+                msgAviso("A data de pagameto não pode ser inferior a data atual.");
+            }
+
+        });
+
+
+    </script>
+}
+
+

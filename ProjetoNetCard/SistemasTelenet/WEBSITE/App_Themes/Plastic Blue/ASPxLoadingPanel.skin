@@ -1,0 +1,5 @@
+<%@ Register TagPrefix="dxlp" Namespace="DevExpress.Web.ASPxLoadingPanel" Assembly="DevExpress.Web.v8.3" %>
+<dxlp:ASPxLoadingPanel runat="server" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" CssPostfix="PlasticBlue" ImageFolder="~/App_Themes/Plastic Blue/{0}/">
+	<Image Url="~/App_Themes/Plastic Blue/Web/dvLoading.gif" AlternateText="Carregando ..."></Image>
+	
+</dxlp:ASPxLoadingPanel>

@@ -1,0 +1,92 @@
+﻿@model IList<PagNet.Application.Models.BaixaPagamentoVM>
+@using PagNet.Interface.Helpers
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @if (Html.EditorFor(x => x.FirstOrDefault().MsgRetorno).ToString() != "")
+            {
+                <div class="col=md-12" style="text-align:center; background-color:gainsboro; font-size:13px; border-color:red; color:red;font-weight: bold;">
+                    @Html.ValueFor(x => x.FirstOrDefault().MsgRetorno)
+                </div>
+            }
+            <div class="col-md-12">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().vlTotalArquivo)<br />
+                    @Html.TextBoxFor(model => model.FirstOrDefault().vlTotalArquivo)
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().qtRegistroArquivo)<br />
+                    @Html.TextBoxFor(model => model.FirstOrDefault().qtRegistroArquivo)
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table id="gridRemessa" class="table" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="30%">@Html.DisplayNameFor(model => model.FirstOrDefault().RAZSOC)</th>
+                                <th width="18%">@Html.DisplayNameFor(model => model.FirstOrDefault().CNPJ)</th>
+                                <th width="15%">@Html.DisplayNameFor(model => model.FirstOrDefault().DATPGTO)</th>
+                                <th width="17%">@Html.DisplayNameFor(model => model.FirstOrDefault().VALLIQ)</th>
+                                <th width="20%">@Html.DisplayNameFor(model => model.FirstOrDefault().Status)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                <tr>
+                                    <td width="30%">
+                                        @Html.DisplayFor(item => item[i].RAZSOC)
+                                    </td>
+                                    <td width="18%">
+                                        @Html.DisplayFor(item => item[i].CNPJ)
+                                    </td>
+                                    <td width="15%">
+                                        @Html.DisplayFor(item => item[i].DATPGTO)
+                                    </td>
+                                    <td width="17%">
+                                        @Html.DisplayFor(item => item[i].VALLIQ)
+                                    </td>
+                                    <td width="20%">
+                                        @Html.DisplayFor(item => item[i].Status)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script>
+    $(document).ready(function () {
+
+        $("#vlTotalArquivo").prop('disabled', true);
+        $("#qtRegistroArquivo").prop('disabled', true);
+
+        $.unblockUI();
+
+        $('#gridRemessa').dataTable({
+            scrollX: true,
+            order: [0, 'asc'],
+
+        });
+
+    });
+
+
+
+</script>

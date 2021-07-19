@@ -1,0 +1,58 @@
+﻿@model PagNet.Application.Models.VisualizaListaPlanoContasVM
+@using PagNet.Interface.Helpers
+
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="">
+            @*@Html.CampoRecursivoPlanoConas(Model.listaPlanoContas, 8)*@
+            <div class="table-responsive">
+                <table id="gridListaPlanoContas" class="table" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th width="10%">Código Hierarquico</th>
+                            <th width="20%">Descrição</th>
+                            <th width="12%" style="text-align:center;">Tipo de Conta</th>
+                            <th width="12%" style="text-align:center;">Natureza</th>
+                            <th width="12%" style="text-align:center;">É Despesa?</th>
+                            <th width="12%" style="text-align:center;">Utiliz. PGTO?</th>
+                            <th width="12%" style="text-align:center;">Utiliz. Rec.?</th>
+                            <th width="5%" style="text-align:center;">Editar</th>
+                            <th width="5%" style="text-align:center;">Excluir</th>
+                            <th width="0%" style="display:none;"></th>
+                            <th width="0%" style="display:none;"></th>
+                        </tr>
+                    </thead>
+                    @if (Model != null)
+                    {
+                        @Html.CampoRecursivoPlanoConas(Model.listaPlanoContas, 8)
+                    }
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@Html.ShowError()
+<script>
+
+    function carregaPagina() {
+        $.unblockUI();
+
+        $('#gridListaPlanoContas').DataTable({
+            dom: 'Brti',
+            //pageLength: 100,
+            buttons: [
+                'excel'
+            ],
+            ordering: false
+        });
+    }
+
+    $(window).load(carregaPagina());
+
+
+</script>
+

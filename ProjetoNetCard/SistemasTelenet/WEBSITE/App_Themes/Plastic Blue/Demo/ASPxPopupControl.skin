@@ -1,0 +1,14 @@
+<%@ Register TagPrefix="dxpc" Namespace="DevExpress.Web.ASPxPopupControl" Assembly="DevExpress.Web.v8.3" %>
+<dxpc:ASPxPopupControl runat="server" ImageFolder="~/App_Themes/Plastic Blue/{0}/" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" CssPostfix="PlasticBlue">
+<ContentStyle>
+<BorderBottom BorderWidth="1px" BorderStyle="Solid" BorderColor="#E0E0E0"></BorderBottom>
+</ContentStyle>
+<SizeGripImage Height="16px" Width="16px" Url="~/App_Themes/Plastic Blue/Web/pcSizeGrip.gif"></SizeGripImage>
+<HeaderStyle>
+<Paddings PaddingTop="4px" PaddingRight="4px" PaddingBottom="4px" PaddingLeft="10px"></Paddings>
+</HeaderStyle>
+<CloseButtonImage Height="14px" Width="14px"></CloseButtonImage>
+<CloseButtonStyle>
+<Paddings Padding="0px"></Paddings>
+</CloseButtonStyle>
+</dxpc:ASPxPopupControl>

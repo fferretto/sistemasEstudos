@@ -1,0 +1,107 @@
+﻿@model IList<PagNet.Application.Models.ListaAntecipacaoPGTOVm>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaFechClienteVM">
+    <div class="panel-heading">
+        @ViewData.ModelMetadata.DisplayName
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 0%;">
+
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="gridListaAntecip" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th width="25%">Favorecido</th>
+                    <th width="9%" style="text-align:center;">Data Emissão</th>
+                    <th width="9%" style="text-align:center;">Data Pagamento</th>
+                    <th width="9%" style="text-align:center;">Valor Atual</th>
+                    <th width="9%" style="text-align:center;">Taxa Anteciação</th>
+                    <th width="9%" style="text-align:center;">Valor a Pagar</th>
+                    <th width="10%" style="text-align:center;">Tipo Cartão</th>
+                    <th width="15%" style="text-align:center;">CNPJ</th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                <tr>
+                    <td width="25%">
+                        @Model[i].NMFAVORECIDO
+                    </td>
+                    <td width="9%" style="text-align:center;">
+                        @Model[i].DTEMISSAO
+                    </td>
+                    <td width="9%" style="text-align:center;">
+                        @Model[i].DTREALPGTO
+                    </td>
+                    <td width="9%" class="INPVALATUAL" style="text-align:center;">
+                        @Model[i].VALATUAL
+                    </td>
+                    <td width="9%" class="INPVALTAXA" style="text-align:center;">
+                        @Model[i].VALTAXA
+                    </td>
+                    <td width="9%" class="INPVALTOTAL" style="text-align:center;">
+                        @Model[i].VALTOTAL
+                    </td>
+                    <td width="10%" style="text-align:center;">
+                        @Model[i].TIPOCARTAO
+                    </td>
+                    <td width="15%" style="text-align:center;">
+                        @Model[i].CNPJ
+                    </td>
+                    <td class="Codigo" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].Codigo", nmPropriedade, i)" value="@Model[i].Codigo" />
+                    </td>
+                    <td class="VALATUAL" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].VALATUAL", nmPropriedade, i)" value="@Model[i].VALATUAL" />
+                    </td>
+                    <td class="VALTOTAL" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].VALTOTAL", nmPropriedade, i)" value="@Model[i].VALTOTAL" />
+                    </td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var table = $('#gridListaAntecip').DataTable({
+            order: [[1, 'asc']],
+            dom: 'lfrtip',
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL'
+                },
+                'excel'
+            ],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0]
+                }
+            ]
+        });
+
+    });
+
+
+</script>

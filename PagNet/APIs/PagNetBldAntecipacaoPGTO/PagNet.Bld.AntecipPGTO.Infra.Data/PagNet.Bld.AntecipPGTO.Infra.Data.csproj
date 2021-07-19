@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Telenet.Bld.ControleAcesso.Web.Setup" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagNet.Bld.AntecipPGTO.Abstraction\PagNet.Bld.AntecipPGTO.Abstraction.csproj" />
+    <ProjectReference Include="..\PagNet.Bld.AntecipPGTO.Domain\PagNet.Bld.AntecipPGTO.Domain.csproj" />
+    <ProjectReference Include="..\PagNet.Bld.AntecipPGTO\PagNet.Bld.AntecipPGTO.csproj" />
+  </ItemGroup>
+
+</Project>

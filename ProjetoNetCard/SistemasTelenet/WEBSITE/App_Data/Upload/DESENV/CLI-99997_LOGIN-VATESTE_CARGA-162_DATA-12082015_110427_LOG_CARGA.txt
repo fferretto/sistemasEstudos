@@ -1,0 +1,5 @@
+---------------------------  ARQUIVO DE LOG - DATA:12/08/2015  --------------------------
+
+ O arquivo foi processado e apresentou os seguintes resultados:
+
+ERRO GERAL  ARQUIVO INVALIDO - CNPJ OU CODIGO DO CLIENTE NÃO ENCONTRADO                                                                                

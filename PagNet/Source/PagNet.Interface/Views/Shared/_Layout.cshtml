@@ -1,0 +1,280 @@
+﻿@using PagNet.Interface.Helpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PagNet - @ViewData["Title"]</title>
+    <link id="icoBrowser" rel="shortcut icon" href="@Url.Action("GetImagIco", "Autenticacao", new { area = "Identificacao", sid = ViewBag.Sid})">
+
+    @* -------------------------------INCLUSÃO DE CLASSES CSS ----------------------------------*@
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css" />
+
+
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="@Url.Action("GetClassCss", "Autenticacao", new { area = "Identificacao", sid = ViewBag.Sid })" />
+    <link rel='stylesheet' href='~/css/All.css' crossorigin='anonymous'>
+    <link rel='stylesheet' href='~/css/StyleMenu.css' crossorigin='anonymous'>
+    <link rel="stylesheet" href="~/css/jBox.css" />
+    <link rel="stylesheet" href="~/css/themes/NoticeBorder.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/css/morris/morris-0.4.3.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="~/css/bootstrap-datepicker.standalone.css" />
+    <link rel="stylesheet" href="~/js/dataTables/datatables.min.css" />
+    <link rel="stylesheet" href="~/js/dataTables/dataTables.bootstrap.css" />
+
+    <link rel="stylesheet" href="~/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://kit.fontawesome.com/f10d5f634d.js" crossorigin="anonymous"></script>
+
+
+
+    @* -------------------------------INCLUSÃO DE CLASSES JAVA SCRIPTS ----------------------------------*@
+    <script src="~/js/jquery-3.3.1.js"></script>
+    <script src="~/js/jquery.validate.js"></script>
+    <script src="~/js/jquery.validate.zz.PagNet.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script src="~/js/jquery.pulse.min.js"></script>
+    <script src="~/js/jquery.form.min.js"></script>
+    <script src="~/js/jquery.blockUI.js"></script>
+    <script src="~/js/dataTables/jquery.dataTables.min.js"></script>
+
+    <script src="~/js/dataTables/dataTables.buttons.min.js"></script>
+    <script src="~/js/dataTables/buttons.flash.min.js"></script>
+    <script src="~/js/dataTables/jszip.min.js"></script>
+    <script src="~/js/dataTables/pdfmake.min.js"></script>
+    <script src="~/js/dataTables/vfs_fonts.js"></script>
+    <script src="~/js/dataTables/buttons.html5.min.js"></script>
+    <script src="~/js/dataTables/buttons.print.min.js"></script>
+    <script src="~/js/client-authorization.js"></script>
+
+    <script src="~/js/jquery.cookie.js"></script>
+    <script src="~/js/jquery.MultiFile.js" type="text/javascript" language="javascript"></script>
+    <script src="~/js/jscolor.js" type="text/javascript" language="javascript"></script>
+
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+
+    @* -------------------------------FINAL DA IMPLEMENTAÇÃO DE CLASSES----------------------------------*@
+
+
+    <environment include="Development">
+        <script type="text/javascript">
+
+            function montaUrl(urlRelativa) {
+
+                var sid = urlRelativa.indexOf("?") > -1
+                    ? "&sid=" + '@ViewBag.Sid'
+                    : "?sid=" + '@ViewBag.Sid';
+
+                urlRelativa = urlRelativa + sid;
+
+                var valor = urlRelativa.substring(0, 1);
+
+                if (valor != '/') {
+                    urlRelativa = '/' + urlRelativa;
+                }
+
+                var nmPastaRaiz = ""; //Modo Debug
+
+
+                if (nmPastaRaiz == "")  //modo debug
+                    return urlRelativa;
+
+                var split = urlRelativa.split('/');
+
+                if (split[1] == nmPastaRaiz)
+                    return urlRelativa;
+                else
+                    return '/' + nmPastaRaiz + urlRelativa;
+            }
+        </script>
+    </environment>
+
+    <environment exclude="Development">
+        <script type="text/javascript">
+
+            function montaUrl(urlRelativa) {
+
+                var sid = urlRelativa.indexOf("?") > -1
+                    ? "&sid=" + '@ViewBag.Sid'
+                    : "?sid=" + '@ViewBag.Sid';
+
+                urlRelativa = urlRelativa + sid;
+
+                var valor = urlRelativa.substring(0, 1);
+
+                if (valor != '/') {
+                    urlRelativa = '/' + urlRelativa;
+                }
+
+                //var nmPastaRaiz = "pagnetteste"; //Ambiente de Homologação
+                var nmPastaRaiz = "pagnet"; //Ambiente de Produção
+
+
+                if (nmPastaRaiz == "")  //modo debug
+                    return urlRelativa;
+
+                var split = urlRelativa.split('/');
+
+                if (split[1] == nmPastaRaiz)
+                    return urlRelativa;
+                else
+                    return '/' + nmPastaRaiz + urlRelativa;
+            }
+        </script>
+    </environment>
+
+    <script type="text/javascript">
+
+        var listAviso = [];
+
+        function showError() {
+            //var altura = 8;
+
+            if (listAviso.length == 0) return;
+
+            $.each(listAviso, function (i, retorno2) {
+
+                if (retorno2 != null) {
+                    var TipAviso = retorno2[i][1];
+
+                    var cor = 'red';
+                    var _title = "";
+                    var _icon = "";
+
+                    if (TipAviso == "Sucesso") { cor = 'green'; _title = "Sucesso"; _icon = "glyphicon glyphicon-ok"; }
+                    if (TipAviso == "Erro") { cor = 'red'; _title = "Erro"; _icon = "glyphicon glyphicon-remove"; }
+                    if (TipAviso == "Aviso") { cor = 'blue'; _title = "Aviso"; _icon = "glyphicon glyphicon-alert"; }
+
+                    return new $.confirm({
+                        title: _title,
+                        icon: _icon,
+                        content: retorno2[i][2],
+                        type: cor,
+                        typeAnimated: true,
+                        buttons: {
+                            tryAgain: {
+                                text: 'OK',
+                                btnClass: 'btn-' + cor,
+                                action: function () {
+                                    listAviso = [];
+                                }
+                            }
+                        }
+                    });
+
+
+                    retorno2 = null;
+                }
+            })
+
+        }
+
+                                                //jQuery(document).ready(() => showError());
+
+    </script>
+    <div class="page-header Color-Header-menu">
+
+        @await Component.InvokeAsync("LocalAcessoSistema")
+        <div class="user-pic col-md-2">
+            <a href="@Url.Action("Index", "Home", new { area = "", sid = ViewBag.Sid })">
+                <img class="logo-pagnet img-responsive img-rounded" style="width:100%;margin-top:2%" src="@Url.Action("GetImagemLogo", "Autenticacao", new { area = "Identificacao", sid = ViewBag.Sid })" alt="User picture">
+            </a>
+        </div>
+        <div class="text-header col-md-7">
+            PAGNET - Módulo de Pagamentos e Recebimentos
+        </div>
+        <div class="col-md-3" id="nmUsu" style="margin-top: 1%;">
+            <div class="col-md-1">
+                <div class="icons">
+                    <div class="notification">
+                        <a href="#">
+                            @await Component.InvokeAsync("NotificacaoItensVencidos")
+                        </a>
+                    </div>
+                    @*<a href="#"><i class="fa fa-envelope-o" id="btnFaNotificationEnvelope"></i></a>*@
+                </div>
+
+            </div>
+
+            @await Component.InvokeAsync("DadosUser")
+        </div>
+        <ul class="menu col-md-10">
+            @await Component.InvokeAsync("ListaMenu")
+        </ul>
+    </div>
+
+
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+       
+        <partial name="_CookieConsentPartial" />
+
+        <main class="page-content body-content" id="page-wrapper">
+            <div class="container-fluid" id="page-inner">
+                <div class="col-md-12">
+                    <!-- sidebar-wrapper  -->
+                    @RenderBody()
+                    <!-- page-content" -->
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div>
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div>
+
+    <script src="~/js/jquery-3.3.1.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script src="~/js/jquery.pulse.min.js"></script>
+    <script src="~/js/jBox.min.js"></script>
+    <script src="~/js/jquery.form.min.js"></script>
+    <script src="~/js/jquery.blockUI.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
+    @*<script src="~/js/jquery.metisMenu.js"></script>*@
+    <script src="~/js/dataTables/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables/dataTables.buttons.min.js"></script>
+    <script src="~/js/dataTables/buttons.flash.min.js"></script>
+    <script src="~/js/dataTables/jszip.min.js"></script>
+    <script src="~/js/dataTables/pdfmake.min.js"></script>
+    <script src="~/js/dataTables/vfs_fonts.js"></script>
+    <script src="~/js/dataTables/buttons.html5.min.js"></script>
+    <script src="~/js/dataTables/buttons.print.min.js"></script>
+    <script src="~/js/dataTables/dataTables.bootstrap.js"></script>
+    <script src="~/js/ScriptHelpers.js"></script>
+    <script src="~/js/jquery.validate.js"></script>
+    <script src="~/js/jquery.validate.zz.PagNet.js"></script>
+    <script src="~/js/jquery.mask.min.js"></script>>
+    <script src="~/js/jquery.MultiFile.js" type="text/javascript" language="javascript"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+
+    @*<script src="https://www.gstatic.com/charts/loader.js"></script>*@
+
+
+
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

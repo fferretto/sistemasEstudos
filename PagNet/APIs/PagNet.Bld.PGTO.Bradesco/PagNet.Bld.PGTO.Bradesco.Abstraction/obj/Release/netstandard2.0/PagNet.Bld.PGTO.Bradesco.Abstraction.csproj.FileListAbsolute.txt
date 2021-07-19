@@ -1,0 +1,9 @@
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Abstraction\bin\Release\netstandard2.0\PagNet.Bld.PGTO.Bradesco.Abstraction.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Abstraction\bin\Release\netstandard2.0\PagNet.Bld.PGTO.Bradesco.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Abstraction\bin\Release\netstandard2.0\PagNet.Bld.PGTO.Bradesco.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Abstraction\obj\Release\netstandard2.0\PagNet.Bld.PGTO.Bradesco.Abstraction.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Abstraction\obj\Release\netstandard2.0\PagNet.Bld.PGTO.Bradesco.Abstraction.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Abstraction\obj\Release\netstandard2.0\PagNet.Bld.PGTO.Bradesco.Abstraction.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Abstraction\obj\Release\netstandard2.0\PagNet.Bld.PGTO.Bradesco.Abstraction.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Abstraction\obj\Release\netstandard2.0\PagNet.Bld.PGTO.Bradesco.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Abstraction\obj\Release\netstandard2.0\PagNet.Bld.PGTO.Bradesco.Abstraction.pdb

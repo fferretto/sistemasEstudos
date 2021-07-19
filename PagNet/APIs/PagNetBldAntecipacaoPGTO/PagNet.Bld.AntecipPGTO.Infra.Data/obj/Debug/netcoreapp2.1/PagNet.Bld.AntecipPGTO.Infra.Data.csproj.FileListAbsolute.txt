@@ -1,0 +1,64 @@
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.deps.json
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csprojAssemblyReference.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.AssemblyInfoInputs.cache
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.AssemblyInfo.cs
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csproj.CopyComplete
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.dll
+D:\Repositorios_Git\ServicosTelenet\PagNetBldAntecipacaoPGTO\Source\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.deps.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csproj.CopyComplete
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.deps.json
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csproj.CopyComplete
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Domain.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.csproj.CopyComplete
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Infra.Data\obj\Debug\netcoreapp2.1\PagNet.Bld.AntecipPGTO.Infra.Data.pdb

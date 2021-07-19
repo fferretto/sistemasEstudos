@@ -1,0 +1,9 @@
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Abstraction\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Abstraction\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Abstraction\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Abstraction\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Abstraction\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Abstraction\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Abstraction\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Abstraction\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicoob\PagNet.Bld.PGTO.Sicoob.Abstraction\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Sicoob.Abstraction.pdb

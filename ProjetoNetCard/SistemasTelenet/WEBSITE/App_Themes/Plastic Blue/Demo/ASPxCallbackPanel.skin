@@ -1,0 +1,6 @@
+<%@ Register TagPrefix="dxrp" Namespace="DevExpress.Web.ASPxRoundPanel" Assembly="DevExpress.Web.v8.3" %>
+<%@ Register TagPrefix="dxcp" Namespace="DevExpress.Web.ASPxCallbackPanel" Assembly="DevExpress.Web.v8.3" %>
+<dxcp:ASPxCallbackPanel runat="server" CssFilePath="~/App_Themes/Plastic Blue/web/styles.css"
+    CssPostfix="PlasticBlue" ImageFolder="~/App_Themes/Plastic Blue/{0}/">
+    <LoadingPanelImage Url="~/App_Themes/Plastic Blue/Web/dvLoading.gif"></LoadingPanelImage>
+</dxcp:ASPxCallbackPanel>

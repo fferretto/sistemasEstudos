@@ -1,0 +1,5 @@
+---------------------------  ARQUIVO DE LOG - DATA:21/01/2015  --------------------------
+
+ O arquivo foi processado e apresentou os seguintes resultados:
+
+- IDENTIFICAÇÃO:      8 - 04407907606 - DIAGNÓSTICO: OK. PROCESSO REALIZADO COM SUCESSO                                                                                          

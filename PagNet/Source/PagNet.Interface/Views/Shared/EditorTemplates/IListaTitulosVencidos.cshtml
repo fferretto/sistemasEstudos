@@ -1,0 +1,144 @@
+﻿@model IList<PagNet.Application.Models.ListaTitulosVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaTitulosVM">
+    <div class="panel-heading">
+        @ViewData.ModelMetadata.DisplayName
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 0%;">
+
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="GridTitulosVencidos" class="table" cellspacing="0" width="130%">
+            <thead>
+                <tr>
+                    <th width="3%" style="text-align:center;" class="CheckBox-Grid"><input name="select_all" id="select_all" checked="checked" type="checkbox"></th>
+                    <th width="5%" style="text-align:center;">Codigo</th>
+                    <th width="20%">Nome</th>
+                    <th width="11%">CNPJ</th>
+                    <th width="8%" style="text-align:center;">Data Pgto</th>
+                    <th width="7%" style="text-align:right;">Valor Liquido</th>
+                    <th width="5%" style="text-align:center;">Banco</th>
+                    <th width="8%" style="text-align:right;">Agencia</th>
+                    <th width="10%" style="text-align:right;">Conta Corrente</th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        var CorFundo = "background-color:#ffffff";
+
+
+                        <tr>
+                            <td class="CheckBox-Grid" width="3%" style="@CorFundo" align="center">
+                                    <input class="inpchkFechCredPai" type="checkbox" name="@String.Format("{0}[{1}].chkFechCred", nmPropriedade, i)" checked="@Model[i].chkFechCred" />
+                      
+                            </td>
+                            <td width="5%" align='center' style="@CorFundo">
+                                @Model[i].CODFAVORECIDO
+                            </td>
+                            <td width="20%" title="@Model[i].RAZSOC" style="@CorFundo">
+                                @Model[i].RAZSOC
+                            </td>
+                            <td width="11%" title="@Model[i].CNPJ" style="@CorFundo">
+                                @Model[i].CNPJ
+                            </td>
+                            <td width="8%" class="INPDATPGTO" title="@Model[i].DATPGTO" style="text-align:center;@CorFundo">
+                                @Model[i].DATPGTO
+                            </td>
+                            <td width="7%" class="INPVALLIQ" title="@Model[i].VALLIQ" style="text-align:right;@CorFundo">
+                                @Model[i].VALLIQ
+                            </td>
+                            <td width="5%" class="INPBANCO" title="@Model[i].BANCO" style="text-align:center;@CorFundo">
+                                @Model[i].BANCO
+                            </td>
+                            <td width="8%" class="INPAGENCIA" title="@Model[i].AGENCIA" style="text-align:right;@CorFundo">
+                                @Model[i].AGENCIA
+                            </td>
+                            <td width="10%" class="INPCONTACORRENTE" title="@Model[i].CONTACORRENTE" style="text-align:right;@CorFundo">
+                                @Model[i].CONTACORRENTE
+                            </td>
+                            <td class="CODFAVORECIDO" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("{0}[{1}].CODCEN", nmPropriedade, i)" value="@Model[i].CODFAVORECIDO" />
+                            </td>
+                            <td class="DATPGTO" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("{0}[{1}].DATPGTO", nmPropriedade, i)" value="@Model[i].DATPGTO" />
+                            </td>
+                            <td class="VALLIQ" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("{0}[{1}].VALLIQ", nmPropriedade, i)" value="@Model[i].VALLIQ" />
+                            </td>
+                            <td class="BANCO" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("{0}[{1}].BANCO", nmPropriedade, i)" value="@Model[i].BANCO" />
+                            </td>
+                            <td class="AGENCIA" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("{0}[{1}].AGENCIA", nmPropriedade, i)" value="@Model[i].AGENCIA" />
+                            </td>
+                            <td class="CONTACORRENTE" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("{0}[{1}].CONTACORRENTE", nmPropriedade, i)" value="@Model[i].CONTACORRENTE" />
+                            </td>
+                            <td class="CODTITULO" width="0%" style="display:none;">
+                                <input class="" type="hidden" name="@String.Format("{0}[{1}].CODTITULO", nmPropriedade, i)" value="@Model[i].CODTITULO" />
+                            </td>
+
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //inicia();
+
+        var table = $('#GridTitulosVencidos').DataTable({
+            order: [[1, 'asc']],
+            scrollX: true,
+            dom: 'Blfrtip',
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL'
+                },
+                'excel'
+            ],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0, 1]
+                }
+            ]
+        });
+
+
+        $("#select_all").click(function () {
+            $('input', table.cells().nodes()).prop('checked', this.checked);
+        });
+
+    });
+
+
+
+</script>

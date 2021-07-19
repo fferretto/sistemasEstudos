@@ -1,0 +1,5 @@
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v8.3" %>
+<dxe:ASPxRadioButtonList runat="server"
+	CssFilePath="~/App_Themes/Office2003 Silver/{0}/styles.css" CssPostfix="Office2003_Silver"
+	ImageFolder="~/App_Themes/Office2003 Silver/{0}/">
+</dxe:ASPxRadioButtonList>

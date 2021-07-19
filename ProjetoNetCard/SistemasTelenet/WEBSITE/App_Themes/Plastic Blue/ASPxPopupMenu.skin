@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v8.3" %>
+<dxm:ASPxPopupMenu runat="server" ImageFolder="~/App_Themes/Plastic Blue/{0}/" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" GutterWidth="20px" CssPostfix="PlasticBlue">
+    <SubMenuStyle GutterWidth="0px" GutterColor="#CCCCCC" SeparatorColor="#E9E9E9"></SubMenuStyle>
+    <RootItemSubMenuOffset LastItemY="-1" FirstItemY="-1" Y="-1"></RootItemSubMenuOffset>
+    <ItemSubMenuOffset LastItemY="-1" FirstItemY="-1" Y="-1"></ItemSubMenuOffset>
+    <SubMenuItemStyle ImageSpacing="0px" />
+    <ItemStyle ImageSpacing="0px" />
+</dxm:ASPxPopupMenu>

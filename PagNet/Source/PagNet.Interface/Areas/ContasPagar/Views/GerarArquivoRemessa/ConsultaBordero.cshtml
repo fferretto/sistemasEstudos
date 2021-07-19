@@ -1,0 +1,78 @@
+﻿@model PagNet.Application.Models.BorderoPagVM
+@using PagNet.Interface.Helpers
+
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(x => x.codBanco)
+@Html.HiddenFor(x => x.codUsuario)
+@Html.HiddenFor(x => x.codOpe)
+@Html.HiddenFor(x => x.acessoAdmin)
+@Html.HiddenFor(x => x.CaminhoArquivo)
+@Html.HiddenFor(x => x.codigoBanco)
+@Html.HiddenFor(x => x.codigoFormaPGTO)
+@Html.HiddenFor(x => x.codigoEmpresa)
+
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="">
+            <div class="form-group col-lg-4">
+                <div class="form-group" style="margin-top: 5px">
+                    <div class="col-lg-6">
+                        <a id="btnDownload">
+                            <div class="btn btn-default">
+                                <i class="fa fa-download"></i> Download do Arquivo
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-lg-4  pull-right">
+                <div class="pull-right" style="margin-top: 26px">
+                    <div id="btnGeraArquivo" class="btn btn-success" data-confirm="Confirma a geração do arquivo de remessa para os itens selecionados?" onclick="GeraArquivoRemessa();">Gerar Arquivo Remessa</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top:2%;">
+            @Html.EditorFor(model => model.ListaBordero, "IListaBorderoPag")
+        </div>
+
+    </div>
+</div>
+
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#btnDownload').hide();
+
+        $('.umadata input').datepicker({
+            format: "dd/mm/yyyy",
+            language: "pt-BR",
+            orientation: "auto",
+            autoclose: true
+        });
+
+        $.unblockUI();
+
+        if ($("#CaminhoArquivo").val() == "") {
+            $("#btnDownload").attr('disabled', 'disabled');
+        }
+        else {
+            $('#btnDownload').removeAttr('disabled');
+        }
+    });
+
+</script>
+

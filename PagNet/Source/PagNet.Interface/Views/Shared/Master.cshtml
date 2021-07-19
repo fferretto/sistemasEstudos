@@ -1,0 +1,75 @@
+﻿@model List<PagNet.Application.Models.MenuVMs>
+@using PagNet.Interface.Helpers
+
+@if (Model != null)
+{
+    @foreach (var item in Model)
+    {
+        if (item.Listamenus != null && item.Listamenus.Count > 0)
+        {
+            <li>
+                <a href="#"><i class="@item.favIcon"></i> @item.Descricao <span class="arrow"></span></a>
+
+                <ul class="submenu-1">
+                    @foreach (var subitem in item.Listamenus)
+                    {
+                        if (subitem.ListamenusNetos.Count > 0)
+                        {
+                            <li>
+                                <a href="#" class="seta-direita"><i class="@subitem.favIcon"></i> @subitem.Descricao <span class="arrow"></span></a>
+
+                                <ul class="submenu-2">
+                                    @foreach (var listaNetos in subitem.ListamenusNetos)
+                                    {
+                                        <li>
+                                            @if (listaNetos.codParametro > 0)
+                                            {
+                                                @Html.ActionLink(listaNetos.Descricao, listaNetos.Action, listaNetos.Controller, new { area = listaNetos.Area, id = listaNetos.codParametro, sid = ViewBag.Sid }, new { })
+                                            }
+                                            else
+                                            {
+                                                @Html.ActionLink(listaNetos.Descricao, listaNetos.Action, listaNetos.Controller, new { area = listaNetos.Area, sid = ViewBag.Sid })
+                                            }
+                                        </li>
+                                    }
+                                </ul>
+
+                            </li>
+                        }
+                        else
+                        {
+                            <li id="@subitem.Nome">
+                                @if (subitem.codParametro > 0)
+                                {
+                                    @Html.ActionLink(subitem.Descricao, subitem.Action, subitem.Controller, new { area = subitem.Area, id = subitem.codParametro, sid = ViewBag.Sid }, new { })
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action(subitem.Action, subitem.Controller, new { area = subitem.Area, sid = ViewBag.Sid })">
+                                        @subitem.Descricao
+                                    </a>
+                                }
+                            </li>
+                        }
+                    }
+                </ul>
+
+            </li>
+        }
+        else
+        {
+            <li id="@item.Nome">
+                @if (item.codParametro > 0)
+                {
+                    @Html.ActionLink(item.Descricao, item.Action, item.Controller, new { area = item.Area, id = item.codParametro, sid = ViewBag.Sid }, new { })
+                }
+                else
+                {
+                    @Html.ActionLink(item.Descricao, item.Action, item.Controller, new { area = item.Area, sid = ViewBag.Sid })
+                }
+
+            </li>
+
+        }
+    }
+}

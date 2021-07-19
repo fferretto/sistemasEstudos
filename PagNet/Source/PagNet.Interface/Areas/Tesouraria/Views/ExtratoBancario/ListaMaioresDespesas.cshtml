@@ -1,0 +1,70 @@
+﻿@model IList<PagNet.Application.Models.TesourariaMaioresDespesasVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+<div id="@nmPropriedade" class="panel panel-default TesourariaMaioresDespesasVM">
+    <div class="panel-heading">
+        Maiores Saídas no Período
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table id="gridMaioresDespesas" class="table" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th width="40%">Descrição</th>
+                        <th width="45%" style="text-align:center;">Origem</th>
+                        <th width="25%" style="text-align:center;">Valor</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var PonteiroMouse = "cursor:Pointer";
+
+                            <tr>
+                                <td class="inpNomeDespesa" width="40%" title="@Model[i].NomeDespesa" style="@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].NomeDespesa)
+                                </td>
+                                <td class="inpOrigemDespesa" width="45%" title="@Model[i].OrigemDespesa" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].OrigemDespesa)
+                                </td>
+                                <td class="inpValorDespesa" width="15%" title="@Model[i].ValorDespesa" style="text-align:right;@PonteiroMouse;color:#fb0505">
+                                    @Html.DisplayFor(item => item[i].ValorDespesa)
+                                </td>
+                            </tr>
+                        }
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@Html.ShowError()
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.unblockUI();
+        var table = $('#gridMaioresDespesas').DataTable({
+            dom: 'rt',
+            ordering: false
+        });
+
+        $('#gridMaioresDespesas tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+    });
+
+</script>

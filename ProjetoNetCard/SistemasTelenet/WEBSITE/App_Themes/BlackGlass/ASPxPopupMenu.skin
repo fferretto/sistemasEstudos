@@ -1,0 +1,5 @@
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v8.3" %>
+<dxm:ASPxPopupMenu runat="server" ImageFolder="~/App_Themes/BlackGlass/{0}/"
+    CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" GutterWidth="0px" CssPostfix="BlackGlass">
+    <SubMenuStyle GutterWidth="0px" SeparatorColor="#7EACB1"></SubMenuStyle>
+</dxm:ASPxPopupMenu>

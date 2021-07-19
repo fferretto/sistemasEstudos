@@ -1,0 +1,14 @@
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\bin\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\bin\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\bin\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\bin\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\bin\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente2.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\bin\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente2.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\bin\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\obj\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\obj\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\obj\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\obj\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\obj\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.csproj.CopyComplete
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\obj\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente.Web.Setup\obj\Release\netcoreapp2.1\PagNet.BLD.ContaCorrente.Web.Setup.pdb

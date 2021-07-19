@@ -1,0 +1,5 @@
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.Titulos\PagNet.Bld.Titulos\bin\Debug\netstandard2.0\PagNet.Bld.Titulos.Abstraction.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.Titulos\PagNet.Bld.Titulos\obj\Debug\netstandard2.0\PagNet.Bld.Titulos.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.Titulos\PagNet.Bld.Titulos\obj\Debug\netstandard2.0\PagNet.Bld.Titulos.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.Titulos\PagNet.Bld.Titulos\obj\Debug\netstandard2.0\PagNet.Bld.Titulos.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.Titulos\PagNet.Bld.Titulos\obj\Debug\netstandard2.0\PagNet.Bld.Titulos.AssemblyInfo.cs

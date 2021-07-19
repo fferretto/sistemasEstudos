@@ -1,0 +1,503 @@
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\ApplicationInsights.config
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll.config
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.pdb
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe.config
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.rsp
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe.config
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.rsp
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.AppContext.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Collections.Immutable.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Console.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Compression.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Reflection.Metadata.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.AccessControl.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Claims.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.ValueTuple.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe.config
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.rsp
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe.config
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Boleto2Net.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.ApplicationInsights.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.Web.Infrastructure.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\WebGrease.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.pdb
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csprojAssemblyReference.cache
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CopyComplete
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.dll
+D:\Repositorios_Git\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\ApplicationInsights.config
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll.config
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe.config
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.rsp
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe.config
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.rsp
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.AppContext.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Collections.Immutable.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Console.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Compression.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Reflection.Metadata.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.AccessControl.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Claims.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.ValueTuple.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe.config
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.rsp
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe.config
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Boleto2Net.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.ApplicationInsights.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.Web.Infrastructure.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\WebGrease.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.pdb
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CopyComplete
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.dll
+D:\Repositorios_Git\Projeto PagNet\BranchMelhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.pdb
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\ApplicationInsights.config
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll.config
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.pdb
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe.config
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.rsp
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe.config
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.rsp
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.AppContext.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Collections.Immutable.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Console.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Compression.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Reflection.Metadata.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.AccessControl.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Claims.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.ValueTuple.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe.config
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.rsp
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe.config
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Boleto2Net.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.ApplicationInsights.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.Web.Infrastructure.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\WebGrease.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Boleto2Net.pdb
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.pdb
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CopyComplete
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\ApplicationInsights.config
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll.config
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe.config
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.rsp
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe.config
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.rsp
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.AppContext.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Collections.Immutable.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Console.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Compression.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Reflection.Metadata.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.AccessControl.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Claims.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.ValueTuple.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe.config
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.rsp
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe.config
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Boleto2Net.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.ApplicationInsights.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.Web.Infrastructure.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\WebGrease.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CopyComplete
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Boleto2Net.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\ApplicationInsights.config
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll.config
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\APIGeracaoBoleto.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.exe.config
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csc.rsp
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.exe.config
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\csi.rsp
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.AppContext.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Collections.Immutable.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Console.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Compression.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.IO.Pipes.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Reflection.Metadata.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.AccessControl.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Claims.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.ValueTuple.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.exe.config
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\vbc.rsp
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\roslyn\VBCSCompiler.exe.config
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Boleto2Net.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.ApplicationInsights.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.Web.Infrastructure.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\WebGrease.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Boleto2Net.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\NReco.PdfGenerator.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Newtonsoft.Json.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Net.Http.Formatting.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Helpers.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Http.WebHost.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Mvc.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Optimization.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.Razor.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Deployment.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Web.WebPages.Razor.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Antlr3.Runtime.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.WindowsServer.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.AI.Web.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.csproj.CopyComplete
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\APIGeracaoBoleto\APIGeracaoBoleto\obj\Release\APIGeracaoBoleto.pdb

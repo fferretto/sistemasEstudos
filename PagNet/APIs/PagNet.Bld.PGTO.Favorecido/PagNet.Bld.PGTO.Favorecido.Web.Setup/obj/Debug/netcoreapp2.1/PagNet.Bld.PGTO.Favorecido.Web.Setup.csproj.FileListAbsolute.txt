@@ -1,0 +1,14 @@
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.csproj.CopyComplete
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Favorecido\PagNet.Bld.PGTO.Favorecido.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.Bld.PGTO.Favorecido.Web.Setup.pdb

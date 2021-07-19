@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<telenet>
+	<services.domains>
+		<domain name="BorderoBoleto">
+			<messages>
+				<add key="1" text="PagNet Processos Bordero Fatura" />
+
+				<add key="1000" text="Código empresa não informado." />
+				<add key="1001" text="Código Borderô não informado." />
+				<add key="1002" text="Código conta corrente não informado." />
+			</messages>
+		</domain>
+	</services.domains>
+</telenet>

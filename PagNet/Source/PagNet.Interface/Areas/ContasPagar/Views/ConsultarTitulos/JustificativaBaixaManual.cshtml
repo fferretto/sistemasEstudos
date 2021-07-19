@@ -1,0 +1,54 @@
+﻿@model PagNet.Application.Models.JustificativaVm
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            Informe o motivo da baixa manual
+        </div>
+        <div class="panel-body">
+            <div class="form-group" id="MotivoBaixaManual">
+                <div class="row">
+                    <div>
+                        @Html.DDLBootstrapFor(model => model.codContaCorrenteBaixaManual, Model.nmContaCorrenteBaixaManual, "/Generico/CadastrosDiversos/GetContaCorrentePagamento/", 6)
+                        <span id="ValidaContaCorrente" style="display:none; margin-left:2%" class="text-danger field-validation-valid" data-valmsg-replace="true">
+                            Obrigatório Informar uma Conta Corrente!
+                        </span>
+                    </div>
+                    <div class="col-md-12"></div>
+                    @Html.DDLBootstrapFor(model => model.codJustificativa, Model.descJustificativa, "/Generico/ConsultasGenericas/ListaJustificativaBaixaManual/", 5)
+                    @Html.EditBootstrapFor(model => model.DescJustOutros, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <div id="btPagamentoManual" class="btn btn-warning" data-confirm="Confirma a baixa manual do título selecionado?" onclick="BaixaManual(); ">Realizar a Baixa</div>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(".DescJustOutros").hide();
+
+    $(".codJustificativa").change(function () {
+        $("#codJustificativa").val($('.codJustificativa option:selected').val());
+        if ($("#codJustificativa").val() == "OUTROS") {
+            $(".DescJustOutros").show();
+        }
+        else {
+            $(".DescJustOutros").hide();
+            $("#DescJustOutros").val("");
+        }
+    });
+
+
+
+</script>

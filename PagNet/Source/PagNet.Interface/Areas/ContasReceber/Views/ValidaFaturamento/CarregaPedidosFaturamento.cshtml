@@ -1,0 +1,32 @@
+﻿@model PagNet.Application.Models.DadosBoletoVM
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaTitulosVM">
+    <div class="panel-heading">
+        Lista de Pedidos de Faturamentos
+    </div>
+    <div class="panel-body">
+        <div class="col-md-12">
+            <div class="form-group col-md-2  pull-right">
+                <label></label>
+                <div class="input-group col-xs-12">
+                    <div class="btn btn-success" onclick="ValidarPedidosFaturamento();" data-confirm="Confirma a validação destes pedidos de faturamento?">Validar Pedidos</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" style="margin-top:2%;">
+            @Html.EditorFor(model => model.ListaBoletos, "IListaPedidosAFaturar")
+        </div>
+    </div>
+</div>
+
+
+
+@*<script src="~/js/ScriptHelpersPartialView.js"></script>*@
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()

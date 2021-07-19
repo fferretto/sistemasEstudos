@@ -1,0 +1,55 @@
+﻿@model PagNet.Application.Models.JustificativaVm
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            Voltar título para o status de Em Aberto
+        </div>
+        <div class="panel-body">
+            <div class="form-group" id="MotivoDesvinculaTitulo">
+                <div class="row">
+                    <div class="col-md-12">
+                        <b>
+                            Este processo só é permitido para títulos que foram enviados para o banco mas que não foram autorizados ou por algum
+                            outro motivo. Após a confirmação, este título será desvinculado do arquivo de remessa e voltará para o status de Em Aberto para que
+                            seja reenviado ao banco.
+                        </b>
+                    </div>
+                    <div class="col-md-12"style="margin-top:1%"></div>
+                    @Html.DDLBootstrapFor(model => model.codJustificativa, Model.descJustificativa, "/ContasPagar/ConsultarTitulos/GetJustificativaDesvincularTitulo/", 5)
+                    @Html.EditBootstrapFor(model => model.DescJustOutros, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <div id="btPagamentoManual" class="btn btn-warning" data-confirm="Confirma a desvinculação deste título do arquivo de remessa?" onclick="DesvinculaTitulo(); ">Desvincular Título</div>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(".DescJustOutros").hide();
+
+    $(".codJustificativa").change(function () {
+        $("#codJustificativa").val($('.codJustificativa option:selected').val());
+        if ($("#codJustificativa").val() == "OUTROS") {
+            $(".DescJustOutros").show();
+        }
+        else {
+            $(".DescJustOutros").hide();
+            $("#DescJustOutros").val("");
+        }
+    });
+
+
+
+</script>

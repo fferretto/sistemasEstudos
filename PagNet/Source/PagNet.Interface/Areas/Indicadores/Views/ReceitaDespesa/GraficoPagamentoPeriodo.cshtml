@@ -1,0 +1,18 @@
+﻿
+@using PagNet.Interface.Helpers
+
+<div class="col-md-12">
+    <div id="Chart_pag_periodo" style="min-width: 400px; height: 400px; margin: 0 auto">
+    </div>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+
+<script type="text/javascript">
+    google.load("visualization", "1", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(GraficoDespesaPeriodo);
+
+</script>
+

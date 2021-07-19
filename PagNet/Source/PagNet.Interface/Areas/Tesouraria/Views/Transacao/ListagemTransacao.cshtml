@@ -1,0 +1,161 @@
+﻿@model IList<PagNet.Application.Models.ListaTransacoesAConsolidarVm>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaTitulosVM">
+    <div class="panel-heading">
+        Lista de Títulos
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                @Html.DDLbtnDinamic("AcoesTransacao", "Ações", "/Tesouraria/Transacao/CarregaListaAcoes/", 1)
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table id="gridListaTransacao" class="table" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th width="40%">Descição</th>
+                        <th width="10%" style="text-align:center;">Data Prevista</th>
+                        <th width="10%" style="text-align:center;">Tipo de Transação</th>
+                        <th width="10%" style="text-align:center;">Valor da Transação</th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+                        <th width="0%" style="display:none;"></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var CodTexto = "color:#5f5f5f;";
+                            var PonteiroMouse = "cursor:Pointer";
+
+                            if (Model[i].TipoTransacao == "SAIDA")
+                            {
+                                CodTexto = "color:#ef5350;";
+                            }
+                            <tr>
+                                <td class="inpDescricao" width="40%" title="@Model[i].Descricao" style="@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].Descricao)
+                                </td>
+                                <td class="inpdataPGTO" width="10%" title="@Model[i].dataPGTO" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].dataPGTO)
+                                </td>
+                                <td class="inpTipoTransacao" width="10%" title="@Model[i].TipoTransacao" style="text-align:center;@PonteiroMouse">
+                                    @Html.DisplayFor(item => item[i].TipoTransacao)
+                                </td>
+                                <td class="inpValorTransacao" width="10%" title="@Model[i].ValorTransacao" style="text-align:center;@PonteiroMouse;@CodTexto">
+                                    @Html.DisplayFor(item => item[i].ValorTransacao)
+                                </td>
+
+                                <td class="itemChecado" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].itemChecado", nmPropriedade, i)" value="@Model[i].itemChecado" />
+                                </td>
+                                <td class="codigo" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].codigo", nmPropriedade, i)" value="@Model[i].codigo" />
+                                </td>
+                                <td class="Descricao" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].Descricao", nmPropriedade, i)" value="@Model[i].Descricao" />
+                                </td>
+                                <td class="dataSolicitacao" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].dataSolicitacao", nmPropriedade, i)" value="@Model[i].dataSolicitacao" />
+                                </td>
+                                <td class="dataPGTO" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].dataPGTO", nmPropriedade, i)" value="@Model[i].dataPGTO" />
+                                </td>
+                                <td class="ValorTransacao" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].ValorTransacao", nmPropriedade, i)" value="@Model[i].ValorTransacao" />
+                                </td>
+                                <td class="TipoTransacao" width="0%" style="display:none;">
+                                    <input class="" type="hidden" name="@String.Format("{0}[{1}].TipoTransacao", nmPropriedade, i)" value="@Model[i].TipoTransacao" />
+                                </td>
+
+                            </tr>
+                        }
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="AbreTelaModal" tabindex="-1" role="dialog" aria-labelledby="AbreTelaModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalAbreTelaModal">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.unblockUI();
+        var table = $('#gridListaTransacao').DataTable({
+            dom: 'frtip'
+        });
+
+        $('#gridListaTransacao tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+    });
+    function RealizarAcao(tipoAcao) {
+        var table = $('#gridListaTransacao').DataTable();
+        var trs = $(table.cells().nodes()).parent()
+        var Codigo = 0;
+        var TipoTransacao = "";
+        $(trs).each(function (index, value) {
+            if ($(value).hasClass("selected")) {
+                Codigo = $(value).find('.codigo').find('input').val();
+                TipoTransacao = $(value).find('.TipoTransacao').find('input').val();
+            }
+        });
+
+        if (tipoAcao == "INCLUIRTRANSACAO") {
+            IncluirTransacao(Codigo, TipoTransacao)
+        }
+        else if (Codigo == 0) {
+            msgAviso("Obrigatório selecionar uma transação para realizar esta ação.");
+            return false;
+        }
+
+        if (tipoAcao == "EDITATRANSACAO" && Codigo != 0) {
+            EditarTransacao(Codigo, TipoTransacao)
+        }
+        else if (tipoAcao == "CONSOLIDATRANSACAO" && Codigo != 0) {
+            ConsolidarTransacao()
+        }
+        else if (tipoAcao == "CANCELATRANSACAO" && Codigo != 0) {
+            CancelarTransacao()
+        }
+    }
+
+</script>

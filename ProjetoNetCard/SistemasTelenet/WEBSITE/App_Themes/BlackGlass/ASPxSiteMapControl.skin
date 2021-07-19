@@ -1,0 +1,28 @@
+<%@ Register TagPrefix="dxsm" Namespace="DevExpress.Web.ASPxSiteMapControl" Assembly="DevExpress.Web.v8.3" %>
+<dxsm:ASPxSiteMapControl runat="server" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" CssPostfix="BlackGlass">
+    <LevelProperties>
+        <dxsm:LevelProperties BulletStyle="None">
+            <ChildNodesPaddings PaddingTop="9px"></ChildNodesPaddings>
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties>
+            <ChildNodesPaddings PaddingTop="7px" PaddingLeft="18px"></ChildNodesPaddings>
+            <NodePaddings PaddingLeft="6px"></NodePaddings>
+            <Image Url="~/App_Themes/BlackGlass/Web/smBullet.png" Width="4px" Height="5px"/>            
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties>
+            <ChildNodesPaddings PaddingTop="7px" PaddingLeft="16px"></ChildNodesPaddings>
+            <NodePaddings PaddingLeft="2px"></NodePaddings>
+            <Image Url="~/App_Themes/BlackGlass/Web/smBullet.png" Width="4px" Height="5px"/>                        
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties>
+            <Image Url="~/App_Themes/BlackGlass/Web/smBullet.png" Width="4px" Height="5px"/>                        
+        </dxsm:LevelProperties>
+    </LevelProperties>
+    <LinkStyle VisitedColor="#C37300" HoverColor="#FF9600"></LinkStyle>
+    <DefaultLevelProperties BulletStyle="Disc" NodeSpacing="3px">
+        <CurrentNodeStyle BackColor="#d0dae2"></CurrentNodeStyle>
+    </DefaultLevelProperties>
+    <ColumnStyle>
+        <Paddings PaddingBottom="10px"></Paddings>
+    </ColumnStyle>
+</dxsm:ASPxSiteMapControl>

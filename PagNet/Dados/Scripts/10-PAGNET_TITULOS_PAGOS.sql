@@ -1,0 +1,36 @@
+
+BEGIN
+	IF EXISTS (SELECT 1 
+					 FROM INFORMATION_SCHEMA.TABLES 
+					 WHERE TABLE_SCHEMA = 'DBO' 
+					 AND  TABLE_NAME = 'PAGNET_TITULOS_PAGOS')
+	BEGIN
+			DROP TABLE PAGNET_TITULOS_PAGOS
+	END
+END
+BEGIN
+    CREATE TABLE PAGNET_TITULOS_PAGOS
+    (
+         CODTITULOPAGO                  INT             NOT NULL PRIMARY KEY
+        ,[STATUS]                       NVARCHAR(60)
+        ,CODUSUARIO                   	INT             NOT NULL  FOREIGN KEY REFERENCES PAGNET_USUARIO(CODUSUARIO)
+        ,CODCONTACORRENTE               INT             NOT NULL  FOREIGN KEY REFERENCES PAGNET_CONTACORRENTE(CODCONTACORRENTE)
+        ,CODBORDERO                     INT             NOT NULL  FOREIGN KEY REFERENCES PAGNET_BORDERO_PAGAMENTO(CODBORDERO)
+        ,CODFAVORECIDO                  INT             NOT NULL  FOREIGN KEY REFERENCES PAGNET_CADFAVORECIDO(CODFAVORECIDO)
+        ,CODEMPRESA                     INT             NOT NULL  FOREIGN KEY REFERENCES PAGNET_CADEMPRESA(CODEMPRESA)
+        ,TIPOSERVICO                    INT             NOT NULL
+        ,CODFORMALANCAMENTO             INT             NOT NULL   
+        ,SEUNUMERO                      NVARCHAR(100)
+        ,NOSSONUMERO                    NVARCHAR(100)
+        ,DTPAGAMENTO                    DATETIME
+        ,DTREALPAGAMENTO                DATETIME 
+        ,DTVENCIMENTO                   DATETIME
+        ,VALOR                          DECIMAL(15,2)
+        ,CODARQUIVO                     INT             NULL  FOREIGN KEY REFERENCES PAGNET_ARQUIVO(CODARQUIVO)
+        ,OCORRENCIARETORNO              VARCHAR(8000)
+        ,TIPOTITULO                     NVARCHAR(120)
+        ,LINHADIGITAVEL                 NVARCHAR(120)
+
+    )
+END
+	

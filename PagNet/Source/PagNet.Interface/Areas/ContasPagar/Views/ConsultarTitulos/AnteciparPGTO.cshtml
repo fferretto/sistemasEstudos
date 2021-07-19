@@ -1,0 +1,55 @@
+﻿@model PagNet.Application.Models.FiltroAntecipacaoPGTOVm
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        @Html.HiddenFor(x => x.codigoTitulo)
+
+        <div class="panel-heading">
+            Antecipação de Pagamento
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    @Html.EditBootstrapFor(model => model.dtAntecipacao, tudoTamanho: 12, inputTamanho: 5)
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group col-md-2  pull-right" style="margin-top:0.3%; margin-left:-2%">
+                        <label></label>
+                        <div class="input-group col-xs-12">
+                            <div class="btn btn-success" onclick="CalcularTaxas();">Calcular Taxas</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="CalculoAntecipacao">
+                    <div id="modalCalculoAntecipacao">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" id="btonAnteciparPGTO" class="btn btn-success" data-confirm="Confirma a antecipação deste título?" onclick="SalvarAntecipacaoPagamento();">Salvar</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $('.umadata input').datepicker({
+        format: "dd/mm/yyyy",
+        language: "pt-BR",
+        orientation: "auto",
+        autoclose: true
+    });
+
+</script>

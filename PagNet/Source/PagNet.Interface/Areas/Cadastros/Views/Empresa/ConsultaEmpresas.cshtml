@@ -1,0 +1,72 @@
+﻿@model IList<PagNet.Application.Models.CadEmpresaVm>
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="example" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().RAZAOSOCIAL)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().NMFANTASIA)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().CNPJ)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().UTILIZANETCARD)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(item => item[i].RAZAOSOCIAL)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].NMFANTASIA)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].CNPJ)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].EmpresaNetCard)
+                            </td>
+                            <td align='center'>
+                                <a href="@Url.Action("Index", "Empresa", new { area = "Cadastros", id = Model[i].CODEMPRESA, sid = ViewBag.Sid })">
+                                    <div class="btn btn-primary btn-xs">
+                                        <i class="fa fa-edit "></i>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    function carregaPagina() {
+    }
+    $(window).load(carregaPagina());
+
+    $(document).ready(function () {
+
+        $('#example').dataTable({
+            dom: 'frtip',
+            //buttons: [
+            //    'excel'
+            //],
+        });
+
+    });
+
+</script>

@@ -1,0 +1,150 @@
+﻿@model PagNet.Application.Models.DadosTituloVm
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        @Html.HiddenFor(x => x.CODIGOTITULO)
+        @Html.HiddenFor(x => x.CODBANCO_ORI)
+        @Html.HiddenFor(x => x.CODPGTO_ORI)
+
+        <div class="panel-heading">
+            Dados para Edição
+        </div>
+        <div class="panel-body">
+            <div class="form-group" id="GrupoTipoProgramacao">
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.CODFAVORECIDO, tudoTamanho: 1, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.NMFAVORECIDO, tudoTamanho: 8, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.CNPJ, tudoTamanho: 2, inputTamanho: 12)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.DATEMISSAO, tudoTamanho: 3, inputTamanho: 6)
+                    @Html.EditBootstrapFor(model => model.DATPGTO, tudoTamanho: 3, inputTamanho: 6)
+                    @Html.EditBootstrapFor(model => model.DATREALPGTO, tudoTamanho: 3, inputTamanho: 6)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.VALBRUTO, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.VALTAXAS, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.VALLIQ, tudoTamanho: 2, inputTamanho: 10)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.CODBANCO, tudoTamanho: 1, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.AGENCIA, tudoTamanho: 2, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.DVAGENCIA, tudoTamanho: 1, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.CONTACORRENTE, tudoTamanho: 4, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.DVCONTACORRENTE, tudoTamanho: 1, inputTamanho: 12)
+                </div>
+                <div class="row">
+                    @Html.DDLBootstrapFor(model => model.CodigoPlanoContas, Model.NomePlanoContas, "/Generico/ConsultasGenericas/DDLPlanoContasPagamento/", "codEmpresa", null, 5)
+                </div>
+                <div class="row">
+                    @Html.DDLBootstrapFor(model => model.codJustificativa, Model.descJustificativa, "/ContasPagar/ConsultarTitulos/GetJustificativaEditTitulo/", 5)
+                    @Html.EditBootstrapFor(model => model.DescJustOutros, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" id="btnGeraArquivo" class="btn btn-success" onclick="AlterarTituloPGTO();">Alterar</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+    $("#CODFAVORECIDO").prop('disabled', true);
+    $("#NMFAVORECIDO").prop('disabled', true);
+    $("#CNPJ").prop('disabled', true);
+    $("#DATEMISSAO").prop('disabled', true);
+    $("#DATPGTO").prop('disabled', true);
+    $("#VALLIQ").prop('disabled', true);
+    $("#VALBRUTO").prop('disabled', true);
+    $("#VALTAXAS").prop('disabled', true);
+
+    $("#CODBANCO").prop('disabled', true);
+    $("#AGENCIA").prop('disabled', true);
+    $("#DVAGENCIA").prop('disabled', true);
+    $("#CONTACORRENTE").prop('disabled', true);
+    $("#DVCONTACORRENTE").prop('disabled', true);
+       
+
+    $('#VALDESCONTO').mask("#.##0,00", { reverse: true })
+    $('#VALACRESCIMO').mask("#.##0,00", { reverse: true })
+
+    $("#VALACRESCIMO").click(function () {
+        if ($("#VALACRESCIMO").val() == "0,00") {
+            $("#VALACRESCIMO").val("")
+        }
+    });
+
+    $("#VALDESCONTO").click(function () {
+        if ($("#VALDESCONTO").val() == "0,00") {
+            $("#VALDESCONTO").val("")
+        }
+    });
+
+    $("#VALACRESCIMO").change(function () {
+        var valorBruto = getMoney($("#VALBRUTO").val())
+        var valorTaxa = getMoney($("#VALTAXAS").val())
+        var valorAcrescimo = getMoney($("#VALACRESCIMO").val())
+        var valorDesconto = getMoney($("#VALDESCONTO").val())
+
+        var valorTotal = (valorBruto + valorAcrescimo) - (valorTaxa + valorDesconto)
+
+        $("#VALLIQ").val(formatReal(valorTotal))
+
+    });
+    $("#VALDESCONTO").change(function () {
+        var valorBruto = getMoney($("#VALBRUTO").val())
+        var valorTaxa = getMoney($("#VALTAXAS").val())
+        var valorAcrescimo = getMoney($("#VALACRESCIMO").val())
+        var valorDesconto = getMoney($("#VALDESCONTO").val())
+
+        var valorTotal = (valorBruto + valorAcrescimo) - (valorTaxa + valorDesconto)
+
+        $("#VALLIQ").val(formatReal(valorTotal))
+    });
+
+    $(".DescJustOutros").hide();
+
+
+    function getMoney(str) {
+        return parseInt(str.replace(/[\D]+/g, ''));
+    }
+    function formatReal(int) {
+        var tmp = int + '';
+        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+        if (tmp.length > 6)
+            tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+        return tmp;
+    }
+
+
+    $(".codJustificativa").change(function () {
+        $("#codJustificativa").val($('.codJustificativa option:selected').val());
+        if ($("#codJustificativa").val() == "OUTROS") {
+            $(".DescJustOutros").show();
+        }
+        else {
+            $(".DescJustOutros").hide();
+            $("#DescJustOutros").val("");
+        }
+    });
+
+
+    $('.umadata input').datepicker({
+        format: "dd/mm/yyyy",
+        language: "pt-BR",
+        orientation: "auto",
+        autoclose: true
+    });
+
+</script>

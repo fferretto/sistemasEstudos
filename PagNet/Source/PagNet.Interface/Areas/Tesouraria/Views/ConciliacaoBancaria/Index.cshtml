@@ -1,0 +1,76 @@
+﻿@model PagNet.Application.Models.FiltroConciliacaoBancariaVm
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Baixa de Pagamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.codigoUsuario)
+    @Html.HiddenFor(x => x.caminhoArquivo)
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Conciliação Bancária</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.DDLBootstrapFor(model => model.codigoEmpresa, Model.nomeEmpresa, "/Generico/CadastrosDiversos/GetEmpresa/", null, model => model.codContaCorrente, 6)
+
+                    <div class="col-md-5">
+                        @Html.DDLBootstrapFor(model => model.codContaCorrente, Model.nmContaCorrente, "/Generico/CadastrosDiversos/GetContaCorrente/", "codigoEmpresa", null, 0)
+                        <span id="ValidaContaCorrente" style="display:none; margin-left:2%" class="text-danger field-validation-valid" data-valmsg-replace="true">
+                            Obrigatório Informar uma Conta Corrente!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-xs-8 form-group">
+                        <label for="ArquivoUpload">Selecione o Arquivo</label>
+                        <abbr class='tooltip2' title='Arquivo disponibilizado pelo banco no formato OLX'>
+                            <i class='fa fa-question-circle'></i>
+                        </abbr>
+
+                        <div class="input-group">
+                            <input type="file" name="files" id="uploadFile" class="form-control" />
+                            <span class="form-group input-group-btn">
+                                <input class="btn btn-default" style="height:29px" type="button" onclick="ProcessarArquivo();" value="Processar">
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+<div id="ListaConciliacao">
+    <div id="modalListaConciliacao">
+
+    </div>
+</div>
+
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Tesouraria" , classe = "ConciliacaoBancaria.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+
+@section Scripts
+    {
+    <script>
+
+
+
+    </script>
+}

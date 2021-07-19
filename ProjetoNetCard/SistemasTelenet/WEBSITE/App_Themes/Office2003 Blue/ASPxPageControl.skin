@@ -1,0 +1,12 @@
+<%@ Register TagPrefix="dxtc" Namespace="DevExpress.Web.ASPxTabControl" Assembly="DevExpress.Web.v8.3" %>
+<dxtc:ASPxPageControl runat="server"
+	CssFilePath="~/App_Themes/Office2003 Blue/{0}/styles.css" CssPostfix="Office2003_Blue"
+	ImageFolder="~/App_Themes/Office2003 Blue/{0}/">
+	
+	<ContentStyle>
+		<Border BorderColor="#002D96" BorderStyle="Solid" BorderWidth="1px" />
+	</ContentStyle>
+	
+	<LoadingPanelStyle ImageSpacing="6px" />
+		
+</dxtc:ASPxPageControl>

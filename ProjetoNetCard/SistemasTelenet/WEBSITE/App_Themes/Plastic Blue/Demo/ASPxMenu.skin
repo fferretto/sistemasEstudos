@@ -1,0 +1,7 @@
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v8.3" %>
+<dxm:ASPxMenu runat="server" ImageFolder="~/App_Themes/Plastic Blue/{0}/" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" ItemSpacing="0px" CssPostfix="PlasticBlue" AutoSeparators="RootOnly" SeparatorHeight="100%" SeparatorWidth="2px">
+    <SubMenuStyle GutterWidth="0px" />
+    <RootItemSubMenuOffset X="1" LastItemX="1" FirstItemX="1"></RootItemSubMenuOffset>
+    <ItemSubMenuOffset LastItemY="-1" FirstItemY="-1" Y="-1"></ItemSubMenuOffset>
+    <SeparatorBackgroundImage ImageUrl="~/App_Themes/Plastic Blue/Web/mSeparatorHor.gif" VerticalPosition="Top" />
+</dxm:ASPxMenu>

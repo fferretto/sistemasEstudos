@@ -1,0 +1,6 @@
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.ABCBrasil.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.ABCBrasil.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.ABCBrasil.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.ABCBrasil.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.ABCBrasil.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.ABCBrasil.AssemblyInfo.cs

@@ -1,0 +1,14 @@
+---------------------------  ARQUIVO DE LOG - DATA:24/01/2020  --------------------------
+
+ O arquivo foi processado e apresentou os seguintes resultados:
+
+TRANSFERENCIA USUARIO 81297/03974984119/81632 - Usuário já existe no destino                                                                                            
+TRANSFERENCIA USUARIO 81297/52826350110/81876 - Cliente destino não existe                                                                                              
+TRANSFERENCIA USUARIO 81549/03955183181/81311 - Usuário já existe no destino                                                                                            
+TRANSFERENCIA USUARIO 81151/98148044104/81295 - Limite de crédito do cliente insuficiente                                                                               
+TRANSFERENCIA USUARIO 81296/03902727101/81444 - Usuário já existe no destino                                                                                            
+TRANSFERENCIA USUARIO 81632/93221304153/81869 - Cliente destino não existe                                                                                              
+TRANSFERENCIA USUARIO 81632/05498757190/81869 - Cliente destino não existe                                                                                              
+TRANSFERENCIA USUARIO 81297/88794938172/81876 - Cliente destino não existe                                                                                              
+TRANSFERENCIA USUARIO 81297/16468554187/81876 - Cliente destino não existe                                                                                              
+TRANSFERENCIA USUARIO 0/00000000000/0 - Registro com erro na linha - ;;                                                                                         

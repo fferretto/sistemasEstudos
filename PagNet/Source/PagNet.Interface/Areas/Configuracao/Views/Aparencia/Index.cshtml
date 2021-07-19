@@ -1,0 +1,208 @@
+﻿@model PagNet.Application.Models.AparenciaSistemaVm
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Definições de Aparência";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Cabecaho)
+    @Html.HiddenFor(x => x.LinhaCabecalho)
+    @Html.HiddenFor(x => x.corTexto1)
+    @Html.HiddenFor(x => x.corTexto2)
+    @Html.HiddenFor(x => x.corTexto3)
+    @Html.HiddenFor(x => x.corTexto4)
+    @Html.HiddenFor(x => x.PainelSuperior)
+    @Html.HiddenFor(x => x.LinhaPainel)
+    @Html.HiddenFor(x => x.btnSucesso)
+    @Html.HiddenFor(x => x.btnDanger)
+    @Html.HiddenFor(x => x.btnDefault)
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold; font-size: 15px;">
+                <b>Definições de Aparência do Sistema</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @Html.ValidationSummary(true, "(* campos obrigatórios)", new { @class = "text-danger" })
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12">
+                                        <div class="col-md-5">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    Logo da Empresa
+                                                    <i class="fa-question-circle fa" title="O arquivo será redimensionado para o tamanho de 140px. A imagem preferencialmente deve possuir fundo transparente."></i>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="form-group">
+                                                        <div id="imagePlaceholder" class="col-md-12 Color-Header-menu">
+                                                            <img style="margin-left:26%" id="LogoImage" class="logo-pagnet img-responsive img-rounded" src="@Url.Action("GetImagemLogo", "Aparencia", new { area = "Configuracao", sid = ViewBag.Sid })" alt="User picture" width="140px">
+                                                        </div>
+                                                        <div class="input-group col-md-12">
+                                                            <input type="file" name="arquivos" id="imgLogo" class="form-control" accept="image/png, image/jpeg" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    Ícone do Browser
+                                                    <i class="fa-question-circle fa" title="Só é permitido imagem no formato .Ico. A imagem preferencialmente deve possuir fundo transparente."></i>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="form-group">
+                                                        <div id="imagePlaceholder" class="col-md-12 Color-Header-menu">
+                                                            <img style="margin-left:26%" id="icoImage" class="logo-pagnet img-responsive img-rounded" src="@Url.Action("GetImagemIco", "Aparencia", new { area = "Configuracao", sid = ViewBag.Sid })" alt="User picture" width="95px">
+                                                        </div>
+                                                        <div class="input-group col-md-12">
+                                                            <input type="file" name="icoarquivos" id="ImgIco" class="form-control" accept="image/x-icon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Definir as Cores do Cabeçalho e Menu Lateral
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        @Html.DisplayNameFor(model => model.Cabecaho)
+                                                        <br />
+                                                        <button class="btn jscolor {valueElement:'Cabecaho', onFineChange:'setColorCabecalho(this)'}" id="btnCabecaho">
+                                                            <i class="fa fa-paint-brush" aria-hidden="true"></i> Alterar Cor
+                                                        </button>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        @Html.DisplayNameFor(model => model.LinhaCabecalho)
+                                                        <br />
+                                                        <button class="btn jscolor {valueElement:'LinhaCabecalho', onFineChange:'setColorLinhaCabecalho(this)'}" id="btnLinhaCabecalho">
+                                                            <i class="fa fa-paint-brush" aria-hidden="true"></i> Alterar Cor
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        @Html.DisplayNameFor(model => model.corTexto1)
+                                                        <br />
+                                                        <button class="btn jscolor {valueElement:'corTexto1', onFineChange:'setColorTexto1(this)'}" id="btncorTexto1">
+                                                            <i class="fa fa-paint-brush" aria-hidden="true"></i> Alterar Cor
+                                                        </button>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        @Html.DisplayNameFor(model => model.corTexto2)
+                                                        <br />
+                                                        <button class="btn jscolor {valueElement:'corTexto2', onFineChange:'setColorTexto2(this)'}" id="btncorTexto2">
+                                                            <i class="fa fa-paint-brush" aria-hidden="true"></i> Alterar Cor
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        @Html.DisplayNameFor(model => model.corTexto3)
+                                                        <br />
+                                                        <button class="btn jscolor {valueElement:'corTexto3', onFineChange:'setColorTexto3(this)'}" id="btncorTexto3">
+                                                            <i class="fa fa-paint-brush" aria-hidden="true"></i> Alterar Cor
+                                                        </button>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        @Html.DisplayNameFor(model => model.corTexto4)
+                                                        <br />
+                                                        <button class="btn jscolor {valueElement:'corTexto4', onFineChange:'setColorTexto4(this)'}" id="btncorTexto4">
+                                                            <i class="fa fa-paint-brush" aria-hidden="true"></i> Alterar Cor
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Definir as Cores do Painel
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    @Html.DisplayNameFor(model => model.PainelSuperior)
+                                                    <br />
+                                                    <button class="btn jscolor {valueElement:'PainelSuperior', onFineChange:'setColorPainelSuperior(this)'}" id="btnPainelSuperior">
+                                                        <i class="fa fa-paint-brush" aria-hidden="true"></i> Alterar Cor
+                                                    </button>
+                                                </div>
+                                                <div class="form-group">
+                                                    @Html.DisplayNameFor(model => model.LinhaPainel)
+                                                    <br />
+                                                    <button class="btn jscolor {valueElement:'LinhaPainel', onFineChange:'setColorLinhaPainel(this)'}" id="btnLinhaPainel">
+                                                        <i class="fa fa-paint-brush" aria-hidden="true"></i>Alterar Cor
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Definir as Cores dos Botões
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <button class="btn jscolor {valueElement:'btnSucesso', onFineChange:'setColorbtnSucesso(this)'}" id="botaoSucesso">
+                                                        <i class="fa fa-paint-brush" aria-hidden="true"></i> Exemplo do botão
+                                                    </button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button class="btn jscolor {valueElement:'btnDanger', onFineChange:'setColorbtnDanger(this)'}" id="botaoDanger">
+                                                        <i class="fa fa-paint-brush" aria-hidden="true"></i> Exemplo do botão
+                                                    </button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button class="btn jscolor {valueElement:'btnDefault', onFineChange:'setColorbtnDefault(this)'}" id="botaoDefault">
+                                                        <i class="fa fa-paint-brush" aria-hidden="true"></i>  Exemplo do botão
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group col-lg-4 ">
+                                        <div class="" style="margin-top: 26px">
+                                            <div id="btnResetarAparencia" class="btn btn-default" data-confirm="A configuração atual será perdida. Deseja continuar?" onclick="ResetarAparencia();">Restaurar Padrão do PagNet</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-8  pull-right">
+                                        <div class="pull-right" style="margin-top: 26px">
+                                            <div id="btnSalvar" class="btn btn-success" data-confirm="Confirma a alteração da aparência do Sistema?" onclick="SalvaAlteracaoLayout();">Salvar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+@*<script src="~/js/Scripts/Configuracao/Aparencia.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Configuracao" , classe = "Aparencia.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()

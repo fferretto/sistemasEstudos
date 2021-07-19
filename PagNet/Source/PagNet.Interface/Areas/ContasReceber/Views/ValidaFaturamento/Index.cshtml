@@ -1,0 +1,139 @@
+﻿@model PagNet.Application.Models.FiltroConsultaFaturamentoVM
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Valida Faturamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.codigoEmpresa)
+    @Html.HiddenFor(x => x.codStatus)
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.CodigoCliente)
+    @Html.HiddenFor(x => x.ValidaCliente)
+    @Html.HiddenFor(x => x.UtilizaNetCard)
+    
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Validar Pedidos de Faturamento</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-9">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+                    <div class="col-md-8" id="FiltroEmpresa" style="display:none">
+                        @Html.DDLBootstrapFor(model => model.codigoEmpresa, Model.nomeEmpresa, "/Generico/CadastrosDiversos/GetEmpresa/", 0)
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditBootstrapFor(model => model.filtroCliente, tudoTamanho: 3, inputTamanho: 10)
+                        @Html.EditBootstrapFor(model => model.nomeCliente, tudoTamanho: 7, inputTamanho: 12)
+                        <div class="form-group col-md-2" id="btnLocalizarCliente">
+                            <label></label>
+                            <div class="input-group col-xs-12">
+                                <div class="btn btn-success" onclick="LocalizaCliente();">Localizar</div>
+                            </div>
+                        </div>
+                    </div>
+                    @if (Model.UtilizaNetCard)
+                    {
+                        <div class="panel panel-default col-md-11" style="margin-left:2%" id="FormaCobrancaJuros">
+                            <div class="panel-heading-decision">
+                                Validar Pedidos via arquivo de retorno de prefeituras?
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills">
+                                    <li class="active" id="liNao">
+                                        <a href="#Nao" data-toggle="tab" id="btnNao">Não</a>
+                                    </li>
+                                    <li class="" id="liSim">
+                                        <a href="#Sim" data-toggle="tab" id="btnSim">Sim</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" style="margin-top:2%;">
+                                    <div class="tab-pane fade active in show" id="Nao">
+
+                                    </div>
+                                    <div class="tab-pane fade" id="Sim">
+                                        <div class="row">
+
+                                            @Html.DDLBootstrapFor(model => model.codigoFatura, Model.nomeFatura, "/ContasReceber/ValidaFaturamento/CarregaListaFaturas/", "CodigoCliente", null, 5)
+                                            <span id="ValidacodigoFatura" style="display:none; margin-left:2%" class="text-danger field-validation-valid" data-valmsg-replace="true">
+                                                Obrigatório Informar uma fatura!
+                                            </span>
+
+                                            <div class="col-xs-8 form-group">
+                                                <label for="ArquivoUploadCliente">Selecione o Arquivo de Retorno da Prefeitura</label>
+                                                <abbr class='tooltip2' title='Arquivo de retorno disponibilizado pela prefeitura para realizar a validação dos pedidos de faturamento'>
+                                                    <i class='fa fa-question-circle'></i>
+                                                </abbr>
+
+                                                <div class="input-group">
+                                                    <input type="file" style="width: 190%;" name="files" id="uploadFileCliente" size="1"  class="form-control" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group col-md-2  pull-right">
+                        <label></label>
+                        <div class="input-group col-xs-12">
+                            <div class="btn btn-success" onclick="CarregaListaPedidosFaturamento();">Carregar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ListaPedidos">
+        <div id="modalListaPedidos">
+
+        </div>
+    </div>
+    <div class="modal fade" id="LocalizaCliente" tabindex="-1" role="dialog" aria-labelledby="LocalizaCliente" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalCliente">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="VisualizarPedidoFaturamento" tabindex="-1" role="dialog" aria-labelledby="VisualizarPedidoFaturamento" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalPedidoFaturamento">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@*<script src="~/js/Scripts/ContasReceber/EmitirBoletosGerados.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "ContasReceber" , classe = "ValidaFaturamento.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()

@@ -1,0 +1,102 @@
+﻿@model IList<PagNet.Application.Models.SolicitacaoBoletoVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default IListaPedidosAFaturar">
+    <div class="panel-heading">
+        
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 0%;">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table id="gridPedidosFaturamentos" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th width="5%" style="text-align:center;" class="CheckBox-Grid"><input name="select_all" id="select_all" checked="checked" type="checkbox"></th>
+                    <th width="3%" style="text-align:center;"></th>
+                    <th width="29%">Cliente</th>
+                    <th width="11%" style="text-align:center;">CPF/CNPJ</th>
+                    <th width="10%" style="text-align:center;">Valor</th>
+                    <th width="11%" style="text-align:center;">Vencimento</th>
+                    <th width="11%" style="text-align:center;">Origem</th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                <tr>
+                    <td class="CheckBox-Grid chkBoleto" width="5%" align="center">
+                        <input class="inpchkBoleto" type="checkbox" name="@String.Format("{0}[{1}].chkBoleto", nmPropriedade, i)" checked="@Model[i].chkBoleto" />
+                    </td>
+                    <td width="3%" align='center' title="Visualizar Pedido de Faturamento">
+                        <div class="btn btn-success" onclick="VisualizarPedidoFaturamento(@Model[i].codEmissaoBoleto);">
+                            <i class="fa fa-search "></i>
+                        </div>
+                    </td>
+                    <td class="nomeCliente" width="29%" title="@Model[i].nomeCompletoCliente">
+                        @Html.DisplayFor(item => item[i].nomeCliente)
+                    </td>
+                    <td class="cnpj" width="11%" title="@Model[i].cnpj" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].cnpj)
+                    </td>
+                    <td class="Valor" width="10%" title="@Model[i].Valor" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].Valor)
+                    </td>
+                    <td class="dtVencimento" width="11%" title="@Model[i].dtVencimento" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].dtVencimento)
+                    </td>
+                    <td class="OrigemBoleto" width="11%" title="@Model[i].dtVencimento" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].OrigemBoleto)
+                    </td>
+                    <td class="codEmissaoBoleto" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].codEmissaoBoleto", nmPropriedade, i)" value="@Model[i].codEmissaoBoleto" />
+                    </td>
+                </tr>
+                    }
+
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.unblockUI();
+        var table = $('#gridPedidosFaturamentos').DataTable({
+            dom: 'Blfrtip',
+            buttons: [
+                'excel'
+            ],
+            scrollX: true,
+            order: [[6, 'asc']],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0, 1]
+                }
+            ]
+        });
+
+
+        $("#select_all").click(function () {
+            $('input', table.cells().nodes()).prop('checked', this.checked);
+        });
+
+    });
+
+
+</script>

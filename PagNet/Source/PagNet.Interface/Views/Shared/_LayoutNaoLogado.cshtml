@@ -1,0 +1,190 @@
+﻿@{
+
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    @*<meta http-equiv="X-UA-Compatible" content="IE=edge">*@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PagNet - @ViewBag.Title </title>
+    <link rel="shortcut icon" href="~/images/icoPagNet.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--webfonts-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="<spring:url value='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text.css'/>" />
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css" />
+
+
+    @*<link rel="stylesheet" href="~/css/bootstrap.css" />*@
+    <link rel='stylesheet' href='~/css/All.css' crossorigin='anonymous'>
+    <link rel='stylesheet' href='~/css/StyleMenu.css' crossorigin='anonymous'>
+    <link rel="stylesheet" href="~/css/jBox.css" />
+    <link rel="stylesheet" href="~/css/themes/NoticeBorder.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/css/morris/morris-0.4.3.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="~/css/bootstrap-datepicker.standalone.css" />
+    <link rel="stylesheet" href="~/js/dataTables/datatables.min.css" />
+    <link rel="stylesheet" href="~/js/dataTables/dataTables.bootstrap.css" />
+
+    <link rel="stylesheet" href="~/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://kit.fontawesome.com/f10d5f634d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="~/css/Login.css" />
+
+    <script src="~/js/jquery-3.3.1.js"></script>
+    <script src="~/js/jquery.validate.js"></script>
+    <script src="~/js/jquery.validate.zz.PagNet.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script src="~/js/jquery.pulse.min.js"></script>
+    <script src="~/js/jquery.form.min.js"></script>
+    <script src="~/js/jquery.blockUI.js"></script>
+    <script src="~/js/dataTables/jquery.dataTables.min.js"></script>
+
+    <script src="~/js/dataTables/dataTables.buttons.min.js"></script>
+    <script src="~/js/dataTables/buttons.flash.min.js"></script>
+    <script src="~/js/dataTables/jszip.min.js"></script>
+    <script src="~/js/dataTables/pdfmake.min.js"></script>
+    <script src="~/js/dataTables/vfs_fonts.js"></script>
+    <script src="~/js/dataTables/buttons.html5.min.js"></script>
+    <script src="~/js/dataTables/buttons.print.min.js"></script>
+    <script src="~/js/client-authorization.js"></script>
+
+    <script src="~/js/jquery.cookie.js"></script>
+    <script src="~/js/jquery.MultiFile.js" type="text/javascript" language="javascript"></script>
+    <script src="~/js/jscolor.js" type="text/javascript" language="javascript"></script>
+
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <environment include="Development">
+        <script type="text/javascript">
+
+            function montaUrl(urlRelativa) {
+
+                @*var sid = urlRelativa.indexOf("?") > -1
+                    ? "&sid=" + '@ViewBag.Sid'
+                    : "?sid=" + '@ViewBag.Sid';*@
+
+                //urlRelativa = urlRelativa + sid;
+
+                //var valor = urlRelativa.substring(0, 1);
+
+                //if (valor != '/') {
+                //    urlRelativa = '/' + urlRelativa;
+                //}
+
+                var nmPastaRaiz = ""; //Modo Debug
+
+
+                if (nmPastaRaiz == "")  //modo debug
+                    return urlRelativa;
+
+                var split = urlRelativa.split('/');
+
+                if (split[1] == nmPastaRaiz)
+                    return urlRelativa;
+                else
+                    return '/' + nmPastaRaiz + urlRelativa;
+            }
+        </script>
+    </environment>
+
+    <environment exclude="Development">
+        <script type="text/javascript">
+
+            function montaUrl(urlRelativa) {
+
+                @*var sid = urlRelativa.indexOf("?") > -1
+                    ? "&sid=" + '@ViewBag.Sid'
+                    : "?sid=" + '@ViewBag.Sid';*@
+
+                //urlRelativa = urlRelativa + sid;
+
+                var valor = urlRelativa.substring(0, 1);
+
+                if (valor != '/') {
+                    urlRelativa = '/' + urlRelativa;
+                }
+
+                //var nmPastaRaiz = "pagnetteste"; //Ambiente de Homologação
+                var nmPastaRaiz = "pagnet"; //Ambiente de Produção
+
+
+                if (nmPastaRaiz == "")  //modo debug
+                    return urlRelativa;
+
+                var split = urlRelativa.split('/');
+
+                if (split[1] == nmPastaRaiz)
+                    return urlRelativa;
+                else
+                    return '/' + nmPastaRaiz + urlRelativa;
+            }
+        </script>
+    </environment>
+
+
+</head>
+<body>
+    <div id="wrapper">
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+
+                @RenderBody()
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div>
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div>
+
+    <script src="~/js/jquery-3.3.1.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script src="~/js/jquery.pulse.min.js"></script>
+    <script src="~/js/jBox.min.js"></script>
+    <script src="~/js/jquery.form.min.js"></script>
+    <script src="~/js/jquery.blockUI.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
+    @*<script src="~/js/jquery.metisMenu.js"></script>*@
+    <script src="~/js/dataTables/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables/dataTables.buttons.min.js"></script>
+    <script src="~/js/dataTables/buttons.flash.min.js"></script>
+    <script src="~/js/dataTables/jszip.min.js"></script>
+    <script src="~/js/dataTables/pdfmake.min.js"></script>
+    <script src="~/js/dataTables/vfs_fonts.js"></script>
+    <script src="~/js/dataTables/buttons.html5.min.js"></script>
+    <script src="~/js/dataTables/buttons.print.min.js"></script>
+    <script src="~/js/dataTables/dataTables.bootstrap.js"></script>
+    <script src="~/js/ScriptHelpers.js"></script>
+    <script src="~/js/jquery.validate.js"></script>
+    <script src="~/js/jquery.validate.zz.PagNet.js"></script>
+    <script src="~/js/jquery.mask.min.js"></script>>
+    <script src="~/js/jquery.MultiFile.js" type="text/javascript" language="javascript"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+

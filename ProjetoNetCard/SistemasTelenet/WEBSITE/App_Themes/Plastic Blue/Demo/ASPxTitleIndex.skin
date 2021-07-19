@@ -1,0 +1,20 @@
+<%@ Register TagPrefix="dxti" Namespace="DevExpress.Web.ASPxTitleIndex" Assembly="DevExpress.Web.v8.3" %>
+<dxti:ASPxTitleIndex runat="server" GroupSpacing="26px" BackToTopSpacing="7px" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" FilterBoxSpacing="0px" IndexPanelSpacing="0px" CssPostfix="PlasticBlue" Font-Underline="False">
+<BackToTopImage Height="7px" Width="7px" Url="~/App_Themes/Plastic Blue/Web/tiGotToBackP.gif"></BackToTopImage>
+<LoadingPanelImage Url="~/App_Themes/Plastic Blue/Web/tiLoading.gif"></LoadingPanelImage>
+<ItemStyle>
+<CurrentItemStyle Font-Underline="False" Font-Bold="False"></CurrentItemStyle>
+</ItemStyle>
+<FilterBox InfoText="" VerticalPosition="AboveIndexPanel"></FilterBox>
+<IndexPanelStyle VerticalAlign="Middle" Font-Size="16px">
+<BorderBottom BorderStyle="None"></BorderBottom>
+</IndexPanelStyle>
+<BackToTopStyle HorizontalAlign="Right" ImageSpacing="4px"></BackToTopStyle>
+<GroupContentStyle ItemSpacing="0px" Font-Underline="False" Font-Bold="False">
+<Paddings PaddingTop="18px" PaddingBottom="1px" PaddingLeft="25px"></Paddings>
+</GroupContentStyle>
+<IndexPanelSeparatorStyle Height="0px"></IndexPanelSeparatorStyle>
+<IndexPanel Separator="&amp;nbsp;|"></IndexPanel>
+<LoadingPanelStyle ImageSpacing="6px"></LoadingPanelStyle>
+<DisabledStyle ForeColor="#B8B8B8"></DisabledStyle>
+</dxti:ASPxTitleIndex>

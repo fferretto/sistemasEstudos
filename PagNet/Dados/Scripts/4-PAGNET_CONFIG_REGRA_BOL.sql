@@ -1,0 +1,61 @@
+BEGIN
+	IF EXISTS (SELECT 1 
+					 FROM INFORMATION_SCHEMA.TABLES 
+					 WHERE TABLE_SCHEMA = 'DBO' 
+					 AND  TABLE_NAME = 'PAGNET_CONFIG_REGRA_BOL')
+	BEGIN
+			DROP TABLE PAGNET_CONFIG_REGRA_BOL
+	END
+END
+BEGIN
+    CREATE TABLE PAGNET_CONFIG_REGRA_BOL
+    (
+         CODREGRA               INT PRIMARY KEY NOT NULL          
+        ,CODEMPRESA             INT FOREIGN KEY REFERENCES PAGNET_CADEMPRESA(CODEMPRESA)
+        ,COBRAJUROS             CHAR(1)         NOT NULL
+        ,VLJUROSDIAATRASO       DECIMAL(15,2)     
+        ,PERCJUROS              DECIMAL(5,2) 
+        ,COBRAMULTA             CHAR(1)         NOT NULL
+        ,VLMULTADIAATRASO       DECIMAL(15,2)
+        ,PERCMULTA              DECIMAL(5,2)
+        ,CODPRIMEIRAINSTCOBRA   INT             NOT NULL
+        ,CODSEGUNDAINSTCOBRA    INT             NOT NULL
+        ,TAXAEMISSAOBOLETO      DECIMAL(13,2)
+        ,AGRUPARFATURAMENTOSDIA CHAR(1)         NOT NULL
+        ,ATIVO                  CHAR(1)         NOT NULL
+
+    )
+END
+BEGIN
+
+	IF EXISTS (SELECT 1 
+					 FROM INFORMATION_SCHEMA.TABLES 
+					 WHERE TABLE_SCHEMA = 'DBO' 
+					 AND  TABLE_NAME = 'PAGNET_CONFIG_REGRA_BOL_LOG')
+	BEGIN
+			DROP TABLE PAGNET_CONFIG_REGRA_BOL_LOG
+	END
+END
+BEGIN
+    CREATE TABLE PAGNET_CONFIG_REGRA_BOL_LOG
+    (
+         CODREGRA_LOG           INT   PRIMARY KEY      NOT NULL 
+        ,CODREGRA               INT                    NOT NULL     
+        ,CODEMPRESA             INT 
+        ,COBRAJUROS             CHAR(1)  
+        ,VLJUROSDIAATRASO       DECIMAL(15,2)     
+        ,PERCJUROS              DECIMAL(5,2) 
+        ,COBRAMULTA             CHAR(1)        
+        ,VLMULTADIAATRASO       DECIMAL(15,2)
+        ,PERCMULTA              DECIMAL(5,2)
+        ,CODPRIMEIRAINSTCOBRA   INT             
+        ,CODSEGUNDAINSTCOBRA    INT             
+        ,TAXAEMISSAOBOLETO      DECIMAL(13,2)
+        ,AGRUPARFATURAMENTOSDIA CHAR(1)         NOT NULL
+        ,ATIVO                  CHAR(1)         NOT NULL
+        ,CODUSUARIO             INT             NOT NULL          
+        ,DATINCLOG              DATETIME        NOT NULL   
+        ,DESCLOG                VARCHAR(500)    NOT NULL
+
+    )
+END

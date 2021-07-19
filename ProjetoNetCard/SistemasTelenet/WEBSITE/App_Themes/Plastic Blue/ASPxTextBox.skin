@@ -1,0 +1,9 @@
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v8.3" %>
+<dxe:ASPxTextBox runat="server" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" CssPostfix="PlasticBlue">
+<ValidationSettings>
+<ErrorFrameStyle ImageSpacing="4px">
+<ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+</ErrorFrameStyle>
+<ErrorImage Url="~/App_Themes/Plastic Blue/Editors/edtError.png" Height="14px" Width="14px"></ErrorImage>
+</ValidationSettings>
+</dxe:ASPxTextBox>

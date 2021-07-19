@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PagNet.Bld.Domain" Version="1.1.0" />
+    <PackageReference Include="Telenet.AspNetCore.Mvc.Authentication" Version="1.0.1.1002" />
+    <PackageReference Include="Telenet.BusinessLogicModel" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagNet.Bld.PGTO.ArquivoRemessa.Abrstraction\PagNet.Bld.PGTO.ArquivoRemessa.Abrstraction.csproj" />
+  </ItemGroup>
+
+</Project>

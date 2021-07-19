@@ -1,0 +1,144 @@
+﻿/* -- ASPxMenu -- */
+.dxmControl_PlasticBlueChartDemoToolbar
+{
+	font: 9pt Tahoma;
+	color: white;
+	background-color: #2C4182;
+}
+.dxmControl_PlasticBlueChartDemoToolbar a, .dxmMenu_PlasticBlueChartDemoToolbar a
+{
+	color: white;
+	text-decoration: none;
+}
+.dxmControl_PlasticBlueChartDemoToolbar a:hover
+{
+	text-decoration:none;
+}
+.dxmMenu_PlasticBlueChartDemoToolbar
+{
+	font: 9pt Tahoma;
+	color: white;
+	background-color: #2C4182;
+	background: url('../../Web/mItemBack.gif') repeat-x top center;
+	border: Solid 1px #2C4182;	
+	padding: 0px;
+}
+.dxmMenuGutter_PlasticBlueChartDemoToolbar
+{
+}
+.dxmMenuSeparator_PlasticBlueChartDemoToolbar
+{
+    width: 2px!important;    
+    background-image: url('../../Web/mSeparatorHor.gif');
+    background-position: left top;
+    background-repeat: repeat-y;
+}
+
+.dxmMenuItem_PlasticBlueChartDemoToolbar, .dxmMenuItemWithImage_PlasticBlueChartDemoToolbar
+{
+	font: 9pt Tahoma;
+	color: white;
+	white-space: nowrap;
+	border-width: 0px;
+	
+	background-color: #3E5496;
+	background-image: url('../../Web/mItemBack.gif');	
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+.dxmMenuItem_PlasticBlueChartDemoToolbar a, .dxmMenuItemWithImage_PlasticBlueChartDemoToolbar a
+{
+	font: 9pt Tahoma;
+	color: white;
+	white-space: nowrap;
+}
+
+.dxmMenuItem_PlasticBlueChartDemoToolbar, .dxmMenuItemWithImage_PlasticBlueChartDemoToolbar
+{
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;	
+}
+.dxmMenuItemWithImage_PlasticBlueChartDemoToolbar
+{
+	padding-right: 8px;
+	padding-left: 8px;	
+}
+
+.dxmMenuItemSelected_PlasticBlueChartDemoToolbar, .dxmMenuItemSelectedWithImage_PlasticBlueChartDemoToolbar
+{
+	color: White;	
+
+	background-color: #273A79;
+	background-image: url('../../Web/mItemSBack.gif');	
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+.dxmMenuItemSelected_PlasticBlueChartDemoToolbar a, .dxmMenuItemSelectedWithImage_PlasticBlueChartDemoToolbar a
+{
+	color: White;	
+}
+
+.dxmMenuItemSelected_PlasticBlueChartDemoToolbar, .dxmMenuItemSelectedWithImage_PlasticBlueChartDemoToolbar
+{
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;	    
+}
+.dxmMenuItemSelectedWithImage_PlasticBlueChartDemoToolbar
+{
+	padding-right: 8px;
+	padding-left: 8px;	
+}
+.dxmMenuItemChecked_PlasticBlueChartDemoToolbar, .dxmMenuItemCheckedWithImage_PlasticBlueChartDemoToolbar
+{
+	color: White;	
+
+	background-color: #273A79;
+	background-image: url('../../Web/mItemSBack.gif');	
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+.dxmMenuItemChecked_PlasticBlueChartDemoToolbar a, .dxmMenuItemCheckedWithImage_PlasticBlueChartDemoToolbar a
+{
+	color: White;	
+}
+
+.dxmMenuItemChecked_PlasticBlueChartDemoToolbar, .dxmMenuItemCheckedWithImage_PlasticBlueChartDemoToolbar
+{
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;	    
+}
+.dxmMenuItemCheckedWithImage_PlasticBlueChartDemoToolbar
+{
+	padding-right: 8px;
+	padding-left: 8px;	
+}
+
+.dxmMenuItemHover_PlasticBlueChartDemoToolbar, .dxmMenuItemHoverWithImage_PlasticBlueChartDemoToolbar
+{
+	color: #FFFFFF;
+	
+	background-color: #E9E9E9;
+	background-image: url('../../Web/mItemHBack.gif');	
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+.dxmMenuItemHover_PlasticBlueChartDemoToolbar a, .dxmMenuItemHoverWithImage_PlasticBlueChartDemoToolbar a
+{
+	color: #FFFFFF!important;
+}
+
+/* Disabled */
+.dxmDisabled_PlasticBlueChartDemoToolbar
+{
+	color: #808080;
+	cursor: default;
+}

@@ -1,0 +1,14 @@
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v8.3" %>
+<dxe:ASPxDateEdit runat="server" ImageFolder="~/App_Themes/Glass/{0}/" CssFilePath="~/App_Themes/Glass/{0}/styles.css" CssPostfix="Glass">
+<CalendarProperties>
+    <FooterStyle Spacing="4px"></FooterStyle>
+    <HeaderStyle Spacing="1px"></HeaderStyle>
+</CalendarProperties>
+<ValidationSettings>
+<ErrorFrameStyle ImageSpacing="4px">
+<ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+</ErrorFrameStyle>
+<ErrorImage Url="~/App_Themes/Glass/Editors/edtError.png" Height="14px" Width="14px"></ErrorImage>
+</ValidationSettings>
+<ButtonStyle Width="13px"></ButtonStyle>
+</dxe:ASPxDateEdit>

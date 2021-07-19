@@ -1,0 +1,79 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "b4070e79a8f840776f8f2433051faa9fcfcf30ba"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "PagNet.Bld.PGTO.CobrancaBancaria.Abstraction/1.0.0": {
+        "dependencies": {
+          "Boleto2.Net": "2.1.0.430",
+          "NETStandard.Library": "2.0.3",
+          "PagNet.Bld.Domain": "1.1.3"
+        },
+        "runtime": {
+          "PagNet.Bld.PGTO.CobrancaBancaria.Abstraction.dll": {}
+        }
+      },
+      "Boleto2.Net/2.1.0.430": {
+        "runtime": {
+          "lib/Boleto2Net.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "PagNet.Bld.Domain/1.1.3": {
+        "runtime": {
+          "lib/netstandard2.0/PagNet.Bld.Domain.dll": {
+            "assemblyVersion": "1.1.3.0",
+            "fileVersion": "1.1.3.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PagNet.Bld.PGTO.CobrancaBancaria.Abstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Boleto2.Net/2.1.0.430": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gv4VGHvrw7elJT5p17CD1/SH/POPecnyfMcAYpeHI1H30pJHiwcBBS635+eRIl2AqFi4b8nLnJSz2iG8hAS2HA==",
+      "path": "boleto2.net/2.1.0.430",
+      "hashPath": "boleto2.net.2.1.0.430.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "PagNet.Bld.Domain/1.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QTUNpMnNJW69Ww+2S4IDb/bhLtwQQ6TeM6rHV5FPT4QRYh6/WEadt54WObbntaJd1i+CWzYdIL3uN4r1iY3P+A==",
+      "path": "pagnet.bld.domain/1.1.3",
+      "hashPath": "pagnet.bld.domain.1.1.3.nupkg.sha512"
+    }
+  }
+}

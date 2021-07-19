@@ -1,0 +1,96 @@
+﻿@model PagNet.Application.Models.UsuariosVm
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(x => x.Btn)
+    @Html.HiddenFor(x => x.CodUsuario)
+    @Html.HiddenFor(x => x.idOperadora)
+    @Html.HiddenFor(x => x.Administrador)
+    @Html.HiddenFor(x => x.PerfilOperadora)
+    @Html.HiddenFor(x => x.acessoAdmin)
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold; font-size: 15px;">
+                <b>Cadastro de Usuário</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-6" id="FiltroEmpresa" style="display:none" >
+                                        @Html.DDLBootstrapFor(model => model.CODEMPRESA, Model.NMEMPRESA, "/Generico/CadastrosDiversos/GetEmpresa/", 0)
+                                    </div>
+                                    <div class="col-md-12">
+                                        @Html.EditBootstrapFor(model => model.nmUsuario, tudoTamanho: 8, inputTamanho: 12)
+                                        <div class="form-group col-md-1">
+                                            <label></label>
+                                            <div class="input-group col-xs-12" id="btnLocalizarUsuario">
+                                                <div class="btn btn-success" onclick="CarregaGridUsuario();">Localizar</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        @Html.EditBootstrapFor(model => model.Email, tudoTamanho: 6, inputTamanho: 12)
+                                        @Html.EditBootstrapFor(model => model.Cpf, tudoTamanho: 6, inputTamanho: 6)
+                                        @Html.EditBootstrapFor(model => model.Login, tudoTamanho: 12, inputTamanho: 5)
+                                        <div id="senha">
+                                            @Html.EditBootstrapFor(model => model.Password, tudoTamanho: 4, inputTamanho: 12)
+                                        </div>
+                                        <div id="Confirmasenha">
+                                            @Html.EditBootstrapFor(model => model.ConfirmPassword, tudoTamanho: 4, inputTamanho: 12)
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <hr />
+                                        <div class="form-group  pull-right">
+                                            <a id="btnNovo" class="btn btn-default" href="@Url.Action("Index", "Usuarios", new { area = "Cadastros", id = "0", sid = ViewBag.Sid })">
+                                                Novo
+                                            </a>
+
+                                            <div id="btnSalvar" class="btn btn-success" onclick="confirmaSalvar();" data-confirm="Tem certeza que deseja salvar?">Salvar</div>
+                                            <div id="btnDesativar" class="btn btn-danger" onclick="confirmaDesativar();" data-confirm="Tem certeza que deseja desativar este usuário?">Desativar</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="LocalizarUsuario" tabindex="-1" role="dialog" aria-labelledby="Localizar" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalUsuario">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+@*<script src="~/js/Scripts/Cadastros/Usuarios.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Cadastros" , classe = "Usuarios.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()

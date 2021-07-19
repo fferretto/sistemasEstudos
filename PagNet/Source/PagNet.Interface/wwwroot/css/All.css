@@ -1,0 +1,108 @@
+﻿
+.bolaVerde {
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #000000;
+    background-color: #03dc00;
+    box-shadow: inset -10px -10px 10px #6dc24f, inset 3px 3px 5px #1f0404;
+}
+
+.bolaVermelha {
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #8c6363;
+    background-color: #fe0a0a;
+    box-shadow: inset -10px -10px 10px #f52706, inset 3px 3px 5px #f5f4f4;
+}
+
+.bolaAmarela {
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #bfbebe;
+    background-color: #ff4444;
+    box-shadow: inset -10px -10px 10px #fdfd08, inset 3px 3px 5px #000000;
+}
+
+.bolaCinza {
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #585252;
+    background-color: #ffffff;
+    box-shadow: inset -10px -10px 10px #d0d0cf, inset 3px 3px 5px #1f0404;
+}
+
+.bolaLaranja {
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #585252;
+    background-color: #ffffff;
+    box-shadow: inset -10px -10px 10px #ff7600, inset 3px 3px 5px #ff7600;
+}
+
+/*-------------------------------------------DROP DOWN NAS TELAS DE PESQUISA-------------------------------------*/
+.dropbtn {
+    background-color: #345d5f;
+    color: white;
+    padding: 16px;
+    font-size: 13px;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.dropdownInView {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownInView-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdownInView-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        width: 225px;
+    }
+
+        .dropdownInView-content a:hover {
+            background-color: #ddd;
+        }
+
+.dropdownInView:hover .dropdownInView-content {
+    display: block;
+}
+
+.dropdownInView:hover .dropbtn {
+    background-color: #3e8e41;
+}
+/*-------------LAYOUT VIDEOS DE TREINAMENTO---------------*/
+
+.videoTreinamento {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 3em auto;
+}
+.menuvideostreinamento {
+    margin: 1em;
+    font-size: 15px;
+    font-weight: bold;
+}

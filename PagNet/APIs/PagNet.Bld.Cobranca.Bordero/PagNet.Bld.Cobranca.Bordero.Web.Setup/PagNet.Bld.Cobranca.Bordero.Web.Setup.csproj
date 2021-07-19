@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PagNet.Bld.Infra.Data" Version="1.1.2" />
+    <PackageReference Include="Telenet.Bld.ControleAcesso.Web.Setup" Version="1.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagNet.Bld.Cobranca.Bordero\PagNet.Bld.Cobranca.Bordero.csproj" />
+  </ItemGroup>
+
+</Project>

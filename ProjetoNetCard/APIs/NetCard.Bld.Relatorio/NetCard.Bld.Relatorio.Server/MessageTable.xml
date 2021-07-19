@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<telenet>
+	<services.domains>
+		<domain name="Relatorio">
+			<messages>
+				<add key="1" text="Telenet Processo de Geração de Relatórios" />
+
+				<add key="1000" text="Código do relatório não informado." />
+				<add key="1001" text="A geração do relatório ainda não foi finalizada. Aguarde mais um pouco." />
+
+			</messages>
+		</domain>
+	</services.domains>
+</telenet>

@@ -1,0 +1,74 @@
+﻿@model IList<PagNet.Application.Models.ListaEmissaoTitulosVM>
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="gridTitulosNaoLiquidados" class="table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th width="8%" style="text-align:left;">Código</th>
+                    <th width="36%" style="text-align:left;">Favorecido</th>
+                    <th width="25%" style="text-align:center;">Status</th>
+                    <th width="11%" style="text-align:center;">Data Real PGTO</th>
+                    <th width="10%" style="text-align:center;">Banco</th>
+                    <th width="10%" style="text-align:center;">Valor</th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                <tr>
+                    <td width="8%" style="text-align:left;">
+                        @Html.DisplayFor(item => item[i].CODIGOTITULO)
+                    </td>
+                    <td width="36%" style="text-align:left;">
+                        @Html.DisplayFor(item => item[i].NMFAVORECIDO)
+                    </td>
+                    <td width="25%" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].STATUS)
+                    </td>
+                    <td width="11%" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].DATPGTO)
+                    </td>
+                    <td width="10%" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].CODBANCO)
+                    </td>
+                    <td width="10%" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].VALTOTAL)
+                    </td>
+                    <td class="CODIGOTITULO" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@Model[i].CODIGOTITULO" value="@Model[i].CODIGOTITULO" />
+                    </td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" onclick="FechaJanelaModal();" data-dismiss="modal">Fechar</button>
+</div>
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+    $(document).ready(function () {
+
+
+        $('#gridTitulosNaoLiquidados').dataTable({
+            dom: 'Blfrtip',
+            buttons: [
+                'excel'
+            ]
+        });
+    });
+
+
+</script>

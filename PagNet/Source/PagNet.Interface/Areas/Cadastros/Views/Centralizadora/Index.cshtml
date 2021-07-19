@@ -1,0 +1,194 @@
+﻿@model PagNet.Interface.Areas.Cadastros.Models.APIFavorecidoVM
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Centralizadora";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(x => x.codigoFavorecido)
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.regraDiferenciada)
+    @Html.HiddenFor(x => x.contaPagamentoPadrao)
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold; font-size: 15px;">
+                <b>Consulta de Centralizadoras Cadastrados pelo sistema NetCard</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12">
+                                        @Html.EditBootstrapFor(model => model.codigoCentralizadora, tudoTamanho: 2, inputTamanho: 12)
+                                        @Html.EditBootstrapFor(model => model.CPFCNPJ, tudoTamanho: 3, inputTamanho: 12)
+                                        @Html.EditBootstrapFor(model => model.nomeFavorecido, tudoTamanho: 5, inputTamanho: 12)
+                                        <div class="form-group col-md-2">
+                                            <label></label>
+                                            <div class="input-group col-xs-12" id="btnLocalizar">
+                                                <div class="btn btn-success" onclick="LocalizaFavorito();">Localizar</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <div class="input-group col-xs-12">
+                                                <div class="btn btn-success" id="btnLocalizaLog" onclick="ConsultaLog();">Visualizar Log</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="panel panel-default col-md-11" style="margin-left:1%" id="UtilizaNetCard">
+                                            <div class="panel-heading-decision">
+                                                Endereço do Favorecido
+                                            </div>
+                                            <div class="panel-body">
+                                                @Html.EditBootstrapFor(model => model.CEP, tudoTamanho: 2, inputTamanho: 12)
+                                                <div class="col-md-8 Procesando" id="LocalizandoEndereco"></div>
+                                                <div class="row"></div>
+                                                @Html.EditBootstrapFor(model => model.Logradouro, tudoTamanho: 5, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.nroLogradouro, tudoTamanho: 3, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.Complemento, tudoTamanho: 3, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.Bairro, tudoTamanho: 4, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.cidade, tudoTamanho: 6, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.UF, tudoTamanho: 1, inputTamanho: 12)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="panel panel-default col-md-11" style="margin-left:1%" id="UtilizaNetCard">
+                                            <div class="panel-heading-decision">
+                                                Dados Bancários
+                                            </div>
+                                            <div class="panel-body">
+                                                @Html.EditBootstrapFor(model => model.Banco, tudoTamanho: 2, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.Agencia, tudoTamanho: 2, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.DvAgencia, tudoTamanho: 2, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.Operacao, tudoTamanho: 1, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.contaCorrente, tudoTamanho: 3, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.DvContaCorrente, tudoTamanho: 2, inputTamanho: 12)
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default col-md-10" style="margin-left:2%" id="FazPagamento">
+                                        <div class="panel-heading-decision">
+                                            Utilizar Regra Diferenciada?
+                                        </div>
+                                        <div class="panel-body">
+                                            <ul class="nav nav-pills">
+                                                <li class="" id="liPagSim">
+                                                    <a href="#PagSim" data-toggle="tab" id="btnPagSim">Sim</a>
+                                                </li>
+                                                <li class="active" id="liPagNao">
+                                                    <a href="#PagNao" data-toggle="tab" id="btnPagNao">Não</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" style="margin-top:2%;">
+                                                <div class="tab-pane fade" id="PagSim">
+                                                    <div class="row">
+                                                        @Html.EditBootstrapFor(model => model.ValorMinimoCC, tudoTamanho: 4, inputTamanho: 9)
+                                                        @Html.EditBootstrapFor(model => model.ValorTED, tudoTamanho: 3, inputTamanho: 12)
+                                                        @Html.EditBootstrapFor(model => model.ValorMinimoTed, tudoTamanho: 5, inputTamanho: 6)
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="PagNao">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default col-md-10" style="margin-left:2%" id="ContaCorrentePadrao">
+                                        <div class="panel-heading-decision">
+                                            Conta utilizada para pagamento padrão?
+                                        </div>
+                                        <div class="panel-body">
+                                            <ul class="nav nav-pills">
+                                                <li class="" id="liContaCorrenteSim">
+                                                    <a href="#ContaCorrenteSim" data-toggle="tab" id="btnContaCorrenteSim">Sim</a>
+                                                </li>
+                                                <li class="active" id="liContaCorrenteNao">
+                                                    <a href="#ContaCorrenteNao" data-toggle="tab" id="btnContaCorrenteNao">Não</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" style="margin-top:2%;">
+                                                <div class="tab-pane fade" id="ContaCorrenteSim">
+                                                    <div class="row">
+                                                        @Html.DDLBootstrapFor(model => model.codigoContaCorrente, Model.nmContaCorrente, "/Generico/CadastrosDiversos/GetContaCorrentePagamento/", 11)
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="ContaCorrenteNao">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-12">
+                                        <hr />
+                                        <div class="form-group  pull-right">
+
+                                            <div id="btnSalvar" class="btn btn-success" style="display:none" onclick="ConfirmaSalvar();" data-confirm="Tem certeza que deseja salvar?">Salvar</div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Localizar" tabindex="-1" role="dialog" aria-labelledby="Localizar" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modal">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ConsultLog" tabindex="-1" role="dialog" aria-labelledby="ConsultLog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalLog">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@*<script src="~/js/Scripts/Cadastros/Centralizadora.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Cadastros" , classe = "Centralizadora.js", sid = ViewBag.Sid})"></script>
+
+@*<script>
+        ClientFormAuthorization.registerAllForms()
+    </script>*@
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+

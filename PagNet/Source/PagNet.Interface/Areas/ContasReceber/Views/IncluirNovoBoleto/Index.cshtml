@@ -1,0 +1,233 @@
+﻿@model PagNet.Application.Models.EmissaoBoletoVM
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Geração de Borderô";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.codigoUsuario)
+    @Html.HiddenFor(x => x.CodigoCliente)
+    @Html.HiddenFor(x => x.codigoEmissaoBoleto)
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.codBordero)
+    @Html.HiddenFor(x => x.Status)
+    @Html.HiddenFor(x => x.codigoContaCorrente)
+    @Html.HiddenFor(x => x.Origem)
+    @Html.HiddenFor(x => x.codJustificativa)
+    @Html.HiddenFor(x => x.descJustificativa)
+    @Html.HiddenFor(x => x.DescJustOutros)
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Inclusão ou Edição de Pedido de Faturamento</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+
+                    <div class="col-md-8" id="FiltroEmpresa" style="display:none">
+                        @Html.DDLBootstrapFor(model => model.codigoEmpresa, Model.nomeEmpresa, "/Generico/CadastrosDiversos/GetEmpresa/", 0)
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label></label>
+                        <div class="input-group col-xs-12" id="btnLocalizarBoleto">
+                            <div class="btn btn-success" onclick="LocalizaBoletosCriados();">Localizar Solcitações de Faturamento</div>
+                        </div>
+                    </div>
+                    @if (@Model.Status == "PENDENTE REGISTRO" || @Model.Status == "REGISTRADO")
+                    {
+                        <div style="margin-top:5px;">
+                            @Html.DDLBootstrapFor(model => model.codigoOcorrencia, Model.nomeOcorrencia, "/Generico/ConsultasGenericas/GetTiposOcorrenciasBoleto/", 9)
+                        </div>
+                    }
+                    <div class="col-md-12"></div>
+                    @Html.EditBootstrapFor(model => model.filtroCliente, tudoTamanho: 3, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.nomeCliente, tudoTamanho: 7, inputTamanho: 12)
+                    <div class="form-group col-md-2" id="btnLocalizarCliente">
+                        <label></label>
+                        <div class="input-group col-xs-12">
+                            <div class="btn btn-success" onclick="LocalizaCliente();">Localizar</div>
+                        </div>
+                    </div>
+                    <div class="col-md-11" style="background-color:darkgrey;margin-left:1%;margin-top:1%;display:none;border:1px solid #264c54;" id="DadosCliente">
+                        <div>
+                            <b>Taxa para Emissão do Boleto: </b>
+                            <input id="TaxaEmissaoBoleto" name="TaxaEmissaoBoleto" type="text" disabled="" value="@Model.TaxaEmissaoBoleto" style="background-color:darkgrey;border: darkgrey;width: 11%;">
+
+                            <b>CPF/CNPJ: </b>
+                            <input id="CPFCNPJCliente" name="CPFCNPJCliente" type="text" disabled="" value="@Model.CPFCNPJCliente" style="background-color:darkgrey;border: darkgrey;width: 17%;">
+
+                            <b>Email: </b>
+                            <input id="EmailCliente" name="EmailCliente" type="text" disabled="" value="@Model.EmailCliente" style="background-color:darkgrey;border: darkgrey;width: 35%;">
+                        </div>
+                        <div>
+                            <b>Cobra Juros: </b>
+                            <input id="CobraJuros" name="CobraJuros" type="text" disabled="" value="@Model.CobraJuros" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+
+                            <b>Valor Juros: </b>
+                            <input id="ValorJuros" name="ValorJuros" type="text" disabled="" value="@Model.ValorJuros" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+
+                            <b>Porcentagem Juros: </b>
+                            <input id="PercentualJuros" name="PercentualJuros" type="text" disabled="" value="@Model.PercentualJuros" style="background-color:darkgrey;border: darkgrey;width: 17%;">
+                        </div>
+                        <div>
+                            <b>Cobra Multa: </b>
+                            <input id="CobraMulta" name="CobraMulta" type="text" disabled="" value="@Model.CobraMulta" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+
+                            <b>Valor Multa: </b>
+                            <input id="ValorMulta" name="ValorMulta" type="text" disabled="" value="@Model.ValorMulta" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+
+                            <b>Porcentagem Multa: </b>
+                            <input id="PercentualMulta" name="PercentualMulta" type="text" disabled="" value="@Model.PercentualMulta" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 1%;margin-left:-1%">
+                        @Html.EditBootstrapFor(model => model.dataVencimento, tudoTamanho: 3, inputTamanho: 11)
+                        @Html.EditBootstrapFor(model => model.Valor, tudoTamanho: 3, inputTamanho: 11)
+                        @Html.EditBootstrapFor(model => model.nroDocumento, tudoTamanho: 3, inputTamanho: 11)
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 1%;margin-left:-1%">
+                        @Html.EditBootstrapFor(model => model.ValorDescontoConcedido, tudoTamanho: 3, inputTamanho: 10)
+                        @Html.EditBootstrapFor(model => model.JurosCobrado, tudoTamanho: 3, inputTamanho: 10)
+                        @Html.EditBootstrapFor(model => model.MultaCobrada, tudoTamanho: 3, inputTamanho: 10)
+                    </div>
+
+                    @Html.DDLBootstrapFor(model => model.codigoFormaFaturamento, Model.nomeFormaFaturamento, "/Generico/ConsultasGenericas/GetFormasLiquidacao/", 5)
+                    @Html.DDLBootstrapFor(model => model.CodigoPlanoContas, Model.NomePlanoContas, "/Generico/ConsultasGenericas/DDLPlanoContasRecebimento/", "codigoEmpresa", null, 5)
+
+
+                    <div id="TipoBoleto" style="display:none">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Mensagem de instrução para o Caixa:</label><br />
+                                @Html.TextAreaFor(model => model.MensagemInstrucoesCaixa, 2, 130, new { maxlength = "40", @class = "form-control" })
+                                <span class="caracteresCaixa">40</span> Restantes <br>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12">
+
+                <div class="form-group col-md-2 pull-right" id="btnExcluir" style="display:none">
+                    <label></label>
+                    <div class="form-group col-xs-12">
+                        <div class="btn btn-danger pull-right" onclick="JustificarCancelamentoPedidoFaturamento();">Cancelar Faturamento</div>
+                    </div>
+                </div>
+                <div class="form-group col-md-4  pull-right">
+                    <label></label>
+                    <div class="form-group  pull-right">
+                        <a id="btnNovo" class="btn btn-default" href="@Url.Action("Index", "IncluirNovoBoleto", new { area = "ContasReceber", id = "0", sid = ViewBag.Sid })">
+                            Novo
+                        </a>
+
+                        <div class="btn btn-success " onclick="SalvarBoleto();">Salvar</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<div class="modal fade" id="LocalizaCliente" tabindex="-1" role="dialog" aria-labelledby="LocalizaCliente" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalCliente">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="LocalizaBoletos" tabindex="-1" role="dialog" aria-labelledby="LocalizaBoletos" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalLocalizaBoletos">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="JanelaModal" tabindex="-1" role="dialog" aria-labelledby="JanelaModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalJanelaModal">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "ContasReceber" , classe = "IncluirNovoBoleto.js", sid = ViewBag.Sid })"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+@section Scripts
+    {
+    <script>
+
+        $("#DATREALPGTO").change(function () {
+
+            var data = new Date();
+            var dtInicio = $("#DATREALPGTO").val().split("/");
+            var dataIni = new Date(`${dtInicio[2]},${dtInicio[1]},${dtInicio[0]}`);
+            var dataAtual = new Date(`${data.getFullYear()},${data.getMonth() + 1},${data.getDate()}`)
+
+            if (dataIni < dataAtual) {
+                valido = false;
+                msgAviso("A data de pagameto não pode ser inferior a data atual.");
+            }
+
+        });
+
+
+        function getMoney(str) {
+            return parseInt(str.replace(/[\D]+/g, ''));
+        }
+        function formatReal(int) {
+            var tmp = int + '';
+            tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+            if (tmp.length > 6)
+                tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+            return tmp;
+        }
+
+
+
+
+    </script>
+}
+
+
+
+

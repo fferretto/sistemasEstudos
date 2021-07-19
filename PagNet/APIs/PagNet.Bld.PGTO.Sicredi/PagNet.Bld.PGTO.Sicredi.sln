@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagNet.Bld.PGTO.Sicredi", "PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.csproj", "{42D716FC-8718-4577-86EC-655D5144B606}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagNet.Bld.PGTO.Sicredi.Abstraction", "PagNet.Bld.PGTO.Sicredi.Abstraction\PagNet.Bld.PGTO.Sicredi.Abstraction.csproj", "{AC6A8073-5CE3-4C84-948E-BE228EE14B58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagNet.Bld.PGTO.Sicredi.Server", "PagNet.Bld.PGTO.Sicredi.Server\PagNet.Bld.PGTO.Sicredi.Server.csproj", "{167EC57D-7610-44BE-8C0A-CEC47FC3E297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagNet.Bld.PGTO.Sicredi.Web.Setup", "PagNet.Bld.PGTO.Sicredi.Web.Setup\PagNet.Bld.PGTO.Sicredi.Web.Setup.csproj", "{AB1C373B-B589-4CBD-BC62-2665749B2317}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42D716FC-8718-4577-86EC-655D5144B606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D716FC-8718-4577-86EC-655D5144B606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D716FC-8718-4577-86EC-655D5144B606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D716FC-8718-4577-86EC-655D5144B606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6A8073-5CE3-4C84-948E-BE228EE14B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6A8073-5CE3-4C84-948E-BE228EE14B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6A8073-5CE3-4C84-948E-BE228EE14B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6A8073-5CE3-4C84-948E-BE228EE14B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{167EC57D-7610-44BE-8C0A-CEC47FC3E297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167EC57D-7610-44BE-8C0A-CEC47FC3E297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167EC57D-7610-44BE-8C0A-CEC47FC3E297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167EC57D-7610-44BE-8C0A-CEC47FC3E297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB1C373B-B589-4CBD-BC62-2665749B2317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1C373B-B589-4CBD-BC62-2665749B2317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1C373B-B589-4CBD-BC62-2665749B2317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1C373B-B589-4CBD-BC62-2665749B2317}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {057C25BD-DEA3-4E08-809E-7F06B7F47F91}
+	EndGlobalSection
+EndGlobal

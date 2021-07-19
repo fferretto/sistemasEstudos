@@ -1,0 +1,39 @@
+﻿@model PagNet.Api.Service.Model.APIAntecipacaoPGTOResult
+@using PagNet.Interface.Helpers
+
+
+<div class="col-md-12">
+    @Html.EditBootstrapFor(model => model.codigoFavorecido, tudoTamanho: 2, inputTamanho: 12)
+    @Html.EditBootstrapFor(model => model.nomeFavorecido, tudoTamanho: 6, inputTamanho: 12)
+    @Html.EditBootstrapFor(model => model.cnpj, tudoTamanho: 3, inputTamanho: 12)
+    @Html.EditBootstrapFor(model => model.tipoCartao, tudoTamanho: 3, inputTamanho: 12)
+    @Html.EditBootstrapFor(model => model.strDataEmissao, tudoTamanho: 3, inputTamanho: 12)
+    @Html.EditBootstrapFor(model => model.strDataRealPGTO, tudoTamanho: 3, inputTamanho: 12)
+    @Html.EditBootstrapFor(model => model.strValorAtual, tudoTamanho: 4, inputTamanho: 12)
+    @Html.EditBootstrapFor(model => model.valorTaxa, tudoTamanho: 2, inputTamanho: 12)
+    @Html.EditBootstrapFor(model => model.strValorTaxaProRata, tudoTamanho: 2, inputTamanho: 12)
+    @Html.EditBootstrapFor(model => model.strValorTotalComTaxa, tudoTamanho: 4, inputTamanho: 12)
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(document).ready(function () {
+        $.unblockUI();
+        $("#codigoFavorecido").prop("disabled", true);
+        $("#nomeFavorecido").prop("disabled", true);
+        $("#cnpj").prop("disabled", true);
+        $("#tipoCartao").prop("disabled", true);
+        $("#strDataEmissao").prop("disabled", true);
+        $("#strDataRealPGTO").prop("disabled", true);
+        $("#strValorAtual").prop("disabled", true);
+        $("#valorTaxa").prop("disabled", true);
+        $("#strValorTaxaProRata").prop("disabled", true);
+        $("#strValorTotalComTaxa").prop("disabled", true);
+    });
+
+
+</script>
+

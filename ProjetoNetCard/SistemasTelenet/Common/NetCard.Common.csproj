@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3DF6300-26B5-4D28-AFC3-F1988F8B2E5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetCard.Common</RootNamespace>
+    <AssemblyName>NetCard.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\DevExpress.Data.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\DevExpress.Web.ASPxEditors.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\DevExpress.Web.ASPxGridView.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\DevExpress.Web.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="dotnetcardweb, Version=1.0.6834.20358, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\dotnetcardweb.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\EnvDTE.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WEBSITE\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Yogesh.ExcelXml, Version=3.35.1017.910, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Yogesh.ExcelXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Yogesh.Extensions, Version=1.16.524.1306, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Yogesh.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\IObjetoConexao.cs" />
+    <Compile Include="Models\Adesao.cs" />
+    <Compile Include="Models\AdesaoCB.cs" />
+    <Compile Include="Models\AgendamentoBloqDesbloq.cs" />
+    <Compile Include="Models\Bloqueio.cs" />
+    <Compile Include="Models\CamposObrigatoriosUsuario.cs" />
+    <Compile Include="Models\CartaoFidelidade.cs" />
+    <Compile Include="Models\ClienteLoginValidate.cs" />
+    <Compile Include="Models\Credenciado.cs" />
+    <Compile Include="Models\CredenciadoLoginValidate.cs" />
+    <Compile Include="Models\DesbloqEmMassa.cs" />
+    <Compile Include="Models\DetalhesBeneficio.cs" />
+    <Compile Include="Models\EndCep.cs" />
+    <Compile Include="Models\Especialidades.cs" />
+    <Compile Include="Models\ExtratoCB.cs" />
+    <Compile Include="Models\FidelidadeCre.cs" />
+    <Compile Include="Models\FidelidateLoginValidate.cs" />
+    <Compile Include="Models\IDadosAcesso.cs" />
+    <Compile Include="Models\ILoginValidate.cs" />
+    <Compile Include="Models\InclusaoTemp.cs" />
+    <Compile Include="Models\IPermissao.cs" />
+    <Compile Include="Models\LimiteUtilizado.cs" />
+    <Compile Include="Models\LoginValidateBase.cs" />
+    <Compile Include="Models\LoginValidateFactory.cs" />
+    <Compile Include="Models\LoginValidation.cs" />
+    <Compile Include="Models\MemBloqueioEmMassa.cs" />
+    <Compile Include="Models\MenuItemCarga.cs" />
+    <Compile Include="Models\NovaCarga.cs" />
+    <Compile Include="Models\Parcela.cs" />
+    <Compile Include="Models\ParceriaLoginValidate.cs" />
+    <Compile Include="Models\Permissao.cs" />
+    <Compile Include="Models\Fidelidade.cs" />
+    <Compile Include="Models\RecuperarSenhaUsu.cs" />
+    <Compile Include="Models\ResumoCB.cs" />
+    <Compile Include="Models\Sindicato.cs" />
+    <Compile Include="Models\SubstituicaoCartao.cs" />
+    <Compile Include="Models\SubstituirCartaoUsuario.cs" />
+    <Compile Include="Models\SubstituirUsuario.cs" />
+    <Compile Include="Models\TermoConsentimento.cs" />
+    <Compile Include="Models\TransacoesPendentes.cs" />
+    <Compile Include="Models\TransfSaldoUsuario.cs" />
+    <Compile Include="Models\TransfSaldo.cs" />
+    <Compile Include="Models\Acao.cs" />
+    <Compile Include="Models\Atividade.cs" />
+    <Compile Include="Models\Bairro.cs" />
+    <Compile Include="Models\Cancelamento.cs" />
+    <Compile Include="Models\Carga.cs" />
+    <Compile Include="Models\Cartao.cs" />
+    <Compile Include="Models\Cidade.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Dependente.cs" />
+    <Compile Include="Models\DetalheCarga.cs" />
+    <Compile Include="Models\DetalheLote.cs" />
+    <Compile Include="Models\DetalheMovimento.cs" />
+    <Compile Include="Models\DetalheParcialMovimento.cs" />
+    <Compile Include="Models\DetalheParcialLote.cs" />
+    <Compile Include="Models\DetalheParcialTransacao.cs" />
+    <Compile Include="Models\DetalheTotalMovimento.cs" />
+    <Compile Include="Models\DetalheTotalLote.cs" />
+    <Compile Include="Models\DetalheTotalTransacao.cs" />
+    <Compile Include="Models\DownFile.cs" />
+    <Compile Include="Models\LoteSubRede.cs" />
+    <Compile Include="Models\LoteTaxas.cs" />
+    <Compile Include="Models\ModRelTela.cs" />
+    <Compile Include="Models\Movimento.cs" />
+    <Compile Include="Models\MovimentoLote.cs" />
+    <Compile Include="Models\ItensGenerico.cs" />
+    <Compile Include="Models\ListCarga.cs" />
+    <Compile Include="Models\ListDetalheExtrato.cs" />
+    <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\Lote.cs" />
+    <Compile Include="Models\MemCancelamento.cs" />
+    <Compile Include="Models\MemCarga.cs" />
+    <Compile Include="Models\ModRel.cs" />
+    <Compile Include="Dao\ObjConn.cs" />
+    <Compile Include="Models\ParRel.cs" />
+    <Compile Include="Models\Rede.cs" />
+    <Compile Include="Models\DadosAcesso.cs" />
+    <Compile Include="Models\Filtro.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="Models\Parametro.cs" />
+    <Compile Include="Models\RedeSegmento.cs" />
+    <Compile Include="Models\Relatorio.cs" />
+    <Compile Include="Models\RelCanc.cs" />
+    <Compile Include="Models\Saldo.cs" />
+    <Compile Include="Models\Segmento.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Sistema.cs" />
+    <Compile Include="Models\Token.cs" />
+    <Compile Include="Models\TotalComprasAberto.cs" />
+    <Compile Include="Models\Transacao.cs" />
+    <Compile Include="Models\TransferenciaSaldo.cs" />
+    <Compile Include="Models\TrocaCpf.cs" />
+    <Compile Include="Models\Uf.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\UsuarioLoginValidate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ApiHelper.cs" />
+    <Compile Include="Util\ConsultaWebAuthorizationContext.cs" />
+    <Compile Include="Util\StringExtensions.cs" />
+    <Compile Include="Util\Constantes.cs" />
+    <Compile Include="Util\Ini.cs" />
+    <Compile Include="Util\ItensGeneric.cs" />
+    <Compile Include="Util\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIL\SIL.csproj">
+      <Project>{0dd9478f-13fb-4dcb-8a26-e34210074d21}</Project>
+      <Name>SIL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Telenet.Core\Telenet.Core.csproj">
+      <Project>{cee4aa05-eabd-4fd9-88e7-136e5f43aefb}</Project>
+      <Name>Telenet.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

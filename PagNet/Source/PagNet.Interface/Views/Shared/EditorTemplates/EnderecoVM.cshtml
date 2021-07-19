@@ -1,0 +1,121 @@
+﻿@model PagNet.Application.Models.EnderecoVM
+@using PagNet.Interface.Helpers
+@{
+    ViewBag.Titulo = "Endereço";
+    Layout = "~/Views/Shared/_Panel.cshtml";
+}
+<div id="EnderecoVMTemplate" class="col-md-12">
+    <div class="row">
+        @Html.EditBootstrapFor(model => model.Cep, tudoTamanho: 5, inputTamanho: 12)
+        <div class="form-group input-group-btn" >
+            <button class="btn btn-default" type="button" style="margin-top:7%" onclick="consultaCep(this)">Consultar!</button>
+        </div>
+    </div>
+
+    @Html.HiddenFor(model => model.EnderecoVMId)
+
+    <div class="row">
+        @Html.EditBootstrapFor(model => model.Endereco, tudoTamanho: 12, inputTamanho: 12)
+    </div>
+
+    <div class="row">
+        @Html.EditBootstrapFor(model => model.Numero, tudoTamanho: 5, inputTamanho: 12)
+        @Html.EditBootstrapFor(model => model.Complemento, tudoTamanho: 7, inputTamanho: 12)
+    </div>
+
+
+    <div class="row">
+        @Html.EditBootstrapFor(model => model.LocalidadeUfDescricao, tudoTamanho: 4, inputTamanho: 12)
+        @Html.EditBootstrapFor(model => model.LocalidadeMunicipioDescricao, tudoTamanho: 8, inputTamanho: 12)
+    </div>
+    <div class="row">
+        @Html.EditBootstrapFor(model => model.LocalidadeBairroDescricao, tudoTamanho: 12, inputTamanho: 12)
+    </div>
+
+</div>
+
+@section scripts{
+    <script>
+        function disabilitaEndereco(desabilita, desabilitaN) {
+            $("#LocalidadeUfDescricao").attr('readonly', desabilita);
+            $("#LocalidadeMunicipioDescricao").attr('readonly', desabilita);
+            $("#LocalidadeBairroDescricao").attr('readonly', desabilita);
+            $("#Endereco").attr('readonly', desabilita);
+            $("#Numero").attr('readonly', desabilitaN);
+            $("#Complemento").attr('readonly', desabilitaN);
+
+
+            $("#Cep").mask("99999-999");
+
+        }
+
+        function consultaCep(ele) {
+
+            var cep = $(ele).parent().parent().find("input.form-control").val();
+
+            var validacep = /^[0-9]{5}-[0-9]{3}$/;
+
+            if (validacep.test(cep)) {
+
+
+                var panel = $("#EnderecoVMTemplate");
+
+                if (cep == "") {
+                    $("span[data-valmsg-for='Endereco.Cep']").text("Digite o CEP");
+                    return;
+                }
+
+
+                var properties22 = {
+                    color: 'red'
+                };
+                $("span[data-valmsg-for='Endereco.Cep']").html('<p class="target" style="color:rgb(0,0, 0);">procurando...</p>');
+
+                //var el = $("span[data-valmsg-for='Endereco.Cep'] .target");
+                //el.pulse(properties22, {  pulses: 5 });
+
+                $.ajax({
+                    type: 'GET',
+                    url: '/Generico/Endereco/ConsultaCep/' + cep,
+                    dataType: 'json',
+                    cache: false,
+                    async: true,
+                    success: function (data) {
+                        if (data.Success) {
+                            $("span[data-valmsg-for='Endereco.Cep'").html(' ');
+                            data = data.Dado;
+                            refresh = new Object();
+                            panel.find("#Endereco").val(data.Endereco);
+                            panel.find("#LocalidadeUfDescricao").val(data.LocalidadeUfDescricao);
+                            panel.find("#LocalidadeMunicipioDescricao").val(data.LocalidadeMunicipioDescricao);
+                            panel.find("#LocalidadeBairroDescricao").val(data.LocalidadeBairroDescricao);
+
+                            disabilitaEndereco(true, false)
+                        } else {
+
+                            $("span[data-valmsg-for='Endereco.Cep'").text(data.ErrorMessage);
+
+                            disabilitaEndereco(false, false);
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+
+                        $("span[data-valmsg-for='Endereco.Cep'").text("erro interno, tente novamente mais tarde");
+                        disabilitaEndereco(false, false);
+                    }
+                });
+            }
+            else {
+
+            }
+        };
+
+        function changeCep(ele) {
+
+            disabilitaEndereco(true, true)
+        }
+
+    </script>
+
+}
+

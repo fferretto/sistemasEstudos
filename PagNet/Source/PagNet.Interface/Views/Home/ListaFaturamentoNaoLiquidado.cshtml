@@ -1,0 +1,69 @@
+﻿@model IList<PagNet.Application.Models.ConstulaEmissao_BoletoVM>
+@using PagNet.Interface.Helpers
+
+<div class="panel-body">
+    <div class="table-responsive">
+        <table id="gridFaturamentoNaoLiquidados" class="table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th width="8%" style="text-align:left;">@Html.DisplayNameFor(model => model.FirstOrDefault().codEmissaoBoleto)</th>
+                    <th width="36%" style="text-align:left;">@Html.DisplayNameFor(model => model.FirstOrDefault().nmCliente)</th>
+                    <th width="20%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().Status)</th>
+                    <th width="18%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().dtVencimento)</th>
+                    <th width="18%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().Valor)</th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                <tr>
+                    <td width="8%" style="text-align:left;">
+                        @Html.DisplayFor(item => item[i].codEmissaoBoleto)
+                    </td>
+                    <td width="36%" style="text-align:left;">
+                        @Html.DisplayFor(item => item[i].nmCliente)
+                    </td>
+                    <td width="20%" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].Status)
+                    </td>
+                    <td width="18%" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].dataVendimento)
+                    </td>
+                    <td width="18%" style="text-align:center;">
+                        @Html.DisplayFor(item => item[i].Valor)
+                    </td>
+                    <td class="codEmissaoBoleto" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@Model[i].codEmissaoBoleto" value="@Model[i].codEmissaoBoleto" />
+                    </td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" onclick="FechaJanelaModal();" data-dismiss="modal">Fechar</button>
+</div>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+    $(document).ready(function () {
+
+        $.unblockUI();
+
+        $('#gridFaturamentoNaoLiquidados').dataTable({
+            dom: 'Blfrtip',
+            buttons: [
+                'excel'
+            ]
+        });
+    });
+
+
+</script>

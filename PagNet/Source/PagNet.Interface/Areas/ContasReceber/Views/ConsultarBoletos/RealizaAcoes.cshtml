@@ -1,0 +1,114 @@
+﻿@model PagNet.Application.Models.EmissaoBoletoVM
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        @Html.HiddenFor(x => x.codigoEmpresa)
+        @Html.HiddenFor(x => x.Status)
+        @Html.HiddenFor(x => x.nomeBoleto)
+
+        <div class="panel-heading">
+            Informações do Faturamento
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.CodigoCliente, tudoTamanho: 1, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.nomeCliente, tudoTamanho: 8, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.CPFCNPJCliente, tudoTamanho: 2, inputTamanho: 12)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.dataSolicitacao, tudoTamanho: 3, inputTamanho: 6)
+                    @Html.EditBootstrapFor(model => model.dataVencimento, tudoTamanho: 3, inputTamanho: 6)
+                    @Html.EditBootstrapFor(model => model.SeuNumero, tudoTamanho: 2, inputTamanho: 12)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.Valor, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.ValorJuros, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.PercentualJuros, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.ValorMulta, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.PercentualMulta, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.TaxaEmissaoBoleto, tudoTamanho: 2, inputTamanho: 10)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.PrimeiraInstrucaoCobranca, tudoTamanho: 6, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.SegundaInstrucaoCobranca, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+                <div class="row">
+                    @Html.DDLBootstrapFor(model => model.codJustificativa, Model.descJustificativa, "/ContasReceber/ConsultarBoletos/BuscaJustificativas/", 5)
+                    @Html.EditBootstrapFor(model => model.DescJustOutros, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="col-md-7">
+        <button type="button" style="display:none;" id="btnEnviarEmail pull-left" class="btn btn-success" onclick="EnviarEmail(@Model.codigoEmissaoBoleto)"><i class="fa fa-envelope" aria-hidden="true"></i> Enviar Boleto por Email</button>
+        <a style="display:none;" href="@Url.Action("DownloadBoleto", "ConsultarBoletos", new { area = "ContasReceber", id = Model.codigoEmissaoBoleto, sid = ViewBag.Sid })" class="btnDownload">
+            <div class="btn btn-success">
+                <i class="fa fa-download"></i> Download PDF Boleto
+            </div>
+        </a>
+        <button type="button" style="display:none;" id="btnLiquidacaoManual" class="btn btn-warning" onclick="LiquidacaoManual(@Model.codigoEmissaoBoleto);"><i class="fa fa-check" aria-hidden="true"></i> Liquidação Manual</button>
+        <button type="button" style="display:none;" id="btnExcluiBoleto" class="btn btn-danger" onclick="ExcluiBoleto(@Model.codigoEmissaoBoleto)"><i class="fa fa-trash-o" aria-hidden="true"></i> Excluir Pedido de Faturamento</button>
+    </div>
+
+
+    <div class="col-md-5">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+
+    </div>
+</div>
+
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    var status = $('#Status').val();
+
+    if (status == "LIQUIDADO" || status == "PENDENTE_DE_REGISTRO" || status == "REGISTRADO") {
+        $('#btnEnviarEmail').show();
+        $('#btnDownloadBoleto').show();
+    }
+
+    if (status == "EM_ABERTO") {
+        $('#btnLiquidacaoManual').show();
+        $('#btnExcluirFaturamento').show();
+    }
+
+
+    $("#CodigoCliente").prop('disabled', true);
+    $("#nomeCliente").prop('disabled', true);
+    $("#CPFCNPJCliente").prop('disabled', true);
+    $("#dataSolicitacao").prop('disabled', true);
+    $("#dataVencimento").prop('disabled', true);
+    $("#SeuNumero").prop('disabled', true);
+    $("#Valor").prop('disabled', true);
+    $("#ValorJuros").prop('disabled', true);
+    $("#PercentualJuros").prop('disabled', true);
+    $("#ValorMulta").prop('disabled', true);
+    $("#PercentualMulta").prop('disabled', true);
+    $("#TaxaEmissaoBoleto").prop('disabled', true);
+    $("#PrimeiraInstrucaoCobranca").prop('disabled', true);
+    $("#SegundaInstrucaoCobranca").prop('disabled', true);
+    $("#DescJustOutros").prop('disabled', true);
+
+
+    $(".DescJustOutros").hide();
+    $(".codJustificativa").change(function () {
+        $("#codJustificativa").val($('.codJustificativa option:selected').val());
+        if ($("#codJustificativa").val() == "OUTROS") {
+            $(".DescJustOutros").show();
+        }
+        else {
+            $(".DescJustOutros").hide();
+            $("#DescJustOutros").val("");
+        }
+    });
+
+</script>

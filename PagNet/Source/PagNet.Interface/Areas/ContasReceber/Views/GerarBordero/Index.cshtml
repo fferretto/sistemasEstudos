@@ -1,0 +1,148 @@
+﻿@model PagNet.Application.Models.FiltroConsultaFaturamentoVM
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Geração de Borderô";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.CodigoUsuario)
+    @Html.HiddenFor(x => x.CodigoCliente)
+    @Html.HiddenFor(x => x.codigoEmpresa)
+    @Html.HiddenFor(x => x.codBordero)
+    @Html.HiddenFor(x => x.acessoAdmin)
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Geração de Borderô para Emissão de Boletos</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-8">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+
+                    <div class="col-md-8" id="FiltroEmpresa" style="display:none">
+                        @Html.DDLBootstrapFor(model => model.codigoEmpresa, Model.nomeEmpresa, "/Generico/CadastrosDiversos/GetEmpresa/", 0)
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditBootstrapFor(model => model.filtroCliente, tudoTamanho: 3, inputTamanho: 10)
+                        @Html.EditBootstrapFor(model => model.nomeCliente, tudoTamanho: 7, inputTamanho: 12)
+                        <div class="form-group col-md-2" id="btnLocalizarCliente">
+                            <label></label>
+                            <div class="input-group col-xs-12">
+                                <div class="btn btn-success" onclick="LocalizaCliente();">Localizar</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*<div class="col-md-8">
+                            @Html.DDLBootstrapFor(model => model.codigoContaCorrente, Model.nomeContaCorrente, "/Generico/CadastrosDiversos/GetContaCorrenteBoleto/", "codigoEmpresa", null, 11)
+                        </div>*@
+
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-10 pull-right">
+                            <div class="panel panel-default" style="float:right">
+                                <div class="panel-heading">
+                                    Data de Vencimento
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group" id="GrupoTipoProgramacao">
+                                        <div class="row">
+                                            @Html.EditBootstrapFor(model => model.dtInicio, tudoTamanho: 12, inputTamanho: 11)
+                                        </div>
+                                        <div class="row">
+                                            @Html.EditBootstrapFor(model => model.dtFim, tudoTamanho: 12, inputTamanho: 11)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group col-md-8  pull-right">
+                        <div class="input-group col-xs-5 pull-right">
+                            <div class="btn btn-success pull-right" onclick="FuncConsultaSolicitacaoBoletos();">Consultar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="SolicitacaoBoleto">
+        <div id="modalSolicitacaoBoleto">
+
+        </div>
+    </div>
+    <div class="modal fade" id="LocalizaCliente" tabindex="-1" role="dialog" aria-labelledby="LocalizaCliente" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalCliente">
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@*<script src="~/js/Scripts/ContasReceber/GerarBordero.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "ContasReceber" , classe = "GerarBordero.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+
+@section Scripts
+    {
+    <script>
+
+        $("#dtInicio").change(function () {
+
+            var data = new Date();
+            var dtInicio = $("#dtInicio").val().split("/");
+            var dtFim = $("#dtFim").val().split("/");
+            var dataIni = new Date(`${dtInicio[2]},${dtInicio[1]},${dtInicio[0]}`);
+            var dataFim = new Date(`${dtFim[2]},${dtFim[1]},${dtFim[0]}`);
+            var dataAtual = new Date(`${data.getFullYear()},${data.getMonth() + 1},${data.getDate()}`)
+
+            if (dataIni < dataAtual) {
+                msgAviso("A data de início não pode ser inferior a data atual.");
+            }
+
+            if (dataFim < dataIni) {
+                $("#dtFim").val($("#dtInicio").val())
+            }
+        });
+        $("#dtFim").change(function () {
+            var data = new Date();
+            var dtInicio = $("#dtInicio").val().split("/");
+            var dtFim = $("#dtFim").val().split("/");
+            var dataIni = new Date(`${dtInicio[2]},${dtInicio[1]},${dtInicio[0]}`);
+            var dataFim = new Date(`${dtFim[2]},${dtFim[1]},${dtFim[0]}`);
+            var dataAtual = new Date(`${data.getFullYear()},${data.getMonth() + 1},${data.getDate()}`)
+
+            if (dataFim < dataAtual) {
+                msgAviso("A data final não pode ser inferior a data atual.");
+            }
+
+            if (dataFim < dataIni) {
+                $("#dtInicio").val($("#dtFim").val());
+            }
+        });
+
+    </script>
+}

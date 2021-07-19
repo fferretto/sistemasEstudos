@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.AssemblyInfo.cs
+=======
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\bin\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.ContaCorrente\PagNet.BLD.ContaCorrente\obj\Debug\netstandard2.0\PagNet.BLD.ContaCorrente.csproj.CopyComplete
+>>>>>>> remotes/origin/master

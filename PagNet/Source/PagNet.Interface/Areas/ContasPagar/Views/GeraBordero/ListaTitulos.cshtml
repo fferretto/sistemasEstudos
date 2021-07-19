@@ -1,0 +1,86 @@
+﻿@model PagNet.Application.Models.FiltroBorderoPagVM
+@using PagNet.Interface.Helpers
+
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(x => x.codUsuario)
+@Html.HiddenFor(x => x.codEmpresa)
+@Html.HiddenFor(x => x.codigoBanco)
+@Html.HiddenFor(x => x.codJustificativa)
+@Html.HiddenFor(x => x.descJustificativa)
+@Html.HiddenFor(x => x.DescJustOutros)
+
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="">
+            <div class="form-group col-lg-3 ">
+                @*<div class="" style="margin-top: 19px">
+                    <div id="btPagamentoManual" class="btn btn-warning" onclick="JustificativaBaixaManual(); ">Baixa Manual</div>
+                </div>*@
+            </div>
+            <div class="form-group col-lg-6">
+                @Html.EditBootstrapFor(model => model.qtTitulosSelecionados, tudoTamanho: 5, inputTamanho: 6)
+                @Html.EditBootstrapFor(model => model.ValorBordero, tudoTamanho: 6, inputTamanho: 12)
+            </div>
+            <div class="form-group col-lg-3  pull-right">
+                <div class="pull-right" style="margin-top: 19px">
+                    <div id="btnSalvaBordero" class="btn btn-success" data-confirm="Confirma a criação do borderô?" onclick="SalvaBordero();">Salvar Borderô</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" style="text-align:center">
+            <b style="color:red;font-size: 16px;">O valor do título já está constando uma previsão da taxa de transferência que será cobrada para pagamentos via TED</b>
+        </div>
+        <div class="col-md-12" style="margin-top:2%;">
+            @Html.EditorFor(model => model.ListaFechamento, "IListTitulosPGTO")
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="JustBaixaManual" tabindex="-1" role="dialog" aria-labelledby="JustBaixaManual" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalJustBaixaManual">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ListaTitulosFavorecido" tabindex="-1" role="dialog" aria-labelledby="ListaTitulosFavorecido" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalListaTitulosFavorecido">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*
+    <script src="~/js/ScriptHelpersPartialView.js"></script>*@
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script>
+
+    $(document).ready(function () {
+        $("#qtTitulosSelecionados").prop('disabled', true);
+        $("#ValorBordero").prop('disabled', true);
+
+        $.unblockUI();
+
+    });
+
+</script>
+

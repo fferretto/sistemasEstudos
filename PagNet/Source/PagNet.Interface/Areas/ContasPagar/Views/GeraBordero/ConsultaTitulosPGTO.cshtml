@@ -1,0 +1,78 @@
+﻿@model IList<PagNet.Application.Models.ListaTitulosPGTOVM>
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="GridTitulosFavorecido" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().TIPOCARTAO)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().CODFAVORECIDO)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().NMFAVORECIDO)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().VALTOTAL)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().VALBRUTO)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().DATEMISSAO)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().DATPGTO)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().DATREALPGTO)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(item => item[i].TIPOCARTAO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].CODFAVORECIDO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].NMFAVORECIDO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].VALTOTAL)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].VALBRUTO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].DATEMISSAO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].DATPGTO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].DATREALPGTO)
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script>
+
+    function carregaPagina() {
+    }
+    $(window).load(carregaPagina());
+
+    $(document).ready(function () {
+
+        $('#GridTitulosFavorecido').dataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'excel'
+            ],
+        });
+
+    });
+
+
+</script>

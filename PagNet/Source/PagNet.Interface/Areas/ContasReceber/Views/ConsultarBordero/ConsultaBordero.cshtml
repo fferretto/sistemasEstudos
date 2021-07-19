@@ -1,0 +1,36 @@
+﻿@model PagNet.Application.Models.BorderoBolVM
+@using PagNet.Interface.Helpers
+
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(x => x.codUsuario)
+@Html.HiddenFor(x => x.codOpe)
+@Html.HiddenFor(x => x.acessoAdmin)
+@Html.HiddenFor(x => x.CaminhoArquivo)
+@Html.HiddenFor(x => x.codigoEmpresa)
+
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-md-12" style="margin-top:2%;">
+            @Html.EditorFor(model => model.ListaBordero, "IListaConsultaBorderoBol")
+        </div>
+    </div>
+</div>
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script>
+
+    $(document).ready(function () {
+
+        $.unblockUI();
+
+
+    });
+
+
+
+</script>
+

@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Relatorio.master.cs" Inherits="Relatorio" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="DevExpress.Web.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxMenu" TagPrefix="dxm" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">    
+        <div style="margin-left: auto; margin-right: auto; width: 95%; margin-top: 10px;">
+            <div style="width: 100%; float: right; margin-left: auto; margin-right: auto; margin-top: -10px; margin-bottom: 10px;">
+                <dxm:ASPxMenu ID="mnuTop" runat="server" Width="100%" EnableViewState="False" >
+                <Items>
+                    <dxm:MenuItem NavigateUrl="~/Default.aspx" Text="INICIO" Name="Inicio">
+                    </dxm:MenuItem>
+                    <dxm:MenuItem Text="CADASTRO" Name="Cadastros">
+                        <Items>
+                            <dxm:MenuItem Text="Produtos" Name="Produto"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Cliente" Name="CadClienteVA" NavigateUrl="~/CadClienteVA.aspx" Visible="false"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Cliente" Name="CadClienteNovo" NavigateUrl="~/CadClienteNovo.aspx" Visible="false"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Credenciados" Name="CadCredenciado" NavigateUrl="~/CadCredenciado.aspx" Visible="false"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Credenciados" Name="CadCredenciadoNovo" NavigateUrl="~/CadCredenciadoNovo.aspx" Visible="false"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Usuarios" Name="CadUsuario" NavigateUrl="~/CadUsuario.aspx" Visible="false"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Usuarios" Name="CadUsuarioNovo" NavigateUrl="~/CadUsuarioNovo.aspx" Visible="false"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Taxas" Name="CadTaxas" NavigateUrl="~/CadTaxas.aspx" Visible="false"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Taxas" Name="CadTaxasNovo" NavigateUrl="~/CadTaxasNovo.aspx" Visible="false"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Benefícios" Name="CadBeneficiosNovo" NavigateUrl="~/CadBeneficiosNovo.aspx" Visible="false"></dxm:MenuItem>
+                            <dxm:MenuItem Text="Grupo de Credenciados" NavigateUrl="~/CadGrupoCredenciado.aspx" Name="GrupoCred"></dxm:MenuItem>
+                        </Items>
+                    </dxm:MenuItem>
+                    <dxm:MenuItem Text="TAREFAS" Name="Tarefas">
+                        <Items>
+                            <dxm:MenuItem Text="Solicitar Cargas Via Arquivo" NavigateUrl="~/SolicitaCargas.aspx"
+                                Name="SolicitaCargas">
+                            </dxm:MenuItem>
+                            <dxm:MenuItem Text="Solicitar Cargas Via Selecao Usuario" NavigateUrl="~/SolicitaCargasSistema.aspx"
+                                Name="SolicitaCargasUsu">
+                            </dxm:MenuItem>
+                            <dxm:MenuItem Text="Efetuar Cargas" NavigateUrl="~/CargaCartoes.aspx" Name="CargaCartoes">
+                            </dxm:MenuItem>
+                            <dxm:MenuItem Text="Transf. Saldo entre Cartoes (Exceto VOUCHER)" NavigateUrl="~/TransfSaldo.aspx?tela=0"
+                                Name="TransfSaldoCart">
+                            </dxm:MenuItem>
+                            <dxm:MenuItem Text="Transf. Saldo p/Conta Cliente" NavigateUrl="~/TransfSaldo.aspx?tela=1"
+                                Name="TransfSaldoCli">
+                            </dxm:MenuItem>
+                            <dxm:MenuItem Text="Tranferência de Usuário" NavigateUrl="~/TransfUsuario.aspx"
+                                Name="TransfUsuario">
+                            </dxm:MenuItem>
+                             <dxm:MenuItem Text="Consulta Cargas Aguardando Pagamento" NavigateUrl="~/CargaAguarLibPgto.aspx" ToolTip="Consulta e Liberar Cargas Aguardando Pagamento"
+                                Name="CargaPendPgto">
+                            </dxm:MenuItem>  
+                        </Items>
+                    </dxm:MenuItem>
+                    <dxm:MenuItem Text="CONSULTAS" Name="Consultas">
+                        <Items>
+                            <dxm:MenuItem Text="Consulta Transacoes" NavigateUrl="~/SelConsTransacao.aspx" ToolTip="Consultas"
+                                Name="SelConsTransacao">
+                            </dxm:MenuItem>
+                        </Items>
+                    </dxm:MenuItem>
+                    <dxm:MenuItem Name="Modulo_Relatorios" Text="MODULO RELATORIOS">
+                    </dxm:MenuItem>
+                    <dxm:MenuItem Text="OPERADORES" Name="Operadores">
+                        <Items>
+                            <dxm:MenuItem Text="Trocar Senha" NavigateUrl="~/TrocarSenha.aspx" Name="TrocarSenha">
+                            </dxm:MenuItem>
+                            <dxm:MenuItem Text="Manutencao Operador Netcard" Name="ManutencaoOperador">
+                                <Items>
+                                    <dxm:MenuItem Name="CadOperador" NavigateUrl="~/CadOperador.aspx" Text="Cadastro de Operador Netcard">
+                                    </dxm:MenuItem>
+                                    <dxm:MenuItem Name="ControleAcessoVA" NavigateUrl="~/ControleAcessoVA.aspx" Text="Cadastro de Perfil Netcard">
+                                    </dxm:MenuItem>
+                                    <dxm:MenuItem Name="ControleAcesso" NavigateUrl="~/ControleAcesso.aspx" Text="Cadastro de Perfil Netcard">
+                                    </dxm:MenuItem>
+                                </Items>
+                            </dxm:MenuItem>
+                            <dxm:MenuItem Name="OperadoresWEB" Text="Operador Web Parceria">
+                            </dxm:MenuItem>
+                            <%-- NavigateUrl="~/CadOperadorWeb.aspx"  --%>
+                            <dxm:MenuItem Text="Logoff" NavigateUrl="~/EncerrarSessao.aspx" Name="Logoff">
+                            </dxm:MenuItem>
+                        </Items>
+                    </dxm:MenuItem>
+                </Items>
+                <ItemStyle Width="16.6%" />
+                <ClientSideEvents ItemClick="function(s, e) { MenuItemClick(e); }" />
+            </dxm:ASPxMenu>
+            </div>
+            <div style="width: 90%; margin-left: auto; margin-right: auto; height: 100%;">
+                <asp:ContentPlaceHolder ID="cphRelatorio" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

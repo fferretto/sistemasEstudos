@@ -1,0 +1,23 @@
+BEGIN
+	IF EXISTS (SELECT 1 
+				FROM INFORMATION_SCHEMA.TABLES 
+			   WHERE TABLE_SCHEMA = 'DBO' 
+				 AND TABLE_NAME = 'PAGNET_BORDERO_BOLETO')
+	BEGIN
+			DROP TABLE PAGNET_BORDERO_BOLETO
+	END
+	END
+BEGIN
+    CREATE TABLE PAGNET_BORDERO_BOLETO
+    (
+         CODBORDERO                     INT             NOT NULL PRIMARY KEY
+        ,[STATUS]                       NVARCHAR(60)    NOT NULL
+        ,CODUSUARIO                   	INT             NOT NULL  FOREIGN KEY REFERENCES PAGNET_USUARIO(CODUSUARIO)
+        ,CODEMPRESA                     INT             NOT NULL  FOREIGN KEY REFERENCES PAGNET_CADEMPRESA(CODEMPRESA)
+        ,QUANTFATURAS                   INT             NOT NULL
+        ,VLBORDERO                      DECIMAL(15,2)   NOT NULL
+        ,DTBORDERO                      DATETIME        NOT NULL       
+    )
+END
+    
+    

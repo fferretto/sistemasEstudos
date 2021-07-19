@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="PagNet.Bld.Domain" Version="1.0.24" />
+    <PackageReference Include="PagNet.Bld.Infra.Data" Version="1.0.17" />
+    <PackageReference Include="Telenet.Bld.ControleAcesso.Web.Setup" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagNet.BLD.DescontoFolha\PagNet.BLD.DescontoFolha.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PagNet.Bld.Domain">
+      <HintPath>..\..\..\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,7 @@
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v8.3" %>
+<dxe:ASPxButtonEdit runat="server" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css"
+ImageFolder="~/App_Themes/BlackGlass/{0}/" CssPostfix="BlackGlass">
+    <ValidationSettings ErrorText="Error has occurred">
+        <ErrorImage Height="14px" Width="14px" Url="~/App_Themes/BlackGlass/Editors/Error.gif"></ErrorImage>
+    </ValidationSettings>
+</dxe:ASPxButtonEdit>

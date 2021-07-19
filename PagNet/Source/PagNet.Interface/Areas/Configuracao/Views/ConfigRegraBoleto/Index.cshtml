@@ -1,0 +1,207 @@
+﻿@model PagNet.Application.Models.RegraNegocioBoletoVm
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Configruação";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.CODREGRA)
+    @Html.HiddenFor(x => x.CODEMPRESA)
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.CodUsuario)
+    @Html.HiddenFor(x => x.COBRAJUROS)
+    @Html.HiddenFor(x => x.COBRAMULTA)
+    @Html.HiddenFor(x => x.AgruparCobranca)
+    
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Configuração de Regra para Emissão de Boletos</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+
+
+                    <div class="col-md-8" id="FiltroEmpresa" style="display:none">
+                        @Html.DDLBootstrapFor(model => model.CODEMPRESA, Model.NMEMPRESA, "/Generico/CadastrosDiversos/GetEmpresa/", 0)
+                    </div>
+
+                    @Html.EditBootstrapFor(model => model.TAXAEMISSAOBOLETO, tudoTamanho: 12, inputTamanho: 3)
+
+                    @Html.DDLBootstrapFor(model => model.CODPRIMEIRAINSTCOBRA, Model.NMPRIMEIRAINSTCOBRA, "/Generico/ConsultasGenericas/GetInstrucaoCobranca/", 5)
+                    @Html.DDLBootstrapFor(model => model.CODSEGUNDAINSTCOBRA, Model.NMSEGUNDAINSTCOBRA, "/Generico/ConsultasGenericas/GetInstrucaoCobranca/", 5)
+
+
+                    <div class="panel panel-default col-md-3" style="margin-left:1%" id="PermitePagamentoMulta">
+                        <div class="panel-heading-decision">
+                            Cobrar Multa Após Vencimento?
+                        </div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills">
+                                <li class="" id="liMultaSim">
+                                    <a href="#MultaSim" data-toggle="tab" id="btnMultaSim">Sim</a>
+                                </li>
+                                <li class="active" id="liMultaNao">
+                                    <a href="#MultaNao" data-toggle="tab" id="btnMultaNao">Não</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="margin-top:2%;">
+                                <div class="tab-pane fade" id="MultaSim">
+                                    <div class="row">
+                                        @* verificação da forma de cobrança da multa *@
+                                        <div class="panel panel-default col-md-11" style="margin-left:1%" id="FormaCobrancaMulta">
+                                            <div class="panel-heading-decision">
+                                                Forma de Cobrança
+                                            </div>
+                                            <div class="panel-body">
+                                                <ul class="nav nav-pills">
+                                                    <li class="" id="liMultaValor">
+                                                        <a href="#MultaValor" data-toggle="tab" id="btnMultaValor">Valor</a>
+                                                    </li>
+                                                    <li class="" id="liMultaPerc">
+                                                        <a href="#MultaPerc" data-toggle="tab" id="btnMultaPerc">Percentual</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content" style="margin-top:2%;">
+                                                    <div class="tab-pane fade" id="MultaValor">
+                                                        <div class="row">
+                                                            @Html.EditBootstrapFor(model => model.VLMULTADIAATRASO, tudoTamanho: 12, inputTamanho: 11)
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="MultaPerc">
+                                                        @Html.EditBootstrapFor(model => model.PERCMULTA, tudoTamanho: 11, inputTamanho: 10)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="MultaNao">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default col-md-3" style="margin-left:1%" id="PermitePagamentoJuros">
+                        <div class="panel-heading-decision">
+                            Cobrar Juros Após Vencimento?
+                        </div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills">
+                                <li class="" id="liJurosSim">
+                                    <a href="#JurosSim" data-toggle="tab" id="btnJurosSim">Sim</a>
+                                </li>
+                                <li class="active" id="liJurosNao">
+                                    <a href="#JurosNao" data-toggle="tab" id="btnJurosNao">Não</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="margin-top:2%;">
+                                <div class="tab-pane fade" id="JurosSim">
+                                    <div class="row">
+                                        @* verificação da forma de cobrança da multa *@
+                                        <div class="panel panel-default col-md-11" style="margin-left:1%" id="FormaCobrancaJuros">
+                                            <div class="panel-heading-decision">
+                                                Forma de Cobrança
+                                            </div>
+                                            <div class="panel-body">
+                                                <ul class="nav nav-pills">
+                                                    <li class="" id="liJurosValor">
+                                                        <a href="#JurosValor" data-toggle="tab" id="btnJurosValor">Valor</a>
+                                                    </li>
+                                                    <li class="" id="liJurosPerc">
+                                                        <a href="#JurosPerc" data-toggle="tab" id="btnJurosPerc">Percentual</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content" style="margin-top:2%;">
+                                                    <div class="tab-pane fade" id="JurosValor">
+                                                        <div class="row">
+                                                            @Html.EditBootstrapFor(model => model.VLJUROSDIAATRASO, tudoTamanho: 12, inputTamanho: 11)
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="JurosPerc">
+                                                        @Html.EditBootstrapFor(model => model.PERCJUROS, tudoTamanho: 11, inputTamanho: 10)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="JurosNao">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default col-md-5" style="margin-left:1%" id="AgruparCobranca">
+                        <div class="panel-heading-decision">
+                            Agrupar os Faturamentos do Dia para Gerar Apenas um Boleto?
+                        </div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills">
+                                <li class="" id="liAgruparCobrancaSim">
+                                    <a href="#AgruparCobrancaSim" data-toggle="tab" id="btnAgruparCobrancaSim">Sim</a>
+                                </li>
+                                <li class="active" id="liAgruparCobrancaNao">
+                                    <a href="#AgruparCobrancaNao" data-toggle="tab" id="btnAgruparCobrancaNao">Não</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="margin-top:2%;">
+                                <div class="tab-pane fade" id="AgruparCobrancaSim">
+                                </div>
+                                <div class="tab-pane fade" id="AgruparCobrancaNao">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group col-md-3  pull-right">
+                        <label></label>
+                        <div class="input-group col-xs-12">
+                            <div id="SalvarRegra" class="btn btn-success" data-confirm="Confirma a criação/alteração da regra?" onclick="SalvarRegra();">Salvar Regra</div>
+                            <div id="DesativarRegra" style="margin-left:1%" class="btn btn-danger" onclick="JustificativaDesativarRegra();">Desativar Regra</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="Justificativa" tabindex="-1" role="dialog" aria-labelledby="Justificativa" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalJustificativa">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Configuracao" , classe = "ConfigRegraBoleto.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+

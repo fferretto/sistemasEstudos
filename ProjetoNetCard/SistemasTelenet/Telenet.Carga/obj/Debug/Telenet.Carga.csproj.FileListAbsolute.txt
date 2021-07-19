@@ -1,0 +1,15 @@
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\bin\Debug\Telenet.Carga.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\bin\Debug\Telenet.Carga.pdb
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\bin\Debug\Telenet.Carga.Abstractions.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\bin\Debug\Telenet.Core.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\bin\Debug\Newtonsoft.Json.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\bin\Debug\Telenet.Carga.Abstractions.pdb
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\bin\Debug\Telenet.Core.pdb
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\bin\Debug\Newtonsoft.Json.xml
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\obj\Debug\Telenet.Carga.csprojAssemblyReference.cache
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\obj\Debug\Telenet.Carga.Properties.Resources.resources
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\obj\Debug\Telenet.Carga.csproj.GenerateResource.cache
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\obj\Debug\Telenet.Carga.csproj.CoreCompileInputs.cache
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\obj\Debug\Telenet.Carga.csproj.CopyComplete
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\obj\Debug\Telenet.Carga.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga\obj\Debug\Telenet.Carga.pdb

@@ -1,0 +1,31 @@
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.csproj.CopyComplete
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.pdb
+<<<<<<< HEAD
+=======
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.PGTO.Sicredi\PagNet.Bld.PGTO.Sicredi.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Sicredi.Web.Setup.csproj.CopyComplete
+>>>>>>> remotes/origin/master

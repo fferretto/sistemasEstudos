@@ -1,0 +1,193 @@
+﻿/* corpo página em geral */
+html, body {
+    font-family: Tahoma;
+    height: 100%;
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+h5 a:link, h5 a:visited, h5 a:active {
+    padding: 0;
+    text-decoration: none;
+}
+
+label {
+    color: gray;
+}
+
+#page {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+    min-height: 660px;
+}
+
+#header {
+    margin:0px;
+    padding:1px;   
+    vertical-align:top;
+    height:100px;
+}
+
+#title {
+    height: 107px;
+    _height: 107px;
+    padding-top: 2px;
+    padding-left: 5px;
+	vertical-align: middle;
+}
+#title_logo {
+    background-position: center center;
+    width: 30%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('logo.png');
+    margin-right: 90px;
+    float: left;
+    clear: none;
+}
+#title_text {
+    margin-top: 40px;
+}
+#title_text h1 {
+	font-size: 1.2em;
+    font-family: Tahoma;
+	color: gray;
+    font-weight: normal;
+}
+#logindisplay {
+    width: 36%;
+    float: right;
+    font-size: xx-small;
+    margin-top: -35px;
+    font-family: tahoma;
+    padding: 10px;
+    background: white;
+}
+
+#logindisplay input {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+    font-size: 7pt;
+    width: 300px;
+    padding-left: 3px;
+}
+
+#logindisplay a {
+    color: #060;
+    font-weight: bold;
+    background-color: white;
+}
+
+#left {
+    width: 232px;
+    float: left;
+    clear: none;
+    margin: 0px;
+}
+
+#middletop, #middlebottom {
+    height: 12px;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-image: url('backht.png');
+}
+
+#middlebottom {
+    color: gray;
+    text-align: center;
+    font-size: 8pt;
+    padding-top: 20px;
+    height: 24px;
+    float: none;
+    background: none;
+}
+#middle {
+    padding: 10px 15px 15px 10px;    
+    margin: 0px;    
+    min-height:486px;
+    clear:none;
+    background-repeat:repeat-y;
+    background-image: url('backh.png');
+}
+
+#Menu {
+    height: 35px;
+    text-align: center;
+    margin-left: 3px;
+    margin-top: -10px;
+}
+
+/*Componentes*/
+
+input, textarea, select {
+    background: #fff;
+    color: #333;
+}
+
+.botao {
+    background-color: gray;
+    color: ghostwhite;
+}
+
+.botaoGrid {
+    background-color: gray;
+    color: ghostwhite;
+}
+
+input[type="submit"], input[type="button"], button {
+	background-color: gray;
+	color: ghostwhite;
+}
+
+.linkButton {
+    background-color: gray;
+    color: ghostwhite;
+}
+
+.head {
+    background-color: gray;
+	color: ghostwhite;
+}
+
+#footer {
+    background-color: gray;
+    color: blue;
+}
+#footer a {
+    background-color: gray;
+    color: white;
+}

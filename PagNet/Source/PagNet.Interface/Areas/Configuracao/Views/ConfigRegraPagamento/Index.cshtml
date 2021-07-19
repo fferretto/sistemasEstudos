@@ -1,0 +1,147 @@
+﻿@model PagNet.Application.Models.RegraNegocioPagamentoVm
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Configruação";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.CODREGRA)
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.CodUsuario)
+    @Html.HiddenFor(x => x.COBRATAXAANTECIPACAO)
+    @Html.HiddenFor(x => x.TIPOFORMACOMPENSACAO)
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Configuração Regra de Antecipação</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default col-md-11" style="margin-left:1%" id="TaxaAntecipaPgto">
+                            <div class="panel-heading-decision">
+                                Será cobrada taxa de Antecipação de pagamento?
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills">
+                                    <li class="" id="liAntecipaSim">
+                                        <a href="#AntecipaSim" data-toggle="tab" id="btnAntecipaSim">Sim</a>
+                                    </li>
+                                    <li class="active" id="liAntecipaNao">
+                                        <a href="#AntecipaNao" data-toggle="tab" id="btnAntecipaNao">Não</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" style="margin-top:2%;">
+                                    <div class="tab-pane fade" id="AntecipaSim">
+                                        <div class="row">
+                                            @* verificação da forma de cobrança da Antecipa *@
+                                            <div class="panel panel-default col-md-5" style="margin-left:1%" id="FormaCobrancaAntecipa">
+                                                <div class="panel-heading-decision">
+                                                    Forma de Cobrança
+                                                </div>
+                                                <div class="panel-body">
+                                                    <ul class="nav nav-pills">
+                                                        <li class="" id="liAntecipaValor">
+                                                            <a href="#AntecipaValor" data-toggle="tab" id="btnAntecipaValor">Valor</a>
+                                                        </li>
+                                                        <li class="" id="liAntecipaPerc">
+                                                            <a href="#AntecipaPerc" data-toggle="tab" id="btnAntecipaPerc">Percentual</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" style="margin-top:2%;">
+                                                        <div class="tab-pane fade" id="AntecipaValor">
+                                                            <div class="row">
+                                                                @Html.EditBootstrapFor(model => model.VLTAXAANTECIPACAO, tudoTamanho: 7, inputTamanho: 11)
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="AntecipaPerc">
+                                                            @Html.EditBootstrapFor(model => model.PORCENTAGEMTAXAANTECIPACAO, tudoTamanho: 7, inputTamanho: 10)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @*VEFIRICA A FORMA DE COMPENSAÇÃO*@
+                                            <div class="panel panel-default col-md-5" style="margin-left:1%" id="FormaCobrancaAntecipa">
+                                                <div class="panel-heading-decision">
+                                                    Forma de calcular o valor
+                                                </div>
+                                                <div class="panel-body">
+                                                    <ul class="nav nav-pills">
+                                                        <li class="" id="liCalculoFixo">
+                                                            <a href="#CalculoFixo" data-toggle="tab" id="btnCalculoFixo" title="O valor será abatido do total a ser pago indiferênte da quantidade de dias de antecipação.">
+                                                                Taxa Única
+                                                            </a>
+                                                        </li>
+                                                        <li class="" id="liCalculoMensal">
+                                                            <a href="#CalculoMensal" data-toggle="tab" id="btnCalculoMensal" title="Valor será calculado pro rata">
+                                                                Pro Rata
+                                                            </a>
+                                                        </li>
+                                                        <li class="" id="liCalculoDiario">
+                                                            <a href="#CalculoDiario" data-toggle="tab" id="btnCalculoDiario" title="Valor cobrado por dia de antecipação">
+                                                                Diário
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" style="margin-top:2%;">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="AntecipaNao">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group col-md-3  pull-right">
+                        <label></label>
+                        <div class="input-group col-xs-12">
+                            <div id="SalvarRegra" class="btn btn-success" data-confirm="Confirma a criação/alteração da regra?" onclick="SalvarRegra();">Salvar Regra</div>
+                            <div id="DesativarRegra" style="margin-left:1%" class="btn btn-danger" onclick="JustificativaDesativarRegra();">Desativar Regra</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="Justificativa" tabindex="-1" role="dialog" aria-labelledby="Justificativa" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modalJustificativa">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Configuracao" , classe = "ConfigRegraPagamento.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+

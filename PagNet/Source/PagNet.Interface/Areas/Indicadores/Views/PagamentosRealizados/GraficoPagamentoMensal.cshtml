@@ -1,0 +1,29 @@
+﻿@using PagNet.Interface.Helpers
+
+@*<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>*@
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div style="font-weight: bold;font-size:15px;">
+            <b>Valores Pagos nos Últimos 12 Meses</b>
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <div class="col-md-12">
+            <div id="Chart_pag_Mensal" style="min-width: 400px; height: 400px; margin: 0 auto">
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script type="text/javascript">
+    google.charts.load('current', { packages: ['corechart', 'bar'] });
+    google.charts.setOnLoadCallback(GraficoDespesaAno);
+
+
+</script>
+

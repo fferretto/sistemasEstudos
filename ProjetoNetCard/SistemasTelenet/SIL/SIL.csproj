@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DD9478F-13FB-4DCB-8A26-E34210074D21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIL</RootNamespace>
+    <AssemblyName>SIL</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\SIL.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v8.3.Core, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Charts.v8.3.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\DevExpress.Data.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.Utils.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\DevExpress.Web.ASPxEditors.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\DevExpress.Web.ASPxGridView.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v8.3.Export">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.Web.ASPxGridView.v8.3.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.Web.ASPxHtmlEditor.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.Web.ASPxPivotGrid.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v8.3.Export">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.Web.ASPxPivotGrid.v8.3.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.Web.ASPxSpellChecker.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.Web.ASPxTreeList.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\DevExpress.Web.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.Xpo.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.XtraCharts.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v8.3.Web">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.XtraCharts.v8.3.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.XtraEditors.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.XtraPivotGrid.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v8.3.Core">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.XtraPivotGrid.v8.3.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.XtraPrinting.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v8.3">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.XtraReports.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v8.3.Web">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.XtraReports.v8.3.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v8.3.Core">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\DevExpress.XtraSpellChecker.v8.3.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="dotnetcardweb, Version=1.0.6834.20358, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\dotnetcardweb.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\EnvDTE.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="FrameworkTelenet">
+      <HintPath>\\afrodite\Repositorio2\DllNetcard\FrameworkTelenet.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net35\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Yogesh.ExcelXml, Version=3.35.1017.910, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Yogesh.ExcelXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Yogesh.Extensions, Version=1.16.524.1306, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dependencias-NetCardWeb.1.0.0\lib\Yogesh.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ambiente.cs" />
+    <Compile Include="APIs\Model\ModelPadrao.cs" />
+    <Compile Include="AuditingService.cs" />
+    <Compile Include="BLL\blSolicitaCarga.cs" />
+    <Compile Include="BLL\blCarga.cs" />
+    <Compile Include="BLL\blClienteVA.cs" />
+    <Compile Include="BLL\blComponentesAcessoVA.cs" />
+    <Compile Include="BLL\blConsultaVA.cs" />
+    <Compile Include="BLL\blControleAcessoVA.cs" />
+    <Compile Include="BLL\blCredenciadoVA.cs" />
+    <Compile Include="BLL\BlCriptografia.cs" />
+    <Compile Include="BLL\blModRel.cs" />
+    <Compile Include="BLL\blOperadorVA.cs" />
+    <Compile Include="BLL\blOperdor.cs" />
+    <Compile Include="BLL\blPerfilAcessoVA.cs" />
+    <Compile Include="BLL\blTabelas.cs" />
+    <Compile Include="BLL\blTransacao.cs" />
+    <Compile Include="BLL\blUsuarioVA.cs" />
+    <Compile Include="BLL\blVopervaws.cs" />
+    <Compile Include="BLL\blTaxas.cs" />
+    <Compile Include="BLL\blClienteNovo.cs" />
+    <Compile Include="BLL\blCredenciadoVANovo.cs" />
+    <Compile Include="BLL\blUsuarioVANovo.cs" />
+    <Compile Include="BLL\blBeneficios.cs" />
+    <Compile Include="BLL\blControleAcesso.cs" />
+    <Compile Include="BLL\blComponentesAcesso.cs" />
+    <Compile Include="BLL\DsUsuarios.cs" />
+    <Compile Include="DAL\daComponentesAcesso.cs" />
+    <Compile Include="DAL\daControleAcesso.cs" />
+    <Compile Include="DAL\daBeneficios.cs" />
+    <Compile Include="DAL\daCargaNovo.cs" />
+    <Compile Include="DAL\daSegmentosEGrupos.cs" />
+    <Compile Include="DAL\daUsuarioVANovo.cs" />
+    <Compile Include="DAL\daCredenciadoVANovo.cs" />
+    <Compile Include="DAL\daClienteNovo.cs" />
+    <Compile Include="EnumExtensions.cs" />
+    <Compile Include="ExceptionExtensions.cs" />
+    <Compile Include="HttpResponseExtrensions.cs" />
+    <Compile Include="IClientSessionManager.cs" />
+    <Compile Include="ICustomSerializer.cs" />
+    <Compile Include="IpAlias.cs" />
+    <Compile Include="ISessionAbstractDataItemSerializer.cs" />
+    <Compile Include="POL\IOperadora.cs" />
+    <Compile Include="SessionData.cs" />
+    <Compile Include="SessionDataItem.cs" />
+    <Compile Include="SessionAbstractDataItemSerializer_T.cs" />
+    <Compile Include="SessionExtensions.cs" />
+    <Compile Include="SessionItem.cs" />
+    <Compile Include="UnauthorizedUserAgentException.cs" />
+    <Compile Include="UserWarningException.cs" />
+    <Compile Include="Crip.cs" />
+    <Compile Include="DAL\daCriptografia.cs" />
+    <Compile Include="DAL\daTaxas.cs" />
+    <Compile Include="DAL\daSolicitaCarga.cs" />
+    <Compile Include="DAL\daCarga.cs" />
+    <Compile Include="DAL\daModRel.cs" />
+    <Compile Include="DAL\daComponentesAcessoVA.cs" />
+    <Compile Include="DAL\daConsultaVA.cs" />
+    <Compile Include="DAL\daControleAcessoVA.cs" />
+    <Compile Include="DAL\daCredenciadoVA.cs" />
+    <Compile Include="DAL\daOperador.cs" />
+    <Compile Include="DAL\daOperadorVA.cs" />
+    <Compile Include="DAL\daPerfilAcessoVA.cs" />
+    <Compile Include="DAL\daTabelas.cs" />
+    <Compile Include="DAL\daTransacao.cs" />
+    <Compile Include="DAL\daUsuarioVA.cs" />
+    <Compile Include="Constantes.cs" />
+    <Compile Include="DAL\daClienteVA.cs" />
+    <Compile Include="DAL\daVopervaws.cs" />
+    <Compile Include="DbConnectionExtensions.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="POL\PO.cs" />
+    <Compile Include="POL\POCustom.cs" />
+    <Compile Include="POL\POOperador.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

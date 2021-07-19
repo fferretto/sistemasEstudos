@@ -1,0 +1,89 @@
+﻿
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Treinamento do Sistema";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold; font-size: 15px;">
+                <b>Treinamentos do sistema pagnet</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Processo de Pagamento
+                                    </div>
+                                    <div class="panel-body menuvideostreinamento">
+                                        <div class="form-group" id="GrupoTipoProgramacao">
+                                            <div class="row">
+                                                <a href="@Url.Action("VisualizarVideo", "Treinamento", new { area = "Ajuda", id = "AlterarDataPGTO", sid = ViewBag.Sid })">
+                                                    Alterar Data de Pagamento
+                                                </a>
+                                            </div>
+                                            <div class="row">
+                                                <a href="@Url.Action("VisualizarVideo", "Treinamento", new { area = "Ajuda", id = "GerarArquivoRemessa", sid = ViewBag.Sid })">
+                                                    Gerar Arquivo de Remessa
+                                                </a>
+                                            </div>
+                                            <div class="row">
+                                                <a href="@Url.Action("VisualizarVideo", "Treinamento", new { area = "Ajuda", id = "ProcessaRetorno", sid = ViewBag.Sid })">
+                                                    Baixar Arquivo de Retorno
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12 pull-right">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Processo de Cadastro
+                                    </div>
+                                    <div class="panel-body menuvideostreinamento">
+                                        <div class="form-group" id="GrupoTipoProgramacao">
+                                            <div class="row">
+                                                <a href="@Url.Action("VisualizarVideo", "Treinamento", new { area = "Ajuda", id = "CadastroContaCorrente", sid = ViewBag.Sid })">
+                                                    Cadastro de Conta Corrente
+                                                </a>
+                                            </div>
+                                            <div class="row">
+                                                <a href="@Url.Action("VisualizarVideo", "Treinamento", new { area = "Ajuda", id = "CadastroUsuario", sid = ViewBag.Sid })">
+                                                    Cadastro de Usuário
+                                                </a>
+                                            </div>
+                                            <div class="row">
+                                                <a href="@Url.Action("VisualizarVideo", "Treinamento", new { area = "Ajuda", id = "CadastroFavorecido", sid = ViewBag.Sid })">
+                                                    Cadastro Favorecido
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

@@ -1,0 +1,153 @@
+﻿@model IList<PagNet.Interface.Areas.ContasPagar.Models.RetornoArquivoBancoVM>
+@using PagNet.Interface.Helpers
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @if (Html.EditorFor(x => x.FirstOrDefault().mensagemRetorno).ToString() != "")
+            {
+                <div class="col=md-12" style="text-align:center; background-color:gainsboro; font-size:13px; border-color:red; color:red;font-weight: bold;">
+                    @Html.ValueFor(x => x.FirstOrDefault().mensagemRetorno)
+                </div>
+            }
+
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().qtRegistroArquivo)<br />
+                    @Html.EditorFor(model => model.FirstOrDefault().qtRegistroArquivo)
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().vlTotalArquivo)<br />
+                    @Html.EditorFor(model => model.FirstOrDefault().vlTotalArquivo)
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().qtRegistroOK)<br />
+                    @Html.EditorFor(model => model.FirstOrDefault().qtRegistroOK)
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().qtRegistroFalha)<br />
+                    @Html.EditorFor(model => model.FirstOrDefault().qtRegistroFalha)
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="table-responsive" style="margin-top: 5%">
+                    <table id="example" class="table" width="170%">
+                        <thead>
+                            <tr>
+                                <th width="3%" style="text-align:center;"></th>
+                                <th width="18%">@Html.DisplayNameFor(model => model.FirstOrDefault().RAZSOC)</th>
+                                <th width="12%">@Html.DisplayNameFor(model => model.FirstOrDefault().CNPJ)</th>
+                                <th width="9%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().dataPGTO)</th>
+                                <th width="9%" style="text-align:right;">@Html.DisplayNameFor(model => model.FirstOrDefault().ValorLiquido)</th>
+                                <th width="11%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().Status)</th>
+                                <th width="37%">@Html.DisplayNameFor(model => model.FirstOrDefault().MsgRetBanco)</th>
+                                <th width="0%" style="display:none;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                if (Model[i].CNPJ != null)
+                                {
+                                    <tr>
+                                        <th width="3%" style="text-align:center;">
+                                            @if (Model[i].mensagemRetorno != "")
+                                            {
+                                                <div onclick="ExibeMensagemRetorno(@Model[i].mensagemRetorno);"></div>
+                                            }
+                                            else
+                                            {
+                                                @if (Model[i].Status == "LIQUIDADO")
+                                                {
+                                                    <i class="bolaVerde"></i>
+                                                }
+                                                else if (Model[i].Status == "EM BORDERO")
+                                                {
+                                                    <i class="bolaAmarela"></i>
+                                                }
+                                                else
+                                                {
+                                                    <i class="bolaVermelha"></i>
+                                                }
+                                            }
+                                        </th>
+                                        <td width="18%">
+                                            @Html.DisplayFor(item => item[i].RAZSOC)
+                                        </td>
+                                        <td width="12%">
+                                            @Html.DisplayFor(item => item[i].CNPJ)
+                                        </td>
+                                        <td width="9%" style="text-align:center;">
+                                            @Html.DisplayFor(item => item[i].dataPGTO)
+                                        </td>
+                                        <td width="9%" style="text-align:right;">
+                                            @Html.DisplayFor(item => item[i].ValorLiquido)
+                                        </td>
+                                        <td width="11%" style="text-align:center;">
+                                            @Html.DisplayFor(item => item[i].Status)
+                                        </td>
+                                        <td width="37%">
+                                            @Html.DisplayFor(item => item[i].MsgRetBanco)
+                                        </td>
+                                        <td width="0%" style="display:none;">
+                                            <input class="" type="hidden" name="@String.Format("[{0}].SeuNumero", i)" value="@Model[i].SeuNumero" />
+                                            <input class="" type="hidden" name="@String.Format("[{0}].CodRetorno", i)" value="@Model[i].codigoRetorno" />
+                                            <input class="" type="hidden" name="@String.Format("[{0}].RAZSOC", i)" value="@Model[i].RAZSOC" />
+                                            <input class="" type="hidden" name="@String.Format("[{0}].CNPJ", i)" value="@Model[i].CNPJ" />
+                                            <input class="" type="hidden" name="@String.Format("[{0}].DATPGTO", i)" value="@Model[i].dataPGTO" />
+                                            <input class="" type="hidden" name="@String.Format("[{0}].VALLIQ", i)" value="@Model[i].ValorLiquido" />
+                                            <input class="" type="hidden" name="@String.Format("[{0}].MsgRetBanco", i)" value="@Model[i].MsgRetBanco" />
+                                            <input class="" type="hidden" name="@String.Format("[{0}].Status", i)" value="@Model[i].Status" />
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(document).ready(function () {
+
+        $.unblockUI();
+
+        $('#btnBaixaArquivo').show();
+        $('#qtRegistroArquivo').prop("disabled", "disabled")
+        $('#vlTotalArquivo').prop("disabled", "disabled")
+        $('#qtRegistroOK').prop("disabled", "disabled")
+        $('#qtRegistroFalha').prop("disabled", "disabled")
+
+        $('#example').dataTable({
+            dom: 'Blfrtip',
+            buttons: [
+                'excel'
+            ],
+            scrollX: true,
+            order: [1, 'asc'],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0]
+                }
+            ]
+
+        });
+
+    });
+
+
+</script>

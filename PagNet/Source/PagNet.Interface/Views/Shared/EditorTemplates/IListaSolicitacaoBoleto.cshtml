@@ -1,0 +1,109 @@
+﻿@model IList<PagNet.Application.Models.SolicitacaoBoletoVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaFechClienteVM">
+    <div class="panel-heading">
+        @ViewData.ModelMetadata.DisplayName
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 0%;">
+
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="gridSolicitacaoBoleto" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th width="5%" class="CheckBox-Grid"><input style="margin-left:20%" name="select_all" id="select_all" checked="checked" type="checkbox"></th>
+                    <th width="30%">Cliente</th>
+                    <th width="13%" style="text-align:center;">CNPJ</th>
+                    <th width="12%" style="text-align:center;">Data Vencimento</th>
+                    <th width="10%" style="text-align:center;">Valor</th>
+                    <th width="20%" style="text-align:center;">Origem</th>
+                    <th width="10%" style="text-align:center;">Código de Rastreio</th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td width="5%" style="margin-left:5%" class="CheckBox-Grid">
+                            <input style="margin-left:20%" class="inpchkFechCredPai" onclick="AtualizaValorBorderoBoleto();" type="checkbox" name="@String.Format("{0}[{1}].chkBoleto", nmPropriedade, i)" checked="@Model[i].chkBoleto" />
+                        </td>
+                        <td width="30%">
+                            @Model[i].nomeCliente
+                        </td>
+                        <td width="13%" style="text-align:center;">
+                            @Model[i].cnpj
+                        </td>
+                        <td width="12%" style="text-align:center;">
+                            @Model[i].dtVencimento
+                        </td>
+                        <td width="10%" class="INPVALOR" style="text-align:center;">
+                            @Model[i].Valor
+                        </td>
+                        <td width="20%" style="text-align:center;">
+                            @Model[i].OrigemBoleto
+                        </td>
+                        <td width="10%" style="text-align:center;">
+                            @Model[i].nroDocumento
+                        </td>
+                        <td class="codEmissaoBoleto" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].codEmissaoBoleto", nmPropriedade, i)" value="@Model[i].codEmissaoBoleto" />
+                        </td>
+                        <td class="Valor" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].Valor", nmPropriedade, i)" value="@Model[i].Valor" />
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //inicia();
+
+        var table = $('#gridSolicitacaoBoleto').DataTable({
+            order: [[1, 'asc']],
+            scrollX: true,
+            dom: 'Blfrtip',
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL'
+                },
+                'excel'
+            ],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0]
+                }
+            ]
+        });
+
+
+        AtualizaValorBorderoBoleto()
+
+        $("#select_all").click(function () {
+            $('input', table.cells().nodes()).prop('checked', this.checked);
+            AtualizaValorBorderoBoleto()
+        });
+
+    });
+
+
+</script>

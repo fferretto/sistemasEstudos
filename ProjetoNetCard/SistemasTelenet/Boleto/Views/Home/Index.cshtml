@@ -1,0 +1,176 @@
+﻿@model Boleto.Models.HomeIndex
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Scripts/jquery-2.1.4.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/bootstrap-theme.min.css" rel="stylesheet" />
+<link href="~/css/Callout.css" rel="stylesheet" />
+<div class="container">
+
+
+    <form action="~/Home/GerarBoleto" method="post">
+
+        <div class="bs-callout bs-callout-danger">
+
+            <div class="row">
+
+                <div class="form-group col-md-2">
+                    <label>Banco</label>
+                    <select class="form-control" id="dropBanco" name="dropBanco">
+                        <option value="0">Selecione</option>
+                        <option value="001">Branco do Brasil</option>
+                        <option value="033">Santander</option>
+                        <option value="341">Itau</option>
+                        <option value="237">Bradesco</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Carteira</label>
+                    <select class="form-control" id="dropCarteira" name="dropCarteira">
+                        <option value="001">Selecione Banco</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-1 ">
+                    <label>Agencia</label>
+                    <input type="email" class="form-control" id="txtAgencia" name="txtAgencia">
+                </div>
+                <div class="form-group col-md-1 ">
+                    <label>Conta</label>
+                    <input type="email" class="form-control" id="txtconta" name="txtconta" />
+                </div>
+                <div class="form-group col-md-3 ">
+                    <label>Cedente</label>
+                    <input type="email" class="form-control" id="txtCedente" name="txtCedente">
+                </div>
+                <div class="form-group col-md-2 ">
+                    <label>Cnpj Cedente</label>
+                    <input type="email" class="form-control" id="txtCnpj" name="txtCnpj">
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="form-group col-md-2">
+                    <label>Nosso Número</label>
+                    <input type="text" class="form-control" id="txtNossoNumero" name="txtNossoNumero" placeholder="Nosso Número">
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label>Nº Documento</label>
+                    <input type="text" class="form-control" id="txtNumeroDocumento" name="txtNumeroDocumento" placeholder="Número Documento">
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label>Valor</label>
+                    <input type="text" class="form-control" id="txtValor" name="txtValor" placeholder="Valor">
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label>Vencimento</label>
+                    <input type="text" class="form-control" id="txtVencimento" name="txtVencimento" placeholder="Vencimento">
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="bs-callout bs-callout-info">
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Sacado</label>
+                    <input type="email" class="form-control" id="txtSacado" name="txtSacado" placeholder="Sacado">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>CPF / CNPJ Sacado</label>
+                    <input type="email" class="form-control" id="txtCnpjCpf" name="txtCnpjCpf" placeholder="CPF / CNPJ Sacado">
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Endereço</label>
+                    <input type="email" class="form-control" id="txtEndereco" name="txtEndereco" placeholder="Endereço">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bs-callout bs-callout-success">
+            <div class="row">
+                <div class="form-group col-md-1">
+                    <input type="submit" class="btn btn-success" id="btnGerarBoleto" name="btnGerarBoleto" value="Gerar Boleto">
+                </div>
+            </div>
+        </div>
+
+
+
+    </form>
+
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#dropBanco").change(function () {
+            PreencherDropCarteira();
+        });
+
+    });
+
+    function PreencherDropCarteira() {
+
+        var banco = $("#dropBanco").val();
+
+        $('#dropCarteira').html('');
+
+        if (banco == '001') {
+
+            $('#dropCarteira').append($("<option></option>").attr("value", "11").text("11"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "16").text("16"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "17").text("17"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "17-019").text("17-019"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "17-027").text("17-027"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "18").text("18"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "18-019").text("18-019"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "18-027").text("18-027"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "18-035").text("18-035"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "18-140").text("18-140"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "31").text("31"));
+        }
+        else if (banco = '341') {
+
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("175"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("176"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("178"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("109"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("198"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("107"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("122"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("142"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("143"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("196"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("126"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("131"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("146"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("150"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("169"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("121"));
+            $('#dropCarteira').append($("<option></option>").attr("value", "175").text("112"));
+
+
+        }
+    }
+
+</script>

@@ -1,0 +1,136 @@
+﻿@model PagNet.Interface.Areas.Cadastros.Models.DadosHomologarContaCorrenteModel
+@using PagNet.Interface.Helpers
+
+@Html.HiddenFor(x => x.codigoFavorecido)
+@Html.HiddenFor(x => x.codigoCliente)
+@Html.HiddenFor(x => x.ExisteArqRemessaBol)
+
+<div class="modal-body">
+    <div class="panel panel-default col-md-11" style="margin-top:2%" id="PermiteBoleto">
+        <div class="panel-heading-decision">
+            Tipo de Arquivo
+        </div>
+        <div class="panel-body">
+            <ul class="nav nav-pills">
+                <li class="" id="liPagamento">
+                    <a href="#Pagamento" data-toggle="tab" id="btnPagamento">Pagamento</a>
+                </li>
+                <li class="" id="liCobranca">
+                    <a href="#Cobranca" data-toggle="tab" id="btnCobranca">Cobrança</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade" id="Pagamento">
+                    <div class="row">
+                        <div class="row" style="margin-top:2%">
+                            <div class="col-md-12">
+                                @Html.EditBootstrapFor(model => model.filtroFavorecido, tudoTamanho: 3, inputTamanho: 10)
+                                @Html.EditBootstrapFor(model => model.nomeFavorecido, tudoTamanho: 7, inputTamanho: 12)
+                                <div class="form-group col-md-2" style="margin-left:-2%">
+                                    <label></label>
+                                    <div class="input-group col-xs-12" id="btnLocalizar">
+                                        <div class="btn btn-success" onclick="LocalizaFavorecido();">Localizar</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="margin-top: 2%;">
+                                <div class="form-group  pull-right">
+                                    <div id="btnDownloladArquivoPag" class="btn btn-success" onclick="GeraArquivoRemessa('PAG');">Download Arquivo Remessa</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="Cobranca">
+                    <div class="row">
+                        <div class="row" style="margin-top:2%">
+                            <div class="col-md-12" style="margin-top: 2%;">
+                                <div class="form-group  pull-right">
+                                    <div id="btnDownloladArquivoBol" class="btn btn-success" onclick="GeraArquivoRemessa('BOL');">Download Arquivo Remessa</div>
+                                    <div id="btnDownloadBolPDF" class="btn btn-default" onclick="DownloadBoleto();">Download Boleto PDF</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+    if ($('#ExisteArqRemessaBol').val() == "False") {
+        $("#btnDownloadBolPDF").attr('disabled', 'disabled');
+    }
+    $('#filtroFavorecido').focusout(function () {
+        $("#codEmpresa").val($('.codEmpresa option:selected').val());
+        var filtro = $('#filtroFavorecido').val();
+        if (filtro != "") {
+            var url = montaUrl('/Cadastros/ContaCorrente/BuscaFavorecido/');
+            url += '&filtroFavorecido=' + filtro
+            url += '&codigoEmpresa=' + $("#codEmpresa").val();
+
+            $.ajax({
+                type: 'get',
+                url: url,
+                dataType: 'json',
+                success: function (data) {
+                    if (data.length > 0) {
+                        PreencheFavorecido(data);
+                    } else {
+                        msgAviso("Favorecido não encontrado");
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    msgErro("Erro interno. Tente novamente mais tarde.");
+                }
+            });
+        }
+        else {
+            $("#filtroFavorecido").val('');
+            $("#nomeFavorecido").val('');
+            $("#codigoFavorecido").val(0)
+        }
+    })
+    $('#filtroCliente').focusout(function () {
+        var filtro = $('#filtroCliente').val();
+        $("#codEmpresa").val($('.codEmpresa option:selected').val());
+        if (filtro != "") {
+
+            var url = montaUrl('/Cadastros/ContaCorrente/BuscaCliente/?filtroCliente=' + filtro);
+            url += '&codigoEmpresa=' + $("#codEmpresa").val();
+
+            $.ajax({
+                type: 'get',
+                url: url,
+                dataType: 'json',
+                success: function (data) {
+                    if (data.length > 0) {
+
+                        PreencheCliente(data);
+
+                    } else {
+                        $("#nomeCliente").val("Cliente não encontrado");
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    msgErro("Erro interno. Tente novamente mais tarde.");
+                }
+            });
+        }
+        else {
+            $("#filtroCliente").val('');
+            $("#nomeCliente").val('');
+            $("#CodigoCliente").val(0)
+        }
+    })
+
+</script>

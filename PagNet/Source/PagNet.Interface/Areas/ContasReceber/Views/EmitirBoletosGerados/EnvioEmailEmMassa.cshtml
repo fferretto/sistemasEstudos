@@ -1,0 +1,58 @@
+﻿@*@model IList<PagNet.Application.Models.ListaBoletosVM>*@
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="col-md-12" style="margin-top: 14px">
+    </div>
+    <div class="table-responsive">
+        <table id="gridStatusEnvioEmail" class="table" cellspacing="0" width="100%" style="font-size:11px"></table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" id="btnGeraArquivo" class="btn btn-success" onclick="EnviarEmailSelecionados();">Enviar</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(document).ready(function () {
+
+        var table = $('#gridBoletosGerados').DataTable();
+
+        var dataSet = [];
+        var trs = $('input[type="checkbox"]:checked', table.cells().nodes()).parent().parent();
+        $(trs).each(function (index, value) {
+
+            dataSet.push([
+                $(value).find('.codEmissaoBoleto').find('input').val(),
+                $(value).find('.Cliente').find('input').val(),
+                $(value).find('.CNPJ').find('input').val(),
+                $(value).find('.EmailCliente').find('input').val(),
+                "",
+                ""
+            ]);
+
+        });
+
+        $('#gridStatusEnvioEmail').DataTable({
+            data: dataSet,
+            dom: 'frtip',
+            columns: [
+                { title: 'Código', width: '4%', class: 'codEmissaoBoleto' },
+                { title: 'Cliente', width: '30%' },
+                { title: 'CNPJ', width: '11%' },
+                { title: 'E-mail', width: '18%' },
+                { title: 'Status', class: 'StatusRet', width: '10%' },
+                { title: 'Mensagem de Retorno', class: 'MensagemRet', width: '27%' },
+            ]
+        });
+
+
+    });
+
+
+</script>

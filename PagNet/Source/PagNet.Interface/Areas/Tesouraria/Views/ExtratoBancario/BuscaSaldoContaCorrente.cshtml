@@ -1,0 +1,36 @@
+﻿@model PagNet.Application.Models.TesourariaInformacaoCCVM
+@using PagNet.Interface.Helpers
+
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Resumo da Conta Corrente</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2"></div>
+                @Html.EditBootstrapFor(model => model.SaldoAnteriorContaCorrente, tudoTamanho: 2, inputTamanho: 12)
+                @Html.EditBootstrapFor(model => model.TotalReceitaPeriodo, tudoTamanho: 2, inputTamanho: 12)
+                @Html.EditBootstrapFor(model => model.TotalDespesaPeriodo, tudoTamanho: 2, inputTamanho: 12)
+                @Html.EditBootstrapFor(model => model.SaldoAtualContaCorrente, tudoTamanho: 2, inputTamanho: 12)
+            </div>
+        </div>
+    </div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+
+<script>
+
+    $('#SaldoAtualContaCorrente').prop('disabled', true);
+    $('#TotalReceitaPeriodo').prop('disabled', true);
+    $('#TotalDespesaPeriodo').prop('disabled', true);
+    $('#SaldoAnteriorContaCorrente').prop('disabled', true);
+    
+
+</script>

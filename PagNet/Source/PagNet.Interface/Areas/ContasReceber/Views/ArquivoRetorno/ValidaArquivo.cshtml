@@ -1,0 +1,87 @@
+﻿@model IList<PagNet.Interface.Areas.ContasReceber.Models.APISolicitacaoBoletoModel>
+@using PagNet.Interface.Helpers
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @if (Html.EditorFor(x => x.FirstOrDefault().MsgRetorno).ToString() != "")
+            {
+                <div class="col=md-12" style="text-align:center; background-color:gainsboro; font-size:13px; border-color:red; color:red;font-weight: bold;">
+                    @Html.ValueFor(x => x.FirstOrDefault().MsgRetorno)
+                </div>
+            }
+
+            <div class="col-md-12">
+                <div class="table-responsive" style="margin-top: 5%">
+                    <table id="gridRetornoArquivoRemessa" class="table" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="7">Código</th>
+                                <th width="30">@Html.DisplayNameFor(model => model.FirstOrDefault().nomeCliente)</th>
+                                <th width="31%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().Status)</th>
+                                <th width="10%" style="text-align:right;">@Html.DisplayNameFor(model => model.FirstOrDefault().Valor)</th>
+                                <th width="11%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().dtVencimento)</th>
+                                <th width="11%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().dtEmissao)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                            <tr>
+                                <td width="7%">
+                                    @Html.DisplayFor(item => item[i].codEmissaoBoleto)
+                                </td>
+                                <td width="30%">
+                                    @Html.DisplayFor(item => item[i].nomeCliente)
+                                </td>
+                                <td width="31%" style="text-align:center;">
+                                    @Html.DisplayFor(item => item[i].Status)
+                                </td>
+                                <td width="10%" style="text-align:right;">
+                                    @Html.DisplayFor(item => item[i].Valor)
+                                </td>
+                                <td width="11%" style="text-align:center;">
+                                    @Html.DisplayFor(item => item[i].dtVencimento)
+                                </td>
+                                <td width="11%" style="text-align:center;">
+                                    @Html.DisplayFor(item => item[i].dtEmissao)
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script>
+
+
+    $(document).ready(function () {
+
+        $.unblockUI();
+
+        $('#gridRetornoArquivoRemessa').dataTable({
+            scrollX: true,
+            order: [1, 'asc'],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0]
+                }
+            ]
+
+        });
+
+    });
+
+</script>

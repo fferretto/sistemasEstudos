@@ -1,0 +1,94 @@
+﻿@model IList<PagNet.Application.Models.ConstulaPagNetFechCredVM>
+@using PagNet.Interface.Helpers
+
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="GridTransacao" class="table" cellspacing="0" style="width:120%">
+            <thead>
+                <tr>
+                    <th width="6%">@Html.DisplayNameFor(model => model.FirstOrDefault().CODBORDERO)</th>
+                    <th width="23%">@Html.DisplayNameFor(model => model.FirstOrDefault().NMFAVORECIDO)</th>
+                    <th width="10%">@Html.DisplayNameFor(model => model.FirstOrDefault().CNPJ)</th>
+                    <th width="10%">@Html.DisplayNameFor(model => model.FirstOrDefault().VALLIQ)</th>
+                    <th width="16%">@Html.DisplayNameFor(model => model.FirstOrDefault().STATUS)</th>
+                    <th width="8%">@Html.DisplayNameFor(model => model.FirstOrDefault().dtBordero)</th>
+                    <th width="10%">@Html.DisplayNameFor(model => model.FirstOrDefault().dtAgendamento)</th>
+                    <th width="5%">@Html.DisplayNameFor(model => model.FirstOrDefault().CODBANCO)</th>
+                    <th width="6%">@Html.DisplayNameFor(model => model.FirstOrDefault().AGENCIA)</th>
+                    <th width="6%">@Html.DisplayNameFor(model => model.FirstOrDefault().CONTACORRENTE)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td width="6%">
+                            @Html.DisplayFor(item => item[i].CODBORDERO)
+                        </td>
+                        <td width="23%">
+                            @Html.DisplayFor(item => item[i].NMFAVORECIDO)
+                        </td>
+                        <td width="10%">
+                            @Html.DisplayFor(item => item[i].CNPJ)
+                        </td>
+                        <td width="10%">
+                            @Html.DisplayFor(item => item[i].VALLIQ)
+                        </td>
+                        <td width="16%">
+                            @Html.DisplayFor(item => item[i].STATUS)
+                        </td>
+                        <td width="8%">
+                            @Html.DisplayFor(item => item[i].dtBordero)
+                        </td>
+                        <td width="10%">
+                            @Html.DisplayFor(item => item[i].dtAgendamento)
+                        </td>
+                        <td width="5%">
+                            @Html.DisplayFor(item => item[i].CODBANCO)
+                        </td>
+                        <td width="6%">
+                            @Html.DisplayFor(item => item[i].AGENCIA)
+                        </td>
+                        <td width="6%">
+                            @Html.DisplayFor(item => item[i].CONTACORRENTE)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+
+<script>
+
+    function carregaPagina() {
+    }
+    $(window).load(carregaPagina());
+
+    $(document).ready(function () {
+
+        $('#GridTransacao').dataTable({
+            dom: 'Bfrtip',
+            scrollX: true,
+            autoWidth: false,
+            buttons: [
+                'excel'
+            ],
+        });
+
+
+        document.getElementsByClassName("dataTables_scrollHeadInner")[0].style.width = "1400px"
+        document.getElementsByClassName("dataTables_scrollHeadInner")[0].children[0].style.width = "1408px"
+    });
+
+
+</script>

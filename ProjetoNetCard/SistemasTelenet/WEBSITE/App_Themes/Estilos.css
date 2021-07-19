@@ -1,0 +1,518 @@
+﻿
+/* MODULO CONSULTA TRANSACOES*/
+
+.styleCheckBoxFitros
+{
+	width: 100%;
+	float: left;
+	background-color: #E1E1E1;
+	margin-bottom: 10px;
+}
+
+.BotoesAcaoConsulta
+{
+	float: left;
+	padding-right: 5px;
+	width: 45px;
+	margin-bottom: 10px;
+}
+
+.divsPrincipaisConsultaTrans
+{
+	width: 100%;
+	float: right;
+	margin-bottom: 5px;
+	padding-top: 10px;
+}
+
+.divsPrincipaisConsultaTrans.divScroll
+{
+	height: 210px;
+	padding-top: 10px;
+	width: 100%;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.divsPrincipaisConsultaTrans.divFiltrosListaCliCred
+{
+	border: solid 1px LightGray;
+	padding-bottom: 8px;
+}
+
+.divBotoesAcao
+{
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.divClientesConsulta
+{
+	width: 100%;
+	float: right;
+	height: 340px;
+}
+
+.divDivisao
+{
+	width: 100%;
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.divDivisao.divDivisaoClienteCredenciado
+{
+	border: 1px solid LightGray;
+}
+
+.divFiltroFechamentoEIntervalos
+{
+	padding-bottom: 5px;
+	padding-top: 6px;
+}
+
+
+/* OUTROS*/
+
+.toolButton
+{
+	vertical-align: top;
+}
+
+.ContentHeader
+{
+	vertical-align: top;
+}
+
+.Label {
+    font-weight:bold;
+}
+
+.Homologacao {
+    width: 97.3% !important;
+    text-align: center;
+    padding-top: 2px;
+    padding-right: 16px;
+    padding-bottom: 3px;
+    padding-left: 18px;
+    font: 9pt Tahoma;
+    color: white;
+    white-space: nowrap;
+    border-width: 0px;
+    background-color: red;
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+.TituloPanel
+{
+    width: 96% !important;
+    padding-top: 2px;
+    padding-right: 16px;
+    padding-bottom: 3px;
+    padding-left: 18px;	
+    font: 9pt Tahoma;
+    color: white;
+    white-space: nowrap;
+    border-width: 0px;
+    background-color: #3E5496;
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+.TituloPanelChk
+{
+    width: 100% !important;
+    padding-top: 2px;
+    padding-right: 16px;
+    padding-bottom: 3px;
+    padding-left: 18px;	
+    font: 9pt Tahoma;
+    color: white;
+    white-space: nowrap;
+    border-width: 0px;
+    background-color: #3E5496;
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+.TextBox
+{
+    margin-top: 2px;
+	font-size: small;
+	font-family: Tahoma;
+}
+
+.ComboBox
+{
+    margin-top: 2px;
+	font-size: small;
+	font-family: Tahoma;
+    height: 22px;
+}
+
+.ComboBoxNavProd
+{
+	font-size: small;
+	font-family: Tahoma;
+    height: 33px;
+}
+
+.EditDesabilitado {
+    border: 1px solid #a9a9a9;
+    background-color: rgb(235, 235, 228);
+    font-size: small;
+    font-family: Tahoma;
+    height: 18px;
+    color: #535353;
+    margin-top: 2px;
+}
+
+.EditDesabilitadoProd
+{
+	font-size: small;
+	font-family: Tahoma;
+    font-weight:bold;
+    color: red;
+    height: 18px;
+}
+
+.Conteudo
+{
+	width: 820px;
+	height: 600px;
+	vertical-align: top;
+	position: absolute;
+}
+
+.Menu
+{
+	float: left;
+	left: 0px;
+	width: 100px;
+}
+
+.ColunaDesabilitada
+{
+	background-color: #E9E9E9;
+	color: Black;
+}
+
+.Rodape
+{
+	bottom: 20px;
+	position: absolute;
+	width: 100%;
+	height: 15px;
+	left: 0px;
+}
+
+.PreviewRelatorio
+{
+	overflow: scroll;
+	width: 750px;
+	height: 800px;
+}
+
+.DivAbaConsTrans
+{
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+}
+
+.DivAbas
+{
+	width: 99%;
+	padding: 0px 0px 0px 10px;
+}
+
+.DivAbasDois
+{
+	width: 100%;
+	padding: 0px 10px 10px 10px;
+}
+
+
+.linha
+{
+	background-color: #E1E1E1;
+}
+
+.tableFiltros
+{
+	border: 1px solid LightGray;
+}
+
+.divScrollTrans
+{
+	border: 1px solid LightGray;
+	height: 170px;
+	width: 100%;
+	overflow: auto;
+}
+
+.divScrollTransCli
+{
+	float: left;
+	height: 320px;
+	width: 98%;
+	overflow: auto;
+	border: 1px solid LightGray;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+.divScrollTransCre
+{
+	height: 350px;
+	width: 100%;
+	overflow: auto;
+}
+
+.divScrollResp
+{
+	border: 1px solid LightGray;
+	height: 130px;
+	width: 100%;
+	overflow: auto;
+}
+
+.TableTipoResp
+{
+	height: 100%;
+}
+
+.GridObs
+{
+	overflow: scroll;
+	width: 100%;
+	height: 438px;
+}
+
+.GridObsCred
+{
+	overflow: scroll;
+	height: 205px;
+}
+
+.GridConsultas
+{
+	width: 790px;
+	height: 650px;
+	overflow: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.GridConsultasInt
+{
+	width: 100%;
+}
+
+.testGrid2
+{
+	width: 100%;
+	height: 650px;
+	overflow: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.testGrid3
+{
+	width: 100%;
+}
+
+.rodape2
+{
+	font-family: Times New Roman;
+	text-align: center;
+	margin-left: 20%;
+	width: 70%;
+	left: 1px;
+	position: absolute;
+	margin-top: 830px;
+}
+
+.GridOperador
+{
+	overflow: scroll;
+	width: 667px;
+	height: 190px;
+}
+
+.GridDivideTela
+{
+	width: 400px;
+	height: 500px;
+	float: left;
+}
+
+.GridDivideTelaPadrao
+{
+	width: 48%;
+	float: left;
+}
+
+.GridClienteCartoes
+{
+	overflow: scroll;
+	width: 100%;
+	height: 550px;
+	float: left;
+}
+
+
+
+.Panel
+{
+	background-image: url('../Images/Small/background.gif');
+	border: 1px solid #afafaf;
+	background-repeat: repeat-x;
+}
+
+
+.GridResolucao
+{
+	overflow: scroll;
+	height: 300px;
+	width: 830px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* JQUERY AUTO COMPLETE */
+.ac_results
+{
+	padding: 0px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: hidden;
+	z-index: 99999;
+}
+
+.ac_results ul
+{
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li
+{
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block; /*  	if width will be 100% horizontal scrollbar will apear  	when scroll mode will be used 	*/ /*width: 100%;*/
+	font: menu;
+	font-size: 12px; /*  	it is very important, if line-height not setted or setted  	in relative units scroll will be broken in firefox 	*/
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.ac_loading
+{
+	background: white url('indicator.gif') right center no-repeat;
+}
+
+.ac_odd
+{
+	background-color: #eee;
+}
+
+.ac_over
+{
+	background-color: #0A246A;
+	color: white;
+}
+
+.blockPanel {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.invalidField {
+  box-shadow: 0 0 5px rgba(204, 0, 0, 1);
+  padding: 1px 0px 3px 3px;
+  margin: 2px 1px 2px 0px;
+  border: 0px solid rgba(204, 0, 0, 1);
+}
+
+.campoInvalido {
+  box-shadow: 0 0 5px rgba(204, 0, 0, 1);
+  padding: 1px 0px 3px 3px;
+  margin: 2px 1px 2px 0px;
+  border: 0px solid rgba(204, 0, 0, 1);
+}
+
+.campoObrigatorio {
+  background-color: rgba(242, 242, 242, 1);
+    padding: 1px 0px 3px 3px;
+  margin: 2px 1px 2px 0px;
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.alert-count {
+    background-color: #d90000;
+    /*border: 1px solid #fff059;*/
+    color: #fff;
+    line-height: 14px;
+    padding: 0 2px;
+    position: absolute;
+    margin-left: 120px;
+    margin-top: -15px;
+    /*top: -4px;
+    right: 1px;*/
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 600;
+    text-indent: 0;
+    text-align: center;
+    border-radius: 4px;
+    min-width: 15px;
+}
+
+.Procesando {
+    background-image: url(../Images/Medium/processando.gif);
+    height: 36px;
+    margin-top: 15px;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.ModalCarregando {
+    background-image: url(../Images/Medium/carregando.gif);
+    height: 50px;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-repeat: no-repeat;
+    z-index: 12001;
+}
+
+    .ModalCarregando:before {
+        font-size: 30px;
+        color: #0f9b1a;
+        font: bold;
+        content: "Aguarde...";
+    }
+
+.ModalCarregandoRelatorio {
+    background-image: url(../Images/Medium/carregando.gif);
+    height: 50px;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-repeat: no-repeat;
+    z-index: 12001;
+}
+
+    .ModalCarregandoRelatorio:before {
+        font-size: 25px;
+        color: #0f9b1a;
+        font: bold;
+        content: "Gerando Relatório...";
+    }

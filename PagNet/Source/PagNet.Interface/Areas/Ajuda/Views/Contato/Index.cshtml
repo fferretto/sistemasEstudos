@@ -1,0 +1,83 @@
+﻿@model PagNet.Application.Models.ContatoViaEmailVM
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Cadastro de Favorecidos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.acessoAdmin)
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold; font-size: 15px;">
+                <b>Fale Conosco</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+                    <div style="text-align: center; color: #337583;">
+                        <b>Seu contato é muito importante para nós.</b> <br />
+                        Você pode preencher os dados solicitados abaixo e enviar sua mensagem.
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            @Html.EditBootstrapFor(model => model.nmEmpresaSolicitante, tudoTamanho: 9, inputTamanho: 10)
+                            @Html.EditBootstrapFor(model => model.nmSolicitante, tudoTamanho: 9, inputTamanho: 10)
+                            @Html.EditBootstrapFor(model => model.EmailSolicitente, tudoTamanho: 6, inputTamanho: 12)
+                            @Html.EditBootstrapFor(model => model.TelefoneSolicitante, tudoTamanho: 2, inputTamanho: 12)
+                            @Html.EditBootstrapFor(model => model.Assunto, tudoTamanho: 12, inputTamanho: 7)
+                            <div class="col-md-8 form-group">
+                                <label>Mensagem:</label><br />
+                                @Html.TextAreaFor(model => model.Mensagem, 5, 130, new { maxlength = "8000", @class = "form-control notes" })
+                                <span class="caracteres">8000</span> Restantes <br>
+                            </div>
+                            @* Processo utilizado para inclusão de anexos. *@
+                            @*<div class="col-md-11">
+                                    <div class="col-md-12">
+                                        @Html.EditorFor(model => model.Anexo, "IListaAnexarArquivo")
+                                    </div>
+                                </div>*@
+                            <div class="col-md-12">
+                                <hr />
+                                <div class="form-group  pull-right">
+                                    <div class="btn btn-success" onclick="EnviarEmail();" data-confirm="Confirma o envio do e-mail?">Enviar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@*<script src="~/js/Scripts/Cadastros/Fornecedor.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Suporte" , classe = "FaleConosco.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    function carregaPagina() {
+        document.getElementById('TelefoneSolicitante').onkeyup = function () {
+            MascaraTelefone(this, mtel);
+        }
+    }
+    $(window).load(carregaPagina());
+
+
+    $(document).on("input", "#Mensagem", function () {
+        var limite = 8000;
+        var caracteresDigitados = $(this).val().length;
+        var caracteresRestantes = limite - caracteresDigitados;
+
+        $(".caracteres").text(caracteresRestantes);
+    });
+</script>

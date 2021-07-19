@@ -1,0 +1,21 @@
+﻿@model PagNet.Application.Models.DadosUserVm
+
+
+<div class="info-user  col-md-9">
+    <b >OLÁ, @Model.nmUsuario</b> <br />
+    <b >Usuário:  @Model.Login</b> <br />
+    <b >Perfil: @Model.Perfil</b> <br />
+    <a class="mnuAlteraSenha" href="@Url.Action("AlteraSenha", "Usuarios", new { area = "Cadastros", sid = ViewBag.Sid })">Altera Senha</a> <br />
+</div>
+<div class="col-md-2">
+    @{
+        var parms = new Dictionary<string, string>
+        {
+            { "sid", ViewBag.Sid }
+        };
+    }
+
+    <a asp-area="Identificacao" asp-controller="Autenticacao" asp-action="logout" asp-all-route-data="parms">
+        <i class="fa fa-power-off" style="color: white;font-size: 17px;margin-top: 15px;"> Sair</i>
+    </a>
+</div>

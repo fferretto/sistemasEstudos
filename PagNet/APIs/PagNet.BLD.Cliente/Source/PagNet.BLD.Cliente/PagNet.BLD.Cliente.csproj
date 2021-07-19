@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagNet.BLD.Cliente.Abstraction\PagNet.BLD.Cliente.Abstraction.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PagNet.Bld.Domain" Version="1.1.3" />
+    <PackageReference Include="Telenet.Bld.ControleAcesso.Abstractions" Version="1.0.5" />
+    <PackageReference Include="Telenet.BusinessLogicModel" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

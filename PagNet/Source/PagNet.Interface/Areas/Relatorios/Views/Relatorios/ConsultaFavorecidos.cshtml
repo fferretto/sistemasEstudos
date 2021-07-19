@@ -1,0 +1,62 @@
+﻿@model IList<PagNet.Interface.Areas.Cadastros.Models.APIFavorecidoVM>
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="example" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().nomeFavorecido)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().CPFCNPJ)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(item => item[i].nomeFavorecido)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(item => item[i].CPFCNPJ)
+                            </td>
+                            <td align='center'>
+                                <div class="btn btn-success" onclick="SelecionaFavorecido(@Model[i].codigoFavorecido);" style="font-size:9px">
+                                    <i class="fa fa-edit "></i>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    function carregaPagina() {
+    }
+    $(window).load(carregaPagina());
+
+    $(document).ready(function () {
+
+        $('#example').dataTable({
+            dom: 'frtip',
+            //buttons: [
+            //    'excel'
+            //],
+        });
+
+    });
+
+</script>

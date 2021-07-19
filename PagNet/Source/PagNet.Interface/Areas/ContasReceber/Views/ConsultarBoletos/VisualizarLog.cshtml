@@ -1,0 +1,64 @@
+﻿@model IList<PagNet.Application.Models.ConstulaLogFaturaVM>
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="GridLog" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th width="0%" style="display:none;"></th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().dataAlteracao)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Usuario)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Status)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Justificativa)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                <tr>
+                    <td width="0%" style="display:none;">
+                        @Html.DisplayFor(item => item[i].codigoLog)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].dataAlteracao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].Usuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(item => item[i].Justificativa)
+                    </td>
+
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script>
+
+
+
+    var tableLog = $('#GridLog').dataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'excel'
+        ],
+        ordering: false
+    });
+
+
+</script>

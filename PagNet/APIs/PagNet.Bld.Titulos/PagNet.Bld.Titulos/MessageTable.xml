@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<telenet>
+  <services.domains>
+    <domain name="TitulosPagamento">
+      <messages>
+        <add key="1" text="PagNet Processo de inclusão, alteração e consulta de títulos" />
+
+        <add key="1000" text="Código do título não informado." />
+
+      </messages>
+    </domain>
+  </services.domains>
+</telenet>

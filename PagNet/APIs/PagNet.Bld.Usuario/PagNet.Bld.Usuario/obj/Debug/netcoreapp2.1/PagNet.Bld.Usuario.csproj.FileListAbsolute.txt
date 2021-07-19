@@ -1,0 +1,14 @@
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\bin\Debug\netcoreapp2.1\PagNet.Bld.Usuario.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\obj\Debug\netcoreapp2.1\PagNet.Bld.Usuario.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\obj\Debug\netcoreapp2.1\PagNet.Bld.Usuario.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\obj\Debug\netcoreapp2.1\PagNet.Bld.Usuario.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\obj\Debug\netcoreapp2.1\PagNet.Bld.Usuario.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\bin\Debug\netcoreapp2.1\PagNet.Bld.Usuario.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\bin\Debug\netcoreapp2.1\PagNet.Bld.Usuario.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\bin\Debug\netcoreapp2.1\PagNet.Bld.Usuario.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\bin\Debug\netcoreapp2.1\PagNet.Bld.Domain.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\bin\Debug\netcoreapp2.1\PagNet.Bld.Usuario.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\bin\Debug\netcoreapp2.1\PagNet.Bld.Domain.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\obj\Debug\netcoreapp2.1\PagNet.Bld.Usuario.csproj.CopyComplete
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\obj\Debug\netcoreapp2.1\PagNet.Bld.Usuario.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.Bld.Usuario\PagNet.Bld.Usuario\obj\Debug\netcoreapp2.1\PagNet.Bld.Usuario.pdb

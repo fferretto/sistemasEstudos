@@ -1,0 +1,140 @@
+﻿@model IList<PagNet.Application.Models.ListaBorderoBolVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default IListaConsultaBorderoPag">
+    <div class="panel-heading">
+        @ViewData.ModelMetadata.DisplayName
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 0%;">
+
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="gridBordero" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th width="5%" style="text-align:center;"></th>
+                    <th width="3%" style="text-align:center;"></th>
+                    <th width="10%">Código</th>
+                    <th width="15%" style="text-align:center;">Quantidade</th>
+                    <th width="15%" style="text-align:right;">Valor Líquido</th>
+                    <th width="18%" style="text-align:center;">Data Emissão</th>
+                    <th width="24%" style="text-align:center;">Status</th>
+                    <th width="10%" style="text-align:center;">Cancelar</th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                <tr>
+                    <td width="5%" align='center'>
+                        <div class="btn btn-success" onclick="VisualizarBoletos(@Model[i].CODBORDERO);" style="font-size:11px">
+                            <i class="fa fa-search "></i>
+                        </div>
+                    </td>
+                    <td width="3%" style="text-align:center;">
+                        @if (Model[i].STATUS == "LIQUIDADO" || Model[i].STATUS == "LIQUIDADO_MANUALMENTE")
+                        {
+                            <i class="bolaVerde"></i>
+                        }
+                        else if (Model[i].STATUS == "PENDENTE_REGISTRO" | Model[i].STATUS == "REGISTRADO")
+                        {
+                            <i class="bolaAmarela"></i>
+                        }
+                        else if (Model[i].STATUS == "RECUSADO" || Model[i].STATUS == "PARCIALMENTE_RECUSADO" || Model[i].STATUS == "VENCIDO")
+                        {
+                            <i class="bolaVermelha"></i>
+                        }
+                        else if (Model[i].STATUS == "EM_BORDERO")
+                        {
+                            <i class="bolaCinza"></i>
+                        }
+
+                    </td>
+                    <td width="10%">
+                        @Model[i].CODBORDERO
+                    </td>
+                    <td width="15%" align="center">
+                        @Model[i].QUANTFATURAMENTO
+                    </td>
+                    <td width="15%" align='right'>
+                        @Model[i].VLBORDERO
+                    </td>
+                    <td width="18%" align='center'>
+                        @Model[i].DTBORDERO
+                    </td>
+                    <td width="24%" align='center'>
+                        @Model[i].STATUS
+                    </td>
+                    <td width="10%" align='center'>
+                        @if (Model[i].STATUS == "EM BORDERO")
+                        {
+                            <div class="btn btn-danger" onclick="CancelaBordero(@Model[i].CODBORDERO);" style="font-size:11px">
+                                <i class="fa fa-trash"></i>
+                            </div>
+                        }
+                    </td>
+                    <td class="CODBORDERO" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].CODBORDERO", nmPropriedade, i)" value="@Model[i].CODBORDERO" />
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="VisualizarTransacoes" tabindex="-1" role="dialog" aria-labelledby="Localizar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalTransacoes">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //inicia();
+
+        var table = $('#gridBordero').DataTable({
+            order: [[1, 'asc']],
+            scrollX: true,
+            dom: 'Blfrtip',
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL'
+                },
+                'excel'
+            ],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0, 1]
+                }
+            ]
+        });
+
+
+        $("#select_all").click(function () {
+            $('input', table.cells().nodes()).prop('checked', this.checked);
+        });
+
+    });
+
+
+</script>

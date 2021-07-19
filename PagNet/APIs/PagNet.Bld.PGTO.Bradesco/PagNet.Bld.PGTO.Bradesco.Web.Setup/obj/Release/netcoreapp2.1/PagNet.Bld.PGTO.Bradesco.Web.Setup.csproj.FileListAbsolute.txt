@@ -1,0 +1,14 @@
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\bin\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.csproj.CopyComplete
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.Bradesco\PagNet.Bld.PGTO.Bradesco.Web.Setup\obj\Release\netcoreapp2.1\PagNet.Bld.PGTO.Bradesco.Web.Setup.pdb

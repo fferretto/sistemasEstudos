@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<telenet>
+  <services.domains>
+    <domain name="CobrancaBancaria">
+      <messages>
+        <add key="1" text="PagNet Processo de Cobrança Bancária" />
+
+        <add key="1000" text="Caminho do arquivo não informado" />
+        <add key="1001" text="Nenhum boleto para ser incluido no arquivo de remessa." />
+
+      </messages>
+    </domain>
+  </services.domains>
+</telenet>

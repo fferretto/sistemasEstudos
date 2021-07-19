@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PagNet.Bld.Domain" Version="1.0.0" />
+    <PackageReference Include="PagNet.Bld.Infra.Data" Version="1.0.0" />
+    <PackageReference Include="Telenet.Bld.ControleAcesso.Web.Setup" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagNet.Bld.PGTO.ABCBrasil.Abstraction\PagNet.Bld.PGTO.ABCBrasil.Abstraction.csproj" />
+    <ProjectReference Include="..\PagNet.Bld.PGTO.ABCBrasil\PagNet.Bld.PGTO.ABCBrasil.csproj" />
+  </ItemGroup>
+
+</Project>

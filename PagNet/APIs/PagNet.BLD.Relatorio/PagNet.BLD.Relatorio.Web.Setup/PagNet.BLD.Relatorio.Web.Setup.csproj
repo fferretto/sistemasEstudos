@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PagNet.Bld.Domain" Version="1.0.11" />
+    <PackageReference Include="PagNet.Bld.Infra.Data" Version="1.0.8" />
+    <PackageReference Include="Telenet.Bld.ControleAcesso.Web.Setup" Version="1.0.3" />
+    <PackageReference Include="Telenet.Data.SqlClient" Version="1.0.1" />
+    <PackageReference Include="Telenet.Extensions.Data" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagNet.BLD.Relatorio.Job\PagNet.BLD.Relatorio.Job.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PagNet.Bld.Infra.Data">
+      <HintPath>..\..\Nugets\PagNet.Bld.Infra.Data\bin\Debug\netcoreapp2.1\PagNet.Bld.Infra.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

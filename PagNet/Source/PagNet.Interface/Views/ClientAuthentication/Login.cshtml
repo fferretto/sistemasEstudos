@@ -1,0 +1,40 @@
+@model Telenet.AspNetCore.Mvc.Authentication.UserLogin
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+@Html.ValidationSummary("", new { @class = "text-danger" })
+
+@using (Html.BeginForm("Login", "ClientAuthentication", new { ReturnUrl = @ViewData["ReturnUrl"] }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    if (@ViewBag.Message != null)
+    {
+        <div style="border:1px solid red">
+            @ViewBag.Message
+        </div>
+    }
+    <table>
+        <tr>
+            <td>@Html.LabelFor(a => a.Username)</td>
+            <td>@Html.TextBoxFor(a => a.Username)</td>
+            <td>@Html.ValidationMessageFor(a => a.Username)</td>
+        </tr>
+        <tr>
+            <td> @Html.LabelFor(a => a.Password)</td>
+            <td> @Html.PasswordFor(a => a.Password) </td>
+            <td> @Html.ValidationMessageFor(a => a.Password) </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Login" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+}

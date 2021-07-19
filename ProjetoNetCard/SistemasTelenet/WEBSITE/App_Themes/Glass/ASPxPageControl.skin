@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dxtc" Namespace="DevExpress.Web.ASPxTabControl" Assembly="DevExpress.Web.v8.3" %> 
+<dxtc:ASPxPageControl runat="server" TabSpacing="0px" CssFilePath="~/App_Themes/Glass/{0}/styles.css" CssPostfix="Glass" ImageFolder="~/App_Themes/Glass/{0}/" >
+<Paddings PaddingLeft="0px"></Paddings>
+<ContentStyle>
+	<Border BorderColor="#4986A2"></Border>
+</ContentStyle>
+<TabStyle HorizontalAlign="Center"></TabStyle>
+</dxtc:ASPxPageControl>

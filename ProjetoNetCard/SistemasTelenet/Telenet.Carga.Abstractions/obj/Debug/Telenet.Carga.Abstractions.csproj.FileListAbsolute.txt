@@ -1,0 +1,5 @@
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga.Abstractions\bin\Debug\Telenet.Carga.Abstractions.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga.Abstractions\bin\Debug\Telenet.Carga.Abstractions.pdb
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga.Abstractions\obj\Debug\Telenet.Carga.Abstractions.csproj.CoreCompileInputs.cache
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga.Abstractions\obj\Debug\Telenet.Carga.Abstractions.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Carga.Abstractions\obj\Debug\Telenet.Carga.Abstractions.pdb

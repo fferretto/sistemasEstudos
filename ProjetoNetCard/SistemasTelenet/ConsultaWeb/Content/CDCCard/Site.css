@@ -1,0 +1,198 @@
+﻿/* corpo página em geral */
+html, body {
+    font-family: Tahoma;
+    color: #33536d;
+    height: 100%;
+    background: url('bg.jpg') no-repeat scroll center top #003756;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+h5 a:link, h5 a:visited, h5 a:active {
+    padding: 0;
+    text-decoration: none;
+}
+
+label {
+    color: gray;
+}
+
+#page {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+    min-height: 660px;
+}
+
+#header {
+    margin:0px;
+    padding:0px;   
+    vertical-align:top;
+    height: 100px;
+}
+
+#title {
+    height: 100px;
+    padding-top: 2px;
+    padding-left: 5px;
+	vertical-align: middle;
+    BACKGROUND-COLOR: WHITE;
+}
+#title_logo {
+    background-position: center center;
+    width: 36%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-image: url('logo.png');
+    margin-right: 5px;
+    float:left;
+	clear:none;
+}
+#title_text {
+    margin-top: 45px;
+}
+#title_text h1 {
+	font-size: 1.2em;
+    font-family: Tahoma;
+	color: #f98038;
+    font-weight: normal;
+}
+
+#logindisplay {
+    width: 36%;
+    float: right;
+    font-size: xx-small;
+    margin-top: -49px;
+    margin-right: 7px;
+    font-family: tahoma;
+    padding: 10px;
+    background: white;
+}
+
+#logindisplay input {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+    font-size: 7pt;
+    width: 300px;
+	padding-left: 3px;
+}
+
+#logindisplay a {
+	color: #060;
+	font-weight: bold;
+    background-color: white;
+}
+
+#left {	
+	width: 232px;
+	float:left;
+	clear:none;
+	margin: 0px;
+}
+
+#middletop, #middlebottom {
+    height: 12px;
+    margin: 0px;
+    padding: 0px;
+    background-repeat:no-repeat;
+    background-image: url('backht.png');
+}
+#middlebottom {
+    margin-top: 4px;
+    background: none;
+    color: gray;
+    text-align: center;
+    font-size: 8pt;
+    padding-right: 7px;
+}
+#middle {
+    padding: 10px 15px 15px 10px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscrore */
+    margin: 0px;
+    _margin-top: -2px;
+    min-height:486px;
+    clear:none;
+    background-repeat:repeat-y;
+    background-image: url('backh.png');
+}
+
+#Menu {
+    height: 35px;
+    text-align: center;
+    margin-left: 3px;
+    margin-top: -10px;
+}
+
+div#caixa p#abas a {
+    margin-top: 10px !important;
+}
+
+/*Componentes*/
+
+input, textarea, select {
+    background: #fff;
+    color: #333;
+}
+
+.botao {
+    background-color: gray;
+    color: ghostwhite;
+}
+
+.botaoGrid {
+    background-color: gray;
+    color: ghostwhite;
+}
+
+input[type="submit"], input[type="button"], button {
+	background-color: gray;
+	color: ghostwhite;
+}
+
+.linkButton {
+    background-color: gray;
+    color: ghostwhite;
+}
+
+.head {
+    background-color: gray;
+	color: ghostwhite;
+}
+
+#footer {
+    background-color: gray;
+    color: blue;
+}
+#footer a {
+    background-color: gray;
+    color: white;
+}

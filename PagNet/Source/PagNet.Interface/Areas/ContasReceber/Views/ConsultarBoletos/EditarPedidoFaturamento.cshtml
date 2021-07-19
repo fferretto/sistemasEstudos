@@ -1,0 +1,124 @@
+﻿@model PagNet.Application.Models.EmissaoBoletoVM
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x => x.codigoUsuario)
+        @Html.HiddenFor(x => x.CodigoCliente)
+        @Html.HiddenFor(x => x.codigoEmpresa)
+        @Html.HiddenFor(x => x.codigoEmissaoBoleto)
+        @Html.HiddenFor(x => x.acessoAdmin)
+        @Html.HiddenFor(x => x.codBordero)
+        @Html.HiddenFor(x => x.Status)
+        @Html.HiddenFor(x => x.codigoContaCorrente)
+        @Html.HiddenFor(x => x.Origem)
+        @Html.HiddenFor(x => x.codigoFormaFaturamento)
+        @Html.HiddenFor(x => x.valorPrevistoRecebimento)
+        @Html.HiddenFor(x => x.MensagemArquivoRemessa)
+        
+        <div class="panel-heading">
+            Editar pedido de Faturamento
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+
+                    @Html.EditBootstrapFor(model => model.nomeEmpresa, tudoTamanho: 3, inputTamanho: 11)
+                    @Html.EditBootstrapFor(model => model.CodigoClienteConsulta, tudoTamanho: 3, inputTamanho: 11)
+                    @Html.EditBootstrapFor(model => model.nomeClienteConsulta, tudoTamanho: 6, inputTamanho: 11)
+
+                    <div class="col-md-11" style="background-color:darkgrey;margin-left:1%;margin-top:1%;display:none;border:1px solid #264c54;" id="DadosCliente">
+                        <div>
+                            <b>Taxa para Emissão do Boleto: </b>
+                            <input id="TaxaEmissaoBoleto" name="TaxaEmissaoBoleto" type="text" disabled="" value="@Model.TaxaEmissaoBoleto" style="background-color:darkgrey;border: darkgrey;width: 11%;">
+
+                            <b>CPF/CNPJ: </b>
+                            <input id="CPFCNPJCliente" name="CPFCNPJCliente" type="text" disabled="" value="@Model.CPFCNPJCliente" style="background-color:darkgrey;border: darkgrey;width: 17%;">
+
+                            <b>Email: </b>
+                            <input id="EmailCliente" name="EmailCliente" type="text" disabled="" value="@Model.EmailCliente" style="background-color:darkgrey;border: darkgrey;width: 35%;">
+                        </div>
+                        <div>
+                            <b>Cobra Juros: </b>
+                            <input id="CobraJuros" name="CobraJuros" type="text" disabled="" value="@Model.CobraJuros" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+
+                            <b>Valor Juros: </b>
+                            <input id="ValorJuros" name="ValorJuros" type="text" disabled="" value="@Model.ValorJuros" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+
+                            <b>Porcentagem Juros: </b>
+                            <input id="PercentualJuros" name="PercentualJuros" type="text" disabled="" value="@Model.PercentualJuros" style="background-color:darkgrey;border: darkgrey;width: 17%;">
+                        </div>
+                        <div>
+                            <b>Cobra Multa: </b>
+                            <input id="CobraMulta" name="CobraMulta" type="text" disabled="" value="@Model.CobraMulta" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+
+                            <b>Valor Multa: </b>
+                            <input id="ValorMulta" name="ValorMulta" type="text" disabled="" value="@Model.ValorMulta" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+
+                            <b>Porcentagem Multa: </b>
+                            <input id="PercentualMulta" name="PercentualMulta" type="text" disabled="" value="@Model.PercentualMulta" style="background-color:darkgrey;border: darkgrey;width: 15.5%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-12" style="margin-top: 1%;margin-left:-1%">
+                        @Html.EditBootstrapFor(model => model.Valor, tudoTamanho: 3, inputTamanho: 11)
+                        @Html.EditBootstrapFor(model => model.dataVencimento, tudoTamanho: 3, inputTamanho: 11)
+                        @Html.EditBootstrapFor(model => model.nroDocumento, tudoTamanho: 3, inputTamanho: 11)
+                    </div>
+
+                    <div class="col-xs-12" style="margin-top: 1%;margin-left:-1%">
+                        @Html.EditBootstrapFor(model => model.ValorDescontoConcedido, tudoTamanho: 3, inputTamanho: 10)
+                        @Html.EditBootstrapFor(model => model.JurosCobrado, tudoTamanho: 3, inputTamanho: 10)
+                        @Html.EditBootstrapFor(model => model.MultaCobrada, tudoTamanho: 3, inputTamanho: 10)
+                        @Html.EditBootstrapFor(model => model.ValorRecebido, tudoTamanho: 3, inputTamanho: 10)
+                    </div>
+                    @Html.DDLBootstrapFor(model => model.codigoFormaFaturamento, Model.nomeFormaFaturamento, "/Generico/ConsultasGenericas/GetFormasLiquidacao/", 5)
+                    @Html.DDLBootstrapFor(model => model.CodigoPlanoContas, Model.NomePlanoContas, "/Generico/ConsultasGenericas/DDLPlanoContasRecebimento/", "codigoEmpresa", null, 5)
+
+                    <div id="TipoBoleto" style="display:none">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Mensagem de instrução para o Caixa:</label><br />
+                                @Html.TextAreaFor(model => model.MensagemInstrucoesCaixa, 2, 130, new { maxlength = "40", @class = "form-control" })
+                                <span class="caracteresCaixa">40</span> Restantes <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12"></div>
+                    @Html.DDLBootstrapFor(model => model.codJustificativa, Model.descJustificativa, "/ContasReceber/ConsultarBoletos/BuscaJustificativas/", 5)
+
+                    <div class="row">
+                        @Html.EditBootstrapFor(model => model.DescJustOutros, tudoTamanho: 6, inputTamanho: 12)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="col-md-12">
+        <div class="btn btn-success " onclick="SalvarEdicao();">Salvar</div>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="~/css/bootstrap-datepicker.css" />
+<link rel="stylesheet" href="~/css/bootstrap-datepicker.standalone.css" />
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "ContasReceber", subpasta = "ConsultaFaturamento", classe = "EditarPedidoFaturamento.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+
+
+
+</script>

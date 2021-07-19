@@ -1,0 +1,28 @@
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Abstraction.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Job.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.deps.json
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.pdb
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Job.pdb
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Abstraction.pdb
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.csproj.CopyComplete
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.dll
+C:\Repository_Git\PagNet\Projeto Relatorio\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.deps.json
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Abstraction.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Job.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Job.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\bin\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Abstraction.pdb
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.csproj.CopyComplete
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.dll
+C:\Repository_Git\PagNet\Master\PagNet\APIs\PagNet.BLD.Relatorio\PagNet.BLD.Relatorio.Web.Setup\obj\Debug\netcoreapp2.1\PagNet.BLD.Relatorio.Web.Setup.pdb

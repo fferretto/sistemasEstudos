@@ -1,0 +1,130 @@
+﻿@model PagNet.Application.Models.CadEmpresaVm
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Empresa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(x => x.CODEMPRESA)
+    @Html.HiddenFor(x => x.acessoAdmin)
+    @Html.HiddenFor(x => x.UTILIZANETCARD)
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold; font-size: 15px;">
+                <b>Cadastro de Empresa</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-default col-md-6" style="margin-left:2%" id="UtilizaNetCard">
+                                        <div class="panel-heading-decision">
+                                            Esta Empresa Utiliza o Sistema NetCard?
+                                        </div>
+                                        <div class="panel-body">
+                                            <ul class="nav nav-pills">
+                                                <li class="" id="liSim">
+                                                    <a href="#Sim" data-toggle="tab" id="btnSim">Sim</a>
+                                                </li>
+                                                <li class="active" id="liNao">
+                                                    <a href="#Nao" data-toggle="tab" id="btnNao">Não</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" style="margin-top:2%;">
+                                                <div class="tab-pane fade" id="Sim">
+                                                    <div class="row">
+                                                        @Html.DDLBootstrapFor(model => model.CODSUBREDE, Model.NMSUBREDE, "/Generico/CadastrosDiversos/GetSubRede/", 0)
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="Nao">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-md-12">
+                                        @Html.EditBootstrapFor(model => model.RAZAOSOCIAL, tudoTamanho: 8, inputTamanho: 12)
+                                        <div class="form-group col-md-2">
+                                            <label></label>
+                                            <div class="input-group col-xs-12" id="btnLocalizar">
+                                                <div class="btn btn-success" onclick="LocalizaEmpresa();">Localizar</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        @Html.EditBootstrapFor(model => model.NMFANTASIA, tudoTamanho: 5, inputTamanho: 12)
+                                        @Html.EditBootstrapFor(model => model.CNPJ, tudoTamanho: 3, inputTamanho: 12)
+                                        @Html.EditBootstrapFor(model => model.NMLOGIN, tudoTamanho: 3, inputTamanho: 12)
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="panel panel-default col-md-11" style="margin-left:1%" id="UtilizaNetCard">
+                                            <div class="panel-heading-decision">
+                                                Endereço da Empresa
+                                            </div>
+                                            <div class="panel-body">
+                                                @Html.EditBootstrapFor(model => model.CEP, tudoTamanho: 2, inputTamanho: 12)
+                                                <div class="col-md-8 Procesando" id="LocalizandoEndereco"></div>
+                                                <div class="row"></div>
+                                                @Html.EditBootstrapFor(model => model.LOGRADOURO, tudoTamanho: 5, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.NROLOGRADOURO, tudoTamanho: 3, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.COMPLEMENTO, tudoTamanho: 3, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.BAIRRO, tudoTamanho: 4, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.CIDADE, tudoTamanho: 6, inputTamanho: 12)
+                                                @Html.EditBootstrapFor(model => model.UF, tudoTamanho: 1, inputTamanho: 12)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <hr />
+                                        <div class="form-group  pull-right">
+                                            <a id="btnNovo" class="btn btn-default" href="@Url.Action("Index", "Empresa", new { area = "Cadastros", id = "0", sid = ViewBag.Sid })">
+                                                Novo
+                                            </a>
+
+                                            <div id="btnSalvar" class="btn btn-success" onclick="ConfirmaSalvar();" data-confirm="Tem certeza que deseja salvar?">Salvar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Localizar" tabindex="-1" role="dialog" aria-labelledby="Localizar" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div id="modal">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@*<script src="~/js/Scripts/Cadastros/Empresa.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Cadastros" , classe = "Empresa.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()

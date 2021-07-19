@@ -1,0 +1,101 @@
+﻿@model IList<PagNet.Application.Models.ConstulaPagNetFechCredVM>
+@using PagNet.Interface.Helpers
+
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table id="GridTransacao" class="table" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    @*<th width="5%" style="text-align:center;"></th>*@
+                    <th width="8%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().CODFAVORECIDO)</th>
+                    <th width="28%">@Html.DisplayNameFor(model => model.FirstOrDefault().NMFAVORECIDO)</th>
+                    <th width="12%">@Html.DisplayNameFor(model => model.FirstOrDefault().CNPJ)</th>
+                    <th width="10%" style="text-align:left;">@Html.DisplayNameFor(model => model.FirstOrDefault().VALLIQ)</th>
+                    <th width="10%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().dtAgendamento)</th>
+                    <th width="10%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().CODBANCO)</th>
+                    <th width="10%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().AGENCIA)</th>
+                    <th width="12%" style="text-align:center;">@Html.DisplayNameFor(model => model.FirstOrDefault().CONTACORRENTE)</th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var CorFundoTitulo = "background-color:#ffffff";
+
+                    if (Model[i].TITVENCIDO)
+                    {
+                        CorFundoTitulo = "background-color:#fa6161;font-weight: bold; cursor:Default";
+                    }
+                <tr>
+                    @*<td width="5%" class="btnEdit"  align='center' style="@CorFundoTitulo">
+            <div class="btn btn-success" title="Editar este título" onclick="EditarTitulo(@Model[i].Codigo);" style="font-size:7px">
+                <i class="fa fa-edit "></i>
+            </div>
+        </td>*@
+                    <td width="8%" class="CODFAVORECIDO" style="text-align:center;@CorFundoTitulo">
+                        @Html.DisplayFor(item => item[i].CODFAVORECIDO)
+                    </td>
+                    <td width="25%" class="NMFAVORECIDO" style="@CorFundoTitulo">
+                        @Html.DisplayFor(item => item[i].NMFAVORECIDO)
+                    </td>
+                    <td width="12%" class="CNPJ" style="@CorFundoTitulo">
+                        @Html.DisplayFor(item => item[i].CNPJ)
+                    </td>
+                    <td width="10%" class="VALLIQ" style="text-align:left;@CorFundoTitulo">
+                        @Html.DisplayFor(item => item[i].VALLIQ)
+                    </td>
+                    <td width="10%" class="dtAgendamento" style="text-align:center;@CorFundoTitulo">
+                        @Html.DisplayFor(item => item[i].dtAgendamento)
+                    </td>
+                    <td width="10%" class="CODBANCO" style="text-align:center;@CorFundoTitulo">
+                        @Html.DisplayFor(item => item[i].CODBANCO)
+                    </td>
+                    <td width="10%" class="AGENCIA" style="text-align:center;@CorFundoTitulo">
+                        @Html.DisplayFor(item => item[i].AGENCIA)
+                    </td>
+                    <td width="12%" class="CONTACORRENTE" style="text-align:center;@CorFundoTitulo">
+                        @Html.DisplayFor(item => item[i].CONTACORRENTE)
+                    </td>
+                    <td class="TITVENCIDO" width="0%" style="display:none;">
+                        <input class="" type="hidden" value="@Model[i].TITVENCIDO" />
+                    </td>
+                    <td class="Codigo" width="0%" style="display:none;">
+                        <input class="" type="hidden" value="@Model[i].Codigo" />
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    function carregaPagina() {
+    }
+    $(window).load(carregaPagina());
+
+    $(document).ready(function () {
+
+        $('#GridTransacao').dataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'excel'
+            ],
+        });
+
+    });
+
+
+</script>

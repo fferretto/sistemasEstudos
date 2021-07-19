@@ -1,0 +1,40 @@
+﻿@*@model PagNet.Application.Models.LoginViewModel
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Identifique-se";
+    Layout = "~/Views/Shared/_LayoutNaoLogado.cshtml";
+}
+
+<div class="main">
+    <form asp-area="Identificacao"
+          asp-controller="Autenticacao"
+          asp-action="Logar"
+          asp-route-returnurl="@ViewBag.ReturnUrl"
+          method="post">
+        <h1>
+            <img class="img-responsive img-rounded" src="~/images/NetPag.png" alt="User picture" width="130px">
+            <br />
+        </h1>
+
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="inset">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Login)
+                @Html.TextBoxFor(m => m.Login, new { placeholder = "nome@suaempresa", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Login, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { placeholder = "sua senha", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <p class="p-container">
+            <input type="submit" value="Entrar">
+        </p>
+    </form>
+</div>*@

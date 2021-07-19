@@ -1,0 +1,16 @@
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v8.3" %>
+<dxe:ASPxCalendar runat="server" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css"
+CssPostfix="BlackGlass" ImageFolder="~/App_Themes/BlackGlass/{0}/" >
+    <FooterStyle Spacing="4px" />
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px" />
+        </ErrorFrameStyle>
+    <ErrorImage Height="14px" Url="~/App_Themes/BlackGlass/Editors/Error.gif" Width="14px" />
+    </ValidationSettings>
+        <HeaderStyle Spacing="1px" />
+    <FastNavFooterStyle Spacing="4px">
+    </FastNavFooterStyle>
+        <FastNavStyle MonthYearSpacing="4px">
+    </FastNavStyle>
+</dxe:ASPxCalendar>

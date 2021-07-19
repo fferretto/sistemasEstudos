@@ -1,0 +1,53 @@
+﻿@model PagNet.Application.Models.DadosBoletoVM
+@using PagNet.Interface.Helpers
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.codUsuario)
+    @Html.HiddenFor(x => x.caminhoArquivo)
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Lista de Solicitações para geração de Boletos</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="form-group col-md-6  pull-right" style="margin-top: 3%;margin-left: -1%;">
+                <div class="input-group col-xs-7 pull-right">
+                    <div class="btn btn-success pull-right" onclick="SalvaBordero();">Gerar Bordero</div>
+                </div>
+            </div>
+            <div class="form-group col-lg-6">
+                @Html.EditBootstrapFor(model => model.qtFaturasSelecionados, tudoTamanho: 6, inputTamanho: 5)
+                @Html.EditBootstrapFor(model => model.ValorBordero, tudoTamanho: 6, inputTamanho: 12)
+            </div>
+            <div class="col-md-12" style="margin-top:2%;">
+                @Html.EditorFor(model => model.ListaBoletos, "IListaSolicitacaoBoleto")
+            </div>
+
+        </div>
+    </div>
+}
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(document).ready(function () {
+
+
+        $.unblockUI();
+
+        $("#qtFaturasSelecionados").prop("disabled", true);
+        $("#ValorBordero").prop("disabled", true);
+
+    });
+
+
+</script>

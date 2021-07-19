@@ -1,0 +1,114 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIL", "SIL\SIL.csproj", "{0DD9478F-13FB-4DCB-8A26-E34210074D21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCard.Common", "Common\NetCard.Common.csproj", "{E3DF6300-26B5-4D28-AFC3-F1988F8B2E5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCard.Consulta", "ConsultaWeb\NetCard.Consulta.csproj", "{BB9E6EA6-71C8-44D4-9BB7-2940BEC21488}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WEBSITE", "http://localhost:60932", "{717E8F90-B20F-462E-BA9C-7887957FD854}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{0dd9478f-13fb-4dcb-8a26-e34210074d21}|SIL.dll;{cee4aa05-eabd-4fd9-88e7-136e5f43aefb}|Telenet.Core.dll;{5408b784-4db1-4048-9002-64232aec90c8}|Telenet.Carga.dll;{1F252E79-9C49-45B5-A037-3FA31000C420}|Telenet.Carga.Abstractions.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/WEBSITE"
+		Debug.AspNetCompiler.PhysicalPath = "WEBSITE\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WEBSITE\"
+		Debug.AspNetCompiler.Updateable = "false"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WEBSITE"
+		Release.AspNetCompiler.PhysicalPath = "WEBSITE\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WEBSITE\"
+		Release.AspNetCompiler.Updateable = "false"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "WEBSITE\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telenet.Core", "Telenet.Core\Telenet.Core.csproj", "{CEE4AA05-EABD-4FD9-88E7-136E5F43AEFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telenet.Carga.Abstractions", "Telenet.Carga.Abstractions\Telenet.Carga.Abstractions.csproj", "{1F252E79-9C49-45B5-A037-3FA31000C420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telenet.Carga", "Telenet.Carga\Telenet.Carga.csproj", "{5408B784-4DB1-4048-9002-64232AEC90C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DD9478F-13FB-4DCB-8A26-E34210074D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD9478F-13FB-4DCB-8A26-E34210074D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD9478F-13FB-4DCB-8A26-E34210074D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD9478F-13FB-4DCB-8A26-E34210074D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3DF6300-26B5-4D28-AFC3-F1988F8B2E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3DF6300-26B5-4D28-AFC3-F1988F8B2E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3DF6300-26B5-4D28-AFC3-F1988F8B2E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3DF6300-26B5-4D28-AFC3-F1988F8B2E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB9E6EA6-71C8-44D4-9BB7-2940BEC21488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9E6EA6-71C8-44D4-9BB7-2940BEC21488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9E6EA6-71C8-44D4-9BB7-2940BEC21488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9E6EA6-71C8-44D4-9BB7-2940BEC21488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717E8F90-B20F-462E-BA9C-7887957FD854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717E8F90-B20F-462E-BA9C-7887957FD854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717E8F90-B20F-462E-BA9C-7887957FD854}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{717E8F90-B20F-462E-BA9C-7887957FD854}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{CEE4AA05-EABD-4FD9-88E7-136E5F43AEFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE4AA05-EABD-4FD9-88E7-136E5F43AEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE4AA05-EABD-4FD9-88E7-136E5F43AEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEE4AA05-EABD-4FD9-88E7-136E5F43AEFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F252E79-9C49-45B5-A037-3FA31000C420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F252E79-9C49-45B5-A037-3FA31000C420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F252E79-9C49-45B5-A037-3FA31000C420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F252E79-9C49-45B5-A037-3FA31000C420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5408B784-4DB1-4048-9002-64232AEC90C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5408B784-4DB1-4048-9002-64232AEC90C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5408B784-4DB1-4048-9002-64232AEC90C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5408B784-4DB1-4048-9002-64232AEC90C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00209EB9-981B-4525-9711-5679EEE972DB}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.70.93:8081/tfs/telenet
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Common\\NetCard.Common.csproj
+		SccProjectName1 = Common
+		SccLocalPath1 = Common
+		SccProjectUniqueName2 = ConsultaWeb\\NetCard.Consulta.csproj
+		SccProjectName2 = ConsultaWeb
+		SccLocalPath2 = ConsultaWeb
+		SccProjectUniqueName3 = SIL\\SIL.csproj
+		SccProjectName3 = SIL
+		SccLocalPath3 = SIL
+		SccWebProject4 = true
+		SccProjectUniqueName4 = http://localhost:60932
+		SccProjectName4 = WEBSITE
+		SccLocalPath4 = WEBSITE
+		SccProjectEnlistmentChoice4 = 2
+		SccProjectUniqueName5 = Telenet.Core\\Telenet.Core.csproj
+		SccProjectName5 = Telenet.Core
+		SccLocalPath5 = Telenet.Core
+		SccProjectUniqueName6 = Telenet.Carga.Abstractions\\Telenet.Carga.Abstractions.csproj
+		SccProjectName6 = Telenet.Carga.Abstractions
+		SccLocalPath6 = Telenet.Carga.Abstractions
+		SccProjectUniqueName7 = Telenet.Carga\\Telenet.Carga.csproj
+		SccProjectName7 = Telenet.Carga
+		SccLocalPath7 = Telenet.Carga
+	EndGlobalSection
+EndGlobal

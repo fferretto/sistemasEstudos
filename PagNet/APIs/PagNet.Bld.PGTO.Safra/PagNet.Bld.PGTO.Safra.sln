@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagNet.Bld.PGTO.Safra", "PagNet.Bld.PGTO.Safra\PagNet.Bld.PGTO.Safra.csproj", "{7BD7BDE0-4DED-42CC-BCA0-BF1145E85542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagNet.Bld.PGTO.Safra.Abstraction", "PagNet.Bld.PGTO.Safra.Abstraction\PagNet.Bld.PGTO.Safra.Abstraction.csproj", "{5D7F0F25-38CE-4850-BBAC-40C39C19C826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagNet.Bld.PGTO.Safra.Server", "PagNet.Bld.PGTO.Safra.Server\PagNet.Bld.PGTO.Safra.Server.csproj", "{655EC07F-A0F6-4017-B192-D4EB3EA7E929}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagNet.Bld.PGTO.Safra.Web.Setup", "PagNet.Bld.PGTO.Safra.Web.Setup\PagNet.Bld.PGTO.Safra.Web.Setup.csproj", "{1BE5C8BB-B852-44F2-B0C0-199309BE5D15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BD7BDE0-4DED-42CC-BCA0-BF1145E85542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD7BDE0-4DED-42CC-BCA0-BF1145E85542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD7BDE0-4DED-42CC-BCA0-BF1145E85542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD7BDE0-4DED-42CC-BCA0-BF1145E85542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D7F0F25-38CE-4850-BBAC-40C39C19C826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D7F0F25-38CE-4850-BBAC-40C39C19C826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D7F0F25-38CE-4850-BBAC-40C39C19C826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D7F0F25-38CE-4850-BBAC-40C39C19C826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655EC07F-A0F6-4017-B192-D4EB3EA7E929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655EC07F-A0F6-4017-B192-D4EB3EA7E929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655EC07F-A0F6-4017-B192-D4EB3EA7E929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655EC07F-A0F6-4017-B192-D4EB3EA7E929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE5C8BB-B852-44F2-B0C0-199309BE5D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE5C8BB-B852-44F2-B0C0-199309BE5D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE5C8BB-B852-44F2-B0C0-199309BE5D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE5C8BB-B852-44F2-B0C0-199309BE5D15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53076F46-2BEA-42D0-A3D1-F4F2D799C994}
+	EndGlobalSection
+EndGlobal

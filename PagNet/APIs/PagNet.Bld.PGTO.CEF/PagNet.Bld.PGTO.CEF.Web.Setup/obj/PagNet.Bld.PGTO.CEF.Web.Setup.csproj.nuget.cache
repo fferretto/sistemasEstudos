@@ -1,0 +1,10 @@
+{
+  "version": 1,
+<<<<<<< HEAD
+  "dgSpecHash": "8jtH9kyrLlq00ofUDI8PZTjXzS0VgTKiOoPRYOzCZA7uOCI5yMUoNVx/ItyS6OTAVCiEev2VERilQaTrv7Z6ZQ==",
+  "success": false
+=======
+  "dgSpecHash": "f0/CrcQLR2IDuhVx8zaxxfKP3KNaobUCX7TisO4nGbwALyPmdLsg7SbCbucfcKU6BGZPuW6Mr6ZDaj6pOdYmRA==",
+  "success": true
+>>>>>>> remotes/origin/BCH_Melhorias
+}

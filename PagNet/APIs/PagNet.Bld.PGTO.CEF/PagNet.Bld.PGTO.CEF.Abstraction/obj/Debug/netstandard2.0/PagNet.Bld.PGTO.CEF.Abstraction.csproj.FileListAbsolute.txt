@@ -1,0 +1,17 @@
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.deps.json
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.pdb
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.AssemblyInfo.cs
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.dll
+C:\Repository_Git\PagNet\CriacaoApis\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\bin\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\PagNet.Bld.PGTO.CEF\PagNet.Bld.PGTO.CEF.Abstraction\obj\Debug\netstandard2.0\PagNet.Bld.PGTO.CEF.Abstraction.pdb

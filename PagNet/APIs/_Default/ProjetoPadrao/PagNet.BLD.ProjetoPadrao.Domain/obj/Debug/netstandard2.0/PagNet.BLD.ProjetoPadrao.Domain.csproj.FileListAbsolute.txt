@@ -1,0 +1,18 @@
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.deps.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Domain\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.pdb

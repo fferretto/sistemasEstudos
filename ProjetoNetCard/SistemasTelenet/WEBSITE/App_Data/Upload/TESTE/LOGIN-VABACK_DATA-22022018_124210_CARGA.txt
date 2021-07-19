@@ -1,0 +1,6 @@
+Banco:	033 - BANCO SANTANDER S.A. - 00000000
+Conta destino:	3477 / 00001008790-6
+Tipo de conta:	01 - Conta Corrente
+Tipo de pessoa:	FÍSICA
+Nome:	GLENDA NATALIE SERPA
+CPF/CNPJ:	041.610.886-55

@@ -1,0 +1,171 @@
+﻿@model IList<PagNet.Application.Models.ListaTitulosVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaTitulosVM">
+    <div class="panel-heading">
+        @ViewData.ModelMetadata.DisplayName
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 0%;">
+
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="gridListaTitulos" class="table" cellspacing="0" width="125%">
+            <thead>
+                <tr>
+                    <th width="3%" style="text-align:center;"></th>
+                    <th width="3%" style="text-align:center;" class="CheckBox-Grid"><input name="select_all" id="select_all" checked="checked" type="checkbox"></th>
+                    <th width="6%" style="text-align:center;">Codigo</th>
+                    <th width="19%">Nome</th>
+                    <th width="9%">CNPJ</th>
+                    <th width="10%" style="text-align:center;">Data Pgto</th>
+                    <th width="7%" style="text-align:center;">Quant. Titulos</th>
+                    <th width="7%" style="text-align:right;">Valor Liquido</th>
+                    <th width="10%" style="text-align:center;">Forma PGTO</th>
+                    <th width="5%" style="text-align:center;">Banco</th>
+                    <th width="7%" style="text-align:center;">Agencia</th>
+                    <th width="10%" style="text-align:center;">Conta Corrente</th>
+                    <th width="7%" style="text-align:center;">Linha Digitável</th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                <tr>
+                    <td width="4%" align='center'>
+                        <div class="btn btn-success" onclick="VisualizarTitulos(@Model[i].CODFAVORECIDO, '@Model[i].DATPGTO')" style="font-size:9px">
+                            <i class="fa fa-search "></i>
+                        </div>
+                    </td>
+                    <td class="CheckBox-Grid" width="3%" align="center">
+                        <input class="inpchkFechCredPai" type="checkbox" onclick="AtualizaValorBordero();" name="@String.Format("{0}[{1}].chkFechCred", nmPropriedade, i)" checked="@Model[i].chkFechCred" />
+                    </td>
+                    <td width="3%" align='center'>
+                        @Model[i].CODFAVORECIDO
+                    </td>
+                    <td width="19%" title="@Model[i].MSGRETBANCO">
+                        @Model[i].RAZSOC
+                    </td>
+                    <td width="9%" title="@Model[i].MSGRETBANCO">
+                        @Model[i].CNPJ
+                    </td>
+                    <td width="10%" class="INPDATPGTO" title="@Model[i].MSGRETBANCO" style="text-align:center;">
+                        @Model[i].DATPGTO
+                    </td>
+                    <td width="7%" class="INPDATPGTO" title="@Model[i].MSGRETBANCO" style="text-align:center;">
+                        @Model[i].QTTITULOS
+                    </td>
+                    <td width="7%" class="INPVALLIQ" title="@Model[i].MSGRETBANCO" style="text-align:right;">
+                        @Model[i].VALLIQ
+                    </td>
+                    <td width="10%" class="INPDESFORPAG" title="@Model[i].MSGRETBANCO" style="text-align:center;">
+                        @Model[i].DESFORPAG
+                    </td>
+                    <td width="5%" class="INPBANCO" title="@Model[i].MSGRETBANCO" style="text-align:center;">
+                        @Model[i].BANCO
+                    </td>
+                    <td width="7%" class="INPAGENCIA" title="@Model[i].MSGRETBANCO" style="text-align:center;">
+                        @Model[i].AGENCIA
+                    </td>
+                    <td width="10%" class="INPCONTACORRENTE" title="@Model[i].MSGRETBANCO" style="text-align:center;">
+                        @Model[i].CONTACORRENTE
+                    </td>
+                    <td width="10%" class="INPLINHADIGITAVEL" title="@Model[i].MSGRETBANCO" style="text-align:center;">
+                        @Model[i].LINHADIGITAVEL
+                    </td>
+                    <td class="CODFAVORECIDO" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].CODFAVORECIDO", nmPropriedade, i)" value="@Model[i].CODFAVORECIDO" />
+                    </td>
+                    <td class="DATPGTO" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].DATPGTO", nmPropriedade, i)" value="@Model[i].DATPGTO" />
+                    </td>
+                    <td class="VALLIQ" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].VALLIQ", nmPropriedade, i)" value="@Model[i].VALLIQ" />
+                    </td>
+                    <td class="BANCO" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].BANCO", nmPropriedade, i)" value="@Model[i].BANCO" />
+                    </td>
+                    <td class="AGENCIA" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].AGENCIA", nmPropriedade, i)" value="@Model[i].AGENCIA" />
+                    </td>
+                    <td class="CONTACORRENTE" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].CONTACORRENTE", nmPropriedade, i)" value="@Model[i].CONTACORRENTE" />
+                    </td>
+                    <td class="LINHADIGITAVEL" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].LINHADIGITAVEL", nmPropriedade, i)" value="@Model[i].LINHADIGITAVEL" />
+                    </td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="VisualizarTransacoes" tabindex="-1" role="dialog" aria-labelledby="Localizar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalTransacoes">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //inicia();
+
+        var table = $('#gridListaTitulos').DataTable({
+            order: [[5, 'asc']],
+            scrollX: true,
+            dom: 'Blfrtip',
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL'
+                },
+                'excel'
+            ],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0, 1]
+                }
+            ]
+        });
+
+
+        $("#select_all").click(function () {
+            $('input', table.cells().nodes()).prop('checked', this.checked);
+            AtualizaValorBordero()
+        });
+
+    });
+
+
+
+</script>

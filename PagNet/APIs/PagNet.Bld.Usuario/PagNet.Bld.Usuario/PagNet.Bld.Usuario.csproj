@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Telenet.AspNetCore.Mvc.Authentication" Version="1.0.0" />
+    <PackageReference Include="Telenet.BusinessLogicModel" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagNet.Bld.Usuario.Abstraction\PagNet.Bld.Usuario.Abstraction.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ModelAuxiliar\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PagNet.Bld.Domain">
+      <HintPath>..\..\Nugets\PagNet.Bld.Domain\bin\Debug\netstandard2.0\PagNet.Bld.Domain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

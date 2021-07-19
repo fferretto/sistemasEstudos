@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<telenet>
+  <services.domains>
+    <domain name="PagNetAPIFavorecido">
+      <messages>
+        <add key="1" text="PagNet Processo de CRUD Favorecido" />
+
+        <add key="1000" text="Código do favorecido não informado." />
+        <add key="1001" text="CPF ou CNPJ não informado." />
+        <add key="1002" text="Código da empresa não informado." />
+        <add key="1003" text="Código da centralizadora não informado." />
+
+      </messages>
+    </domain>
+  </services.domains>
+</telenet>

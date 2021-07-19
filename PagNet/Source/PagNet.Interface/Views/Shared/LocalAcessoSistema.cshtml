@@ -1,0 +1,17 @@
+﻿@model PagNet.Interface.Models.LocalAcessoSistemaModel
+
+@Html.HiddenFor(x => x.baseHomologacao)
+
+<div id="LocalAcessoHomologacao" style="display:none; background-color:darkred; height:30px; text-align:center; color: white;">
+ 
+        <b style="font-size:17px">Servidor: </b> @Model.nomeServidor
+        &nbsp; <b style="font-size:17px">Base de Dados: </b>@Model.nomeBanco
+    
+</div>
+
+<script>
+    if ($("#baseHomologacao").val() == "True") {
+        $("#LocalAcessoHomologacao").show();
+        document.getElementsByClassName("page-header")[0].style.maxHeight = '165px'
+    }
+</script>

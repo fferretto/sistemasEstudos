@@ -1,0 +1,7 @@
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v8.3" %>
+<dxe:ASPxCheckBox runat="server" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css"
+CssPostfix="BlackGlass">
+    <ValidationSettings ErrorText="Error has ocurredd">
+        <ErrorImage Height="14px" Width="14px" Url="~/App_Themes/BlackGlass/Editors/Error.gif"></ErrorImage>
+    </ValidationSettings>
+</dxe:ASPxCheckBox>

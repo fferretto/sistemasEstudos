@@ -1,0 +1,23 @@
+<%@ Register TagPrefix="dxwgv" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.ASPxGridView.v8.3" %>
+<dxwgv:ASPxGridView runat="server" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css" CssPostfix="PlasticBlue" >
+<Images ImageFolder="~/App_Themes/Plastic Blue/{0}/">
+    <HeaderSortDown Height="11px" Width="11px" Url="~/App_Themes/Plastic Blue/GridView/gvHeaderSortDown.png"></HeaderSortDown>
+    <ExpandedButton Height="9px" Width="9px" Url="~/App_Themes/Plastic Blue/GridView/gvExpandedButton.png"></ExpandedButton>
+    <CollapsedButton Height="10px" Width="9px" Url="~/App_Themes/Plastic Blue/GridView/gvCollapsedButton.png"></CollapsedButton>
+    <HeaderSortUp Height="11px" Width="11px" Url="~/App_Themes/Plastic Blue/GridView/gvHeaderSortUp.png"></HeaderSortUp>
+    <HeaderFilter Width="13px" Height="15px" Url="~/App_Themes/Plastic Blue/GridView/gvHeaderFilter.png" />
+    <HeaderActiveFilter Width="13px" Height="15px" Url="~/App_Themes/Plastic Blue/GridView/gvHeaderFilterActive.png" />
+    <FilterRowButton Width="13px" Height="13px" />
+    <CustomizationWindowClose Width="14px" Height="14px" />
+    <PopupEditFormWindowClose Width="14px" Height="14px" />
+    <FilterBuilderClose Width="14px" Height="14px" />
+</Images>
+<Styles CssPostfix="PlasticBlue" CssFilePath="~/App_Themes/Plastic Blue/{0}/styles.css">
+<Header SortingImageSpacing="10px" ImageSpacing="10px"></Header>
+</Styles>
+<SettingsPager ShowDefaultImages="False" CurrentPageNumberFormat="{0}">
+<AllButton Text="All"></AllButton>
+<NextPageButton Text="Next &gt;"></NextPageButton>
+<PrevPageButton Text="&lt; Prev"></PrevPageButton>
+</SettingsPager>
+</dxwgv:ASPxGridView>

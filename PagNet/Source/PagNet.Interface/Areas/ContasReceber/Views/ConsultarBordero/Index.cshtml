@@ -1,0 +1,62 @@
+﻿@model PagNet.Application.Models.FiltroConsultaFaturamentoVM
+@using PagNet.Interface.Helpers
+
+
+@{
+    ViewBag.Title = "Consulta de Borderôs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.codigoEmpresa)
+    @Html.HiddenFor(x => x.codStatus)
+    @Html.HiddenFor(x => x.acessoAdmin)
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div style="font-weight: bold;font-size:15px;">
+                <b>Consulta de Borderôs Criados Para Emissão de Boletos</b>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+                    @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+                    <div class="col-md-12">
+                        @Html.EditBootstrapFor(model => model.codBordero, 12, 2)
+                    </div>
+                    <div class="col-md-8" id="FiltroEmpresa" style="display:none">
+                        @Html.DDLBootstrapFor(model => model.codigoEmpresa, Model.nomeEmpresa, "/Generico/CadastrosDiversos/GetEmpresa/", 0)
+                    </div>
+
+                    <div class="col-md-6">
+                        @Html.DDLBootstrapFor(model => model.codStatus, Model.nmStatus, "/ContasReceber/ConsultarBordero/StatusBordero/", 0)
+                    </div>
+
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group col-md-2  pull-right">
+                        <label></label>
+                        <div class="input-group col-xs-12">
+                            <div class="btn btn-success" onclick="ConsultarBordero();">Consultar Borderôs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ListaBordero">
+        <div id="modal">
+
+        </div>
+    </div>
+
+}
+@*<script src="~/js/Scripts/ContasReceber/ConsultarBordero.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "ContasReceber" , classe = "ConsultarBordero.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()

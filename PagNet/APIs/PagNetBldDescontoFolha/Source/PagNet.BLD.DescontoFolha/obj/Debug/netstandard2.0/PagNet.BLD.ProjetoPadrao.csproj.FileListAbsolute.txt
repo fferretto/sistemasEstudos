@@ -1,0 +1,14 @@
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.deps.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.csproj.CopyComplete
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.pdb

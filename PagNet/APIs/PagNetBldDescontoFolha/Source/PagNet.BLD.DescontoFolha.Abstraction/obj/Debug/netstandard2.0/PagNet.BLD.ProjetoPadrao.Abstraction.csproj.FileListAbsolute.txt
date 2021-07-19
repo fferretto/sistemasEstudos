@@ -1,0 +1,9 @@
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.deps.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Abstraction\bin\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Abstraction\obj\Debug\netstandard2.0\PagNet.BLD.ProjetoPadrao.Abstraction.pdb

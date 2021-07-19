@@ -1,0 +1,68 @@
+﻿@model PagNet.Application.Models.LoginViewModel
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Identifique-se";
+    Layout = "~/Views/Shared/_LayoutNaoLogado.cshtml";
+}
+
+
+<div class="col-md-6 image-background">
+
+</div>
+<div class="col-md-6  panel panel-default" style="float:right;">
+    <div class="row">
+        <div class="panel panel-primary text-center no-boder bg-color-PagNet">
+            <div class="panel-body">
+                <i class="logo-completo logo-200"></i>
+                <h1 class="main-text">Bem-Vindo</h1>
+                <h2>Sistema de Pagamentos</h2>
+                <h1>PagNet</h1>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading">
+        @ViewBag.Title
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <section id="loginForm">
+                    <form asp-area="Identificacao"
+                          asp-controller="Autenticacao"
+                          asp-action="Logar"
+                          asp-route-returnurl="@ViewBag.ReturnUrl"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Login)
+                            @Html.TextBoxFor(m => m.Login, new { placeholder = "nome@suaempresa", @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Login, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Password)
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                        <p>
+                            @Html.ActionLink("Esqueceu sua senha?", "EsqueceuSenha")
+                        </p>
+                        <div class="form-group  pull-right">
+                            <input type="submit" value="Entrar" class="btn btn-default" />
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="panel-back">
+
+    </div>
+</div>
+
+
+@section Scripts {
+}

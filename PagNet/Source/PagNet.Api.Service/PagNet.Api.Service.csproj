@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Json" Version="4.7.1" />
+    <PackageReference Include="Telenet.AspNetCore.Mvc.Authentication" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PagNet.Bld.AntecipPGTO.Abstraction">
+      <HintPath>..\..\APIs\PagNetBldAntecipacaoPGTO\PagNet.Bld.AntecipPGTO.Abstraction\bin\Debug\netstandard2.0\PagNet.Bld.AntecipPGTO.Abstraction.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

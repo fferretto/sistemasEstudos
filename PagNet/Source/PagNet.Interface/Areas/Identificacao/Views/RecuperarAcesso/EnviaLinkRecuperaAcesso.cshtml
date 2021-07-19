@@ -1,0 +1,33 @@
+﻿@model PagNet.Interface.Areas.Identificacao.Models.FiltroRecuperaSenhaModel
+
+@{
+    ViewBag.Title = "Recuperar Acesso";
+    Layout = "~/Views/Shared/_LayoutNaoLogado.cshtml";
+}
+
+<div class="main">
+    <h1>
+        <img class="img-responsive img-rounded" src="~/images/Logos/LogoDefault/LogoPagNet.png" alt="User picture" style="width:60%">
+        <br />
+    </h1>
+    @if (Model.MensagemRetorno != "")
+    {
+        if (Model.Sucesso)
+        {
+            <div class="col-md-12" style="color:green;">
+                <span>@Model.MensagemRetorno</span>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-12" style="color:red;">
+                <span>@Model.MensagemRetorno</span>
+            </div>
+        }
+    }
+
+</div>
+
+<script>
+    document.getElementsByTagName("form")[0].style.height = "290px"
+</script>

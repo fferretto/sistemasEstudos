@@ -1,0 +1,131 @@
+﻿@model PagNet.Application.Models.UsuariosVm
+@using PagNet.Interface.Helpers
+
+@{
+    ViewBag.Title = "Altera Senha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(x => x.CodUsuario)
+    @Html.HiddenFor(x => x.nmUsuario)
+    @Html.HiddenFor(x => x.PerfilOperadora)
+    @Html.HiddenFor(x => x.Cpf)
+    @Html.HiddenFor(x => x.CodOpe)
+    @Html.HiddenFor(x => x.CODEMPRESA)
+    @Html.HiddenFor(x => x.Email)
+    @Html.HiddenFor(x => x.Administrador)
+    @Html.HiddenFor(x => x.Login)
+
+
+    <div class="col-md-3"></div>
+    <div class="panel panel-default col-md-6">
+        <div class="panel-heading">
+            <div style="font-weight: bold; font-size: 15px;">
+                <b>Alterar a senha de Usuário</b>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @Html.ValidationSummary(false, "(* campos obrigatórios)", new { @class = "text-danger" })
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <b>
+                                        @Html.NameFor(model => model.Login):
+                                    </b>
+                                    @Html.DisplayFor(model => model.Login)
+                                </div>
+                                <br />
+                                <br />
+                                @Html.EditBootstrapFor(model => model.Password, tudoTamanho: 12, inputTamanho: 5)
+                                @Html.EditBootstrapFor(model => model.ConfirmPassword, tudoTamanho: 12, inputTamanho: 5)
+
+                                <div class="col-md-12">
+                                    <hr />
+                                    <div class="form-group  pull-right">
+                                        <div id="btnSalvar" class="btn btn-success" onclick="SalvarAlteraSenha();" data-confirm="Tem certeza que deseja alterar a senha?">Salvar</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+}
+@*<script src="~/js/Scripts/Cadastros/Usuarios.js"></script>*@
+<script src="@Url.Action("GetClassJs", "ConsultasGenericas", new { area = "Generico", id= "Cadastros" , classe = "Usuarios.js", sid = ViewBag.Sid })"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+@section Scripts
+    {
+    <script>
+
+        $("#Login").prop('disabled', true);
+
+
+        function SalvarAlteraSenha() {
+
+            if ($("#Password").val().length < 6) {
+                msgAviso("A senha deve conter no mínimo 6 caracteres!");
+                return false;
+
+            }
+
+            if ($("#Password").val() != $("#ConfirmPassword").val()) {
+                msgAviso("Senhas não conferem!");
+                return false;
+            }
+
+            //var url = montaUrl('/ContasPagar/GeraBordero/BuscaBanco/?filtro=' + filtro);
+            var url = montaUrl('/Cadastros/Usuarios/SalvarAlteraSenha/?Password=' + $("#Password").val());
+
+            url += "&CodUsuario=" + $("#CodUsuario").val() +
+                    "&nmUsuario=" + $("#nmUsuario").val() +
+                    "&PerfilOperadora=" + $("#PerfilOperadora").val() +
+                    "&Cpf=" + $("#Cpf").val() +
+                    "&CodOpe=" + $("#CodOpe").val() +
+                    "&CODEMPRESA=" + $("#CODEMPRESA").val() +
+                    "&Email=" + $("#Email").val() +
+                    "&Administrador=" + $("#Administrador").val() +
+                    "&Login=" + $("#Login").val();
+
+
+            $.blockUI({ message: '<div class="ModalCarregando"></dic>' });
+
+            $.ajax({
+                type: 'Post',
+                url: url,
+                dataType: 'json',
+                success: function (data) {
+                    $.unblockUI();
+                    if (data.success) {
+                        msgSucessoComReload(data.responseText);
+                    }
+                    else {
+                        msgErro(data.responseText);
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    addErros("FiltroNmBanco", "Erro interno. Tente novamente mais tarde.");
+                }
+            });
+        };
+
+
+    </script>
+}
+
+
+
+

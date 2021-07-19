@@ -1,0 +1,117 @@
+﻿@model IList<PagNet.Application.Models.ListaParcelasVm>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaParcelasVm">
+    <div class="panel-body">
+        @Html.EditBootstrapFor(model => model.FirstOrDefault().TotalAPagar, tudoTamanho: 3, inputTamanho: 12)
+        @Html.EditBootstrapFor(model => model.FirstOrDefault().TotalJuros, tudoTamanho: 3, inputTamanho: 12)
+        @Html.EditBootstrapFor(model => model.FirstOrDefault().ValorParcela, tudoTamanho: 3, inputTamanho: 12)
+        <div class="table-responsive">
+            <table id="gridListaParcelasFatura" class="table" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th width="5%">Parcela</th>
+                        <th width="10%">Vencimento</th>
+                        <th width="10%">Saldo Anterior</th>
+                        <th width="10%">Juros</th>
+                        <th width="10%">Amortização</th>
+                        <th width="10%">Prestação</th>
+                        <th width="10%">Montante Pago</th>
+                        <th width="10%">Saldo Devedor</th>
+                        <th width="0%" style="display:none"></th>
+                        <th width="0%" style="display:none"></th>
+                        <th width="0%" style="display:none"></th>
+                        <th width="0%" style="display:none"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+
+                    <tr>
+                        <td class="inpParcela" width="5%">
+                            @Html.DisplayFor(item => item[i].NroParcela)
+                        </td>
+                        <td class="inpVencimentoParcela" width="10%">
+                            @Html.DisplayFor(item => item[i].VencimentoParcela)
+                        </td>
+                        <td class="inpSaldoAnterior" width="10%">
+                            @Html.DisplayFor(item => item[i].SaldoAnterior)
+                        </td>
+                        <td class="inpJuros" width="10%">
+                            @Html.DisplayFor(item => item[i].Juros)
+                        </td>
+                        <td class="inpJuros" width="10%">
+                            @Html.DisplayFor(item => item[i].Amortizacao)
+                        </td>
+                        <td class="inpValorParcela" width="10%">
+                            @Html.DisplayFor(item => item[i].ValorParcela)
+                        </td>
+                        <td class="inpValorPago" width="10%">
+                            @Html.DisplayFor(item => item[i].ValorPago)
+                        </td>
+                        <td class="inpSaldoDevedor" width="10%">
+                            @Html.DisplayFor(item => item[i].SaldoDevedor)
+                        </td>
+                        <td class="NroParcela" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].NroParcela", nmPropriedade, i)" value="@Model[i].NroParcela" />
+                        </td>
+                        <td class="Juros" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].Juros", nmPropriedade, i)" value="@Model[i].Juros" />
+                        </td>
+                        <td class="ValorParcela" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].ValorParcela", nmPropriedade, i)" value="@Model[i].ValorParcela" />
+                        </td>
+                        <td class="VencimentoParcela" width="0%" style="display:none;">
+                            <input class="" type="hidden" name="@String.Format("{0}[{1}].VencimentoParcela", nmPropriedade, i)" value="@Model[i].VencimentoParcela" />
+                        </td>
+                    </tr>
+                        }
+
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+<script type="text/javascript">
+
+    $('#TotalAPagar').prop("disabled", true);
+    $('#TotalJuros').prop("disabled", true);
+    $('#ValorParcela').prop("disabled", true);
+
+    $(document).ready(function () {
+        $.unblockUI();
+
+        $('#gridListaParcelasFatura').DataTable({
+            bFilter: false,
+            bLengthChange: false,
+            pageLength: 5,
+            //bInfo: false,
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0, 1, 2]
+                }
+            ]
+        });
+        $('.TotalJuros').prop("disabled", true);
+
+
+    });
+
+</script>

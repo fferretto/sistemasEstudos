@@ -1,0 +1,23 @@
+﻿/* -- ASPxRoundPanel -- */
+.dxrpControl_MacOS td.dxrp
+{
+	font-size: 9pt;
+	font-family: Trebuchet MS;
+	color: #313131;
+	text-align: left;
+}
+/* Header */
+.dxrpHeader_MacOS td.dxrp
+{
+    font-size: 12px;
+    font-weight: bold;
+	font-family:  Trebuchet MS;
+	color: #313131;
+	text-align: center;
+}
+/* Disabled */
+.dxrpDisabled_MacOS, .dxrpDisabled_MacOS td.dxrp
+{
+	color: #808080;
+	cursor: default;
+}

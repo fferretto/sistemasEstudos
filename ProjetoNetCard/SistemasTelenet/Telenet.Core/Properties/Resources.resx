@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="JobTemplate" xml:space="preserve">
+    <value>BEGIN
+	USE [msdb]
+
+	/****** Object:  Job [_JOB_NAME_]    Script Date: _CREATION_DATE_ ******/
+	BEGIN TRANSACTION
+
+	DECLARE @ReturnCode INT
+
+	SELECT @ReturnCode = 0
+
+	IF NOT EXISTS (SELECT name FROM msdb.dbo.syscategories WHERE name=N'[Uncategorized (Local)]' AND category_class=1)
+	BEGIN
+		EXEC @ReturnCode = msdb.dbo.sp_add_category @class=N'JOB', @type=N'LOCAL', @name=N'[Uncategorized (Local)]'
+
+		IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+			GOTO QuitWithRollback
+	END
+
+	DECLARE @jobId BINARY(16)
+
+	EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'_JOB_NAME_', 
+			@enabled=_ENABLED_, 
+			@notify_level_eventlog=_EVENT_LOG_, 
+			@notify_level_email=_SEND_EMAIL_, 
+			@notify_level_netsend=_NET_SEND_, 
+			@notify_level_page=0, 
+			@delete_level=_DELETE_LEVEL_,
+			@description=N'_JOB_DESCRIPTION_', 
+			@category_name=N'[Uncategorized (Local)]', 
+			@owner_login_name=N'_OWNER_LOGIN_', @job_id = @jobId OUTPUT
+			
+	IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+		GOTO QuitWithRollback
+		
+	EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Processo do Job', 
+			@step_id=1, 
+			@cmdexec_success_code=0, 
+			@on_success_action=_ON_SUCCESS_ACTION_, 
+			@on_success_step_id=0, 
+			@on_fail_action=_ON_FAIL_ACTION_, 
+			@on_fail_step_id=0, 
+			@retry_attempts=0, 
+			@retry_interval=0, 
+			@os_run_priority=0, @subsystem=N'TSQL', 
+			@command=N'_JOB_SCRIPT', 
+			@database_name=N'master', 
+			@flags=0
+
+	IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+		GOTO QuitWithRollback
+
+	EXEC @ReturnCode = msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1
+
+	IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+		GOTO QuitWithRollback
+		
+	EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
+
+	IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+		GOTO QuitWithRollback
+		
+	COMMIT TRANSACTION
+	GOTO EndSave
+
+	QuitWithRollback:
+		IF (@@TRANCOUNT &gt; 0) 
+			ROLLBACK TRANSACTION
+		
+	EndSave:
+END</value>
+    <comment>Script SQL.</comment>
+  </data>
+  <data name="ScheduledJobTemplate" xml:space="preserve">
+    <value>BEGIN 
+	USE [msdb]
+
+	/****** Object:  Job [_JOB_NAME_]    Script Date: _CREATION_DATE_ ******/
+	BEGIN TRANSACTION
+
+	DECLARE @ReturnCode INT
+
+	SELECT @ReturnCode = 0
+	
+	IF NOT EXISTS (SELECT name FROM msdb.dbo.syscategories WHERE name=N'[Uncategorized (Local)]' AND category_class=1)
+	BEGIN
+		EXEC @ReturnCode = msdb.dbo.sp_add_category @class=N'JOB', @type=N'LOCAL', @name=N'[Uncategorized (Local)]'
+
+		IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+			GOTO QuitWithRollback
+	END
+
+	DECLARE @jobId BINARY(16)
+	
+	EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'_JOB_NAME_', 
+			@enabled=_ENABLED_, 
+			@notify_level_eventlog=_EVENT_LOG_, 
+			@notify_level_email=_SEND_EMAIL_, 
+			@notify_level_netsend=_NET_SEND_, 
+			@notify_level_page=0, 
+			@delete_level=_DELETE_LEVEL_, 
+			@description=N'_JOB_DESCRIPTION_', 
+			@category_name=N'[Uncategorized (Local)]', 
+			@owner_login_name=N'_OWNER_LOGIN_', @job_id = @jobId OUTPUT
+	
+	IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+		GOTO QuitWithRollback
+	
+	EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Processo do Job', 
+			@step_id=1, 
+			@cmdexec_success_code=0, 
+			@on_success_action=_ON_SUCCESS_ACTION_, 
+			@on_success_step_id=0, 
+			@on_fail_action=_ON_FAIL_ACTION_, 
+			@on_fail_step_id=0, 
+			@retry_attempts=0, 
+			@retry_interval=0, 
+			@os_run_priority=0, @subsystem=N'TSQL', 
+			@command=N'_JOB_SCRIPT', 
+			@database_name=N'master', 
+			@flags=0
+	
+	IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+		GOTO QuitWithRollback
+	
+	EXEC @ReturnCode = msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1
+	
+	IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+		GOTO QuitWithRollback
+	
+	EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id = @jobId, @name=N'Scheduler', 
+			@enabled=_ENABLED_, 
+			@freq_type=1, 
+			@freq_interval=0, 
+			@freq_subday_type=0, 
+			@freq_subday_interval=0, 
+			@freq_relative_interval=0, 
+			@freq_recurrence_factor=0, 
+			@active_start_date=_START_DATE_, 
+			@active_end_date=99991231, 
+			@active_start_time=_START_TIME_, 
+			@active_end_time=235959, 
+			@schedule_uid=N'07abbbe3-a839-4122-8055-415fb86b7ad8'
+	
+	IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+		GOTO QuitWithRollback
+	
+	EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
+	
+	IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) 
+		GOTO QuitWithRollback
+
+	COMMIT TRANSACTION
+	GOTO EndSave
+
+	QuitWithRollback:
+		IF (@@TRANCOUNT &gt; 0) ROLLBACK TRANSACTION
+	EndSave:
+END</value>
+    <comment>Script SQL.</comment>
+  </data>
+</root>

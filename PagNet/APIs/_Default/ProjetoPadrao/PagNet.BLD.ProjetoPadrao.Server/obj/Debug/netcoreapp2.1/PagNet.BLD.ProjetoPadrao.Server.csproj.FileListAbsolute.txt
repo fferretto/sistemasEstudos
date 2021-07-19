@@ -1,0 +1,50 @@
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.csprojAssemblyReference.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.csproj.CoreCompileInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.RazorAssemblyInfo.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.RazorAssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.AssemblyInfoInputs.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.AssemblyInfo.cs
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.deps.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.runtimeconfig.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.runtimeconfig.dev.json
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Abstraction.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Domain.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Infra.Data.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Web.Setup.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Web.Setup.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Abstraction.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Domain.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Infra.Data.pdb
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.RazorTargetAssemblyInfo.cache
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.csproj.CopyComplete
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.dll
+D:\Repositorios_Git\Projeto PagNet\Master\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.deps.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.runtimeconfig.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.runtimeconfig.dev.json
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Abstraction.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Domain.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Infra.Data.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Web.Setup.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Web.Setup.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Abstraction.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Domain.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\bin\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Infra.Data.pdb
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.csprojAssemblyReference.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.csproj.CoreCompileInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.RazorAssemblyInfo.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.RazorAssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.AssemblyInfoInputs.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.AssemblyInfo.cs
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.RazorTargetAssemblyInfo.cache
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.csproj.CopyComplete
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.dll
+C:\Repository_Git\PagNet\Melhorias\PagNet\APIs\_Default\ProjetoPadrao\PagNet.BLD.ProjetoPadrao.Server\obj\Debug\netcoreapp2.1\PagNet.BLD.ProjetoPadrao.Server.pdb

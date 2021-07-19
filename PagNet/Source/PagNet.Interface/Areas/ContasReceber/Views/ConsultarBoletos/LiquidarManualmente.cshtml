@@ -1,0 +1,170 @@
+﻿@model PagNet.Application.Models.EmissaoBoletoVM
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        @Html.HiddenFor(x => x.codigoEmpresa)
+        @Html.HiddenFor(x => x.Status)
+        @Html.HiddenFor(x => x.nomeBoleto)
+        @Html.HiddenFor(x => x.valorPrevistoRecebimento)
+
+
+        <div class="panel-heading">
+            Informações do Faturamento
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.CodigoClienteConsulta, tudoTamanho: 1, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.nomeClienteConsulta, tudoTamanho: 8, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.CPFCNPJCliente, tudoTamanho: 2, inputTamanho: 12)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.dataSolicitacao, tudoTamanho: 3, inputTamanho: 6)
+                    @Html.EditBootstrapFor(model => model.dataVencimento, tudoTamanho: 3, inputTamanho: 6)
+                    @Html.EditBootstrapFor(model => model.nroDocumento, tudoTamanho: 2, inputTamanho: 12)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.PrimeiraInstrucaoCobranca, tudoTamanho: 6, inputTamanho: 12)
+                    @Html.EditBootstrapFor(model => model.SegundaInstrucaoCobranca, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.Valor, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.ValorJuros, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.PercentualJuros, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.ValorMulta, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.PercentualMulta, tudoTamanho: 2, inputTamanho: 10)
+                </div>
+                <div class="row">
+                    @Html.EditBootstrapFor(model => model.ValorDescontoConcedido, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.JurosCobrado, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.MultaCobrada, tudoTamanho: 2, inputTamanho: 10)
+                    @Html.EditBootstrapFor(model => model.ValorRecebido, tudoTamanho: 2, inputTamanho: 10)
+                </div>
+                <div>
+                    @Html.DDLBootstrapFor(model => model.codigoContaCorrente, Model.nomeContaCorrente, "/Generico/CadastrosDiversos/GetContaCorrentePagamento/", 6)
+                    <span id="ValidaContaCorrente" style="display:none; margin-left:2%" class="text-danger field-validation-valid" data-valmsg-replace="true">
+                        Obrigatório Informar uma Conta Corrente!
+                    </span>
+                </div>
+                <div class="col-md-12"></div>
+                <div class="row">
+                    @Html.DDLBootstrapFor(model => model.codJustificativa, Model.descJustificativa, "/ContasReceber/ConsultarBoletos/BuscaJustificativas/", 5)
+                    @Html.EditBootstrapFor(model => model.DescJustOutros, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+
+    <div class="col-md-12">
+        <button type="button" id="btnLiquidacaoManual" class="btn btn-warning" onclick="LiquidacaoManual(@Model.codigoEmissaoBoleto);"><i class="fa fa-check" aria-hidden="true"></i> Liquidação Manual</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+
+    </div>
+</div>
+
+
+@*<script src="~/js/ScriptHelpersPartialView.js"></script>*@
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+    inicia();
+
+    $("#CodigoClienteConsulta").prop('disabled', true);
+    $("#nomeClienteConsulta").prop('disabled', true);
+    $("#CPFCNPJCliente").prop('disabled', true);
+    $("#dataSolicitacao").prop('disabled', true);
+    $("#dataVencimento").prop('disabled', true);
+    $("#nroDocumento").prop('disabled', true);
+    $("#Valor").prop('disabled', true);
+    $("#ValorJuros").prop('disabled', true);
+    $("#PercentualJuros").prop('disabled', true);
+    $("#ValorMulta").prop('disabled', true);
+    $("#PercentualMulta").prop('disabled', true);
+    $("#TaxaEmissaoBoleto").prop('disabled', true);
+    $("#PrimeiraInstrucaoCobranca").prop('disabled', true);
+    $("#SegundaInstrucaoCobranca").prop('disabled', true);
+    $("#DescJustOutros").prop('disabled', true);
+    $("#ValorRecebido").prop('disabled', true);
+
+
+    $(".DescJustOutros").hide();
+    $(".codJustificativa").change(function () {
+        $("#codJustificativa").val($('.codJustificativa option:selected').val());
+        if ($("#codJustificativa").val() == "OUTROS") {
+            $(".DescJustOutros").show();
+        }
+        else {
+            $(".DescJustOutros").hide();
+            $("#DescJustOutros").val("");
+        }
+    });
+
+
+    $('#ValorDescontoConcedido').mask("#.##0,00", { reverse: true })
+    $('#JurosCobrado').mask("#.##0,00", { reverse: true })
+    $('#MultaCobrada').mask("#.##0,00", { reverse: true })
+
+    $("#ValorDescontoConcedido").click(function () {
+        if ($("#ValorDescontoConcedido").val() == "0,00") {
+            $("#ValorDescontoConcedido").val("")
+        }
+    });
+
+    $("#JurosCobrado").click(function () {
+        if ($("#JurosCobrado").val() == "0,00") {
+            $("#JurosCobrado").val("")
+        }
+    });
+
+    $("#MultaCobrada").click(function () {
+        if ($("#MultaCobrada").val() == "0,00") {
+            $("#MultaCobrada").val("")
+        }
+    });
+
+    $("#ValorDescontoConcedido").change(function () {
+        CalculaValorTotalRecebido();
+    });
+
+    $("#JurosCobrado").change(function () {
+        CalculaValorTotalRecebido();
+    });
+
+    $("#MultaCobrada").change(function () {
+        CalculaValorTotalRecebido();
+    });
+
+    function CalculaValorTotalRecebido() {
+        var ValorPrevisto = ConvertDecimal($("#valorPrevistoRecebimento").val())
+        var ValorDesconto = ConvertDecimal($("#ValorDescontoConcedido").val())
+        var ValorMulta = ConvertDecimal($("#JurosCobrado").val())
+        var ValorJuros = ConvertDecimal($("#MultaCobrada").val())
+
+        var valorTotal = (ValorPrevisto + ValorMulta + ValorJuros) - (ValorDesconto)
+
+        $("#ValorRecebido").val(FormataMoedaReal(valorTotal));
+
+    }
+
+    function ConvertDecimal(str) {
+        return parseInt(str.replace(/[\D]+/g, ''));
+    }
+    function FormataMoedaReal(int) {
+        var tmp = int + '';
+        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+        if (tmp.length > 6)
+            tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+        return tmp;
+    }
+
+</script>

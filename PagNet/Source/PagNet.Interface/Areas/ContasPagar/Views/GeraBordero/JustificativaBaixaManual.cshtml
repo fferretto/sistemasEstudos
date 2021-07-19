@@ -1,0 +1,61 @@
+﻿@model PagNet.Application.Models.JustificativaVm
+@using PagNet.Interface.Helpers
+
+<div class="modal-body">
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            Informe o motivo da baixa manual
+        </div>
+        <div class="panel-body">
+            <div class="form-group" id="MotivoBaixaManual">
+                <div class="form-group col-mg-2"></div>
+                <div class="form-group col-mg-10">
+                    @Html.EditBootstrapFor(model => model.qtTitulosSelBaixaManual, tudoTamanho: 5, inputTamanho: 5)
+                    @Html.EditBootstrapFor(model => model.ValorTotalBaixaManual, tudoTamanho: 5, inputTamanho: 6)
+                </div>
+                <div class="row">
+                    @Html.DDLBootstrapFor(model => model.codJustificativa, Model.descJustificativa, "/ContasPagar/GeraBordero/GetJustificativaBaixaManual/", 5)
+                    @Html.EditBootstrapFor(model => model.DescJustOutros, tudoTamanho: 6, inputTamanho: 12)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <div id="btPagamentoManual" class="btn btn-warning" data-confirm="Confirma a baixa manual dos títulos selecionados?" onclick="BaixaManual(); ">Realizar a Baixa</div>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+</div>
+
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+<script src="~/js/ScriptHelpersPartialView.js"></script>
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(".DescJustOutros").hide();
+
+    $("#qtTitulosSelBaixaManual").val($("#qtTitulosSelecionados").val())
+    $("#ValorTotalBaixaManual").val($("#ValorBordero").val())
+
+    $("#ValorTotalBaixaManual").prop('disabled', true);
+    $("#qtTitulosSelBaixaManual").prop('disabled', true);
+
+    $(".codJustificativa").change(function () {
+        $("#codJustificativa").val($('.codJustificativa option:selected').val());
+        if ($("#codJustificativa").val() == "OUTROS") {
+            $(".DescJustOutros").show();
+        }
+        else {
+            $(".DescJustOutros").hide();
+            $("#DescJustOutros").val("");
+        }
+    });
+
+
+
+</script>

@@ -1,0 +1,70 @@
+﻿@model PagNet.Application.Models.GridTitulosVM
+@using PagNet.Interface.Helpers
+
+
+@Html.AntiForgeryToken()
+@Html.HiddenFor(x => x.Justificativa)
+@Html.HiddenFor(x => x.JustificativaOutros)
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="4">
+            @Html.EditBootstrapFor(model => model.dtTransferencia, tudoTamanho: 3, inputTamanho: 8)
+        </div>
+        <div class="form-group col-lg-6 pull-right">
+            <div class="pull-right" style="margin-top:2%;">
+                <div id="btPagamentoManual" class="btn btn-warning" onclick="JustificarTitulosEmMassa(); ">Atualizar Títulos Selecionados</div>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top:2%;">
+            @Html.EditorFor(model => model.ListaFechamento, "IListaTitulosVencidos")
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="JustEdicaoTitulo" tabindex="-1" role="dialog" aria-labelledby="JustEdicaoTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div id="modalJustEdicaoTitulo">
+
+            </div>
+        </div>
+    </div>
+</div>
+@*<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/locales/bootstrap-datepicker.pt-BR.min.js"></script>*@
+
+@*<script src="~/js/ScriptHelpersPartialView.js"></script>*@
+
+
+@* Rotina criada para apresentar alertas vindas do ViewData do controler *@
+@Html.ShowError()
+
+<script>
+
+    $(document).ready(function () {
+
+
+        //$('.umadata input').datepicker({
+        //    format: "dd/mm/yyyy",
+        //    language: "pt-BR",
+        //    orientation: "auto",
+        //    autoclose: true
+        //});
+
+        //bindingData(".umadata");
+
+        $.unblockUI();
+    });
+
+
+
+
+</script>
+

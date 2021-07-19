@@ -1,0 +1,10 @@
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\bin\Debug\Telenet.Core.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\bin\Debug\Telenet.Core.pdb
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\bin\Debug\Newtonsoft.Json.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\bin\Debug\Newtonsoft.Json.xml
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\obj\Debug\Telenet.Core.Properties.Resources.resources
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\obj\Debug\Telenet.Core.csproj.GenerateResource.cache
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\obj\Debug\Telenet.Core.csproj.CoreCompileInputs.cache
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\obj\Debug\Telenet.Core.csproj.CopyComplete
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\obj\Debug\Telenet.Core.dll
+C:\ProjetoNetCard\SistemasTelenet\Telenet.Core\obj\Debug\Telenet.Core.pdb

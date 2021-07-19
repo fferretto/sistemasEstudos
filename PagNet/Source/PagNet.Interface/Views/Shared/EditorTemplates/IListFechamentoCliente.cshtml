@@ -1,0 +1,238 @@
+﻿@model IList<PagNet.Application.Models.ListaFechClienteVM>
+@using PagNet.Interface.Helpers
+
+@{
+    string nmPropriedade = ViewData.ModelMetadata.PropertyName;
+}
+
+<div id="@nmPropriedade" class="panel panel-default ListaFechClienteVM">
+    <div class="panel-heading">
+        @ViewData.ModelMetadata.DisplayName
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 0%;">
+
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table id="gridBorderoCliente" class="table" cellspacing="0" width="107%">
+            <thead>
+                <tr>
+                    <th width="8%" class="CheckBox-Grid"><input style="margin-left:20%" name="select_all" id="select_all" checked="checked" type="checkbox"> Todos</th>
+                    <th width="30%">Nome</th>
+                    <th width="12%" style="text-align:center;">CNPJ</th>
+                    <th width="10%" style="text-align:center;">Data Pgto</th>
+                    <th width="10%" style="text-align:right;">Valor Boleto</th>
+                    <th width="10%" style="text-align:right;">Valor Gasto</th>
+                    <th width="10%" style="text-align:right;">Valor 2ª Via</th>
+                    <th width="10%" style="text-align:right;">Valor Anuidade</th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                    <th width="0%" style="display:none;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                <tr>
+                    <td width="8%" style="margin-left:5%" class="CheckBox-Grid">
+                        <input style="margin-left:20%" class="inpchkFechCredPai" type="checkbox" name="@String.Format("{0}[{1}].chkFechCred", nmPropriedade, i)" checked="@Model[i].chkFechCred" />
+                    </td>
+                    <td width="30%">
+                        @Model[i].NOMCLI
+                    </td>
+                    <td width="12%" style="text-align:center;">
+                        @Model[i].CGC
+                    </td>
+                    <td width="10%" style="text-align:center;">
+                        @Model[i].DATPGTO
+                    </td>
+                    <td width="10%" style="text-align:right;">
+                        @Model[i].TOTAL
+                    </td>
+                    <td width="10%" style="text-align:right;">
+                        @Model[i].COMPRAS
+                    </td>
+                    <td width="10%" style="text-align:right;">
+                        @Model[i].VAL2VIA
+                    </td>
+                    <td width="10%" style="text-align:right;">
+                        @Model[i].ANUIDADE
+                    </td>
+                    <td class="CODCLI" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].CODCLI", nmPropriedade, i)" value="@Model[i].CODCLI" />
+                    </td>
+                    <td class="DATPGTO" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].DATPGTO", nmPropriedade, i)" value="@Model[i].DATPGTO" />
+                    </td>
+                    <td class="CGC" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].CGC", nmPropriedade, i)" value="@Model[i].CGC" />
+                    </td>
+                    <td class="TOTAL" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].TOTAL", nmPropriedade, i)" value="@Model[i].TOTAL" />
+                    </td>
+                    <td class="NUMFECCLI" width="0%" style="display:none;">
+                        <input class="" type="hidden" name="@String.Format("{0}[{1}].NUMFECCLI", nmPropriedade, i)" value="@Model[i].NUMFECCLI" />
+                    </td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //inicia();
+
+        var table = $('#gridBorderoCliente').DataTable({
+            order: [[1, 'asc']],
+            scrollX: true,
+            dom: 'Blfrtip',
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    orientation: 'landscape',
+                    pageSize: 'LEGAL'
+                },
+                'excel'
+            ],
+            columnDefs: [
+                {
+                    "orderable": false,
+                    "targets": [0]
+                }
+            ]
+        });
+
+
+        $("#select_all").click(function () {
+            $('input', table.cells().nodes()).prop('checked', this.checked);
+        });
+
+    });
+
+    function SalvaBordero(e) {
+
+        var table = $('#gridBorderoCliente').DataTable();
+
+        $.blockUI({ message: '<div class="ModalCarregando"></dic>' });
+        var codContaCorrente = $('.codContaCorrente option:selected').val()
+        var nmContaCorrente = $('.codContaCorrente').find("option:selected").text();
+        var dtVencimento = $("#dtVencimento").val()
+
+        var ClientePre = (e == 1);
+
+        var codigoSubRede = $('#CodSubRede').val();
+        var CobraMulta = $("#CobraMulta").val();
+        var CobraJuros = $("#CobraJuros").val();
+
+        if (codContaCorrente <= 0) {
+            msgAviso("Obrigatório informar uma conta corrente.")
+            $("#ValidaContaCorrente").show();
+            $.unblockUI();
+            return false;
+        }
+
+
+        if (dtVencimento == "") {
+            msgAviso("Obrigatório informar a data de vencimento.")
+            $("#ValidaDataVencimento").show();
+            $.unblockUI();
+            return false;
+        }
+
+        var partesData = dtVencimento.split("/");
+        var dataVencimento = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+
+        var dtAtual = new Date(),
+            dia = dtAtual.getDate().toString(),
+            diaF = (dia.length == 1) ? '0' + dia : dia,
+            mes = (dtAtual.getMonth() + 1).toString(), //+1 pois no getMonth Janeiro começa com zero.
+            mesF = (mes.length == 1) ? '0' + mes : mes,
+            anoF = dtAtual.getFullYear();
+
+        var DataAtual = new Date(anoF, mesF - 1, diaF - 1);
+
+        if (dataVencimento <= DataAtual) {
+            msgAviso("A data de vencimento não pode ser menor que a data atual.")
+            $("#ValidaDataVencimento").show();
+            $.unblockUI();
+            return false;
+        }
+
+        var codPrimeiraInstrucaoCobranca = $('.codPrimeiraInstrucaoCobranca option:selected').val();
+        var nmPrimeiraInstrucaoCobranca = $('.codPrimeiraInstrucaoCobranca').find("option:selected").text();
+
+        var codSegundaInstrucaoCobranca = $('.codSegundaInstrucaoCobranca option:selected').val();
+        var nmSegundaInstrucaoCobranca = $('.codSegundaInstrucaoCobranca').find("option:selected").text();
+
+        var meuData = '';
+        var trs = $('input[type="checkbox"]:checked', table.cells().nodes()).parent().parent();
+        $(trs).each(function (index, value) {
+
+            meuData += '&ListaFechamento%5B' + index + '%5D.CODCLI=' + $(value).find('.CODCLI').find('input').val();
+            meuData += '&ListaFechamento%5B' + index + '%5D.DATPGTO=' + $(value).find('.DATPGTO').find('input').val();
+            meuData += '&ListaFechamento%5B' + index + '%5D.CGC=' + $(value).find('.CGC').find('input').val();
+            meuData += '&ListaFechamento%5B' + index + '%5D.TOTAL=' + $(value).find('.TOTAL').find('input').val();
+            meuData += '&ListaFechamento%5B' + index + '%5D.NUMFECCLI=' + $(value).find('.NUMFECCLI').find('input').val();
+        });
+                       
+        var data = "codContaCorrente=" + codContaCorrente
+            + "&nmContaCorrente=" + nmContaCorrente
+            + "&codPrimeiraInstrucaoCobranca=" + codPrimeiraInstrucaoCobranca
+            + "&nmPrimeiraInstrucaoCobranca=" + nmPrimeiraInstrucaoCobranca
+            + "&codSegundaInstrucaoCobranca=" + codSegundaInstrucaoCobranca
+            + "&nmSegundaInstrucaoCobranca=" + nmSegundaInstrucaoCobranca
+            + "&vlJuros=" + $("#vlJuros").val()
+            + "&vlMulta=" + $("#vlMulta").val()
+            + "&PercJuros=" + $("#PercJuros").val()
+            + "&PercMulta=" + $("#PercMulta").val()
+            + "&dtVencimento=" + dtVencimento
+            + "&ClientePre=" + ClientePre
+            + "&codigoSubRede=" + codigoSubRede
+            + "&CobraMulta=" + CobraMulta
+            + "&CobraJuros=" + CobraJuros
+            + "&nmBordero=" + $("#nmBordero").val()
+            + "&dtInicioGrid=" + $("#dtInicioGrid").val()
+            + "&dtFimGrid=" + $("#dtFimGrid").val()
+            + "&MensagemArquivoRemessa=" + $("textarea#MensagemArquivoRemessa").val()
+            + "&MensagemInstrucoesCaixa=" + $("textarea#MensagemInstrucoesCaixa").val()
+            + meuData;
+
+        var url = montaUrl("/ContasReceber/GerarBordero/SalvaBordero/");
+
+        // Submit form data via ajax
+        $.ajax({
+            type: "Post",
+            url: url,
+            data: data,
+            success: function (data) {
+                $.unblockUI();
+
+                if (data.success) {
+
+                    var ocultar = $('input[type="checkbox"]:checked', table.cells().nodes());
+                    $(ocultar).each((i, e) => $(e).closest('tr').addClass('selected'));
+                    table.rows('.selected').remove().draw(false);
+
+                    msgSucesso(data.responseText);
+
+                }
+                else {
+                    msgErro(data.responseText)
+                }
+            }
+        });
+
+        // Prevent form submission
+        return false;
+    };
+
+</script>
